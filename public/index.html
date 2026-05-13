@@ -1,26 +1,67 @@
 <!-- ===================================================== -->
-<!-- VELVER MOTOS — BLACK EXPERIENCE™ FINAL REFINED -->
-<!-- Cinematic Premium Dealership Experience -->
+<!-- HERO REFINED — VELVER MOTOS BLACK EXPERIENCE™ -->
+<!-- Minimal Cinematic Premium Hero -->
 <!-- ===================================================== -->
 
-<!DOCTYPE html>
-<html lang="es">
+<section class="hero">
 
-<head>
+    <div class="hero-content reveal">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- SMALL LABEL -->
 
-<title>VELVER MOTOS — BLACK EXPERIENCE™</title>
+        <small>
 
-<!-- ===================================================== -->
-<!-- FONTS -->
-<!-- ===================================================== -->
+            BLACK EXPERIENCE™
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        </small>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <!-- MAIN TITLE -->
+
+        <h1>
+
+            Construimos confianza
+            sobre ruedas.
+
+        </h1>
+
+        <!-- SUBTEXT -->
+
+        <p>
+
+            Tecnología, transparencia y atención humana
+            integradas en una experiencia premium.
+
+        </p>
+
+        <!-- BUTTONS -->
+
+        <div class="hero-buttons">
+
+            <button class="btn-main">
+
+                Explorar showroom
+
+            </button>
+
+            <button class="btn-glass">
+
+                Ver catálogo
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- SCROLL INDICATOR -->
+
+    <div class="scroll-indicator">
+
+        <span></span>
+
+    </div>
+
+</section>
 
 <!-- ===================================================== -->
 <!-- CSS -->
@@ -29,259 +70,95 @@
 <style>
 
 /* ===================================================== */
-/* ROOT */
+/* HERO */
 /* ===================================================== */
 
-:root{
-
-    --blue:#1E6DFF;
-    --blue-dark:#0B46B5;
-    --navy:#081B44;
-
-    --black:#050505;
-
-    --white:#F5F7FA;
-
-    --silver:#D7DCE3;
-
-    --gray:#8D96A6;
-
-}
-
-/* ===================================================== */
-/* GLOBAL */
-/* ===================================================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-
-    background:var(--black);
-
-    color:white;
-
-    font-family:'Inter',sans-serif;
-
-    overflow-x:hidden;
-
-}
-
-/* ===================================================== */
-/* BACKGROUND */
-/* ===================================================== */
-
-.background-layer{
-
-    position:fixed;
-
-    inset:0;
-
-    z-index:-10;
-
-    overflow:hidden;
-
-}
-
-.background-layer img{
-
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-
-    filter:
-    brightness(.30)
-    contrast(1.08)
-    saturate(1.08);
-
-    transform:scale(1.05);
-
-}
-
-/* ===================================================== */
-/* OVERLAY */
-/* ===================================================== */
-
-.background-overlay{
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-
-    radial-gradient(circle at top right,
-    rgba(30,109,255,.20),
-    transparent 30%),
-
-    radial-gradient(circle at bottom left,
-    rgba(11,70,181,.18),
-    transparent 30%),
-
-    linear-gradient(to bottom,
-    rgba(0,0,0,.45),
-    rgba(0,0,0,.94));
-
-}
-
-/* ===================================================== */
-/* PARTICLES */
-/* ===================================================== */
-
-.particles{
-
-    position:absolute;
-
-    inset:0;
-
-    background-image:
-    radial-gradient(rgba(255,255,255,.12) 1px, transparent 1px);
-
-    background-size:4px 4px;
-
-    opacity:.025;
-
-    animation:particlesMove 25s linear infinite;
-
-}
-
-@keyframes particlesMove{
-
-    from{
-        transform:translateY(0px);
-    }
-
-    to{
-        transform:translateY(-120px);
-    }
-
-}
-
-/* ===================================================== */
-/* NAVBAR */
-/* ===================================================== */
-
-header{
-
-    position:fixed;
-
-    top:0;
-
-    width:100%;
-
-    z-index:999;
-
-    backdrop-filter:blur(18px);
-
-    background:rgba(0,0,0,.28);
-
-    border-bottom:1px solid rgba(255,255,255,.04);
-
-}
-
-.navbar{
-
-    max-width:1450px;
-
-    margin:auto;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:20px 40px;
-
-}
-
-.logo{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:16px;
-
-}
-
-.logo img{
-
-    width:58px;
-    height:58px;
-
-    border-radius:50%;
-
-    box-shadow:
-    0 0 30px rgba(30,109,255,.35);
-
-}
-
-.logo h1{
-
-    font-family:'Orbitron',sans-serif;
-
-    letter-spacing:3px;
-
-    font-size:1.05rem;
-
-}
-
-nav{
-
-    display:flex;
-
-    gap:35px;
-
-}
-
-nav a{
-
-    text-decoration:none;
-
-    color:#d7dde7;
-
-    transition:.3s ease;
+.hero{
 
     position:relative;
 
-}
+    min-height:100vh;
 
-nav a::after{
+    display:flex;
 
-    content:"";
+    justify-content:center;
 
-    position:absolute;
+    align-items:center;
 
-    left:0;
-    bottom:-8px;
+    padding:140px 40px 100px;
 
-    width:0%;
-    height:2px;
-
-    background:var(--blue);
-
-    transition:.3s ease;
+    text-align:center;
 
 }
 
-nav a:hover{
+/* ===================================================== */
+/* CONTENT */
+/* ===================================================== */
 
-    color:white;
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:980px;
 
 }
 
-nav a:hover::after{
+/* ===================================================== */
+/* SMALL LABEL */
+/* ===================================================== */
 
-    width:100%;
+.hero-content small{
+
+    display:inline-block;
+
+    color:#1E6DFF;
+
+    letter-spacing:6px;
+
+    font-weight:700;
+
+    margin-bottom:28px;
+
+}
+
+/* ===================================================== */
+/* TITLE */
+/* ===================================================== */
+
+.hero-content h1{
+
+    font-size:clamp(3.5rem,8vw,7rem);
+
+    line-height:.95;
+
+    font-family:'Orbitron',sans-serif;
+
+    text-transform:uppercase;
+
+    letter-spacing:-2px;
+
+    text-shadow:
+    0 0 30px rgba(30,109,255,.12);
+
+}
+
+/* ===================================================== */
+/* SUBTEXT */
+/* ===================================================== */
+
+.hero-content p{
+
+    margin:38px auto 0;
+
+    max-width:760px;
+
+    font-size:1.1rem;
+
+    line-height:2;
+
+    color:#D7DCE3;
 
 }
 
@@ -289,9 +166,27 @@ nav a:hover::after{
 /* BUTTONS */
 /* ===================================================== */
 
+.hero-buttons{
+
+    margin-top:48px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ===================================================== */
+/* PRIMARY BUTTON */
+/* ===================================================== */
+
 .btn-main{
 
-    padding:15px 26px;
+    padding:16px 32px;
 
     border:none;
 
@@ -299,8 +194,8 @@ nav a:hover::after{
 
     background:
     linear-gradient(135deg,
-    var(--blue-dark),
-    var(--blue));
+    #0B46B5,
+    #1E6DFF);
 
     color:white;
 
@@ -311,7 +206,7 @@ nav a:hover::after{
     transition:.35s ease;
 
     box-shadow:
-    0 0 30px rgba(30,109,255,.28);
+    0 0 35px rgba(30,109,255,.25);
 
 }
 
@@ -320,13 +215,17 @@ nav a:hover::after{
     transform:translateY(-4px);
 
     box-shadow:
-    0 0 50px rgba(30,109,255,.45);
+    0 0 50px rgba(30,109,255,.42);
 
 }
 
+/* ===================================================== */
+/* GLASS BUTTON */
+/* ===================================================== */
+
 .btn-glass{
 
-    padding:15px 26px;
+    padding:16px 32px;
 
     border-radius:999px;
 
@@ -348,508 +247,71 @@ nav a:hover::after{
 
     background:rgba(255,255,255,.08);
 
-}
-
-/* ===================================================== */
-/* HERO */
-/* ===================================================== */
-
-.hero{
-
-    min-height:100vh;
-
-    display:flex;
-
-    align-items:center;
-
-    padding:160px 40px 100px;
-
-}
-
-.hero-container{
-
-    max-width:1450px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:1.1fr .9fr;
-
-    gap:70px;
-
-    align-items:center;
-
-}
-
-/* ===================================================== */
-/* HERO TEXT */
-/* ===================================================== */
-
-.hero-text small{
-
-    color:var(--blue);
-
-    letter-spacing:5px;
-
-    font-weight:700;
-
-}
-
-.hero-text h2{
-
-    margin-top:28px;
-
-    font-size:clamp(3rem,7vw,6.5rem);
-
-    line-height:.95;
-
-    font-family:'Orbitron',sans-serif;
-
-    text-transform:uppercase;
-
-    text-shadow:
-    0 0 25px rgba(30,109,255,.15);
-
-}
-
-.hero-text p{
-
-    margin-top:35px;
-
-    max-width:720px;
-
-    line-height:2;
-
-    color:#D7DCE3;
-
-    font-size:1.05rem;
-
-}
-
-.hero-buttons{
-
-    margin-top:42px;
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:18px;
-
-}
-
-/* ===================================================== */
-/* EXPERIENCE PANEL */
-/* ===================================================== */
-
-.experience-panel{
-
-    background:rgba(255,255,255,.05);
-
-    border:1px solid rgba(255,255,255,.06);
-
-    border-radius:36px;
-
-    padding:38px;
-
-    backdrop-filter:blur(20px);
-
-    box-shadow:
-    0 0 60px rgba(0,0,0,.45);
-
-}
-
-/* ===================================================== */
-/* PANEL TOP */
-/* ===================================================== */
-
-.panel-top{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-}
-
-.live-status{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    color:#9dffb9;
-
-    font-size:.9rem;
-
-}
-
-.live-dot{
-
-    width:10px;
-    height:10px;
-
-    border-radius:50%;
-
-    background:#00ff62;
-
-    box-shadow:
-    0 0 15px #00ff62;
-
-    animation:pulse 1.5s infinite;
-
-}
-
-@keyframes pulse{
-
-    0%{
-        transform:scale(1);
-        opacity:1;
-    }
-
-    50%{
-        transform:scale(1.4);
-        opacity:.5;
-    }
-
-    100%{
-        transform:scale(1);
-        opacity:1;
-    }
-
-}
-
-.experience-panel h3{
-
-    margin-top:28px;
-
-    font-size:2rem;
-
-    line-height:1.2;
-
-    font-family:'Orbitron',sans-serif;
-
-}
-
-.experience-panel p{
-
-    margin-top:22px;
-
-    line-height:2;
-
-    color:#D7DCE3;
-
-}
-
-/* ===================================================== */
-/* EXPERIENCE GRID */
-/* ===================================================== */
-
-.experience-grid{
-
-    margin-top:35px;
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:18px;
-
-}
-
-.experience-card{
-
-    padding:22px;
-
-    border-radius:24px;
-
-    background:rgba(255,255,255,.04);
-
-    border:1px solid rgba(255,255,255,.05);
-
-    transition:.35s ease;
-
-}
-
-.experience-card:hover{
-
     transform:translateY(-4px);
 
-    box-shadow:
-    0 0 35px rgba(30,109,255,.12);
-
-}
-
-.experience-card h4{
-
-    color:var(--blue);
-
-    font-size:1.2rem;
-
-    font-family:'Orbitron',sans-serif;
-
-}
-
-.experience-card p{
-
-    margin-top:12px;
-
-    line-height:1.8;
-
-    font-size:.94rem;
-
 }
 
 /* ===================================================== */
-/* SHOWROOM */
+/* SCROLL INDICATOR */
 /* ===================================================== */
 
-.showroom{
-
-    padding:120px 40px;
-
-}
-
-.showroom-container{
-
-    max-width:1450px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:60px;
-
-    align-items:center;
-
-}
-
-/* ===================================================== */
-/* SHOWROOM IMAGE */
-/* ===================================================== */
-
-.showroom-image{
-
-    position:relative;
-
-    overflow:hidden;
-
-    border-radius:36px;
-
-    box-shadow:
-    0 0 60px rgba(0,0,0,.5);
-
-}
-
-.showroom-image img{
-
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-
-    transition:1.2s ease;
-
-}
-
-.showroom-image:hover img{
-
-    transform:scale(1.04);
-
-}
-
-.showroom-glow{
+.scroll-indicator{
 
     position:absolute;
 
-    inset:0;
+    bottom:40px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+.scroll-indicator span{
+
+    display:block;
+
+    width:2px;
+
+    height:70px;
 
     background:
-    linear-gradient(to top,
-    rgba(0,0,0,.65),
-    transparent);
+    linear-gradient(to bottom,
+    rgba(255,255,255,.0),
+    rgba(255,255,255,.7),
+    rgba(255,255,255,.0));
+
+    animation:scrollMove 2s infinite;
 
 }
 
-/* ===================================================== */
-/* SHOWROOM TEXT */
-/* ===================================================== */
+@keyframes scrollMove{
 
-.showroom-text small{
+    0%{
 
-    color:var(--blue);
-
-    letter-spacing:5px;
-
-    font-weight:700;
-
-}
-
-.showroom-text h3{
-
-    margin-top:24px;
-
-    font-size:clamp(2.5rem,5vw,4rem);
-
-    line-height:1.1;
-
-    font-family:'Orbitron',sans-serif;
-
-}
-
-.showroom-text p{
-
-    margin-top:28px;
-
-    color:#D7DCE3;
-
-    line-height:2;
-
-}
-
-/* ===================================================== */
-/* FEATURES */
-/* ===================================================== */
-
-.features{
-
-    margin-top:35px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:18px;
-
-}
-
-.feature{
-
-    padding:20px 24px;
-
-    border-radius:20px;
-
-    background:rgba(255,255,255,.04);
-
-    border:1px solid rgba(255,255,255,.05);
-
-    backdrop-filter:blur(12px);
-
-    transition:.35s ease;
-
-}
-
-.feature:hover{
-
-    border-color:rgba(30,109,255,.18);
-
-    transform:translateX(6px);
-
-}
-
-/* ===================================================== */
-/* AUDIO */
-/* ===================================================== */
-
-.audio-control{
-
-    position:fixed;
-
-    right:25px;
-    bottom:25px;
-
-    z-index:9999;
-
-}
-
-.audio-btn{
-
-    width:68px;
-    height:68px;
-
-    border-radius:50%;
-
-    border:none;
-
-    background:
-    linear-gradient(135deg,
-    var(--blue-dark),
-    var(--blue));
-
-    color:white;
-
-    font-size:1.2rem;
-
-    cursor:pointer;
-
-    transition:.35s ease;
-
-    box-shadow:
-    0 0 35px rgba(30,109,255,.35);
-
-}
-
-.audio-btn:hover{
-
-    transform:scale(1.08);
-
-    box-shadow:
-    0 0 60px rgba(30,109,255,.55);
-
-}
-
-/* ===================================================== */
-/* RESPONSIVE */
-/* ===================================================== */
-
-@media(max-width:980px){
-
-    nav{
-        display:none;
-    }
-
-    .hero-container,
-    .showroom-container{
-
-        grid-template-columns:1fr;
+        opacity:.2;
+        transform:translateY(0);
 
     }
 
-    .experience-grid{
+    50%{
 
-        grid-template-columns:1fr;
-
-    }
-
-    .hero{
-
-        padding-top:180px;
+        opacity:1;
+        transform:translateY(10px);
 
     }
 
-    .hero-text,
-    .showroom-text{
+    100%{
 
-        text-align:center;
-
-    }
-
-    .hero-buttons{
-
-        justify-content:center;
+        opacity:.2;
+        transform:translateY(0);
 
     }
 
 }
 
 /* ===================================================== */
-/* SCROLL REVEAL */
+/* REVEAL */
 /* ===================================================== */
 
 .reveal{
@@ -858,377 +320,45 @@ nav a:hover::after{
 
     transform:translateY(40px);
 
-    transition:1s ease;
+    animation:heroReveal 1.4s ease forwards;
 
 }
 
-.reveal.active{
+@keyframes heroReveal{
 
-    opacity:1;
+    to{
 
-    transform:translateY(0);
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===================================================== */
+/* RESPONSIVE */
+/* ===================================================== */
+
+@media(max-width:768px){
+
+    .hero{
+
+        padding-top:180px;
+
+    }
+
+    .hero-content h1{
+
+        letter-spacing:-1px;
+
+    }
+
+    .hero-content p{
+
+        font-size:1rem;
+
+    }
 
 }
 
 </style>
-
-</head>
-
-<body>
-
-<!-- ===================================================== -->
-<!-- BACKGROUND -->
-<!-- ===================================================== -->
-
-<div class="background-layer">
-
-    <img src="SHOWROOM-EXTERIOR.png" alt="Velver Motos">
-
-    <div class="background-overlay"></div>
-
-    <div class="particles"></div>
-
-</div>
-
-<!-- ===================================================== -->
-<!-- AUDIO -->
-<!-- ===================================================== -->
-
-<div class="audio-control">
-
-    <button class="audio-btn" id="musicButton">
-
-        ♫
-
-    </button>
-
-</div>
-
-<audio id="bgMusic" loop>
-
-    <source src="audio/cinematic-ambient.mp3" type="audio/mpeg">
-
-</audio>
-
-<!-- ===================================================== -->
-<!-- HEADER -->
-<!-- ===================================================== -->
-
-<header>
-
-    <div class="navbar">
-
-        <div class="logo">
-
-            <img src="LOGO-REDONDO.png" alt="Velver">
-
-            <h1>VELVER MOTOS</h1>
-
-        </div>
-
-        <nav>
-
-            <a href="#">Inicio</a>
-            <a href="#">Catálogo</a>
-            <a href="#">Showroom</a>
-            <a href="#">Experiencia</a>
-            <a href="#">Financiamiento</a>
-
-        </nav>
-
-        <button class="btn-main">
-
-            WhatsApp
-
-        </button>
-
-    </div>
-
-</header>
-
-<!-- ===================================================== -->
-<!-- HERO -->
-<!-- ===================================================== -->
-
-<section class="hero">
-
-    <div class="hero-container">
-
-        <!-- LEFT -->
-
-        <div class="hero-text reveal">
-
-            <small>BLACK EXPERIENCE™</small>
-
-            <h2>
-
-                Tecnología humana.
-                Experiencia premium.
-
-            </h2>
-
-            <p>
-
-                Más que vender motocicletas, construimos confianza.
-                Fusionamos tecnología, honestidad y atención humana
-                para crear una experiencia automotriz elegante,
-                transparente y memorable.
-
-            </p>
-
-            <div class="hero-buttons">
-
-                <button class="btn-main">
-
-                    Explorar catálogo
-
-                </button>
-
-                <button class="btn-glass">
-
-                    Entrar al showroom
-
-                </button>
-
-            </div>
-
-        </div>
-
-        <!-- RIGHT -->
-
-        <div class="experience-panel reveal">
-
-            <div class="panel-top">
-
-                <div class="live-status">
-
-                    <div class="live-dot"></div>
-
-                    SHOWROOM ACTIVO
-
-                </div>
-
-                <small style="color:#AEB7C4;">
-                    ATLIXCO • PUEBLA
-                </small>
-
-            </div>
-
-            <h3>
-
-                Una nueva forma de vivir una concesionaria.
-
-            </h3>
-
-            <p>
-
-                Diseñamos una experiencia inspirada en la confianza,
-                la claridad y la evolución tecnológica, manteniendo
-                siempre el trato humano como prioridad.
-
-            </p>
-
-            <div class="experience-grid">
-
-                <div class="experience-card">
-
-                    <h4>IA HUMANA</h4>
-
-                    <p>
-
-                        Atención inteligente con comunicación natural y cercana.
-
-                    </p>
-
-                </div>
-
-                <div class="experience-card">
-
-                    <h4>TRANSPARENCIA</h4>
-
-                    <p>
-
-                        Explicación clara de financieras, procesos y contratos.
-
-                    </p>
-
-                </div>
-
-                <div class="experience-card">
-
-                    <h4>BLACK CODE™</h4>
-
-                    <p>
-
-                        Diseño cinematográfico premium con identidad elegante.
-
-                    </p>
-
-                </div>
-
-                <div class="experience-card">
-
-                    <h4>EXPERIENCIA</h4>
-
-                    <p>
-
-                        Un ecosistema pensado para generar confianza real.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ===================================================== -->
-<!-- SHOWROOM -->
-<!-- ===================================================== -->
-
-<section class="showroom">
-
-    <div class="showroom-container">
-
-        <!-- IMAGE -->
-
-        <div class="showroom-image reveal">
-
-            <img src="SHOWROOM-INTERIOR.png" alt="Velver Showroom">
-
-            <div class="showroom-glow"></div>
-
-        </div>
-
-        <!-- TEXT -->
-
-        <div class="showroom-text reveal">
-
-            <small>SHOWROOM EXPERIENCE™</small>
-
-            <h3>
-
-                La venta termina.
-                La confianza comienza.
-
-            </h3>
-
-            <p>
-
-                Nuestro objetivo no es solo vender una motocicleta.
-                Buscamos crear una experiencia donde cada cliente
-                entienda, compare y tome la mejor decisión con claridad.
-
-            </p>
-
-            <div class="features">
-
-                <div class="feature">
-
-                    ✔ Atención humana combinada con tecnología inteligente.
-
-                </div>
-
-                <div class="feature">
-
-                    ✔ Explicación transparente de financieras y contratos.
-
-                </div>
-
-                <div class="feature">
-
-                    ✔ Experiencia premium inspirada en marcas internacionales.
-
-                </div>
-
-                <div class="feature">
-
-                    ✔ Catálogo cinematográfico y ecosistema digital inmersivo.
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ===================================================== -->
-<!-- SCRIPT -->
-<!-- ===================================================== -->
-
-<script>
-
-/* ===================================================== */
-/* AUDIO */
-/* ===================================================== */
-
-const music =
-document.getElementById('bgMusic');
-
-const button =
-document.getElementById('musicButton');
-
-music.volume = 0.25;
-
-let active = false;
-
-button.addEventListener('click',()=>{
-
-    if(!active){
-
-        music.play();
-
-        button.innerHTML = "❚❚";
-
-        active = true;
-
-    }else{
-
-        music.pause();
-
-        button.innerHTML = "♫";
-
-        active = false;
-
-    }
-
-});
-
-/* ===================================================== */
-/* SCROLL REVEAL */
-/* ===================================================== */
-
-const reveals =
-document.querySelectorAll('.reveal');
-
-window.addEventListener('scroll',()=>{
-
-    reveals.forEach(reveal=>{
-
-        const windowHeight =
-        window.innerHeight;
-
-        const revealTop =
-        reveal.getBoundingClientRect().top;
-
-        if(revealTop < windowHeight - 100){
-
-            reveal.classList.add('active');
-
-        }
-
-    });
-
-});
-
-</script>
-
-</body>
-</html>
