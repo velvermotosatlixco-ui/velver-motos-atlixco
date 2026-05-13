@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<title>Velver Motos | Cinematic Edition</title>
+<title>Velver Motos | Elite International</title>
 
 <meta name="creator" content="KNJO">
 <meta name="signature-system" content="BLACK-CODE">
@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link
-href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap"
 rel="stylesheet"
 >
 
@@ -23,10 +23,14 @@ rel="stylesheet"
 
 :root{
 
+/* BLACK CODE INVISIBLE */
 --s1:11px;
 --s2:14px;
 --s3:10px;
 --s4:15px;
+
+--black:#040404;
+--white:#ffffff;
 
 }
 
@@ -47,13 +51,21 @@ scroll-snap-type:y mandatory;
 
 body{
 
-background:black;
-color:white;
+background:var(--black);
+color:var(--white);
 overflow-x:hidden;
 
 }
 
+a{
+
+text-decoration:none;
+
+}
+
 .section{
+
+position:relative;
 
 height:100vh;
 
@@ -62,8 +74,6 @@ scroll-snap-align:start;
 display:flex;
 justify-content:center;
 align-items:center;
-
-position:relative;
 
 background-size:cover;
 background-position:center;
@@ -80,368 +90,7 @@ position:absolute;
 inset:0;
 
 background:
-radial-gradient(
-circle at center,
-transparent 0%,
-rgba(0,0,0,.35) 45%,
-rgba(0,0,0,.88) 100%
-);
-
-z-index:1;
-
-}
-
-.section::after{
-
-content:"";
-
-position:absolute;
-inset:0;
-
-background:
 linear-gradient(
-rgba(255,255,255,.02),
-rgba(0,0,0,.1)
-);
-
-animation:fog 12s linear infinite;
-
-z-index:1;
-
-}
-
-.content{
-
-position:relative;
-
-z-index:3;
-
-text-align:center;
-
-animation:cinematicReveal 1.4s ease;
-
-padding:20px;
-
-}
-
-.logo{
-
-width:220px;
-
-margin:auto;
-margin-bottom:40px;
-
-animation:pulse 4s infinite;
-
-}
-
-.logo img{
-
-width:100%;
-
-filter:
-drop-shadow(0 0 30px rgba(255,255,255,.15));
-
-}
-
-h1,h2{
-
-font-size:clamp(3rem,9vw,7rem);
-
-font-weight:900;
-
-line-height:.92;
-
-letter-spacing:-2px;
-
-text-shadow:
-0 10px 30px rgba(0,0,0,.8);
-
-margin-bottom:24px;
-
-}
-
-.spec{
-
-font-size:1.15rem;
-
-opacity:.85;
-
-margin-bottom:40px;
-
-}
-
-.btn{
-
-display:inline-flex;
-
-padding:18px 34px;
-
-border-radius:12px;
-
-background:white;
-color:black;
-
-font-weight:900;
-
-text-decoration:none;
-
-transition:.35s;
-
-}
-
-.btn:hover{
-
-transform:scale(1.04);
-
-}
-
-.whatsapp{
-
-position:fixed;
-
-right:24px;
-bottom:24px;
-
-width:70px;
-height:70px;
-
-border-radius:50%;
-
-background:#25D366;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-font-size:30px;
-
-z-index:999;
-
-animation:pulse 2s infinite;
-
-}
-
-@keyframes pulse{
-
-0%{transform:scale(1);}
-50%{transform:scale(1.08);}
-100%{transform:scale(1);}
-
-}
-
-@keyframes fog{
-
-0%{
-
-transform:translateX(-5%) scale(1);
-
-}
-
-100%{
-
-transform:translateX(5%) scale(1.1);
-
-}
-
-}
-
-@keyframes cinematicReveal{
-
-from{
-
-opacity:0;
-transform:scale(1.08);
-
-}
-
-to{
-
-opacity:1;
-transform:scale(1);
-
-}
-
-}
-
-</style>
-
-</head>
-
-
-<body>
-
-
-
-<section
-
-class="section"
-
-style="background-image:url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1800&q=100')"
-
->
-
-<div class="content">
-
-<div class="logo">
-
-<img src="logo.png">
-
-</div>
-
-<h1>
-
-PODER<br>
-SOBRE DOS RUEDAS
-
-</h1>
-
-<div class="spec">
-
-Atlixco, Puebla
-
-</div>
-
-<a
-class="btn"
-target="_blank"
-href="https://wa.me/522441252948?text=Hola%20quiero%20cotizar"
->
-
-COTIZAR
-
-</a>
-
-</div>
-
-</section>
-
-
-
-<section
-
-class="section"
-
-style="background-image:url('https://images.unsplash.com/photo-1517846693594-1567da72af75?auto=format&fit=crop&w=1800&q=100')"
-
->
-
-<div class="content">
-
-<h2>
-
-FIGHTER 200
-
-</h2>
-
-<div class="spec">
-
-200CC • Deportiva
-
-</div>
-
-<a
-class="btn"
-target="_blank"
-href="https://wa.me/522441252948?text=Quiero%20la%20Fighter%20200"
->
-
-QUIERO ESTA
-
-</a>
-
-</div>
-
-</section>
-
-
-
-<section
-
-class="section"
-
-style="background-image:url('https://images.unsplash.com/photo-1529429617124-aee711a5ac1c?auto=format&fit=crop&w=1800&q=100')"
-
->
-
-<div class="content">
-
-<h2>
-
-MAGNUM 250
-
-</h2>
-
-<div class="spec">
-
-250CC • Touring
-
-</div>
-
-<a
-class="btn"
-target="_blank"
-href="https://wa.me/522441252948?text=Quiero%20la%20Magnum%20250"
->
-
-QUIERO ESTA
-
-</a>
-
-</div>
-
-</section>
-
-
-
-<section
-
-class="section"
-
-style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=100')"
-
->
-
-<div class="content">
-
-<h2>
-
-NITRO 150
-
-</h2>
-
-<div class="spec">
-
-150CC • Urbana
-
-</div>
-
-<a
-class="btn"
-target="_blank"
-href="https://wa.me/522441252948?text=Quiero%20la%20Nitro%20150"
->
-
-QUIERO ESTA
-
-</a>
-
-</div>
-
-</section>
-
-
-
-<a
-class="whatsapp"
-target="_blank"
-href="https://wa.me/522441252948?text=Hola%20quiero%20información"
->
-
-💬
-
-</a>
-
-
-</body>
-</html>
+180deg,
+rgba(0,0,0,.15),
+rgba(0,0,0,.
