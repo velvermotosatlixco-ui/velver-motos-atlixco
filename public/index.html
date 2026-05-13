@@ -5,10 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Velver Motos | Atlixco Puebla</title>
-<meta name="description" content="Motocicletas premium en Atlixco Puebla. Crédito, contado y entrega inmediata.">
+
+<meta
+name="description"
+content="Velver Motos Atlixco Puebla. Crédito, contado, entrega inmediata y motocicletas premium."
+>
+
+<meta name="theme-color" content="#000000">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+rel="stylesheet"
+>
 
 <style>
 
@@ -17,61 +28,60 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Inter',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
 background:#050505;
-color:white;
+color:#ffffff;
 overflow-x:hidden;
 }
 
 a{
 text-decoration:none;
+color:inherit;
+}
+
+img{
+display:block;
+width:100%;
 }
 
 .container{
-width:92%;
-max-width:1400px;
+width:min(92%,1400px);
 margin:auto;
 }
 
-.hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-background:
-linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
-url("https://images.unsplash.com/photo-1558981806-ec527fa84c39");
-background-size:cover;
-background-position:center;
+section{
+padding:90px 0;
 }
 
-.hero-content h1{
-font-size:clamp(2.5rem,7vw,5rem);
+.title{
+font-size:clamp(2rem,5vw,3rem);
 font-weight:900;
-line-height:1;
 margin-bottom:20px;
+text-align:center;
 }
 
-.hero-content p{
-font-size:1.2rem;
-opacity:.9;
-margin-bottom:35px;
-}
-
-.btn-group{
-display:flex;
-gap:15px;
-flex-wrap:wrap;
+.subtitle{
+opacity:.8;
+text-align:center;
+margin-bottom:50px;
 }
 
 .btn{
-padding:18px 32px;
-border-radius:8px;
-font-weight:700;
-transition:.3s;
+display:inline-flex;
+justify-content:center;
+align-items:center;
+padding:18px 34px;
+border-radius:12px;
+font-weight:800;
+transition:.25s;
 cursor:pointer;
-display:inline-block;
+}
+
+.btn:hover{
+transform:translateY(-3px);
 }
 
 .btn-primary{
@@ -79,38 +89,73 @@ background:white;
 color:black;
 }
 
-.btn-primary:hover{
-transform:translateY(-3px);
-}
-
-.btn-outline{
-border:1px solid white;
+.btn-secondary{
+border:1px solid rgba(255,255,255,.35);
 color:white;
 }
 
-section{
-padding:80px 0;
+.hero{
+
+min-height:100vh;
+
+background:
+linear-gradient(
+rgba(0,0,0,.55),
+rgba(0,0,0,.85)
+),
+url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
 }
 
-.section-title{
-font-size:2rem;
-font-weight:800;
+.hero-content{
+max-width:900px;
+}
+
+.hero-tag{
+font-size:.9rem;
+font-weight:700;
+letter-spacing:2px;
+opacity:.75;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:clamp(3rem,8vw,6rem);
+font-weight:900;
+line-height:.95;
+margin-bottom:24px;
+}
+
+.hero p{
+font-size:1.2rem;
+line-height:1.6;
+opacity:.9;
 margin-bottom:40px;
-text-align:center;
 }
 
-.grid{
+.hero-buttons{
+display:flex;
+gap:16px;
+flex-wrap:wrap;
+}
+
+.catalog{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
+gap:24px;
 }
 
 .card{
-background:#111;
-border:1px solid #222;
-border-radius:14px;
+background:#0f0f0f;
+border:1px solid rgba(255,255,255,.08);
+border-radius:20px;
 overflow:hidden;
-transition:.3s;
+transition:.25s;
 }
 
 .card:hover{
@@ -118,88 +163,143 @@ transform:translateY(-8px);
 }
 
 .card img{
-width:100%;
-height:230px;
+height:240px;
 object-fit:cover;
 }
 
 .card-body{
-padding:20px;
+padding:22px;
 }
 
 .card h3{
-margin-bottom:12px;
+font-size:1.4rem;
+font-weight:800;
+margin-bottom:10px;
+}
+
+.spec{
+opacity:.75;
+margin-bottom:14px;
 }
 
 .price{
-font-size:1.4rem;
+font-size:1.8rem;
 font-weight:900;
-margin-bottom:16px;
+margin-bottom:22px;
 }
 
 .features{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
 }
 
 .feature{
-background:#111;
-padding:25px;
-border-radius:12px;
+background:#111111;
+border-radius:18px;
+padding:30px;
 text-align:center;
+font-weight:700;
+}
+
+.cta{
+background:#0f0f0f;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.06);
+border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.cta h2{
+font-size:clamp(2rem,5vw,3rem);
+font-weight:900;
+margin-bottom:20px;
+}
+
+.cta p{
+opacity:.8;
+margin-bottom:35px;
 }
 
 footer{
-padding:40px 0;
+padding:50px 0;
 text-align:center;
-border-top:1px solid #222;
+opacity:.75;
 }
 
 .whatsapp{
 position:fixed;
-right:20px;
-bottom:20px;
+bottom:24px;
+right:24px;
+
 width:70px;
 height:70px;
+
 border-radius:50%;
 background:#25D366;
+
 display:flex;
 justify-content:center;
 align-items:center;
-font-size:30px;
+
+font-size:28px;
 z-index:999;
+box-shadow:0 10px 30px rgba(0,0,0,.45);
 }
 
 .popup{
+
 position:fixed;
 inset:0;
+
 background:rgba(0,0,0,.85);
+
 display:none;
 justify-content:center;
 align-items:center;
+
 z-index:1000;
 }
 
-.popup-content{
-background:#111;
+.popup-box{
+
+background:#111111;
+
+width:min(90%,420px);
+
 padding:40px;
-border-radius:20px;
+border-radius:24px;
+
 text-align:center;
-max-width:400px;
-width:90%;
 }
 
-.popup-content h2{
-margin-bottom:20px;
+.popup-box h3{
+font-size:2rem;
+margin-bottom:18px;
+font-weight:900;
+}
+
+.popup-box p{
+opacity:.75;
+margin-bottom:24px;
 }
 
 .popup-buttons{
 display:flex;
-gap:15px;
-justify-content:center;
+gap:14px;
 flex-wrap:wrap;
-margin-top:20px;
+justify-content:center;
+}
+
+@media(max-width:768px){
+
+.hero{
+text-align:center;
+}
+
+.hero-buttons{
+justify-content:center;
+}
+
 }
 
 </style>
@@ -207,29 +307,45 @@ margin-top:20px;
 
 <body>
 
+
 <section class="hero">
 
-<div class="container hero-content">
+<div class="container">
 
-<h1>TU PRÓXIMA MOTO ESTÁ AQUÍ</h1>
+<div class="hero-content">
+
+<div class="hero-tag">
+VELVER BLACK CODE™
+</div>
+
+<h1>
+TU PRÓXIMA MOTO<br>
+ESTÁ AQUÍ
+</h1>
 
 <p>
 Crédito inmediato • Entrega rápida • Modelos 2026<br>
 Atlixco, Puebla
 </p>
 
-<div class="btn-group">
+<div class="hero-buttons">
 
 <a
 class="btn btn-primary"
 target="_blank"
-href="https://wa.me/522444452887?text=Hola%20quiero%20cotizar%20una%20moto">
-Cotizar por WhatsApp
+href="https://wa.me/522441252948?text=Hola%20vi%20una%20moto%20en%20Velver%20Motos%20y%20quiero%20cotizar"
+>
+COTIZAR
 </a>
 
-<a class="btn btn-outline" href="#catalogo">
-Ver catálogo
+<a
+class="btn btn-secondary"
+href="#catalogo"
+>
+VER CATÁLOGO
 </a>
+
+</div>
 
 </div>
 
@@ -238,47 +354,39 @@ Ver catálogo
 </section>
 
 
+
 <section id="catalogo">
 
 <div class="container">
 
-<h2 class="section-title">
+<h2 class="title">
 CATÁLOGO PREMIUM
 </h2>
 
-<div class="grid">
+<p class="subtitle">
+Modelos seleccionados para ciudad, trabajo y carretera
+</p>
 
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1517846693594-1567da72af75">
-
-<div class="card-body">
-
-<h3>Magnum 250</h3>
-
-<div class="price">
-$49,999
-</div>
-
-<a
-class="btn btn-primary"
-target="_blank"
-href="https://wa.me/522444452887">
-Cotizar
-</a>
-
-</div>
-
-</div>
+<div class="catalog">
 
 
 <div class="card">
 
-<img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39">
+<img
+loading="lazy"
+src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=80"
+alt="Fighter 200"
+>
 
 <div class="card-body">
 
-<h3>Fighter 200</h3>
+<h3>
+Fighter 200
+</h3>
+
+<div class="spec">
+200cc • 4 tiempos • deportiva
+</div>
 
 <div class="price">
 $39,999
@@ -287,13 +395,87 @@ $39,999
 <a
 class="btn btn-primary"
 target="_blank"
-href="https://wa.me/522444452887">
-Cotizar
+href="https://wa.me/522441252948?text=Quiero%20cotizar%20la%20Fighter%20200"
+>
+COTIZAR
 </a>
 
 </div>
 
 </div>
+
+
+
+<div class="card">
+
+<img
+loading="lazy"
+src="https://images.unsplash.com/photo-1517846693594-1567da72af75?auto=format&fit=crop&w=1200&q=80"
+alt="Magnum 250"
+>
+
+<div class="card-body">
+
+<h3>
+Magnum 250
+</h3>
+
+<div class="spec">
+250cc • touring • premium
+</div>
+
+<div class="price">
+$49,999
+</div>
+
+<a
+class="btn btn-primary"
+target="_blank"
+href="https://wa.me/522441252948?text=Quiero%20cotizar%20la%20Magnum%20250"
+>
+COTIZAR
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<img
+loading="lazy"
+src="https://images.unsplash.com/photo-1529429617124-aee711a5ac1c?auto=format&fit=crop&w=1200&q=80"
+alt="Nitro 150"
+>
+
+<div class="card-body">
+
+<h3>
+Nitro 150
+</h3>
+
+<div class="spec">
+150cc • urbana • económica
+</div>
+
+<div class="price">
+$29,999
+</div>
+
+<a
+class="btn btn-primary"
+target="_blank"
+href="https://wa.me/522441252948?text=Quiero%20cotizar%20la%20Nitro%20150"
+>
+COTIZAR
+</a>
+
+</div>
+
+</div>
+
 
 </div>
 
@@ -302,18 +484,19 @@ Cotizar
 </section>
 
 
+
 <section>
 
 <div class="container">
 
-<h2 class="section-title">
+<h2 class="title">
 ¿POR QUÉ VELVER?
 </h2>
 
 <div class="features">
 
 <div class="feature">
-✅ Financiamiento
+✅ Financiamiento disponible
 </div>
 
 <div class="feature">
@@ -321,7 +504,7 @@ Cotizar
 </div>
 
 <div class="feature">
-✅ Refacciones
+✅ Refacciones originales
 </div>
 
 <div class="feature">
@@ -335,78 +518,60 @@ Cotizar
 </section>
 
 
+
+<section class="cta">
+
+<div class="container">
+
+<h2>
+¿CONTADO O CRÉDITO?
+</h2>
+
+<p>
+Un asesor puede ayudarte hoy mismo
+</p>
+
+<a
+class="btn btn-primary"
+target="_blank"
+href="https://wa.me/522441252948?text=Quiero%20información%20sobre%20financiamiento"
+>
+HABLAR CON ASESOR
+</a>
+
+</div>
+
+</section>
+
+
+
 <footer>
 
 <div class="container">
 
-<p>
-VELVER MOTOS — Atlixco Puebla
-</p>
+VELVER MOTOS — Atlixco, Puebla<br><br>
 
-<p>
-244 445 2887
-</p>
+WhatsApp: 244 125 2948
 
 </div>
 
 </footer>
 
 
+
 <a
 class="whatsapp"
 target="_blank"
-href="https://wa.me/522444452887?text=Hola%20quiero%20información">
+href="https://wa.me/522441252948?text=Hola%20quiero%20cotizar%20una%20moto"
+>
 💬
 </a>
 
 
-<div class="popup" id="popup">
 
-<div class="popup-content">
+<div
+class="popup"
+id="popup"
+>
 
-<h2>
-¿Buscas crédito o contado?
-</h2>
-
-<div class="popup-buttons">
-
-<a
-class="btn btn-primary"
-target="_blank"
-href="https://wa.me/522444452887?text=Quiero%20crédito">
-Crédito
-</a>
-
-<a
-class="btn btn-outline"
-target="_blank"
-href="https://wa.me/522444452887?text=Quiero%20pago%20de%20contado">
-Contado
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<script>
-
-setTimeout(()=>{
-document.getElementById("popup").style.display="flex";
-},8000);
-
-document.getElementById("popup")
-.addEventListener("click",(e)=>{
-
-if(e.target.id==="popup"){
-e.target.style.display="none";
-}
-
-});
-
-</script>
-
-</body>
-</html>
+<div class="popup
