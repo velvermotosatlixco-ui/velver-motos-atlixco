@@ -6,7 +6,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<title>Velver Motos | Elite Experience</title>
+<title>Velver Motos | Flagship Experience</title>
+
+<meta name="description" content="Velver Motos Atlixco Puebla">
 
 <!-- BLACK CODE INVISIBLE -->
 <meta name="creator" content="KNJO">
@@ -16,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link
-href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap"
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap"
 rel="stylesheet"
 >
 
@@ -29,7 +31,7 @@ rel="stylesheet"
 --s3:10px;
 --s4:15px;
 
---blue:#00aaff;
+--blue:#008cff;
 --black:#020202;
 --white:#ffffff;
 
@@ -64,7 +66,7 @@ text-decoration:none;
 
 }
 
-.section{
+section{
 
 position:relative;
 
@@ -83,7 +85,7 @@ overflow:hidden;
 
 }
 
-.section::before{
+section::before{
 
 content:"";
 
@@ -93,15 +95,15 @@ inset:0;
 background:
 linear-gradient(
 rgba(0,0,0,.10),
-rgba(0,0,0,.45),
-rgba(0,0,0,.95)
+rgba(0,0,0,.40),
+rgba(0,0,0,.94)
 );
 
 z-index:1;
 
 }
 
-.section::after{
+section::after{
 
 content:"";
 
@@ -111,8 +113,8 @@ inset:0;
 background:
 radial-gradient(
 circle at center,
-transparent 10%,
-rgba(0,0,0,.45) 60%,
+transparent 5%,
+rgba(0,0,0,.30) 40%,
 rgba(0,0,0,.95) 100%
 );
 
@@ -125,23 +127,23 @@ z-index:1;
 position:relative;
 z-index:3;
 
-width:min(92%,1400px);
-
 text-align:center;
 
-animation:reveal 1.4s ease;
+width:min(92%,1400px);
+
+animation:fade 1.4s ease;
 
 }
 
 .logo{
 
-width:300px;
+width:420px;
 
 margin:auto;
 margin-bottom:40px;
 
 filter:
-drop-shadow(0 0 35px rgba(0,170,255,.35));
+drop-shadow(0 0 40px rgba(0,140,255,.35));
 
 }
 
@@ -155,19 +157,19 @@ width:100%;
 
 display:inline-block;
 
-padding:12px 26px;
-
-border:1px solid rgba(0,170,255,.35);
+padding:12px 28px;
 
 border-radius:999px;
 
-font-size:.8rem;
+border:1px solid rgba(0,140,255,.35);
+
+color:var(--blue);
 
 letter-spacing:4px;
 
-margin-bottom:24px;
+font-size:.8rem;
 
-color:var(--blue);
+margin-bottom:26px;
 
 backdrop-filter:blur(8px);
 
@@ -181,19 +183,18 @@ font-weight:900;
 
 line-height:.9;
 
-letter-spacing:-3px;
-
-text-transform:uppercase;
+letter-spacing:-4px;
 
 margin-bottom:24px;
 
+text-transform:uppercase;
+
 text-shadow:
-0 0 30px rgba(0,170,255,.15),
-0 10px 40px rgba(0,0,0,.8);
+0 12px 40px rgba(0,0,0,.8);
 
 }
 
-.spec{
+p{
 
 font-size:1.1rem;
 
@@ -211,15 +212,11 @@ margin-bottom:44px;
 
 display:inline-flex;
 
-padding:20px 40px;
+padding:20px 42px;
 
 border-radius:999px;
 
-background:linear-gradient(
-90deg,
-#ffffff,
-#d9d9d9
-);
+background:white;
 
 color:black;
 
@@ -227,16 +224,13 @@ font-weight:900;
 
 letter-spacing:2px;
 
-box-shadow:
-0 0 30px rgba(255,255,255,.12);
-
-transition:.4s;
+transition:.35s;
 
 }
 
 .btn:hover{
 
-transform:scale(1.05);
+transform:scale(1.04);
 
 }
 
@@ -273,15 +267,15 @@ animation:pulse 2s infinite;
 
 position:absolute;
 
-bottom:30px;
+bottom:35px;
 
 left:50%;
 
 transform:translateX(-50%);
 
-font-size:.8rem;
-
 letter-spacing:4px;
+
+font-size:.8rem;
 
 opacity:.7;
 
@@ -297,12 +291,12 @@ z-index:3;
 
 }
 
-@keyframes reveal{
+@keyframes fade{
 
 from{
 
 opacity:0;
-transform:scale(1.08);
+transform:scale(1.05);
 
 }
 
@@ -324,68 +318,45 @@ transform:scale(1);
 
 
 
-<!-- HERO -->
+<!-- LOGO HERO -->
 
 
 <section
-
-class="section"
-
-style="background-image:url('hero.jpg')"
-
+style="background-image:url('./assets/logo.webp')"
 >
-
 
 <div class="content">
 
-
-<div class="logo">
-
-<img src="logo.png">
-
-</div>
-
-
 <div class="badge">
-
-VELVER ELITE
-
+VELVER ELITE INTERNATIONAL
 </div>
-
 
 <h1>
 
-TU CAMINO.<br>
-TU PODER.
+CALIDAD.<br>
+CONFIANZA.<br>
+RENDIMIENTO.
 
 </h1>
 
+<p>
 
-<div class="spec">
+Atlixco • Puebla<br>
+Crédito inmediato • Entrega rápida
 
-ATLIXCO • PUEBLA<br>
-CRÉDITO INMEDIATO • ENTREGA RÁPIDA
-
-</div>
-
+</p>
 
 <a
-
 class="btn"
-
 target="_blank"
-
 href="https://wa.me/522441252948?text=Hola%20quiero%20cotizar"
-
 >
 
 SOLICITAR ASESOR
 
 </a>
 
-
 </div>
-
 
 <div class="scroll">
 
@@ -393,151 +364,67 @@ SCROLL
 
 </div>
 
-
 </section>
 
 
 
 
-<!-- MOTO 1 -->
+<!-- SUCURSAL 01 -->
 
 
 <section
-
-class="section"
-
-style="background-image:url('fighter.jpg')"
-
+style="background-image:url('./assets/store-01.webp')"
 >
-
 
 <div class="content">
 
-
 <div class="badge">
-
-SPORT PERFORMANCE
-
+FLAGSHIP SHOWROOM
 </div>
-
 
 <h2>
 
-FIGHTER 200
+EXPERIENCIA<br>
+VELVER
 
 </h2>
 
+<p>
 
-<div class="spec">
+Inventario premium • Atención especializada<br>
+Financiamiento y contado
 
-200CC • AGRESIVA • PRECISA • DOMINANTE
-
-</div>
-
+</p>
 
 <a
-
 class="btn"
-
 target="_blank"
-
-href="https://wa.me/522441252948?text=Quiero%20la%20Fighter%20200"
-
+href="https://wa.me/522441252948?text=Quiero%20visitar%20la%20sucursal"
 >
 
-QUIERO ESTA
+VISITAR
 
 </a>
 
-
 </div>
-
 
 </section>
 
 
 
 
-<!-- MOTO 2 -->
+<!-- SUCURSAL 02 -->
 
 
 <section
-
-class="section"
-
-style="background-image:url('magnum.jpg')"
-
+style="background-image:url('./assets/store-02.webp')"
 >
-
 
 <div class="content">
 
-
 <div class="badge">
-
-TOURING LUXURY
-
+MOTO EXPERIENCE
 </div>
-
-
-<h2>
-
-MAGNUM 250
-
-</h2>
-
-
-<div class="spec">
-
-250CC • PODER • ELEGANCIA • PRESENCIA
-
-</div>
-
-
-<a
-
-class="btn"
-
-target="_blank"
-
-href="https://wa.me/522441252948?text=Quiero%20la%20Magnum%20250"
-
->
-
-QUIERO ESTA
-
-</a>
-
-
-</div>
-
-
-</section>
-
-
-
-
-<!-- CREDITO -->
-
-
-<section
-
-class="section"
-
-style="background-image:url('credito.jpg')"
-
->
-
-
-<div class="content">
-
-
-<div class="badge">
-
-APROBACIÓN RÁPIDA
-
-</div>
-
 
 <h2>
 
@@ -546,32 +433,24 @@ HOY.
 
 </h2>
 
+<p>
 
-<div class="spec">
+INE • Correo • Teléfono<br>
+Aprobación rápida
 
-INE • CORREO • TELÉFONO<br>
-SIN COMPLICACIONES
-
-</div>
-
+</p>
 
 <a
-
 class="btn"
-
 target="_blank"
-
 href="https://wa.me/522441252948?text=Quiero%20tramitar%20mi%20crédito"
-
 >
 
 TRAMITAR CRÉDITO
 
 </a>
 
-
 </div>
-
 
 </section>
 
@@ -579,13 +458,9 @@ TRAMITAR CRÉDITO
 
 
 <a
-
 class="whatsapp"
-
 target="_blank"
-
 href="https://wa.me/522441252948?text=Hola%20quiero%20información"
-
 >
 
 💬
