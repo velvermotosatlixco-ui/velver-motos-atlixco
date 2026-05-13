@@ -1,550 +1,412 @@
-<!-- ===================================================== -->
-<!-- HERO — VELVER MOTOS CINEMATIC HUMAN EXPERIENCE™ -->
-<!-- BLACK CODE™ -->
-<!-- ===================================================== -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<section class="hero">
+<title>Velver Motos | Atlixco Puebla</title>
+<meta name="description" content="Motocicletas premium en Atlixco Puebla. Crédito, contado y entrega inmediata.">
 
-    <!-- ============================================ -->
-    <!-- CINEMATIC OVERLAY -->
-    <!-- ============================================ -->
-
-    <div class="hero-overlay"></div>
-
-    <!-- ============================================ -->
-    <!-- HERO CONTAINER -->
-    <!-- ============================================ -->
-
-    <div class="hero-container">
-
-        <!-- ============================================ -->
-        <!-- LEFT SIDE -->
-        <!-- ============================================ -->
-
-        <div class="hero-content reveal">
-
-            <small>
-
-                VELVER MOTOS ATLIXCO
-
-            </small>
-
-            <h1>
-
-                Una experiencia construida
-                desde la confianza.
-
-            </h1>
-
-            <p>
-
-                Creemos que elegir una motocicleta debe sentirse claro,
-                humano y transparente. Por eso combinamos tecnología,
-                atención real y acompañamiento para crear una experiencia
-                distinta desde el primer contacto.
-
-            </p>
-
-            <div class="hero-actions">
-
-                <button class="btn-primary">
-
-                    Explorar showroom
-
-                </button>
-
-                <button class="btn-secondary">
-
-                    Ver catálogo
-
-                </button>
-
-            </div>
-
-        </div>
-
-        <!-- ============================================ -->
-        <!-- RIGHT SIDE -->
-        <!-- ============================================ -->
-
-        <div class="hero-visual reveal">
-
-            <div class="hero-image-wrapper">
-
-                <img
-                src="SHOWROOM-EXTERIOR.png"
-                alt="Velver Motos Showroom">
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- ============================================ -->
-    <!-- SCROLL INDICATOR -->
-    <!-- ============================================ -->
-
-    <div class="scroll-indicator">
-
-        <span></span>
-
-    </div>
-
-</section>
-
-<!-- ===================================================== -->
-<!-- CSS -->
-<!-- ===================================================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
 <style>
 
-/* ===================================================== */
-/* HERO */
-/* ===================================================== */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+}
+
+.container{
+width:92%;
+max-width:1400px;
+margin:auto;
+}
 
 .hero{
-
-    position:relative;
-
-    min-height:100vh;
-
-    display:flex;
-
-    align-items:center;
-
-    overflow:hidden;
-
-    padding:140px 40px 100px;
-
-    background:#050505;
-
+min-height:100vh;
+display:flex;
+align-items:center;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
+url("https://images.unsplash.com/photo-1558981806-ec527fa84c39");
+background-size:cover;
+background-position:center;
 }
-
-/* ===================================================== */
-/* OVERLAY */
-/* ===================================================== */
-
-.hero-overlay{
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-
-    radial-gradient(circle at right,
-    rgba(30,109,255,.08),
-    transparent 30%),
-
-    linear-gradient(to right,
-    rgba(0,0,0,.92) 10%,
-    rgba(0,0,0,.55) 45%,
-    rgba(0,0,0,.2) 100%);
-
-    z-index:1;
-
-}
-
-/* ===================================================== */
-/* CONTAINER */
-/* ===================================================== */
-
-.hero-container{
-
-    position:relative;
-
-    z-index:2;
-
-    width:100%;
-
-    max-width:1450px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:1fr 1.1fr;
-
-    gap:60px;
-
-    align-items:center;
-
-}
-
-/* ===================================================== */
-/* LEFT CONTENT */
-/* ===================================================== */
-
-.hero-content{
-
-    max-width:620px;
-
-}
-
-/* ===================================================== */
-/* SMALL */
-/* ===================================================== */
-
-.hero-content small{
-
-    display:inline-block;
-
-    color:#1E6DFF;
-
-    letter-spacing:5px;
-
-    font-weight:700;
-
-    margin-bottom:28px;
-
-    font-size:.82rem;
-
-}
-
-/* ===================================================== */
-/* TITLE */
-/* ===================================================== */
 
 .hero-content h1{
-
-    font-size:clamp(3.5rem,7vw,6.8rem);
-
-    line-height:.95;
-
-    letter-spacing:-3px;
-
-    font-weight:700;
-
-    color:#F5F7FA;
-
-    max-width:700px;
-
+font-size:clamp(2.5rem,7vw,5rem);
+font-weight:900;
+line-height:1;
+margin-bottom:20px;
 }
-
-/* ===================================================== */
-/* TEXT */
-/* ===================================================== */
 
 .hero-content p{
-
-    margin-top:38px;
-
-    color:#D7DCE3;
-
-    line-height:2;
-
-    font-size:1.05rem;
-
-    max-width:560px;
-
+font-size:1.2rem;
+opacity:.9;
+margin-bottom:35px;
 }
 
-/* ===================================================== */
-/* ACTIONS */
-/* ===================================================== */
-
-.hero-actions{
-
-    margin-top:50px;
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:18px;
-
+.btn-group{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
 }
 
-/* ===================================================== */
-/* PRIMARY BUTTON */
-/* ===================================================== */
+.btn{
+padding:18px 32px;
+border-radius:8px;
+font-weight:700;
+transition:.3s;
+cursor:pointer;
+display:inline-block;
+}
 
 .btn-primary{
-
-    padding:16px 30px;
-
-    border:none;
-
-    border-radius:999px;
-
-    background:
-    linear-gradient(135deg,
-    #0B46B5,
-    #1E6DFF);
-
-    color:white;
-
-    font-weight:600;
-
-    cursor:pointer;
-
-    transition:.35s ease;
-
+background:white;
+color:black;
 }
 
 .btn-primary:hover{
-
-    transform:translateY(-4px);
-
+transform:translateY(-3px);
 }
 
-/* ===================================================== */
-/* SECONDARY BUTTON */
-/* ===================================================== */
-
-.btn-secondary{
-
-    padding:16px 30px;
-
-    border-radius:999px;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    background:rgba(255,255,255,.03);
-
-    color:white;
-
-    cursor:pointer;
-
-    transition:.35s ease;
-
+.btn-outline{
+border:1px solid white;
+color:white;
 }
 
-.btn-secondary:hover{
-
-    background:rgba(255,255,255,.08);
-
+section{
+padding:80px 0;
 }
 
-/* ===================================================== */
-/* HERO VISUAL */
-/* ===================================================== */
-
-.hero-visual{
-
-    position:relative;
-
-    display:flex;
-
-    justify-content:flex-end;
-
+.section-title{
+font-size:2rem;
+font-weight:800;
+margin-bottom:40px;
+text-align:center;
 }
 
-/* ===================================================== */
-/* IMAGE WRAPPER */
-/* ===================================================== */
-
-.hero-image-wrapper{
-
-    position:relative;
-
-    width:100%;
-
-    max-width:780px;
-
-    border-radius:34px;
-
-    overflow:hidden;
-
-    box-shadow:
-    0 0 100px rgba(0,0,0,.65);
-
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
-/* ===================================================== */
-/* IMAGE */
-/* ===================================================== */
-
-.hero-image-wrapper img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    display:block;
-
-    transition:1.5s ease;
-
-    filter:
-    brightness(.92)
-    contrast(1.02);
-
+.card{
+background:#111;
+border:1px solid #222;
+border-radius:14px;
+overflow:hidden;
+transition:.3s;
 }
 
-.hero-image-wrapper:hover img{
-
-    transform:scale(1.03);
-
+.card:hover{
+transform:translateY(-8px);
 }
 
-/* ===================================================== */
-/* IMAGE OVERLAY */
-/* ===================================================== */
-
-.hero-image-wrapper::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-
-    linear-gradient(to top,
-    rgba(0,0,0,.45),
-    transparent 40%);
-
+.card img{
+width:100%;
+height:230px;
+object-fit:cover;
 }
 
-/* ===================================================== */
-/* SCROLL INDICATOR */
-/* ===================================================== */
-
-.scroll-indicator{
-
-    position:absolute;
-
-    bottom:40px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    z-index:3;
-
+.card-body{
+padding:20px;
 }
 
-.scroll-indicator span{
-
-    display:block;
-
-    width:2px;
-
-    height:70px;
-
-    background:
-    linear-gradient(to bottom,
-    rgba(255,255,255,.0),
-    rgba(255,255,255,.7),
-    rgba(255,255,255,.0));
-
-    animation:scrollMove 2s infinite;
-
+.card h3{
+margin-bottom:12px;
 }
 
-@keyframes scrollMove{
-
-    0%{
-
-        opacity:.25;
-        transform:translateY(0);
-
-    }
-
-    50%{
-
-        opacity:1;
-        transform:translateY(10px);
-
-    }
-
-    100%{
-
-        opacity:.25;
-        transform:translateY(0);
-
-    }
-
+.price{
+font-size:1.4rem;
+font-weight:900;
+margin-bottom:16px;
 }
 
-/* ===================================================== */
-/* REVEAL */
-/* ===================================================== */
-
-.reveal{
-
-    opacity:0;
-
-    transform:translateY(40px);
-
-    animation:fadeReveal 1.2s ease forwards;
-
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
-@keyframes fadeReveal{
-
-    to{
-
-        opacity:1;
-        transform:translateY(0);
-
-    }
-
+.feature{
+background:#111;
+padding:25px;
+border-radius:12px;
+text-align:center;
 }
 
-/* ===================================================== */
-/* RESPONSIVE */
-/* ===================================================== */
-
-@media(max-width:1100px){
-
-    .hero-container{
-
-        grid-template-columns:1fr;
-
-        gap:70px;
-
-    }
-
-    .hero-content{
-
-        max-width:100%;
-
-        text-align:center;
-
-        margin:auto;
-
-    }
-
-    .hero-content p{
-
-        margin-left:auto;
-        margin-right:auto;
-
-    }
-
-    .hero-actions{
-
-        justify-content:center;
-
-    }
-
-    .hero-visual{
-
-        justify-content:center;
-
-    }
-
+footer{
+padding:40px 0;
+text-align:center;
+border-top:1px solid #222;
 }
 
-@media(max-width:768px){
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+width:70px;
+height:70px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+z-index:999;
+}
 
-    .hero{
+.popup{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.85);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:1000;
+}
 
-        padding-top:180px;
+.popup-content{
+background:#111;
+padding:40px;
+border-radius:20px;
+text-align:center;
+max-width:400px;
+width:90%;
+}
 
-    }
+.popup-content h2{
+margin-bottom:20px;
+}
 
-    .hero-content h1{
-
-        letter-spacing:-1px;
-
-    }
-
+.popup-buttons{
+display:flex;
+gap:15px;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:20px;
 }
 
 </style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<h1>TU PRÓXIMA MOTO ESTÁ AQUÍ</h1>
+
+<p>
+Crédito inmediato • Entrega rápida • Modelos 2026<br>
+Atlixco, Puebla
+</p>
+
+<div class="btn-group">
+
+<a
+class="btn btn-primary"
+target="_blank"
+href="https://wa.me/522444452887?text=Hola%20quiero%20cotizar%20una%20moto">
+Cotizar por WhatsApp
+</a>
+
+<a class="btn btn-outline" href="#catalogo">
+Ver catálogo
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="catalogo">
+
+<div class="container">
+
+<h2 class="section-title">
+CATÁLOGO PREMIUM
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1517846693594-1567da72af75">
+
+<div class="card-body">
+
+<h3>Magnum 250</h3>
+
+<div class="price">
+$49,999
+</div>
+
+<a
+class="btn btn-primary"
+target="_blank"
+href="https://wa.me/522444452887">
+Cotizar
+</a>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39">
+
+<div class="card-body">
+
+<h3>Fighter 200</h3>
+
+<div class="price">
+$39,999
+</div>
+
+<a
+class="btn btn-primary"
+target="_blank"
+href="https://wa.me/522444452887">
+Cotizar
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+¿POR QUÉ VELVER?
+</h2>
+
+<div class="features">
+
+<div class="feature">
+✅ Financiamiento
+</div>
+
+<div class="feature">
+✅ Garantía oficial
+</div>
+
+<div class="feature">
+✅ Refacciones
+</div>
+
+<div class="feature">
+✅ Servicio postventa
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="container">
+
+<p>
+VELVER MOTOS — Atlixco Puebla
+</p>
+
+<p>
+244 445 2887
+</p>
+
+</div>
+
+</footer>
+
+
+<a
+class="whatsapp"
+target="_blank"
+href="https://wa.me/522444452887?text=Hola%20quiero%20información">
+💬
+</a>
+
+
+<div class="popup" id="popup">
+
+<div class="popup-content">
+
+<h2>
+¿Buscas crédito o contado?
+</h2>
+
+<div class="popup-buttons">
+
+<a
+class="btn btn-primary"
+target="_blank"
+href="https://wa.me/522444452887?text=Quiero%20crédito">
+Crédito
+</a>
+
+<a
+class="btn btn-outline"
+target="_blank"
+href="https://wa.me/522444452887?text=Quiero%20pago%20de%20contado">
+Contado
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+setTimeout(()=>{
+document.getElementById("popup").style.display="flex";
+},8000);
+
+document.getElementById("popup")
+.addEventListener("click",(e)=>{
+
+if(e.target.id==="popup"){
+e.target.style.display="none";
+}
+
+});
+
+</script>
+
+</body>
+</html>
