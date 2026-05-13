@@ -1,192 +1,237 @@
 <!-- ===================================================== -->
-<!-- HERO REFINED — VELVER MOTOS BLACK EXPERIENCE™ -->
-<!-- Minimal Cinematic Premium Hero -->
+<!-- VELVER MOTOS — CINEMATIC HUMAN EXPERIENCE™ -->
+<!-- BLACK CODE™ -->
 <!-- ===================================================== -->
 
-<section class="hero">
+<!DOCTYPE html>
+<html lang="es">
 
-    <div class="hero-content reveal">
+<head>
 
-        <!-- SMALL LABEL -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <small>
-
-            BLACK EXPERIENCE™
-
-        </small>
-
-        <!-- MAIN TITLE -->
-
-        <h1>
-
-            Construimos confianza
-            sobre ruedas.
-
-        </h1>
-
-        <!-- SUBTEXT -->
-
-        <p>
-
-            Tecnología, transparencia y atención humana
-            integradas en una experiencia premium.
-
-        </p>
-
-        <!-- BUTTONS -->
-
-        <div class="hero-buttons">
-
-            <button class="btn-main">
-
-                Explorar showroom
-
-            </button>
-
-            <button class="btn-glass">
-
-                Ver catálogo
-
-            </button>
-
-        </div>
-
-    </div>
-
-    <!-- SCROLL INDICATOR -->
-
-    <div class="scroll-indicator">
-
-        <span></span>
-
-    </div>
-
-</section>
+<title>Velver Motos Atlixco</title>
 
 <!-- ===================================================== -->
-<!-- CSS -->
+<!-- FONTS -->
+<!-- ===================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+<!-- ===================================================== -->
+<!-- STYLE -->
 <!-- ===================================================== -->
 
 <style>
 
 /* ===================================================== */
-/* HERO */
+/* ROOT */
 /* ===================================================== */
 
-.hero{
+:root{
 
-    position:relative;
+    --black:#050505;
+    --black-soft:#0B0B0B;
 
-    min-height:100vh;
+    --blue:#1E6DFF;
+    --blue-dark:#0B46B5;
+
+    --white:#F5F7FA;
+    --silver:#D7DCE3;
+    --gray:#8D96A6;
+
+}
+
+/* ===================================================== */
+/* RESET */
+/* ===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:var(--black);
+
+    color:white;
+
+    font-family:'Inter',sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+/* ===================================================== */
+/* BACKGROUND */
+/* ===================================================== */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-5;
+
+    overflow:hidden;
+
+}
+
+.background img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    filter:
+    brightness(.28)
+    contrast(1.05)
+    saturate(.95);
+
+    transform:scale(1.03);
+
+}
+
+.background::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(to bottom,
+    rgba(0,0,0,.35),
+    rgba(0,0,0,.88)),
+
+    radial-gradient(circle at top right,
+    rgba(30,109,255,.08),
+    transparent 35%);
+
+}
+
+/* ===================================================== */
+/* NAVBAR */
+/* ===================================================== */
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    width:100%;
+
+    z-index:999;
+
+    background:rgba(0,0,0,.18);
+
+    backdrop-filter:blur(14px);
+
+    border-bottom:1px solid rgba(255,255,255,.04);
+
+}
+
+.navbar{
+
+    max-width:1400px;
+
+    margin:auto;
 
     display:flex;
 
-    justify-content:center;
+    justify-content:space-between;
 
     align-items:center;
 
-    padding:140px 40px 100px;
-
-    text-align:center;
+    padding:22px 40px;
 
 }
 
 /* ===================================================== */
-/* CONTENT */
+/* LOGO */
 /* ===================================================== */
 
-.hero-content{
-
-    position:relative;
-
-    z-index:2;
-
-    max-width:980px;
-
-}
-
-/* ===================================================== */
-/* SMALL LABEL */
-/* ===================================================== */
-
-.hero-content small{
-
-    display:inline-block;
-
-    color:#1E6DFF;
-
-    letter-spacing:6px;
-
-    font-weight:700;
-
-    margin-bottom:28px;
-
-}
-
-/* ===================================================== */
-/* TITLE */
-/* ===================================================== */
-
-.hero-content h1{
-
-    font-size:clamp(3.5rem,8vw,7rem);
-
-    line-height:.95;
-
-    font-family:'Orbitron',sans-serif;
-
-    text-transform:uppercase;
-
-    letter-spacing:-2px;
-
-    text-shadow:
-    0 0 30px rgba(30,109,255,.12);
-
-}
-
-/* ===================================================== */
-/* SUBTEXT */
-/* ===================================================== */
-
-.hero-content p{
-
-    margin:38px auto 0;
-
-    max-width:760px;
-
-    font-size:1.1rem;
-
-    line-height:2;
-
-    color:#D7DCE3;
-
-}
-
-/* ===================================================== */
-/* BUTTONS */
-/* ===================================================== */
-
-.hero-buttons{
-
-    margin-top:48px;
+.logo{
 
     display:flex;
 
-    justify-content:center;
+    align-items:center;
 
-    gap:20px;
+    gap:16px;
 
-    flex-wrap:wrap;
+}
+
+.logo img{
+
+    width:54px;
+    height:54px;
+
+    border-radius:50%;
+
+}
+
+.logo span{
+
+    font-family:'Orbitron',sans-serif;
+
+    letter-spacing:2px;
+
+    font-size:1rem;
 
 }
 
 /* ===================================================== */
-/* PRIMARY BUTTON */
+/* NAV */
+/* ===================================================== */
+
+nav{
+
+    display:flex;
+
+    gap:34px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:#D7DCE3;
+
+    font-size:.95rem;
+
+    transition:.3s ease;
+
+}
+
+nav a:hover{
+
+    color:white;
+
+}
+
+/* ===================================================== */
+/* BUTTON */
 /* ===================================================== */
 
 .btn-main{
 
-    padding:16px 32px;
+    padding:15px 28px;
 
     border:none;
 
@@ -194,8 +239,8 @@
 
     background:
     linear-gradient(135deg,
-    #0B46B5,
-    #1E6DFF);
+    var(--blue-dark),
+    var(--blue));
 
     color:white;
 
@@ -205,37 +250,117 @@
 
     transition:.35s ease;
 
-    box-shadow:
-    0 0 35px rgba(30,109,255,.25);
-
 }
 
 .btn-main:hover{
 
-    transform:translateY(-4px);
-
-    box-shadow:
-    0 0 50px rgba(30,109,255,.42);
+    transform:translateY(-3px);
 
 }
 
 /* ===================================================== */
-/* GLASS BUTTON */
+/* HERO */
 /* ===================================================== */
 
-.btn-glass{
+.hero{
 
-    padding:16px 32px;
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:140px 40px 100px;
+
+}
+
+/* ===================================================== */
+/* HERO CONTENT */
+/* ===================================================== */
+
+.hero-content{
+
+    max-width:950px;
+
+}
+
+.hero-content small{
+
+    display:inline-block;
+
+    color:var(--blue);
+
+    letter-spacing:6px;
+
+    font-weight:700;
+
+    margin-bottom:28px;
+
+    font-size:.85rem;
+
+}
+
+.hero-content h1{
+
+    font-size:clamp(3.2rem,8vw,7rem);
+
+    line-height:.95;
+
+    font-weight:700;
+
+    letter-spacing:-3px;
+
+    margin:auto;
+
+}
+
+.hero-content p{
+
+    margin:38px auto 0;
+
+    max-width:760px;
+
+    color:#D7DCE3;
+
+    line-height:2;
+
+    font-size:1.08rem;
+
+}
+
+/* ===================================================== */
+/* HERO BUTTONS */
+/* ===================================================== */
+
+.hero-buttons{
+
+    margin-top:52px;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.btn-secondary{
+
+    padding:15px 28px;
 
     border-radius:999px;
 
     border:1px solid rgba(255,255,255,.08);
 
-    background:rgba(255,255,255,.04);
+    background:rgba(255,255,255,.03);
 
     color:white;
-
-    backdrop-filter:blur(12px);
 
     cursor:pointer;
 
@@ -243,19 +368,17 @@
 
 }
 
-.btn-glass:hover{
+.btn-secondary:hover{
 
     background:rgba(255,255,255,.08);
-
-    transform:translateY(-4px);
 
 }
 
 /* ===================================================== */
-/* SCROLL INDICATOR */
+/* SCROLL */
 /* ===================================================== */
 
-.scroll-indicator{
+.scroll-line{
 
     position:absolute;
 
@@ -267,7 +390,7 @@
 
 }
 
-.scroll-indicator span{
+.scroll-line span{
 
     display:block;
 
@@ -278,33 +401,209 @@
     background:
     linear-gradient(to bottom,
     rgba(255,255,255,.0),
-    rgba(255,255,255,.7),
+    rgba(255,255,255,.75),
     rgba(255,255,255,.0));
 
-    animation:scrollMove 2s infinite;
+    animation:scrollAnim 2s infinite;
 
 }
 
-@keyframes scrollMove{
+@keyframes scrollAnim{
 
     0%{
-
-        opacity:.2;
+        opacity:.3;
         transform:translateY(0);
-
     }
 
     50%{
-
         opacity:1;
         transform:translateY(10px);
-
     }
 
     100%{
-
-        opacity:.2;
+        opacity:.3;
         transform:translateY(0);
+    }
+
+}
+
+/* ===================================================== */
+/* EXPERIENCE */
+/* ===================================================== */
+
+.experience{
+
+    padding:140px 40px;
+
+}
+
+.experience-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.experience-container small{
+
+    color:var(--blue);
+
+    letter-spacing:5px;
+
+    font-weight:700;
+
+}
+
+.experience-container h2{
+
+    margin-top:24px;
+
+    font-size:clamp(2.2rem,5vw,4.5rem);
+
+    line-height:1.1;
+
+}
+
+.experience-container p{
+
+    margin:34px auto 0;
+
+    max-width:850px;
+
+    color:#D7DCE3;
+
+    line-height:2;
+
+}
+
+/* ===================================================== */
+/* VALUES */
+/* ===================================================== */
+
+.values{
+
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:22px;
+
+}
+
+.value{
+
+    padding:32px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.04);
+
+    transition:.35s ease;
+
+}
+
+.value:hover{
+
+    transform:translateY(-5px);
+
+    border-color:rgba(30,109,255,.15);
+
+}
+
+.value h3{
+
+    color:white;
+
+    margin-bottom:18px;
+
+    font-size:1.2rem;
+
+}
+
+.value p{
+
+    color:#B7C0CC;
+
+    line-height:1.8;
+
+    font-size:.95rem;
+
+}
+
+/* ===================================================== */
+/* SHOWROOM */
+/* ===================================================== */
+
+.showroom{
+
+    padding:0 40px 140px;
+
+}
+
+.showroom-image{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    overflow:hidden;
+
+    border-radius:36px;
+
+}
+
+.showroom-image img{
+
+    width:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    transition:1.2s ease;
+
+}
+
+.showroom-image:hover img{
+
+    transform:scale(1.03);
+
+}
+
+/* ===================================================== */
+/* RESPONSIVE */
+/* ===================================================== */
+
+@media(max-width:900px){
+
+    nav{
+
+        display:none;
+
+    }
+
+    .navbar{
+
+        padding:20px 24px;
+
+    }
+
+    .hero{
+
+        padding-top:180px;
+
+    }
+
+    .hero-content h1{
+
+        letter-spacing:-1px;
 
     }
 
@@ -320,45 +619,274 @@
 
     transform:translateY(40px);
 
-    animation:heroReveal 1.4s ease forwards;
+    transition:1.2s ease;
 
 }
 
-@keyframes heroReveal{
+.reveal.active{
 
-    to{
+    opacity:1;
 
-        opacity:1;
-        transform:translateY(0);
-
-    }
-
-}
-
-/* ===================================================== */
-/* RESPONSIVE */
-/* ===================================================== */
-
-@media(max-width:768px){
-
-    .hero{
-
-        padding-top:180px;
-
-    }
-
-    .hero-content h1{
-
-        letter-spacing:-1px;
-
-    }
-
-    .hero-content p{
-
-        font-size:1rem;
-
-    }
+    transform:translateY(0);
 
 }
 
 </style>
+
+</head>
+
+<body>
+
+<!-- ===================================================== -->
+<!-- BACKGROUND -->
+<!-- ===================================================== -->
+
+<div class="background">
+
+    <img src="SHOWROOM-EXTERIOR.png" alt="Velver Motos">
+
+</div>
+
+<!-- ===================================================== -->
+<!-- HEADER -->
+<!-- ===================================================== -->
+
+<header>
+
+    <div class="navbar">
+
+        <div class="logo">
+
+            <img src="LOGO-REDONDO.png" alt="Velver">
+
+            <span>VELVER MOTOS</span>
+
+        </div>
+
+        <nav>
+
+            <a href="#">Inicio</a>
+            <a href="#">Catálogo</a>
+            <a href="#">Showroom</a>
+            <a href="#">Financiamiento</a>
+
+        </nav>
+
+        <button class="btn-main">
+
+            WhatsApp
+
+        </button>
+
+    </div>
+
+</header>
+
+<!-- ===================================================== -->
+<!-- HERO -->
+<!-- ===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content reveal">
+
+        <small>
+
+            CINEMATIC HUMAN EXPERIENCE™
+
+        </small>
+
+        <h1>
+
+            Construimos confianza
+            sobre ruedas.
+
+        </h1>
+
+        <p>
+
+            Tecnología, transparencia y atención humana
+            integradas en una experiencia premium diseñada
+            para ayudarte a elegir con claridad y confianza.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <button class="btn-main">
+
+                Explorar showroom
+
+            </button>
+
+            <button class="btn-secondary">
+
+                Ver catálogo
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="scroll-line">
+
+        <span></span>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- EXPERIENCE -->
+<!-- ===================================================== -->
+
+<section class="experience">
+
+    <div class="experience-container reveal">
+
+        <small>
+
+            EXPERIENCIA VELVER™
+
+        </small>
+
+        <h2>
+
+            Atención humana,
+            tecnología inteligente.
+
+        </h2>
+
+        <p>
+
+            Creemos que una motocicleta no debe venderse desde presión,
+            sino desde claridad, honestidad y acompañamiento real.
+            Por eso combinamos experiencia humana y tecnología
+            para crear una experiencia distinta.
+
+        </p>
+
+        <div class="values">
+
+            <div class="value">
+
+                <h3>
+
+                    Transparencia
+
+                </h3>
+
+                <p>
+
+                    Explicamos procesos, financieras y contratos con claridad.
+
+                </p>
+
+            </div>
+
+            <div class="value">
+
+                <h3>
+
+                    Atención real
+
+                </h3>
+
+                <p>
+
+                    Escuchamos antes de recomendar cualquier motocicleta.
+
+                </p>
+
+            </div>
+
+            <div class="value">
+
+                <h3>
+
+                    Tecnología humana
+
+                </h3>
+
+                <p>
+
+                    IA y automatización enfocadas en mejorar la experiencia.
+
+                </p>
+
+            </div>
+
+            <div class="value">
+
+                <h3>
+
+                    Experiencia premium
+
+                </h3>
+
+                <p>
+
+                    Una concesionaria inspirada en marcas internacionales.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- SHOWROOM -->
+<!-- ===================================================== -->
+
+<section class="showroom reveal">
+
+    <div class="showroom-image">
+
+        <img src="SHOWROOM-INTERIOR.png" alt="Velver Showroom">
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- SCRIPT -->
+<!-- ===================================================== -->
+
+<script>
+
+/* ===================================================== */
+/* REVEAL */
+/* ===================================================== */
+
+const reveals =
+document.querySelectorAll('.reveal');
+
+window.addEventListener('scroll',()=>{
+
+    reveals.forEach(reveal=>{
+
+        const windowHeight =
+        window.innerHeight;
+
+        const revealTop =
+        reveal.getBoundingClientRect().top;
+
+        if(revealTop < windowHeight - 120){
+
+            reveal.classList.add('active');
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
