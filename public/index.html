@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -14,6 +15,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
@@ -22,6 +24,7 @@ color:white;
 font-family:'Orbitron',sans-serif;
 overflow-x:hidden;
 }
+
 /* NAVBAR */
 
 .navbar{
@@ -63,6 +66,7 @@ transition:0.3s;
 .nav-links a:hover{
 opacity:0.6;
 }
+
 /* VIDEO */
 
 video{
@@ -176,7 +180,6 @@ filter:drop-shadow(0 0 5px rgba(255,255,255,0.15));
 
 }
 
-/* FOOTER */
 /* SYSTEM SECTION */
 
 .system-section{
@@ -228,20 +231,52 @@ letter-spacing:3px;
 color:#b0b0b0;
 line-height:1.8;
 }
+
+/* FOOTER */
+
 .footer{
-position:absolute;
-bottom:25px;
-width:100%;
+position:relative;
+padding:40px 20px;
 text-align:center;
 font-size:12px;
 letter-spacing:3px;
 color:#666;
+background:#050505;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.navbar{
+padding:18px 20px;
+}
+
+.nav-links{
+gap:15px;
+}
+
+.nav-links a{
+font-size:10px;
+}
+
+.title{
+letter-spacing:4px;
+}
+
+.subtitle{
+letter-spacing:2px;
+}
+
 }
 
 </style>
 </head>
 
 <body>
+
+<!-- NAVBAR -->
+
 <nav class="navbar">
 
 <div class="logo">
@@ -256,11 +291,16 @@ VELVER MOTOS
 </div>
 
 </nav>
+
+<!-- VIDEO -->
+
 <video autoplay muted loop playsinline>
 <source src="https://cdn.coverr.co/videos/coverr-night-drive-in-the-city-1560679427422?download=1080p" type="video/mp4">
 </video>
 
 <div class="overlay"></div>
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -277,6 +317,9 @@ ENTER THE SYSTEM
 </a>
 
 </section>
+
+<!-- SYSTEM SECTION -->
+
 <section id="system" class="system-section">
 
 <h2 class="system-title">
@@ -309,6 +352,9 @@ Arquitectura enterprise escalable enfocada en velocidad, impacto y autoridad vis
 </div>
 
 </section>
+
+<!-- FOOTER -->
+
 <div class="footer">
 KNJO BLACK CODE™ • VELVER MOTOS • EDGE INFRASTRUCTURE
 </div>
