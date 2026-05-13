@@ -1,28 +1,44 @@
+<!-- ===================================================== -->
+<!-- VELVER MOTOS — CINEMATIC HERO EXPERIENCE v2.0 -->
+<!-- BLACK CODE™ STRUCTURAL EXPERIENCE -->
+<!-- ===================================================== -->
+
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>VELVER MOTOS — BLACK EXPERIENCE</title>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VELVER MOTOS — BLACK EXPERIENCE™</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
+/* ===================================================== */
+/* ROOT */
+/* ===================================================== */
+
 :root{
-    --blue-main:#0B46B5;
-    --blue-electric:#1E6DFF;
-    --blue-deep:#081B44;
+
+    --blue:#1E6DFF;
+    --blue-dark:#0B46B5;
+    --navy:#081B44;
     --black:#050505;
     --white:#F5F7FA;
     --silver:#D7DCE3;
     --gray:#8D96A6;
-    --glass:rgba(255,255,255,.05);
+
 }
+
+/* ===================================================== */
+/* GLOBAL */
+/* ===================================================== */
 
 *{
     margin:0;
@@ -35,277 +51,343 @@ html{
 }
 
 body{
+
     background:#050505;
     color:white;
+
     font-family:'Inter',sans-serif;
+
     overflow-x:hidden;
+
 }
 
-/* ========================= */
-/* BACKGROUND */
-/* ========================= */
+/* ===================================================== */
+/* CINEMATIC BACKGROUND */
+/* ===================================================== */
 
-.background{
+.hero-bg{
+
     position:fixed;
     inset:0;
-    z-index:-5;
+
+    z-index:-10;
+
     overflow:hidden;
+
 }
 
-.background::before{
-    content:"";
+.hero-bg img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transform:scale(1.08);
+
+    filter:
+    brightness(.35)
+    contrast(1.1)
+    saturate(1.1);
+
+}
+
+/* OVERLAY */
+
+.hero-overlay{
+
     position:absolute;
     inset:0;
 
     background:
-    radial-gradient(circle at top right, rgba(30,109,255,.25), transparent 30%),
-    radial-gradient(circle at bottom left, rgba(11,70,181,.18), transparent 35%),
-    linear-gradient(to bottom, rgba(0,0,0,.75), rgba(0,0,0,.95)),
-    url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=2070&auto=format&fit=crop');
+    radial-gradient(circle at top right,
+    rgba(30,109,255,.25),
+    transparent 35%),
 
-    background-size:cover;
-    background-position:center;
-    filter:brightness(.5);
-    transform:scale(1.05);
+    radial-gradient(circle at bottom left,
+    rgba(11,70,181,.22),
+    transparent 30%),
+
+    linear-gradient(to bottom,
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.92));
+
 }
 
-.noise{
-    position:fixed;
+/* PARTICLES */
+
+.particles{
+
+    position:absolute;
     inset:0;
+
+    background-image:
+    radial-gradient(rgba(255,255,255,.12) 1px, transparent 1px);
+
+    background-size:4px 4px;
+
     opacity:.03;
-    background-image:url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
-    pointer-events:none;
-    z-index:-1;
+
+    animation:particlesMove 25s linear infinite;
+
 }
 
-/* ========================= */
-/* AUDIO BUTTON */
-/* ========================= */
+@keyframes particlesMove{
 
-.audio-control{
-    position:fixed;
-    right:25px;
-    bottom:25px;
-    z-index:1000;
+    from{
+        transform:translateY(0px);
+    }
+
+    to{
+        transform:translateY(-120px);
+    }
+
 }
 
-.audio-btn{
-    width:64px;
-    height:64px;
-    border-radius:50%;
-    border:none;
-
-    background:
-    linear-gradient(135deg,var(--blue-main),var(--blue-electric));
-
-    color:white;
-    font-size:1.3rem;
-    cursor:pointer;
-
-    box-shadow:
-    0 0 25px rgba(30,109,255,.45);
-
-    transition:.4s ease;
-}
-
-.audio-btn:hover{
-    transform:scale(1.08);
-    box-shadow:
-    0 0 45px rgba(30,109,255,.8);
-}
-
-/* ========================= */
+/* ===================================================== */
 /* NAVBAR */
-/* ========================= */
+/* ===================================================== */
 
 header{
+
     position:fixed;
     width:100%;
+
     top:0;
+
     z-index:999;
 
     backdrop-filter:blur(18px);
 
-    background:rgba(0,0,0,.35);
+    background:rgba(0,0,0,.28);
 
     border-bottom:1px solid rgba(255,255,255,.05);
+
 }
 
 .navbar{
-    max-width:1400px;
+
+    max-width:1450px;
+
     margin:auto;
 
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
 
-    padding:18px 35px;
+    padding:20px 40px;
+
 }
 
 .logo{
+
     display:flex;
     align-items:center;
-    gap:15px;
+    gap:16px;
+
 }
 
 .logo img{
+
     width:58px;
     height:58px;
-    object-fit:cover;
+
     border-radius:50%;
 
     box-shadow:
-    0 0 35px rgba(30,109,255,.55);
+    0 0 25px rgba(30,109,255,.45);
+
 }
 
 .logo h1{
+
     font-family:'Orbitron',sans-serif;
+
     letter-spacing:3px;
+
     font-size:1.1rem;
+
 }
 
 nav{
+
     display:flex;
     gap:35px;
+
 }
 
 nav a{
+
     text-decoration:none;
-    color:#d5dce5;
+    color:#d6dde6;
+
     transition:.3s ease;
+
     position:relative;
+
 }
 
 nav a:hover{
-    color:var(--blue-electric);
-}
 
-nav a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-6px;
+    color:var(--blue);
 
-    width:0%;
-    height:2px;
-
-    background:var(--blue-electric);
-    transition:.3s ease;
-}
-
-nav a:hover::after{
-    width:100%;
 }
 
 .btn-main{
+
     padding:14px 24px;
+
     border:none;
+
     border-radius:999px;
 
     background:
-    linear-gradient(135deg,var(--blue-main),var(--blue-electric));
+    linear-gradient(135deg,
+    var(--blue-dark),
+    var(--blue));
 
     color:white;
+
     font-weight:600;
+
     cursor:pointer;
 
     transition:.4s ease;
 
     box-shadow:
-    0 0 25px rgba(30,109,255,.4);
+    0 0 25px rgba(30,109,255,.35);
+
 }
 
 .btn-main:hover{
+
     transform:translateY(-3px);
+
+    box-shadow:
+    0 0 45px rgba(30,109,255,.55);
+
 }
 
-/* ========================= */
+/* ===================================================== */
 /* HERO */
-/* ========================= */
+/* ===================================================== */
 
 .hero{
+
     min-height:100vh;
 
     display:flex;
     align-items:center;
 
-    padding:140px 40px 80px;
+    padding:160px 40px 80px;
+
 }
 
 .hero-container{
-    max-width:1400px;
+
+    max-width:1450px;
+
     margin:auto;
 
     display:grid;
     grid-template-columns:1.2fr .8fr;
+
     gap:60px;
+
     align-items:center;
+
 }
 
+/* TEXT */
+
 .hero-text small{
-    color:var(--blue-electric);
+
+    color:var(--blue);
+
     letter-spacing:5px;
+
     font-weight:700;
+
 }
 
 .hero-text h2{
-    margin-top:20px;
+
+    margin-top:25px;
+
+    font-size:clamp(3rem,7vw,7rem);
+
+    line-height:.95;
 
     font-family:'Orbitron',sans-serif;
-    font-size:clamp(3rem,7vw,7rem);
-    line-height:1;
+
     text-transform:uppercase;
 
     text-shadow:
     0 0 25px rgba(30,109,255,.18);
+
 }
 
 .hero-text p{
+
     margin-top:30px;
-    font-size:1.1rem;
-    line-height:1.9;
-    color:#d4dae2;
-    max-width:700px;
+
+    max-width:760px;
+
+    line-height:2;
+
+    color:#d4dbe4;
+
+    font-size:1.05rem;
+
 }
 
 .hero-buttons{
-    margin-top:35px;
+
+    margin-top:40px;
 
     display:flex;
     gap:20px;
     flex-wrap:wrap;
+
 }
 
 .btn-glass{
+
     padding:14px 24px;
+
     border-radius:999px;
 
-    background:rgba(255,255,255,.05);
-
     border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.05);
 
     color:white;
 
     backdrop-filter:blur(12px);
 
     cursor:pointer;
+
     transition:.3s ease;
+
 }
 
 .btn-glass:hover{
+
     background:rgba(255,255,255,.1);
+
 }
 
-/* ========================= */
-/* EXPERIENCE CARD */
-/* ========================= */
+/* ===================================================== */
+/* EXPERIENCE PANEL */
+/* ===================================================== */
 
-.hero-card{
+.experience-panel{
+
     background:rgba(255,255,255,.05);
 
     border:1px solid rgba(255,255,255,.08);
 
-    border-radius:32px;
+    border-radius:35px;
 
     padding:35px;
 
@@ -313,706 +395,257 @@ nav a:hover::after{
 
     box-shadow:
     0 0 45px rgba(0,0,0,.45);
+
 }
 
-.card-title{
-    font-family:'Orbitron',sans-serif;
-    font-size:1.6rem;
-}
-
-.card-sub{
-    margin-top:15px;
-    color:#c9d0d8;
-    line-height:1.8;
-}
-
-.card-grid{
-    margin-top:35px;
-
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:18px;
-}
-
-.mini-card{
-    padding:22px;
-    border-radius:22px;
-
-    background:rgba(255,255,255,.04);
-
-    border:1px solid rgba(255,255,255,.06);
-}
-
-.mini-card h3{
-    color:var(--blue-electric);
-    font-size:1.4rem;
-    font-family:'Orbitron',sans-serif;
-}
-
-.mini-card p{
-    margin-top:12px;
-    color:#c8d0d9;
-    line-height:1.6;
-}
-
-/* ========================= */
-/* SECTION */
-/* ========================= */
-
-section{
-    padding:120px 40px;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:80px;
-}
-
-.section-title small{
-    color:var(--blue-electric);
-    letter-spacing:5px;
-    font-weight:700;
-}
-
-.section-title h3{
-    margin-top:18px;
-    font-size:clamp(2rem,5vw,4rem);
-    font-family:'Orbitron',sans-serif;
-}
-
-.section-title p{
-    margin-top:20px;
-    color:#c8d0d9;
-    max-width:900px;
-    margin-inline:auto;
-    line-height:1.9;
-}
-
-/* ========================= */
-/* CATALOG */
-/* ========================= */
-
-.catalog{
-    max-width:1400px;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:35px;
-}
-
-.bike{
-    overflow:hidden;
-
-    border-radius:30px;
-
-    background:rgba(255,255,255,.04);
-
-    border:1px solid rgba(255,255,255,.06);
-
-    transition:.5s ease;
-
-    position:relative;
-}
-
-.bike:hover{
-    transform:translateY(-12px);
-
-    box-shadow:
-    0 0 40px rgba(30,109,255,.18);
-}
-
-.bike img{
-    width:100%;
-    height:260px;
-    object-fit:cover;
-
-    transition:.6s ease;
-}
-
-.bike:hover img{
-    transform:scale(1.05);
-}
-
-.bike-content{
-    padding:30px;
-}
-
-.bike-content h4{
-    font-size:1.7rem;
-    font-family:'Orbitron',sans-serif;
-}
-
-.bike-content p{
-    margin-top:15px;
-    line-height:1.8;
-    color:#c5ced8;
-}
-
-.bike-footer{
-    margin-top:25px;
+.panel-top{
 
     display:flex;
     align-items:center;
     justify-content:space-between;
+
 }
 
-.bike-footer strong{
-    color:var(--blue-electric);
-    font-size:1.2rem;
+.live{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    color:#94ffae;
+
+    font-size:.9rem;
+
 }
 
-/* ========================= */
-/* IMMERSIVE SECTION */
-/* ========================= */
+.live-dot{
 
-.immersive{
-    max-width:1400px;
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+
+    background:#00ff62;
+
+    box-shadow:
+    0 0 12px #00ff62;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+        opacity:1;
+    }
+
+    50%{
+        transform:scale(1.4);
+        opacity:.5;
+    }
+
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+.experience-panel h3{
+
+    margin-top:25px;
+
+    font-size:2rem;
+
+    font-family:'Orbitron',sans-serif;
+
+}
+
+.experience-panel p{
+
+    margin-top:18px;
+
+    line-height:1.9;
+
+    color:#d3dae2;
+
+}
+
+/* CARDS */
+
+.panel-grid{
+
+    margin-top:35px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    gap:18px;
+
+}
+
+.info-card{
+
+    padding:22px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.05);
+
+    transition:.4s ease;
+
+}
+
+.info-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 0 25px rgba(30,109,255,.18);
+
+}
+
+.info-card h4{
+
+    color:var(--blue);
+
+    font-size:1.4rem;
+
+    font-family:'Orbitron',sans-serif;
+
+}
+
+.info-card p{
+
+    margin-top:12px;
+
+    font-size:.95rem;
+
+}
+
+/* ===================================================== */
+/* SHOWROOM SECTION */
+/* ===================================================== */
+
+.showroom{
+
+    padding:120px 40px;
+
+}
+
+.showroom-container{
+
+    max-width:1450px;
+
     margin:auto;
 
     display:grid;
     grid-template-columns:1fr 1fr;
+
     gap:50px;
+
     align-items:center;
+
 }
 
-.immersive img{
-    width:100%;
-    border-radius:30px;
-    min-height:500px;
-    object-fit:cover;
+.showroom-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:35px;
 
     box-shadow:
-    0 0 50px rgba(0,0,0,.5);
+    0 0 60px rgba(0,0,0,.55);
+
 }
 
-.immersive-text h3{
+.showroom-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:1s ease;
+
+}
+
+.showroom-image:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.showroom-glow{
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(to top,
+    rgba(0,0,0,.6),
+    transparent);
+
+}
+
+/* TEXT */
+
+.showroom-text small{
+
+    color:var(--blue);
+
+    letter-spacing:5px;
+
+    font-weight:700;
+
+}
+
+.showroom-text h3{
+
+    margin-top:20px;
+
     font-size:clamp(2rem,5vw,4rem);
+
     font-family:'Orbitron',sans-serif;
-    line-height:1.2;
+
+    line-height:1.1;
+
 }
 
-.immersive-text p{
+.showroom-text p{
+
     margin-top:25px;
-    line-height:1.9;
-    color:#c8d0d9;
+
+    line-height:2;
+
+    color:#d2dae4;
+
 }
 
-.feature-list{
+/* FEATURES */
+
+.features{
+
     margin-top:35px;
 
     display:flex;
     flex-direction:column;
     gap:18px;
+
 }
 
 .feature{
+
     padding:18px 22px;
+
     border-radius:18px;
 
     background:rgba(255,255,255,.04);
 
-    border:1px solid rgba(255,255,255,.06);
-}
-
-/* ========================= */
-/* CTA */
-/* ========================= */
-
-.cta{
-    max-width:1200px;
-    margin:auto;
-
-    padding:80px 40px;
-
-    border-radius:40px;
-
-    background:
-    linear-gradient(135deg,
-    rgba(11,70,181,.35),
-    rgba(30,109,255,.12));
-
-    border:1px solid rgba(255,255,255,.08);
-
-    text-align:center;
-
-    backdrop-filter:blur(14px);
-}
-
-.cta h3{
-    font-size:clamp(2rem,5vw,4rem);
-    font-family:'Orbitron',sans-serif;
-}
-
-.cta p{
-    margin-top:22px;
-    color:#d4dbe4;
-    line-height:1.9;
-    max-width:850px;
-    margin-inline:auto;
-}
-
-/* ========================= */
-/* FOOTER */
-/* ========================= */
-
-footer{
-    padding:70px 40px;
-
-    border-top:1px solid rgba(255,255,255,.05);
-}
-
-.footer-content{
-    max-width:1400px;
-    margin:auto;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:30px;
-}
-
-.footer-content h2{
-    font-family:'Orbitron',sans-serif;
-    letter-spacing:4px;
-}
-
-.footer-content p{
-    margin-top:10px;
-    color:#9ba7b4;
-}
-
-.socials{
-    display:flex;
-    gap:20px;
-}
-
-.socials a{
-    color:white;
-    text-decoration:none;
-    transition:.3s ease;
-}
-
-.socials a:hover{
-    color:var(--blue-electric);
-}
-
-/* ========================= */
-/* RESPONSIVE */
-/* ========================= */
-
-@media(max-width:980px){
-
-    nav{
-        display:none;
-    }
-
-    .hero-container,
-    .immersive{
-        grid-template-columns:1fr;
-    }
-
-    .hero{
-        padding-top:180px;
-    }
-
-    .card-grid{
-        grid-template-columns:1fr;
-    }
-
-}
-
-</style>
-</head>
-<body>
-
-<!-- ========================= -->
-<!-- BACKGROUND -->
-<!-- ========================= -->
-
-<div class="background"></div>
-<div class="noise"></div>
-
-<!-- ========================= -->
-<!-- AUDIO -->
-<!-- ========================= -->
-
-<div class="audio-control">
-    <button class="audio-btn" id="musicButton">
-        ♫
-    </button>
-</div>
-
-<audio id="bgMusic" loop>
-    <source src="music/cinematic-ambient.mp3" type="audio/mpeg">
-</audio>
-
-<!-- ========================= -->
-<!-- HEADER -->
-<!-- ========================= -->
-
-<header>
-
-    <div class="navbar">
-
-        <div class="logo">
-            <img src="LOGO-REDONDO.png" alt="Velver Motos">
-            <h1>VELVER MOTOS</h1>
-        </div>
-
-        <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Catálogo</a>
-            <a href="#">Experiencia</a>
-            <a href="#">Financiamiento</a>
-            <a href="#">Contacto</a>
-        </nav>
-
-        <button class="btn-main">
-            WhatsApp
-        </button>
-
-    </div>
-
-</header>
-
-<!-- ========================= -->
-<!-- HERO -->
-<!-- ========================= -->
-
-<section class="hero">
-
-    <div class="hero-container">
-
-        <div class="hero-text">
-
-            <small>VELVER MOTOS BLACK EXPERIENCE</small>
-
-            <h2>
-                Tecnología
-                humana.
-                Experiencia
-                premium.
-            </h2>
-
-            <p>
-                Más que vender motocicletas, construimos confianza.
-                Fusionamos honestidad, atención humana y tecnología
-                para crear una nueva experiencia automotriz en Atlixco.
-            </p>
-
-            <div class="hero-buttons">
-
-                <button class="btn-main">
-                    Ver catálogo
-                </button>
-
-                <button class="btn-glass">
-                    Activar experiencia
-                </button>
-
-            </div>
-
-        </div>
-
-        <div class="hero-card">
-
-            <h3 class="card-title">
-                Una nueva forma de vivir una concesionaria
-            </h3>
-
-            <p class="card-sub">
-                Transparencia financiera, atención humana,
-                experiencia cinematográfica y tecnología inteligente
-                combinadas para ayudarte a tomar la mejor decisión.
-            </p>
-
-            <div class="card-grid">
-
-                <div class="mini-card">
-                    <h3>100%</h3>
-                    <p>
-                        Honestidad y claridad en cada proceso.
-                    </p>
-                </div>
-
-                <div class="mini-card">
-                    <h3>IA</h3>
-                    <p>
-                        Atención inteligente con esencia humana.
-                    </p>
-                </div>
-
-                <div class="mini-card">
-                    <h3>BLACK</h3>
-                    <p>
-                        Experiencia cinematográfica premium.
-                    </p>
-                </div>
-
-                <div class="mini-card">
-                    <h3>REAL</h3>
-                    <p>
-                        Servicio basado en empatía y confianza.
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ========================= -->
-<!-- CATALOG -->
-<!-- ========================= -->
-
-<section>
-
-    <div class="section-title">
-
-        <small>CATÁLOGO INTELIGENTE</small>
-
-        <h3>
-            Motocicletas con identidad
-        </h3>
-
-        <p>
-            Una experiencia visual premium diseñada para ayudarte
-            a encontrar la motocicleta ideal para tu estilo de vida,
-            trabajo o aventura.
-        </p>
-
-    </div>
-
-    <div class="catalog">
-
-        <div class="bike">
-
-            <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1974&auto=format&fit=crop">
-
-            <div class="bike-content">
-
-                <h4>RYDER HAMMER</h4>
-
-                <p>
-                    Potencia urbana, estética agresiva y presencia premium.
-                    Diseñada para quienes buscan libertad y carácter.
-                </p>
-
-                <div class="bike-footer">
-
-                    <strong>Desde $XX,XXX</strong>
-
-                    <button class="btn-glass">
-                        Explorar
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="bike">
-
-            <img src="https://images.unsplash.com/photo-1517846693594-1567da72af75?q=80&w=1974&auto=format&fit=crop">
-
-            <div class="bike-content">
-
-                <h4>ZMOTO CRX</h4>
-
-                <p>
-                    Eficiencia, diseño moderno y comodidad diaria
-                    para quienes buscan movilidad inteligente.
-                </p>
-
-                <div class="bike-footer">
-
-                    <strong>Desde $XX,XXX</strong>
-
-                    <button class="btn-glass">
-                        Explorar
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="bike">
-
-            <img src="https://images.unsplash.com/photo-1609630875171-b1321377ee65?q=80&w=1974&auto=format&fit=crop">
-
-            <div class="bike-content">
-
-                <h4>HUAIHAI CARGO</h4>
-
-                <p>
-                    Solución inteligente para trabajo, negocio
-                    y crecimiento personal.
-                </p>
-
-                <div class="bike-footer">
-
-                    <strong>Desde $XX,XXX</strong>
-
-                    <button class="btn-glass">
-                        Explorar
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ========================= -->
-<!-- IMMERSIVE -->
-<!-- ========================= -->
-
-<section>
-
-    <div class="immersive">
-
-        <img src="https://images.unsplash.com/photo-1520872024865-3ff2805d8bb3?q=80&w=1974&auto=format&fit=crop">
-
-        <div class="immersive-text">
-
-            <small style="color:var(--blue-electric);letter-spacing:5px;font-weight:700;">
-                EXPERIENCIA VELVER
-            </small>
-
-            <h3>
-                La venta termina.
-                La confianza comienza.
-            </h3>
-
-            <p>
-                Nuestro trabajo empieza después de tu compra.
-                Queremos que cada cliente sienta respaldo,
-                transparencia y acompañamiento real.
-            </p>
-
-            <div class="feature-list">
-
-                <div class="feature">
-                    Explicación clara de financieras y contratos.
-                </div>
-
-                <div class="feature">
-                    Atención inteligente combinando IA y experiencia humana.
-                </div>
-
-                <div class="feature">
-                    Experiencia premium inspirada en marcas internacionales.
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ========================= -->
-<!-- CTA -->
-<!-- ========================= -->
-
-<section>
-
-    <div class="cta">
-
-        <h3>
-            Vive una nueva experiencia automotriz
-        </h3>
-
-        <p>
-            Diseñamos una concesionaria donde la tecnología,
-            la honestidad y la atención humana trabajan juntas
-            para ayudarte a tomar la mejor decisión.
-        </p>
-
-        <div class="hero-buttons" style="justify-content:center;margin-top:40px;">
-
-            <button class="btn-main">
-                Hablar por WhatsApp
-            </button>
-
-            <button class="btn-glass">
-                Ver ubicación
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ========================= -->
-<!-- FOOTER -->
-<!-- ========================= -->
-
-<footer>
-
-    <div class="footer-content">
-
-        <div>
-
-            <h2>VELVER MOTOS</h2>
-
-            <p>
-                Atlixco, Puebla — BLACK EXPERIENCE™
-            </p>
-
-        </div>
-
-        <div class="socials">
-
-            <a href="#">Facebook</a>
-            <a href="#">TikTok</a>
-            <a href="#">Instagram</a>
-            <a href="#">WhatsApp</a>
-
-        </div>
-
-    </div>
-
-</footer>
-
-<script>
-
-const music = document.getElementById('bgMusic');
-const musicButton = document.getElementById('musicButton');
-
-let playing = false;
-
-music.volume = 0.25;
-
-musicButton.addEventListener('click', () => {
-
-    if(!playing){
-        music.play();
-        musicButton.innerHTML = '❚❚';
-        playing = true;
-    }else{
-        music.pause();
-        musicButton.innerHTML = '♫';
-        playing = false;
-    }
-
-});
-
-</script>
-
-</body>
-</html>
+    border:1px solid
