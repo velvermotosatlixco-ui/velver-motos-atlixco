@@ -142,6 +142,140 @@ background:rgba(255,255,255,0.05);
 color:white;
 text-decoration:none;
 letter-spacing:4px;
+border-radius:14px;
+transition:0.4s;
+backdrop-filter:blur(10px);
+}
+
+.btn:hover{
+background:white;
+color:black;
+transform:scale(1.05);
+}
+
+/* GLOW */
+
+@keyframes glow{
+
+0%{
+filter:drop-shadow(0 0 5px rgba(255,255,255,0.15));
+}
+
+50%{
+filter:drop-shadow(0 0 25px rgba(255,255,255,0.45));
+}
+
+100%{
+filter:drop-shadow(0 0 5px rgba(255,255,255,0.15));
+}
+
+}
+
+/* SYSTEM SECTION */
+
+.system-section{
+min-height:100vh;
+padding:120px 30px;
+background:#050505;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+.system-title{
+font-size:clamp(35px,6vw,80px);
+margin-bottom:70px;
+letter-spacing:6px;
+text-align:center;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+width:100%;
+max-width:1200px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+padding:40px;
+border-radius:24px;
+backdrop-filter:blur(10px);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:white;
+}
+
+.card h3{
+margin-bottom:20px;
+font-size:22px;
+letter-spacing:3px;
+}
+
+.card p{
+color:#b0b0b0;
+line-height:1.8;
+}
+
+/* MOTOS */
+
+.motos-section{
+padding:120px 30px;
+background:#070707;
+}
+
+.motos-title{
+text-align:center;
+font-size:clamp(35px,6vw,80px);
+margin-bottom:80px;
+letter-spacing:6px;
+}
+
+.motos-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:35px;
+max-width:1400px;
+margin:auto;
+}
+
+.moto-card{
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:28px;
+overflow:hidden;
+transition:0.5s;
+}
+
+.moto-card:hover{
+transform:translateY(-12px);
+border-color:white;
+}
+
+.moto-image{
+height:340px;
+background:linear-gradient(135deg,#111,#333);
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:40px;
+letter-spacing:4px;
+}
+
+.moto-info{
+padding:30px;
+}
+
+.moto-info h3{
+font-size:28px;
+margin-bottom:18px;
+letter-spacingletter-spacing:4px;
 border-radius:font-size:clamp(35px,6vw,80px);
 margin-bottom:70px;
 letter-spacing:6px;
