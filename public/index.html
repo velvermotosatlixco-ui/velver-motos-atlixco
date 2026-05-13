@@ -1,32 +1,183 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VELVER MOTOS</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <style>
-    body{
-      background:#050505;
-      color:white;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      height:100vh;
-      margin:0;
-      font-family:Arial;
-    }
+<title>VELVER MOTOS — KNJO BLACK CODE™</title>
 
-    h1{
-      font-size:40px;
-      letter-spacing:4px;
-    }
-  </style>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#050505;
+color:white;
+font-family:'Orbitron',sans-serif;
+overflow-x:hidden;
+}
+
+/* VIDEO */
+
+video{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-2;
+filter:brightness(0.35);
+}
+
+/* OVERLAY */
+
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.3),
+rgba(0,0,0,0.85)
+);
+z-index:-1;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+/* TITLE */
+
+.title{
+font-size:clamp(45px,8vw,110px);
+font-weight:900;
+letter-spacing:8px;
+text-transform:uppercase;
+
+background:linear-gradient(
+90deg,
+#ffffff,
+#7a7a7a,
+#ffffff
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:glow 4s infinite ease-in-out;
+}
+
+/* SUBTITLE */
+
+.subtitle{
+margin-top:20px;
+font-size:clamp(14px,2vw,22px);
+color:#b5b5b5;
+letter-spacing:4px;
+max-width:900px;
+line-height:1.8;
+}
+
+/* BUTTON */
+
+.btn{
+margin-top:45px;
+padding:18px 40px;
+border:1px solid rgba(255,255,255,0.25);
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+color:white;
+text-decoration:none;
+letter-spacing:4px;
+transition:0.4s;
+border-radius:14px;
+}
+
+.btn:hover{
+transform:scale(1.05);
+background:white;
+color:black;
+}
+
+/* ANIMATION */
+
+@keyframes glow{
+
+0%{
+filter:drop-shadow(0 0 5px rgba(255,255,255,0.15));
+}
+
+50%{
+filter:drop-shadow(0 0 25px rgba(255,255,255,0.45));
+}
+
+100%{
+filter:drop-shadow(0 0 5px rgba(255,255,255,0.15));
+}
+
+}
+
+/* FOOTER */
+
+.footer{
+position:absolute;
+bottom:25px;
+width:100%;
+text-align:center;
+font-size:12px;
+letter-spacing:3px;
+color:#666;
+}
+
+</style>
 </head>
+
 <body>
 
-<h1>VELVER MOTOS — KNJO BLACK CODE™</h1>
+<video autoplay muted loop playsinline>
+<source src="https://cdn.coverr.co/videos/coverr-night-drive-in-the-city-1560679427422?download=1080p" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<section class="hero">
+
+<h1 class="title">
+VELVER MOTOS
+</h1>
+
+<p class="subtitle">
+KNJO BLACK CODE™ INFRASTRUCTURE — EDGE AI • CLOUD NATIVE • CINEMATIC EXPERIENCE
+</p>
+
+<a class="btn" href="#">
+ENTER THE SYSTEM
+</a>
+
+</section>
+
+<div class="footer">
+KNJO BLACK CODE™ • VELVER MOTOS • EDGE INFRASTRUCTURE
+</div>
 
 </body>
 </html>
