@@ -1,183 +1,26 @@
 <!-- ===================================================== -->
-<!-- VELVER MOTOS — SHOWCASE EXPERIENCE™ v3.0 -->
-<!-- BLACK CODE™ CINEMATIC STRUCTURE -->
+<!-- VELVER MOTOS — BLACK EXPERIENCE™ FINAL REFINED -->
+<!-- Cinematic Premium Dealership Experience -->
 <!-- ===================================================== -->
 
-<section class="showcase-experience">
+<!DOCTYPE html>
+<html lang="es">
 
-    <!-- ============================================ -->
-    <!-- HEADER -->
-    <!-- ============================================ -->
+<head>
 
-    <div class="showcase-header">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <small>SHOWCASE EXPERIENCE™</small>
+<title>VELVER MOTOS — BLACK EXPERIENCE™</title>
 
-        <h2>
-            Encuentra la motocicleta
-            ideal para tu estilo de vida.
-        </h2>
+<!-- ===================================================== -->
+<!-- FONTS -->
+<!-- ===================================================== -->
 
-        <p>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-            Diseñamos una experiencia elegante, intuitiva y humana
-            para ayudarte a elegir con claridad, confianza y emoción.
-
-        </p>
-
-    </div>
-
-    <!-- ============================================ -->
-    <!-- CATEGORY SELECTOR -->
-    <!-- ============================================ -->
-
-    <div class="experience-selector">
-
-        <button class="selector-btn active" data-bike="urban">
-
-            Ciudad
-
-        </button>
-
-        <button class="selector-btn" data-bike="work">
-
-            Trabajo
-
-        </button>
-
-        <button class="selector-btn" data-bike="power">
-
-            Potencia
-
-        </button>
-
-        <button class="selector-btn" data-bike="adventure">
-
-            Aventura
-
-        </button>
-
-    </div>
-
-    <!-- ============================================ -->
-    <!-- SHOWCASE -->
-    <!-- ============================================ -->
-
-    <div class="showcase-container">
-
-        <!-- ============================================ -->
-        <!-- LEFT CONTENT -->
-        <!-- ============================================ -->
-
-        <div class="showcase-content">
-
-            <small id="bikeBrand">
-                HUAIHAI
-            </small>
-
-            <h3 id="bikeTitle">
-                City 125
-            </h3>
-
-            <p id="bikeDescription">
-
-                Diseñada para dominar la ciudad con eficiencia,
-                comodidad y una estética moderna y elegante.
-
-            </p>
-
-            <!-- ============================================ -->
-            <!-- SPECS -->
-            <!-- ============================================ -->
-
-            <div class="bike-specs">
-
-                <div class="spec-card">
-
-                    <span>Motor</span>
-
-                    <strong id="bikeEngine">
-                        125cc
-                    </strong>
-
-                </div>
-
-                <div class="spec-card">
-
-                    <span>Transmisión</span>
-
-                    <strong id="bikeTransmission">
-                        Automática
-                    </strong>
-
-                </div>
-
-                <div class="spec-card">
-
-                    <span>Uso ideal</span>
-
-                    <strong id="bikeUse">
-                        Ciudad
-                    </strong>
-
-                </div>
-
-            </div>
-
-            <!-- ============================================ -->
-            <!-- PRICE -->
-            <!-- ============================================ -->
-
-            <div class="bike-price">
-
-                Desde
-
-                <strong id="bikePrice">
-                    $350 semanales
-                </strong>
-
-            </div>
-
-            <!-- ============================================ -->
-            <!-- BUTTONS -->
-            <!-- ============================================ -->
-
-            <div class="showcase-buttons">
-
-                <button class="btn-main">
-
-                    Solicitar información
-
-                </button>
-
-                <button class="btn-glass">
-
-                    Ver financiamiento
-
-                </button>
-
-            </div>
-
-        </div>
-
-        <!-- ============================================ -->
-        <!-- IMAGE -->
-        <!-- ============================================ -->
-
-        <div class="showcase-image-wrapper">
-
-            <div class="image-glow"></div>
-
-            <img
-            id="bikeImage"
-            src="motos/city125.png"
-            alt="Motocicleta Velver">
-
-        </div>
-
-    </div>
-
-</section>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- ===================================================== -->
 <!-- CSS -->
@@ -186,293 +29,259 @@
 <style>
 
 /* ===================================================== */
-/* ROOT COLORS — OFFICIAL PALETTE */
+/* ROOT */
 /* ===================================================== */
 
 :root{
 
-    --velver-blue:#1E6DFF;
-    --velver-blue-dark:#0B46B5;
-    --velver-navy:#081B44;
+    --blue:#1E6DFF;
+    --blue-dark:#0B46B5;
+    --navy:#081B44;
 
-    --velver-black:#050505;
+    --black:#050505;
 
-    --velver-white:#F5F7FA;
+    --white:#F5F7FA;
 
-    --velver-silver:#D7DCE3;
+    --silver:#D7DCE3;
 
-    --velver-gray:#8D96A6;
+    --gray:#8D96A6;
 
 }
 
 /* ===================================================== */
-/* SECTION */
+/* GLOBAL */
 /* ===================================================== */
 
-.showcase-experience{
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    position:relative;
+html{
+    scroll-behavior:smooth;
+}
 
-    padding:140px 40px;
+body{
+
+    background:var(--black);
+
+    color:white;
+
+    font-family:'Inter',sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+/* ===================================================== */
+/* BACKGROUND */
+/* ===================================================== */
+
+.background-layer{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-10;
 
     overflow:hidden;
 
 }
 
-/* ===================================================== */
-/* HEADER */
-/* ===================================================== */
+.background-layer img{
 
-.showcase-header{
+    width:100%;
+    height:100%;
 
-    max-width:900px;
+    object-fit:cover;
 
-    margin:auto;
+    filter:
+    brightness(.30)
+    contrast(1.08)
+    saturate(1.08);
 
-    text-align:center;
-
-}
-
-.showcase-header small{
-
-    color:var(--velver-blue);
-
-    letter-spacing:5px;
-
-    font-weight:700;
-
-}
-
-.showcase-header h2{
-
-    margin-top:24px;
-
-    font-size:clamp(2.5rem,6vw,5rem);
-
-    line-height:1.1;
-
-    font-family:'Orbitron',sans-serif;
-
-    text-transform:uppercase;
-
-}
-
-.showcase-header p{
-
-    margin-top:25px;
-
-    color:#D7DCE3;
-
-    line-height:2;
-
-    font-size:1.05rem;
+    transform:scale(1.05);
 
 }
 
 /* ===================================================== */
-/* SELECTOR */
+/* OVERLAY */
 /* ===================================================== */
 
-.experience-selector{
+.background-overlay{
 
-    margin-top:60px;
+    position:absolute;
 
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:18px;
-
-}
-
-.selector-btn{
-
-    padding:14px 26px;
-
-    border-radius:999px;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    background:rgba(255,255,255,.04);
-
-    color:white;
-
-    font-weight:600;
-
-    backdrop-filter:blur(12px);
-
-    cursor:pointer;
-
-    transition:.35s ease;
-
-}
-
-.selector-btn:hover{
-
-    transform:translateY(-3px);
-
-    border-color:var(--velver-blue);
-
-    box-shadow:
-    0 0 25px rgba(30,109,255,.25);
-
-}
-
-.selector-btn.active{
+    inset:0;
 
     background:
-    linear-gradient(135deg,
-    var(--velver-blue-dark),
-    var(--velver-blue));
 
-    border-color:transparent;
+    radial-gradient(circle at top right,
+    rgba(30,109,255,.20),
+    transparent 30%),
 
-    box-shadow:
-    0 0 35px rgba(30,109,255,.4);
+    radial-gradient(circle at bottom left,
+    rgba(11,70,181,.18),
+    transparent 30%),
 
-}
-
-/* ===================================================== */
-/* SHOWCASE CONTAINER */
-/* ===================================================== */
-
-.showcase-container{
-
-    max-width:1450px;
-
-    margin:90px auto 0;
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:80px;
-
-    align-items:center;
+    linear-gradient(to bottom,
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.94));
 
 }
 
 /* ===================================================== */
-/* CONTENT */
+/* PARTICLES */
 /* ===================================================== */
 
-.showcase-content small{
+.particles{
 
-    color:var(--velver-blue);
+    position:absolute;
 
-    letter-spacing:5px;
+    inset:0;
 
-    font-weight:700;
+    background-image:
+    radial-gradient(rgba(255,255,255,.12) 1px, transparent 1px);
 
-}
+    background-size:4px 4px;
 
-.showcase-content h3{
+    opacity:.025;
 
-    margin-top:20px;
-
-    font-size:clamp(3rem,6vw,6rem);
-
-    line-height:1;
-
-    font-family:'Orbitron',sans-serif;
+    animation:particlesMove 25s linear infinite;
 
 }
 
-.showcase-content p{
+@keyframes particlesMove{
 
-    margin-top:28px;
+    from{
+        transform:translateY(0px);
+    }
 
-    max-width:650px;
-
-    color:#D7DCE3;
-
-    line-height:2;
-
-    font-size:1.05rem;
+    to{
+        transform:translateY(-120px);
+    }
 
 }
 
 /* ===================================================== */
-/* SPECS */
+/* NAVBAR */
 /* ===================================================== */
 
-.bike-specs{
+header{
 
-    margin-top:45px;
+    position:fixed;
 
-    display:flex;
+    top:0;
 
-    flex-wrap:wrap;
+    width:100%;
 
-    gap:18px;
-
-}
-
-.spec-card{
-
-    min-width:170px;
-
-    padding:22px;
-
-    border-radius:24px;
-
-    background:rgba(255,255,255,.04);
-
-    border:1px solid rgba(255,255,255,.06);
+    z-index:999;
 
     backdrop-filter:blur(18px);
 
-}
+    background:rgba(0,0,0,.28);
 
-.spec-card span{
-
-    display:block;
-
-    color:#9CA6B5;
-
-    font-size:.9rem;
+    border-bottom:1px solid rgba(255,255,255,.04);
 
 }
 
-.spec-card strong{
+.navbar{
 
-    display:block;
+    max-width:1450px;
 
-    margin-top:10px;
+    margin:auto;
 
-    font-size:1.2rem;
+    display:flex;
 
-    color:var(--velver-white);
+    justify-content:space-between;
 
-}
+    align-items:center;
 
-/* ===================================================== */
-/* PRICE */
-/* ===================================================== */
-
-.bike-price{
-
-    margin-top:45px;
-
-    font-size:1.15rem;
-
-    color:#C7D0DB;
+    padding:20px 40px;
 
 }
 
-.bike-price strong{
+.logo{
 
-    display:block;
+    display:flex;
 
-    margin-top:10px;
+    align-items:center;
 
-    font-size:2rem;
+    gap:16px;
 
-    color:var(--velver-blue);
+}
+
+.logo img{
+
+    width:58px;
+    height:58px;
+
+    border-radius:50%;
+
+    box-shadow:
+    0 0 30px rgba(30,109,255,.35);
+
+}
+
+.logo h1{
 
     font-family:'Orbitron',sans-serif;
+
+    letter-spacing:3px;
+
+    font-size:1.05rem;
+
+}
+
+nav{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:#d7dde7;
+
+    transition:.3s ease;
+
+    position:relative;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-8px;
+
+    width:0%;
+    height:2px;
+
+    background:var(--blue);
+
+    transition:.3s ease;
+
+}
+
+nav a:hover{
+
+    color:white;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
 
 }
 
@@ -480,21 +289,9 @@
 /* BUTTONS */
 /* ===================================================== */
 
-.showcase-buttons{
-
-    margin-top:40px;
-
-    display:flex;
-
-    gap:18px;
-
-    flex-wrap:wrap;
-
-}
-
 .btn-main{
 
-    padding:16px 28px;
+    padding:15px 26px;
 
     border:none;
 
@@ -502,12 +299,12 @@
 
     background:
     linear-gradient(135deg,
-    var(--velver-blue-dark),
-    var(--velver-blue));
+    var(--blue-dark),
+    var(--blue));
 
     color:white;
 
-    font-weight:700;
+    font-weight:600;
 
     cursor:pointer;
 
@@ -523,13 +320,13 @@
     transform:translateY(-4px);
 
     box-shadow:
-    0 0 45px rgba(30,109,255,.45);
+    0 0 50px rgba(30,109,255,.45);
 
 }
 
 .btn-glass{
 
-    padding:16px 28px;
+    padding:15px 26px;
 
     border-radius:999px;
 
@@ -554,61 +351,456 @@
 }
 
 /* ===================================================== */
-/* IMAGE */
+/* HERO */
 /* ===================================================== */
 
-.showcase-image-wrapper{
+.hero{
 
-    position:relative;
+    min-height:100vh;
 
     display:flex;
 
-    justify-content:center;
+    align-items:center;
+
+    padding:160px 40px 100px;
+
+}
+
+.hero-container{
+
+    max-width:1450px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    gap:70px;
 
     align-items:center;
 
 }
 
-.image-glow{
+/* ===================================================== */
+/* HERO TEXT */
+/* ===================================================== */
 
-    position:absolute;
+.hero-text small{
 
-    width:520px;
-    height:520px;
+    color:var(--blue);
 
-    border-radius:50%;
+    letter-spacing:5px;
 
-    background:
-    radial-gradient(circle,
-    rgba(30,109,255,.28),
-    transparent 70%);
-
-    filter:blur(20px);
+    font-weight:700;
 
 }
 
-.showcase-image-wrapper img{
+.hero-text h2{
 
-    position:relative;
+    margin-top:28px;
 
-    width:100%;
+    font-size:clamp(3rem,7vw,6.5rem);
+
+    line-height:.95;
+
+    font-family:'Orbitron',sans-serif;
+
+    text-transform:uppercase;
+
+    text-shadow:
+    0 0 25px rgba(30,109,255,.15);
+
+}
+
+.hero-text p{
+
+    margin-top:35px;
 
     max-width:720px;
 
-    object-fit:contain;
+    line-height:2;
 
-    transition:1s ease;
+    color:#D7DCE3;
 
-    filter:
-    drop-shadow(0 0 45px rgba(0,0,0,.55));
+    font-size:1.05rem;
 
 }
 
-.showcase-image-wrapper img:hover{
+.hero-buttons{
 
-    transform:
-    scale(1.03)
-    rotate(-1deg);
+    margin-top:42px;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+}
+
+/* ===================================================== */
+/* EXPERIENCE PANEL */
+/* ===================================================== */
+
+.experience-panel{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    border-radius:36px;
+
+    padding:38px;
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+    0 0 60px rgba(0,0,0,.45);
+
+}
+
+/* ===================================================== */
+/* PANEL TOP */
+/* ===================================================== */
+
+.panel-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.live-status{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#9dffb9;
+
+    font-size:.9rem;
+
+}
+
+.live-dot{
+
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+
+    background:#00ff62;
+
+    box-shadow:
+    0 0 15px #00ff62;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+        opacity:1;
+    }
+
+    50%{
+        transform:scale(1.4);
+        opacity:.5;
+    }
+
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+.experience-panel h3{
+
+    margin-top:28px;
+
+    font-size:2rem;
+
+    line-height:1.2;
+
+    font-family:'Orbitron',sans-serif;
+
+}
+
+.experience-panel p{
+
+    margin-top:22px;
+
+    line-height:2;
+
+    color:#D7DCE3;
+
+}
+
+/* ===================================================== */
+/* EXPERIENCE GRID */
+/* ===================================================== */
+
+.experience-grid{
+
+    margin-top:35px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:18px;
+
+}
+
+.experience-card{
+
+    padding:22px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.05);
+
+    transition:.35s ease;
+
+}
+
+.experience-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 0 35px rgba(30,109,255,.12);
+
+}
+
+.experience-card h4{
+
+    color:var(--blue);
+
+    font-size:1.2rem;
+
+    font-family:'Orbitron',sans-serif;
+
+}
+
+.experience-card p{
+
+    margin-top:12px;
+
+    line-height:1.8;
+
+    font-size:.94rem;
+
+}
+
+/* ===================================================== */
+/* SHOWROOM */
+/* ===================================================== */
+
+.showroom{
+
+    padding:120px 40px;
+
+}
+
+.showroom-container{
+
+    max-width:1450px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+/* ===================================================== */
+/* SHOWROOM IMAGE */
+/* ===================================================== */
+
+.showroom-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:36px;
+
+    box-shadow:
+    0 0 60px rgba(0,0,0,.5);
+
+}
+
+.showroom-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:1.2s ease;
+
+}
+
+.showroom-image:hover img{
+
+    transform:scale(1.04);
+
+}
+
+.showroom-glow{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(to top,
+    rgba(0,0,0,.65),
+    transparent);
+
+}
+
+/* ===================================================== */
+/* SHOWROOM TEXT */
+/* ===================================================== */
+
+.showroom-text small{
+
+    color:var(--blue);
+
+    letter-spacing:5px;
+
+    font-weight:700;
+
+}
+
+.showroom-text h3{
+
+    margin-top:24px;
+
+    font-size:clamp(2.5rem,5vw,4rem);
+
+    line-height:1.1;
+
+    font-family:'Orbitron',sans-serif;
+
+}
+
+.showroom-text p{
+
+    margin-top:28px;
+
+    color:#D7DCE3;
+
+    line-height:2;
+
+}
+
+/* ===================================================== */
+/* FEATURES */
+/* ===================================================== */
+
+.features{
+
+    margin-top:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.feature{
+
+    padding:20px 24px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.05);
+
+    backdrop-filter:blur(12px);
+
+    transition:.35s ease;
+
+}
+
+.feature:hover{
+
+    border-color:rgba(30,109,255,.18);
+
+    transform:translateX(6px);
+
+}
+
+/* ===================================================== */
+/* AUDIO */
+/* ===================================================== */
+
+.audio-control{
+
+    position:fixed;
+
+    right:25px;
+    bottom:25px;
+
+    z-index:9999;
+
+}
+
+.audio-btn{
+
+    width:68px;
+    height:68px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:
+    linear-gradient(135deg,
+    var(--blue-dark),
+    var(--blue));
+
+    color:white;
+
+    font-size:1.2rem;
+
+    cursor:pointer;
+
+    transition:.35s ease;
+
+    box-shadow:
+    0 0 35px rgba(30,109,255,.35);
+
+}
+
+.audio-btn:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+    0 0 60px rgba(30,109,255,.55);
 
 }
 
@@ -618,27 +810,37 @@
 
 @media(max-width:980px){
 
-    .showcase-container{
+    nav{
+        display:none;
+    }
+
+    .hero-container,
+    .showroom-container{
 
         grid-template-columns:1fr;
 
-        gap:60px;
+    }
+
+    .experience-grid{
+
+        grid-template-columns:1fr;
 
     }
 
-    .showcase-content{
+    .hero{
+
+        padding-top:180px;
+
+    }
+
+    .hero-text,
+    .showroom-text{
 
         text-align:center;
 
     }
 
-    .bike-specs{
-
-        justify-content:center;
-
-    }
-
-    .showcase-buttons{
+    .hero-buttons{
 
         justify-content:center;
 
@@ -647,214 +849,386 @@
 }
 
 /* ===================================================== */
-/* SMOOTH TRANSITIONS */
+/* SCROLL REVEAL */
 /* ===================================================== */
 
-.fade-change{
+.reveal{
 
-    animation:fadeChange .5s ease;
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:1s ease;
 
 }
 
-@keyframes fadeChange{
+.reveal.active{
 
-    from{
+    opacity:1;
 
-        opacity:.2;
-        transform:translateY(10px);
-
-    }
-
-    to{
-
-        opacity:1;
-        transform:translateY(0);
-
-    }
+    transform:translateY(0);
 
 }
 
 </style>
 
+</head>
+
+<body>
+
 <!-- ===================================================== -->
-<!-- JAVASCRIPT -->
+<!-- BACKGROUND -->
+<!-- ===================================================== -->
+
+<div class="background-layer">
+
+    <img src="SHOWROOM-EXTERIOR.png" alt="Velver Motos">
+
+    <div class="background-overlay"></div>
+
+    <div class="particles"></div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- AUDIO -->
+<!-- ===================================================== -->
+
+<div class="audio-control">
+
+    <button class="audio-btn" id="musicButton">
+
+        ♫
+
+    </button>
+
+</div>
+
+<audio id="bgMusic" loop>
+
+    <source src="audio/cinematic-ambient.mp3" type="audio/mpeg">
+
+</audio>
+
+<!-- ===================================================== -->
+<!-- HEADER -->
+<!-- ===================================================== -->
+
+<header>
+
+    <div class="navbar">
+
+        <div class="logo">
+
+            <img src="LOGO-REDONDO.png" alt="Velver">
+
+            <h1>VELVER MOTOS</h1>
+
+        </div>
+
+        <nav>
+
+            <a href="#">Inicio</a>
+            <a href="#">Catálogo</a>
+            <a href="#">Showroom</a>
+            <a href="#">Experiencia</a>
+            <a href="#">Financiamiento</a>
+
+        </nav>
+
+        <button class="btn-main">
+
+            WhatsApp
+
+        </button>
+
+    </div>
+
+</header>
+
+<!-- ===================================================== -->
+<!-- HERO -->
+<!-- ===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-container">
+
+        <!-- LEFT -->
+
+        <div class="hero-text reveal">
+
+            <small>BLACK EXPERIENCE™</small>
+
+            <h2>
+
+                Tecnología humana.
+                Experiencia premium.
+
+            </h2>
+
+            <p>
+
+                Más que vender motocicletas, construimos confianza.
+                Fusionamos tecnología, honestidad y atención humana
+                para crear una experiencia automotriz elegante,
+                transparente y memorable.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="btn-main">
+
+                    Explorar catálogo
+
+                </button>
+
+                <button class="btn-glass">
+
+                    Entrar al showroom
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="experience-panel reveal">
+
+            <div class="panel-top">
+
+                <div class="live-status">
+
+                    <div class="live-dot"></div>
+
+                    SHOWROOM ACTIVO
+
+                </div>
+
+                <small style="color:#AEB7C4;">
+                    ATLIXCO • PUEBLA
+                </small>
+
+            </div>
+
+            <h3>
+
+                Una nueva forma de vivir una concesionaria.
+
+            </h3>
+
+            <p>
+
+                Diseñamos una experiencia inspirada en la confianza,
+                la claridad y la evolución tecnológica, manteniendo
+                siempre el trato humano como prioridad.
+
+            </p>
+
+            <div class="experience-grid">
+
+                <div class="experience-card">
+
+                    <h4>IA HUMANA</h4>
+
+                    <p>
+
+                        Atención inteligente con comunicación natural y cercana.
+
+                    </p>
+
+                </div>
+
+                <div class="experience-card">
+
+                    <h4>TRANSPARENCIA</h4>
+
+                    <p>
+
+                        Explicación clara de financieras, procesos y contratos.
+
+                    </p>
+
+                </div>
+
+                <div class="experience-card">
+
+                    <h4>BLACK CODE™</h4>
+
+                    <p>
+
+                        Diseño cinematográfico premium con identidad elegante.
+
+                    </p>
+
+                </div>
+
+                <div class="experience-card">
+
+                    <h4>EXPERIENCIA</h4>
+
+                    <p>
+
+                        Un ecosistema pensado para generar confianza real.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- SHOWROOM -->
+<!-- ===================================================== -->
+
+<section class="showroom">
+
+    <div class="showroom-container">
+
+        <!-- IMAGE -->
+
+        <div class="showroom-image reveal">
+
+            <img src="SHOWROOM-INTERIOR.png" alt="Velver Showroom">
+
+            <div class="showroom-glow"></div>
+
+        </div>
+
+        <!-- TEXT -->
+
+        <div class="showroom-text reveal">
+
+            <small>SHOWROOM EXPERIENCE™</small>
+
+            <h3>
+
+                La venta termina.
+                La confianza comienza.
+
+            </h3>
+
+            <p>
+
+                Nuestro objetivo no es solo vender una motocicleta.
+                Buscamos crear una experiencia donde cada cliente
+                entienda, compare y tome la mejor decisión con claridad.
+
+            </p>
+
+            <div class="features">
+
+                <div class="feature">
+
+                    ✔ Atención humana combinada con tecnología inteligente.
+
+                </div>
+
+                <div class="feature">
+
+                    ✔ Explicación transparente de financieras y contratos.
+
+                </div>
+
+                <div class="feature">
+
+                    ✔ Experiencia premium inspirada en marcas internacionales.
+
+                </div>
+
+                <div class="feature">
+
+                    ✔ Catálogo cinematográfico y ecosistema digital inmersivo.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- SCRIPT -->
 <!-- ===================================================== -->
 
 <script>
 
 /* ===================================================== */
-/* MOTORCYCLE DATA */
+/* AUDIO */
 /* ===================================================== */
 
-const motorcycles = {
+const music =
+document.getElementById('bgMusic');
 
-    urban:{
+const button =
+document.getElementById('musicButton');
 
-        brand:"HUAIHAI",
+music.volume = 0.25;
 
-        title:"City 125",
+let active = false;
 
-        description:
-        "Diseñada para dominar la ciudad con eficiencia, comodidad y una estética moderna y elegante.",
+button.addEventListener('click',()=>{
 
-        engine:"125cc",
+    if(!active){
 
-        transmission:"Automática",
+        music.play();
 
-        use:"Ciudad",
+        button.innerHTML = "❚❚";
 
-        price:"$350 semanales",
+        active = true;
 
-        image:"motos/city125.png"
+    }else{
 
-    },
+        music.pause();
 
-    work:{
+        button.innerHTML = "♫";
 
-        brand:"RGH MOTOS",
-
-        title:"AD-150",
-
-        description:
-        "Pensada para el trabajo diario, combinando rendimiento, economía y confiabilidad.",
-
-        engine:"150cc",
-
-        transmission:"Semiautomática",
-
-        use:"Trabajo",
-
-        price:"$420 semanales",
-
-        image:"motos/ad150.png"
-
-    },
-
-    power:{
-
-        brand:"RYDER",
-
-        title:"Fighter 200",
-
-        description:
-        "Potencia, carácter y diseño agresivo para quienes buscan presencia y emoción.",
-
-        engine:"200cc",
-
-        transmission:"Manual",
-
-        use:"Deportiva",
-
-        price:"$580 semanales",
-
-        image:"motos/fighter200.png"
-
-    },
-
-    adventure:{
-
-        brand:"ZMOTO",
-
-        title:"CRX 300",
-
-        description:
-        "Preparada para explorar nuevos caminos con potencia, control y espíritu aventurero.",
-
-        engine:"300cc",
-
-        transmission:"Manual",
-
-        use:"Adventure",
-
-        price:"$790 semanales",
-
-        image:"motos/crx300.png"
+        active = false;
 
     }
 
-};
+});
 
 /* ===================================================== */
-/* ELEMENTS */
+/* SCROLL REVEAL */
 /* ===================================================== */
 
-const buttons =
-document.querySelectorAll('.selector-btn');
+const reveals =
+document.querySelectorAll('.reveal');
 
-const bikeBrand =
-document.getElementById('bikeBrand');
+window.addEventListener('scroll',()=>{
 
-const bikeTitle =
-document.getElementById('bikeTitle');
+    reveals.forEach(reveal=>{
 
-const bikeDescription =
-document.getElementById('bikeDescription');
+        const windowHeight =
+        window.innerHeight;
 
-const bikeEngine =
-document.getElementById('bikeEngine');
+        const revealTop =
+        reveal.getBoundingClientRect().top;
 
-const bikeTransmission =
-document.getElementById('bikeTransmission');
+        if(revealTop < windowHeight - 100){
 
-const bikeUse =
-document.getElementById('bikeUse');
+            reveal.classList.add('active');
 
-const bikePrice =
-document.getElementById('bikePrice');
-
-const bikeImage =
-document.getElementById('bikeImage');
-
-/* ===================================================== */
-/* CHANGE EXPERIENCE */
-/* ===================================================== */
-
-buttons.forEach(button=>{
-
-    button.addEventListener('click',()=>{
-
-        buttons.forEach(btn=>
-        btn.classList.remove('active'));
-
-        button.classList.add('active');
-
-        const bike =
-        motorcycles[button.dataset.bike];
-
-        bikeBrand.textContent =
-        bike.brand;
-
-        bikeTitle.textContent =
-        bike.title;
-
-        bikeDescription.textContent =
-        bike.description;
-
-        bikeEngine.textContent =
-        bike.engine;
-
-        bikeTransmission.textContent =
-        bike.transmission;
-
-        bikeUse.textContent =
-        bike.use;
-
-        bikePrice.textContent =
-        bike.price;
-
-        bikeImage.src =
-        bike.image;
-
-        /* ANIMATION */
-
-        bikeImage.classList.remove('fade-change');
-
-        void bikeImage.offsetWidth;
-
-        bikeImage.classList.add('fade-change');
+        }
 
     });
 
 });
 
 </script>
+
+</body>
+</html>
