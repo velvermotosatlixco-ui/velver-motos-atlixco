@@ -2,8 +2,8 @@
 <html lang="es">
 
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>VELVER MOTOS — KNJO BLACK CODE™</title>
 
@@ -37,10 +37,8 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:999;
-
 background:rgba(0,0,0,0.25);
 backdrop-filter:blur(14px);
-
 border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
@@ -60,11 +58,6 @@ color:white;
 text-decoration:none;
 font-size:13px;
 letter-spacing:3px;
-transition:0.3s;
-}
-
-.nav-links a:hover{
-opacity:0.6;
 }
 
 /* VIDEO */
@@ -88,8 +81,7 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:
-linear-gradient(
+background:linear-gradient(
 to bottom,
 rgba(0,0,0,0.3),
 rgba(0,0,0,0.85)
@@ -109,75 +101,31 @@ text-align:center;
 padding:20px;
 }
 
-/* TITLE */
-
 .title{
 font-size:clamp(45px,8vw,110px);
 font-weight:900;
 letter-spacing:8px;
 text-transform:uppercase;
-
-background:linear-gradient(
-90deg,
-#ffffff,
-#7a7a7a,
-#ffffff
-);
-
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-
-animation:glow 4s infinite ease-in-out;
 }
-
-/* SUBTITLE */
 
 .subtitle{
 margin-top:20px;
-font-size:clamp(14px,2vw,22px);
+font-size:18px;
 color:#b5b5b5;
-letter-spacing:4px;
+letter-spacing:3px;
 max-width:900px;
 line-height:1.8;
 }
-
-/* BUTTON */
 
 .btn{
 margin-top:45px;
 padding:18px 40px;
 border:1px solid rgba(255,255,255,0.25);
 background:rgba(255,255,255,0.05);
-backdrop-filter:blur(10px);
 color:white;
 text-decoration:none;
 letter-spacing:4px;
-transition:0.4s;
 border-radius:14px;
-}
-
-.btn:hover{
-transform:scale(1.05);
-background:white;
-color:black;
-}
-
-/* ANIMATION */
-
-@keyframes glow{
-
-0%{
-filter:drop-shadow(0 0 5px rgba(255,255,255,0.15));
-}
-
-50%{
-filter:drop-shadow(0 0 25px rgba(255,255,255,0.45));
-}
-
-100%{
-filter:drop-shadow(0 0 5px rgba(255,255,255,0.15));
-}
-
 }
 
 /* SYSTEM SECTION */
@@ -196,3 +144,240 @@ align-items:center;
 font-size:clamp(35px,6vw,80px);
 margin-bottom:70px;
 letter-spacing:6px;
+text-align:center;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+width:100%;
+max-width:1200px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+padding:40px;
+border-radius:24px;
+}
+
+.card h3{
+margin-bottom:20px;
+font-size:22px;
+letter-spacing:3px;
+}
+
+.card p{
+color:#b0b0b0;
+line-height:1.8;
+}
+
+/* MOTOS */
+
+.motos-section{
+padding:120px 30px;
+background:#070707;
+}
+
+.motos-title{
+text-align:center;
+font-size:clamp(35px,6vw,80px);
+margin-bottom:80px;
+letter-spacing:6px;
+}
+
+.motos-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:35px;
+max-width:1400px;
+margin:auto;
+}
+
+.moto-card{
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:28px;
+overflow:hidden;
+}
+
+.moto-image{
+height:340px;
+background:linear-gradient(135deg,#111,#333);
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:40px;
+letter-spacing:4px;
+}
+
+.moto-info{
+padding:30px;
+}
+
+.moto-info h3{
+font-size:28px;
+margin-bottom:18px;
+letter-spacing:4px;
+}
+
+.moto-info p{
+color:#b5b5b5;
+line-height:1.8;
+margin-bottom:25px;
+}
+
+.moto-info a{
+display:inline-block;
+padding:14px 28px;
+border:1px solid rgba(255,255,255,0.2);
+border-radius:12px;
+text-decoration:none;
+color:white;
+letter-spacing:3px;
+}
+
+/* FOOTER */
+
+.footer{
+padding:40px 20px;
+text-align:center;
+font-size:12px;
+letter-spacing:3px;
+color:#666;
+background:#050505;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+VELVER MOTOS
+</div>
+
+<div class="nav-links">
+<a href="#">HOME</a>
+<a href="#system">SYSTEM</a>
+<a href="#motos">MOTOS</a>
+<a href="#">CONTACT</a>
+</div>
+
+</nav>
+
+<video autoplay muted loop playsinline>
+<source src="https://storage.coverr.co/videos/coverr-night-drive-1560679427422?download=1080p" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<section class="hero">
+
+<h1 class="title">
+VELVER MOTOS
+</h1>
+
+<p class="subtitle">
+KNJO BLACK CODE™ INFRASTRUCTURE — EDGE AI • CLOUD NATIVE • CINEMATIC EXPERIENCE
+</p>
+
+<a class="btn" href="#system">
+ENTER THE SYSTEM
+</a>
+
+</section>
+
+<section id="system" class="system-section">
+
+<h2 class="system-title">
+WELCOME TO THE EDGE
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>EDGE AI</h3>
+<p>
+Infraestructura impulsada por Cloudflare Workers AI y automatización inteligente.
+</p>
+</div>
+
+<div class="card">
+<h3>CINEMATIC EXPERIENCE</h3>
+<p>
+Diseño premium inspirado en Hollywood y cyberpunk.
+</p>
+</div>
+
+<div class="card">
+<h3>KNJO BLACK CODE™</h3>
+<p>
+Arquitectura enterprise escalable enfocada en velocidad y autoridad visual.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="motos" class="motos-section">
+
+<h2 class="motos-title">
+MOTORCYCLE EXPERIENCE
+</h2>
+
+<div class="motos-grid">
+
+<div class="moto-card">
+<div class="moto-image">CXR 300</div>
+
+<div class="moto-info">
+<h3>CXR 300</h3>
+<p>
+Potencia y experiencia premium para dominar la ciudad.
+</p>
+<a href="#">EXPLORE</a>
+</div>
+
+</div>
+
+<div class="moto-card">
+<div class="moto-image">RACING</div>
+
+<div class="moto-info">
+<h3>RACING EDITION</h3>
+<p>
+Inspirada en velocidad y tecnología futurista.
+</p>
+<a href="#">EXPLORE</a>
+</div>
+
+</div>
+
+<div class="moto-card">
+<div class="moto-image">BLACK</div>
+
+<div class="moto-info">
+<h3>BLACK SHADOW</h3>
+<p>
+Elegancia oscura fusionada con ingeniería premium.
+</p>
+<a href="#">EXPLORE</a>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="footer">
+KNJO BLACK CODE™ • VELVER MOTOS • EDGE INFRASTRUCTURE
+</div>
+
+</body>
+</html>
