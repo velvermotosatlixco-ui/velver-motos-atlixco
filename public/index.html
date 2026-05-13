@@ -22,7 +22,47 @@ color:white;
 font-family:'Orbitron',sans-serif;
 overflow-x:hidden;
 }
+/* NAVBAR */
 
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:22px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+
+background:rgba(0,0,0,0.25);
+backdrop-filter:blur(14px);
+
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.logo{
+font-size:20px;
+font-weight:900;
+letter-spacing:4px;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-size:13px;
+letter-spacing:3px;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+opacity:0.6;
+}
 /* VIDEO */
 
 video{
@@ -202,7 +242,20 @@ color:#666;
 </head>
 
 <body>
+<nav class="navbar">
 
+<div class="logo">
+VELVER MOTOS
+</div>
+
+<div class="nav-links">
+<a href="#">HOME</a>
+<a href="#system">SYSTEM</a>
+<a href="#">MOTOS</a>
+<a href="#">CONTACT</a>
+</div>
+
+</nav>
 <video autoplay muted loop playsinline>
 <source src="https://cdn.coverr.co/videos/coverr-night-drive-in-the-city-1560679427422?download=1080p" type="video/mp4">
 </video>
