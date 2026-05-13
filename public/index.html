@@ -2,14 +2,17 @@
 <html lang="es">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VELVER MOTOS — KNJO BLACK CODE™</title>
+<title>VELVER MOTOS — ELITE EXPERIENCE™</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
 
 <style>
+
+/* RESET */
 
 *{
 margin:0;
@@ -18,10 +21,20 @@ box-sizing:border-box;
 scroll-behavior:smooth;
 }
 
+:root{
+
+--black:#050505;
+--graphite:#111111;
+--silver:#b8b8b8;
+--white:#f5f5f5;
+--blue:#0A84FF;
+
+}
+
 body{
-background:#050505;
-color:white;
 font-family:'Orbitron',sans-serif;
+background:var(--black);
+color:var(--white);
 overflow-x:hidden;
 }
 
@@ -29,19 +42,16 @@ overflow-x:hidden;
 
 .loader{
 position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
+inset:0;
 background:#050505;
-z-index:10000;
+z-index:99999;
 
 display:flex;
 justify-content:center;
 align-items:center;
 flex-direction:column;
 
-transition:1.2s ease;
+transition:1s ease;
 }
 
 .loader.hide{
@@ -49,47 +59,56 @@ opacity:0;
 visibility:hidden;
 }
 
-.loader-title{
-font-size:clamp(30px,6vw,70px);
-letter-spacing:8px;
+.loader h1{
+font-size:clamp(35px,6vw,70px);
+letter-spacing:10px;
 font-weight:900;
 
 background:linear-gradient(
 90deg,
-#ffffff,
-#7a7a7a,
-#ffffff
+#fff,
+#777,
+#fff
 );
 
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-
-animation:glow 3s infinite;
 }
 
-.loader-sub{
-margin-top:25px;
-font-size:14px;
+.loader p{
+margin-top:20px;
+font-size:12px;
 letter-spacing:6px;
-color:#888;
-
-animation:pulseText 1.8s infinite;
+color:#777;
 }
 
-@keyframes pulseText{
+/* VIDEO BACKGROUND */
 
-0%{
-opacity:0.3;
+video{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-3;
+filter:brightness(0.28);
 }
 
-50%{
-opacity:1;
-}
+/* OVERLAY */
 
-100%{
-opacity:0.3;
-}
+.overlay{
+position:fixed;
+inset:0;
 
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.25),
+rgba(0,0,0,0.92)
+);
+
+z-index:-2;
 }
 
 /* NAVBAR */
@@ -99,274 +118,303 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-padding:22px 50px;
+
+padding:24px 50px;
+
 display:flex;
 justify-content:space-between;
 align-items:center;
+
 z-index:999;
 
 background:rgba(0,0,0,0.25);
 backdrop-filter:blur(14px);
 
-border-bottom:1px solid rgba(255,255,255,0.08);
+border-bottom:1px solid rgba(255,255,255,0.06);
 }
 
 .logo{
-font-size:20px;
+font-size:18px;
 font-weight:900;
-letter-spacing:4px;
+letter-spacing:5px;
 }
 
 .nav-links{
 display:flex;
-gap:30px;
+gap:35px;
 }
 
 .nav-links a{
-color:white;
 text-decoration:none;
-font-size:13px;
+color:white;
+font-size:12px;
 letter-spacing:3px;
 transition:0.3s;
+opacity:0.8;
 }
 
 .nav-links a:hover{
-opacity:0.6;
-}
-
-/* VIDEO */
-
-video{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-object-fit:cover;
-z-index:-2;
-filter:brightness(0.35);
-}
-
-/* OVERLAY */
-
-.overlay{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:linear-gradient(
-to bottom,
-rgba(0,0,0,0.3),
-rgba(0,0,0,0.85)
-);
-z-index:-1;
+opacity:1;
 }
 
 /* HERO */
 
 .hero{
-height:100vh;
+min-height:100vh;
+
 display:flex;
-flex-direction:column;
 justify-content:center;
 align-items:center;
-text-align:center;
-padding:20px;
+padding:0 8%;
+
+position:relative;
 }
 
-.title{
-font-size:clamp(45px,8vw,110px);
+.hero-content{
+max-width:900px;
+}
+
+.hero-tag{
+font-size:12px;
+letter-spacing:6px;
+color:#999;
+margin-bottom:25px;
+}
+
+.hero-title{
+font-size:clamp(55px,9vw,140px);
+line-height:0.95;
 font-weight:900;
-letter-spacing:8px;
+letter-spacing:4px;
 text-transform:uppercase;
+}
+
+.hero-title span{
 
 background:linear-gradient(
 90deg,
 #ffffff,
-#7a7a7a,
+#7f7f7f,
 #ffffff
 );
 
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-
-animation:glow 4s infinite ease-in-out;
 }
 
-.subtitle{
-margin-top:20px;
-font-size:18px;
-color:#b5b5b5;
-letter-spacing:3px;
-max-width:900px;
-line-height:1.8;
+.hero-description{
+margin-top:35px;
+
+max-width:700px;
+
+font-size:16px;
+line-height:2;
+color:#9e9e9e;
+
+letter-spacing:1px;
 }
 
-.btn{
-margin-top:45px;
-padding:18px 40px;
-border:1px solid rgba(255,255,255,0.25);
-background:rgba(255,255,255,0.05);
-color:white;
-text-decoration:none;
-letter-spacing:4px;
+.hero-actions{
+margin-top:50px;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+/* BUTTONS */
+
+.btn-primary{
+padding:18px 36px;
 border-radius:14px;
-transition:0.4s;
-backdrop-filter:blur(10px);
-}
 
-.btn:hover{
 background:white;
 color:black;
-transform:scale(1.05);
-}
 
-/* GLOW */
+text-decoration:none;
 
-@keyframes glow{
+font-size:12px;
+letter-spacing:4px;
+font-weight:700;
 
-0%{
-filter:drop-shadow(0 0 5px rgba(255,255,255,0.15));
-}
-
-50%{
-filter:drop-shadow(0 0 25px rgba(255,255,255,0.45));
-}
-
-100%{
-filter:drop-shadow(0 0 5px rgba(255,255,255,0.15));
-}
-
-}
-
-/* SYSTEM SECTION */
-
-.system-section{
-min-height:100vh;
-padding:120px 30px;
-background:#050505;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-}
-
-.system-title{
-font-size:clamp(35px,6vw,80px);
-margin-bottom:70px;
-letter-spacing:6px;
-text-align:center;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-width:100%;
-max-width:1200px;
-}
-
-.card{
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.1);
-padding:40px;
-border-radius:24px;
-backdrop-filter:blur(10px);
 transition:0.4s;
 }
 
-.card:hover{
-transform:translateY(-10px);
+.btn-primary:hover{
+transform:translateY(-3px);
+}
+
+.btn-secondary{
+padding:18px 36px;
+border-radius:14px;
+
+border:1px solid rgba(255,255,255,0.14);
+
+background:rgba(255,255,255,0.04);
+
+backdrop-filter:blur(10px);
+
+color:white;
+text-decoration:none;
+
+font-size:12px;
+letter-spacing:4px;
+
+transition:0.4s;
+}
+
+.btn-secondary:hover{
 border-color:white;
 }
 
-.card h3{
+/* SHOWROOM SECTION */
+
+.showroom{
+padding:140px 7%;
+background:#070707;
+}
+
+.section-label{
+font-size:11px;
+letter-spacing:6px;
+color:#777;
+margin-bottom:20px;
+}
+
+.section-title{
+font-size:clamp(35px,6vw,90px);
+line-height:1;
+margin-bottom:30px;
+}
+
+.section-description{
+max-width:800px;
+line-height:2;
+color:#999;
+margin-bottom:80px;
+}
+
+/* GRID */
+
+.bikes-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+gap:35px;
+}
+
+/* BIKE CARD */
+
+.bike-card{
+background:rgba(255,255,255,0.03);
+
+border:1px solid rgba(255,255,255,0.06);
+
+border-radius:28px;
+
+overflow:hidden;
+
+transition:0.5s;
+}
+
+.bike-card:hover{
+transform:translateY(-10px);
+border-color:rgba(255,255,255,0.25);
+}
+
+.bike-image{
+height:360px;
+
+background:
+linear-gradient(
+135deg,
+#101010,
+#2d2d2d
+);
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:42px;
+font-weight:900;
+letter-spacing:5px;
+}
+
+.bike-content{
+padding:35px;
+}
+
+.bike-content h3{
+font-size:30px;
+margin-bottom:18px;
+}
+
+.bike-content p{
+color:#9d9d9d;
+line-height:1.9;
+margin-bottom:30px;
+}
+
+.bike-buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.small-btn{
+padding:14px 22px;
+border-radius:12px;
+
+text-decoration:none;
+
+font-size:11px;
+letter-spacing:3px;
+
+transition:0.4s;
+}
+
+.small-primary{
+background:white;
+color:black;
+}
+
+.small-secondary{
+border:1px solid rgba(255,255,255,0.14);
+color:white;
+}
+
+/* EXPERIENCE */
+
+.experience{
+padding:150px 7%;
+background:#050505;
+}
+
+.experience-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:35px;
+margin-top:80px;
+}
+
+.exp-card{
+padding:45px;
+
+background:rgba(255,255,255,0.03);
+
+border:1px solid rgba(255,255,255,0.06);
+
+border-radius:24px;
+}
+
+.exp-card h3{
 margin-bottom:20px;
 font-size:22px;
 letter-spacing:3px;
 }
 
-.card p{
-color:#b0b0b0;
-line-height:1.8;
-}
-
-/* MOTOS */
-
-.motos-section{
-padding:120px 30px;
-background:#070707;
-}
-
-.motos-title{
-text-align:center;
-font-size:clamp(35px,6vw,80px);
-margin-bottom:80px;
-letter-spacing:6px;
-}
-
-.motos-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:35px;
-max-width:1400px;
-margin:auto;
-}
-
-.moto-card{
-background:rgba(255,255,255,0.04);
-border:1px solid rgba(255,255,255,0.08);
-border-radius:28px;
-overflow:hidden;
-transition:0.5s;
-}
-
-.moto-card:hover{
-transform:translateY(-12px);
-border-color:white;
-}
-
-.moto-image{
-height:340px;
-background:linear-gradient(135deg,#111,#333);
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:40px;
-letter-spacing:4px;
-}
-
-.moto-info{
-padding:30px;
-}
-
-.moto-info h3{
-font-size:28px;
-margin-bottom:18px;
-letter-spacing:4px;
-}
-
-.moto-info p{
-color:#b5b5b5;
-line-height:1.8;
-margin-bottom:25px;
-}
-
-.moto-info a{
-display:inline-block;
-padding:14px 28px;
-border:1px solid rgba(255,255,255,0.2);
-border-radius:12px;
-text-decoration:none;
-color:white;
-letter-spacing:3px;
-transition:0.4s;
-}
-
-.moto-info a:hover{
-background:white;
-color:black;
+.exp-card p{
+line-height:2;
+color:#999;
 }
 
 /* WHATSAPP */
@@ -375,101 +423,97 @@ color:black;
 position:fixed;
 bottom:25px;
 right:25px;
-width:75px;
-height:75px;
+
+width:72px;
+height:72px;
+
 border-radius:50%;
-background:rgba(37,211,102,0.18);
+
+background:rgba(37,211,102,0.15);
 
 display:flex;
 justify-content:center;
 align-items:center;
 
-color:white;
-font-size:22px;
-font-weight:900;
 text-decoration:none;
+color:white;
+
+font-size:20px;
+font-weight:900;
 
 backdrop-filter:blur(12px);
 
-border:1px solid rgba(255,255,255,0.15);
+border:1px solid rgba(255,255,255,0.12);
 
 z-index:9999;
 
-animation:pulse 2.5s infinite;
 transition:0.4s;
 }
 
 .whatsapp:hover{
-transform:scale(1.1);
+transform:scale(1.08);
 background:#25D366;
-}
-
-@keyframes pulse{
-
-0%{
-box-shadow:0 0 0 0 rgba(37,211,102,0.6);
-}
-
-70%{
-box-shadow:0 0 0 18px rgba(37,211,102,0);
-}
-
-100%{
-box-shadow:0 0 0 0 rgba(37,211,102,0);
-}
-
 }
 
 /* FOOTER */
 
 .footer{
-padding:40px 20px;
-text-align:center;
-font-size:12px;
-letter-spacing:3px;
-color:#666;
+padding:50px 20px;
+
 background:#050505;
+
+text-align:center;
+
+font-size:11px;
+letter-spacing:4px;
+
+color:#666;
 }
 
 /* RESPONSIVE */
 
-@media(max-width:768px){
+@media(max-width:900px){
 
 .navbar{
-padding:18px 20px;
+padding:20px;
 }
 
 .nav-links{
-gap:15px;
+display:none;
 }
 
-.nav-links a{
-font-size:10px;
+.hero{
+padding:0 25px;
 }
 
-.title{
-letter-spacing:4px;
+.hero-title{
+line-height:1.05;
 }
 
-.subtitle{
-letter-spacing:2px;
+.hero-description{
 font-size:14px;
 }
 
-.whatsapp{
-width:65px;
-height:65px;
-font-size:18px;
+.hero-actions{
+flex-direction:column;
+align-items:flex-start;
 }
 
-.loader-sub{
-font-size:11px;
-letter-spacing:3px;
+.btn-primary,
+.btn-secondary{
+width:100%;
+text-align:center;
+}
+
+.bike-image{
+height:280px;
+font-size:32px;
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
@@ -478,15 +522,18 @@ letter-spacing:3px;
 
 <div class="loader" id="loader">
 
-<div class="loader-title">
-KNJO BLACK CODE™
-</div>
-
-<div class="loader-sub">
-INITIALIZING SYSTEM...
-</div>
+<h1>KNJO BLACK CODE™</h1>
+<p>INITIALIZING EXPERIENCE...</p>
 
 </div>
+
+<!-- VIDEO -->
+
+<video autoplay muted loop playsinline>
+<source src="https://storage.coverr.co/videos/coverr-night-drive-1560679427422?download=1080p" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
 
 <!-- NAVBAR -->
 
@@ -497,130 +544,223 @@ VELVER MOTOS
 </div>
 
 <div class="nav-links">
+
 <a href="#">HOME</a>
-<a href="#system">SYSTEM</a>
-<a href="#motos">MOTOS</a>
+<a href="#showroom">SHOWROOM</a>
+<a href="#experience">EXPERIENCE</a>
 <a href="#">CONTACT</a>
+
 </div>
 
 </nav>
-
-<!-- VIDEO -->
-
-<video autoplay muted loop playsinline>
-<source src="https://storage.coverr.co/videos/coverr-night-drive-1560679427422?download=1080p" type="video/mp4">
-</video>
-
-<div class="overlay"></div>
 
 <!-- HERO -->
 
 <section class="hero">
 
-<h1 class="title">
-VELVER MOTOS
+<div class="hero-content">
+
+<div class="hero-tag">
+PREMIUM URBAN MOBILITY
+</div>
+
+<h1 class="hero-title">
+
+ENGINEERED<br>
+FOR THE<br>
+<span>STREETS</span>
+
 </h1>
 
-<p class="subtitle">
-KNJO BLACK CODE™ INFRASTRUCTURE — EDGE AI • CLOUD NATIVE • CINEMATIC EXPERIENCE
+<p class="hero-description">
+
+Velver Motos redefine la experiencia de movilidad urbana mediante diseño premium, tecnología moderna y una experiencia digital cinematográfica enfocada en rendimiento, presencia y estilo.
+
 </p>
 
-<a class="btn" href="#system">
-ENTER THE SYSTEM
+<div class="hero-actions">
+
+<a class="btn-primary" href="#showroom">
+EXPLORE SHOWROOM
 </a>
 
-</section>
+<a class="btn-secondary" href="https://wa.me/522441252948" target="_blank">
+TALK WITH AI SALES
+</a>
 
-<!-- SYSTEM SECTION -->
-
-<section id="system" class="system-section">
-
-<h2 class="system-title">
-WELCOME TO THE EDGE
-</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>EDGE AI</h3>
-<p>
-Infraestructura impulsada por Cloudflare Workers AI y automatización inteligente.
-</p>
-</div>
-
-<div class="card">
-<h3>CINEMATIC EXPERIENCE</h3>
-<p>
-Diseño premium inspirado en Hollywood y cyberpunk.
-</p>
-</div>
-
-<div class="card">
-<h3>KNJO BLACK CODE™</h3>
-<p>
-Arquitectura enterprise escalable enfocada en velocidad y autoridad visual.
-</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- MOTORCYCLES SECTION -->
+<!-- SHOWROOM -->
 
-<section id="motos" class="motos-section">
+<section class="showroom" id="showroom">
 
-<h2 class="motos-title">
-MOTORCYCLE EXPERIENCE
+<div class="section-label">
+FEATURED MOTORCYCLES
+</div>
+
+<h2 class="section-title">
+THE SHOWROOM
 </h2>
 
-<div class="motos-grid">
+<p class="section-description">
 
-<div class="moto-card">
+Explora una nueva generación de motocicletas urbanas diseñadas para dominar la ciudad con presencia, potencia y estilo premium.
 
-<div class="moto-image">
+</p>
+
+<div class="bikes-grid">
+
+<!-- CARD -->
+
+<div class="bike-card">
+
+<div class="bike-image">
 CXR 300
 </div>
 
-<div class="moto-info">
+<div class="bike-content">
+
 <h3>CXR 300</h3>
+
 <p>
-Potencia y experiencia premium para dominar la ciudad.
+Diseño agresivo, potencia urbana y presencia premium para quienes buscan destacar en cada trayecto.
 </p>
-<a href="#">EXPLORE</a>
+
+<div class="bike-buttons">
+
+<a class="small-btn small-primary" href="#">
+EXPLORE
+</a>
+
+<a class="small-btn small-secondary" href="https://wa.me/522441252948" target="_blank">
+WHATSAPP
+</a>
+
+</div>
+
 </div>
 
 </div>
 
-<div class="moto-card">
+<!-- CARD -->
 
-<div class="moto-image">
+<div class="bike-card">
+
+<div class="bike-image">
 RACING
 </div>
 
-<div class="moto-info">
+<div class="bike-content">
+
 <h3>RACING EDITION</h3>
+
 <p>
-Inspirada en velocidad y tecnología futurista.
+Inspirada en velocidad, precisión y tecnología avanzada con una estética futurista premium.
 </p>
-<a href="#">EXPLORE</a>
+
+<div class="bike-buttons">
+
+<a class="small-btn small-primary" href="#">
+EXPLORE
+</a>
+
+<a class="small-btn small-secondary" href="https://wa.me/522441252948" target="_blank">
+WHATSAPP
+</a>
+
+</div>
+
 </div>
 
 </div>
 
-<div class="moto-card">
+<!-- CARD -->
 
-<div class="moto-image">
+<div class="bike-card">
+
+<div class="bike-image">
 BLACK
 </div>
 
-<div class="moto-info">
+<div class="bike-content">
+
 <h3>BLACK SHADOW</h3>
+
 <p>
-Elegancia oscura fusionada con ingeniería premium.
+Elegancia oscura fusionada con ingeniería moderna para una experiencia urbana sofisticada.
 </p>
-<a href="#">EXPLORE</a>
+
+<div class="bike-buttons">
+
+<a class="small-btn small-primary" href="#">
+EXPLORE
+</a>
+
+<a class="small-btn small-secondary" href="https://wa.me/522441252948" target="_blank">
+WHATSAPP
+</a>
+
 </div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- EXPERIENCE -->
+
+<section class="experience" id="experience">
+
+<div class="section-label">
+WHY VELVER
+</div>
+
+<h2 class="section-title">
+THE EXPERIENCE
+</h2>
+
+<p class="section-description">
+
+Más que motocicletas, construimos una experiencia premium basada en atención inteligente, branding cinematográfico y movilidad urbana moderna.
+
+</p>
+
+<div class="experience-grid">
+
+<div class="exp-card">
+
+<h3>AI SALES SYSTEM</h3>
+
+<p>
+Sistema conversacional inteligente enfocado en seguimiento, atención premium y experiencia personalizada de venta.
+</p>
+
+</div>
+
+<div class="exp-card">
+
+<h3>PREMIUM BRANDING</h3>
+
+<p>
+Dirección visual cinematográfica inspirada en marcas internacionales de lujo y tecnología.
+</p>
+
+</div>
+
+<div class="exp-card">
+
+<h3>MODERN INFRASTRUCTURE</h3>
+
+<p>
+Infraestructura cloud-native desarrollada sobre tecnologías edge modernas y automatización avanzada.
+</p>
 
 </div>
 
@@ -631,7 +771,9 @@ Elegancia oscura fusionada con ingeniería premium.
 <!-- FOOTER -->
 
 <div class="footer">
-KNJO BLACK CODE™ • VELVER MOTOS • EDGE INFRASTRUCTURE
+
+KNJO BLACK CODE™ • VELVER MOTOS • ELITE EXPERIENCE™
+
 </div>
 
 <!-- WHATSAPP -->
@@ -654,11 +796,12 @@ setTimeout(() => {
 
 document.getElementById("loader").classList.add("hide");
 
-}, 2500);
+}, 2200);
 
 });
 
 </script>
 
 </body>
+
 </html>
