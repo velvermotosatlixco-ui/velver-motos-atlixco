@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Velver Motos Atlixco™ | AI Smart Catalog</title>
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+/>
+
+<title>
+Velver Motos Atlixco™ | AI Smart Catalog
+</title>
 
 <meta
   name="description"
   content="Catálogo inteligente premium de motocicletas con IA comercial integrada."
 >
 
+<meta name="theme-color" content="#050505">
+
 <link rel="icon" type="image/png" href="/logo-secondary.png">
 
 <script src="https://cdn.tailwindcss.com"></script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link
@@ -31,22 +43,26 @@ rel="stylesheet"
   padding:0;
   box-sizing:border-box;
   font-family:'Inter',sans-serif;
-}
-
-body{
-  background:#050505;
-  color:white;
-  overflow-x:hidden;
+  -webkit-tap-highlight-color:transparent;
 }
 
 html{
   scroll-behavior:smooth;
 }
 
+body{
+  background:#050505;
+  color:#F5F7FA;
+  overflow-x:hidden;
+}
+
+/* BACKGROUND */
+
 .bg-system{
   position:fixed;
   inset:0;
   z-index:-2;
+  overflow:hidden;
 }
 
 .glow-a{
@@ -55,8 +71,8 @@ html{
   height:800px;
   background:#0057FF;
   border-radius:999px;
-  top:-300px;
-  left:-250px;
+  top:-320px;
+  left:-260px;
   opacity:.08;
   filter:blur(180px);
 }
@@ -67,17 +83,94 @@ html{
   height:700px;
   background:#3BA0FF;
   border-radius:999px;
-  bottom:-280px;
-  right:-240px;
+  bottom:-300px;
+  right:-220px;
   opacity:.06;
   filter:blur(180px);
 }
 
-.glass{
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.06);
-  backdrop-filter:blur(20px);
+.noise{
+  position:absolute;
+  inset:0;
+  opacity:.018;
+
+  background-image:
+  radial-gradient(#ffffff .6px, transparent .6px);
+
+  background-size:12px 12px;
 }
+
+/* GLASS */
+
+.glass{
+  background:rgba(255,255,255,.035);
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,.06);
+}
+
+.glass-soft{
+  background:rgba(255,255,255,.02);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.04);
+}
+
+/* TYPOGRAPHY */
+
+.gradient{
+  background:
+  linear-gradient(
+    90deg,
+    #FFFFFF,
+    #9FD3FF
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.subtle{
+  color:#8B949E;
+}
+
+.massive{
+  font-size:clamp(3.2rem,10vw,8rem);
+  line-height:.95;
+  font-weight:900;
+}
+
+/* BUTTONS */
+
+.primary-btn{
+  background:
+  linear-gradient(
+    135deg,
+    #0057FF,
+    #3BA0FF
+  );
+
+  transition:.45s ease;
+
+  box-shadow:
+  0 20px 70px rgba(0,87,255,.22);
+}
+
+.primary-btn:hover{
+  transform:translateY(-3px);
+
+  box-shadow:
+  0 25px 90px rgba(0,87,255,.35);
+}
+
+.secondary-btn{
+  transition:.35s ease;
+}
+
+.secondary-btn:hover{
+  border-color:rgba(59,160,255,.25);
+  background:rgba(255,255,255,.05);
+}
+
+/* NAVBAR */
 
 .navbar{
   position:fixed;
@@ -85,46 +178,40 @@ html{
   left:50%;
   transform:translateX(-50%);
   width:calc(100% - 24px);
-  max-width:1400px;
-  z-index:999;
+  max-width:1450px;
+  z-index:1000;
 }
+
+/* HERO */
 
 .hero{
   min-height:100vh;
+  position:relative;
   display:flex;
   align-items:center;
-  position:relative;
+  overflow:hidden;
 }
 
-.gradient{
-  background:linear-gradient(90deg,#ffffff,#9FD3FF);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-.massive{
-  font-size:clamp(3rem,10vw,7rem);
-  line-height:.95;
-  font-weight:900;
-}
-
-.subtle{
-  color:#8B949E;
-}
-
-.primary-btn{
-  background:linear-gradient(135deg,#0057FF,#3BA0FF);
-  transition:.4s ease;
-  box-shadow:0 20px 70px rgba(0,87,255,.25);
-}
-
-.primary-btn:hover{
-  transform:translateY(-4px);
-}
+/* SECTION */
 
 .section{
-  padding:120px 24px;
+  padding:140px 24px;
 }
+
+/* INTRO */
+
+#intro{
+  position:fixed;
+  inset:0;
+  background:#050505;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+/* CARDS */
 
 .catalog-grid{
   display:grid;
@@ -153,553 +240,637 @@ html{
   border:1px solid rgba(59,160,255,.25);
 }
 
-@media(max-width:900px){
+/* SOCIAL */
 
-  .massive{
-    font-size:3.6rem;
-  }
+.social-btn{
+  transition:.35s ease;
+}
+
+.social-btn:hover{
+  transform:translateY(-4px);
+  border-color:rgba(59,160,255,.35);
+}
+
+/* MOBILE */
+
+@media(max-width:980px){
 
   .desktop-nav{
     display:none;
   }
 
+  .section{
+    padding:110px 22px;
+  }
+
+  .massive{
+    font-size:3.5rem;
+  }
+
 }
 
 </style>
+
 </head>
+
 <body>
+
+<!-- BACKGROUND -->
 
 <div class="bg-system">
   <div class="glow-a"></div>
   <div class="glow-b"></div>
+  <div class="noise"></div>
 </div>
+
+<!-- INTRO -->
+
+<div id="intro">
+
+  <div class="absolute inset-0 overflow-hidden">
+
+    <div class="absolute w-[700px] h-[700px] bg-blue-600/10 rounded-full blur-[180px] top-[-250px] left-[-180px]"></div>
+
+    <div class="absolute w-[600px] h-[600px] bg-cyan-400/10 rounded-full blur-[180px] bottom-[-250px] right-[-180px]"></div>
+
+  </div>
+
+  <div class="relative z-10 text-center px-6">
+
+    <img
+      id="introLogo"
+      src="/logo-main.png"
+      alt="Velver Motos"
+      class="w-[160px] lg:w-[220px] mx-auto opacity-0 scale-75 drop-shadow-[0_0_50px_rgba(59,130,246,.35)]"
+    >
+
+    <h1
+      id="introTitle"
+      class="mt-10 text-5xl lg:text-8xl font-black tracking-[12px] opacity-0"
+    >
+      VELVER
+    </h1>
+
+    <p
+      id="introSub"
+      class="mt-6 text-xs lg:text-sm tracking-[8px] text-blue-300 opacity-0 uppercase"
+    >
+      Intelligent Mobility Platform™
+    </p>
+
+    <!-- BLACK CODE INVISIBLE -->
+
+    <div
+      class="absolute bottom-[-80px] left-1/2 -translate-x-1/2 opacity-[0.018] text-[9px] tracking-[5px] uppercase whitespace-nowrap select-none"
+    >
+      KNJO-BLK-1141015
+    </div>
+
+  </div>
+
+</div>
+
+<!-- NAVBAR -->
 
 <header class="navbar">
 
-<div class="glass rounded-[28px] px-5 lg:px-8 py-4 flex items-center justify-between">
+  <div class="glass rounded-[28px] px-5 lg:px-8 py-4 flex items-center justify-between">
 
-<div class="flex items-center gap-4">
+    <div class="flex items-center gap-4">
 
-<img
-src="/logo-secondary.png"
-alt="Velver Motos"
-class="w-12 h-12 object-contain"
->
+      <img
+        src="/logo-secondary.png"
+        alt="Velver Motos"
+        class="w-11 h-11 object-contain"
+      >
 
-<div>
-<h1 class="font-black tracking-wide">
-VELVER MOTOS
-</h1>
+      <div>
 
-<p class="text-xs subtle tracking-[3px] uppercase">
-Atlixco™
-</p>
-</div>
+        <h1 class="font-black tracking-wide">
+          VELVER MOTOS
+        </h1>
 
-</div>
+        <p class="text-xs subtle tracking-[3px] uppercase">
+          Atlixco™
+        </p>
 
-<nav class="desktop-nav flex items-center gap-10 text-sm subtle">
-<a href="#catalogo" class="hover:text-white transition">Catálogo</a>
-<a href="#comparador" class="hover:text-white transition">Comparador</a>
-<a href="#ia" class="hover:text-white transition">IA Comercial</a>
-<a href="#contacto" class="hover:text-white transition">Contacto</a>
-</nav>
+      </div>
 
-<a
-href="https://wa.me/522441252948"
-target="_blank"
-class="primary-btn px-6 py-3 rounded-2xl font-semibold"
->
-Hablar con IA
-</a>
+    </div>
 
-</div>
+    <nav class="desktop-nav flex items-center gap-10 text-sm subtle">
+
+      <a href="#catalogo" class="hover:text-white transition">
+        Catálogo
+      </a>
+
+      <a href="#ia" class="hover:text-white transition">
+        IA Comercial
+      </a>
+
+      <a href="#redes" class="hover:text-white transition">
+        Redes
+      </a>
+
+      <a href="#contacto" class="hover:text-white transition">
+        Contacto
+      </a>
+
+    </nav>
+
+    <a
+      href="https://wa.me/522441252948"
+      target="_blank"
+      class="primary-btn px-5 lg:px-6 py-3 rounded-2xl text-sm font-semibold"
+    >
+      WhatsApp IA
+    </a>
+
+  </div>
+
 </header>
+
+<!-- HERO -->
 
 <section class="hero px-6 lg:px-10">
 
-<div class="max-w-7xl mx-auto w-full pt-40">
+  <div class="max-w-7xl mx-auto relative z-10 w-full pt-40">
 
-<div class="grid lg:grid-cols-2 gap-20 items-center">
+    <div class="grid lg:grid-cols-[1.1fr_.9fr] gap-16 items-center">
 
-<div>
+      <div>
 
-<div class="badge inline-flex items-center gap-3 px-5 py-3 rounded-full mb-10">
+        <div class="glass-soft inline-flex items-center gap-3 px-5 py-3 rounded-full mb-10">
 
-<div class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
+          <div class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
 
-<span class="text-sm tracking-[3px] uppercase subtle">
-AI Smart Catalog™
-</span>
+          <span class="text-sm subtle tracking-[3px] uppercase">
+            AI Smart Catalog™
+          </span>
 
-</div>
+        </div>
 
-<h1 class="massive max-w-5xl">
-Catálogo
+        <h1 class="massive max-w-5xl">
 
-<span class="gradient">
-inteligente.
-</span>
-</h1>
+          El futuro de las
 
-<p class="mt-10 text-lg subtle max-w-2xl leading-relaxed">
-Explora motocicletas premium, compara modelos y recibe recomendaciones inteligentes basadas en tu estilo de vida.
-</p>
+          <span class="gradient">
+            motocicletas premium.
+          </span>
 
-<div class="mt-12 flex flex-col sm:flex-row gap-5">
+        </h1>
 
-<a
-href="#catalogo"
-class="primary-btn px-10 py-5 rounded-2xl font-bold text-center"
->
-Explorar catálogo
-</a>
+        <p class="mt-10 text-lg lg:text-xl subtle max-w-2xl leading-relaxed">
 
-<a
-href="https://wa.me/522441252948"
-target="_blank"
-class="glass px-10 py-5 rounded-2xl font-semibold text-center"
->
-Cotizar ahora
-</a>
+          Catálogo inteligente conectado a IA comercial, experiencia cinematográfica y conversión digital avanzada.
 
-</div>
+        </p>
 
-</div>
+        <div class="mt-14 flex flex-col sm:flex-row gap-5">
 
-<div>
+          <a
+            href="#catalogo"
+            class="primary-btn px-10 py-5 rounded-2xl font-bold text-center"
+          >
+            Explorar catálogo
+          </a>
 
-<div class="glass rounded-[40px] overflow-hidden">
+          <a
+            href="https://wa.me/522441252948"
+            target="_blank"
+            class="secondary-btn glass px-10 py-5 rounded-2xl font-semibold text-center"
+          >
+            Hablar con IA
+          </a>
 
-<img
-src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1400&auto=format&fit=crop"
-class="w-full h-[700px] object-cover"
-alt="Moto premium"
->
+        </div>
 
-</div>
+      </div>
 
-</div>
+      <div class="hidden lg:flex justify-end">
 
-</div>
+        <div class="glass rounded-[42px] overflow-hidden w-[520px]">
 
-</div>
+          <img
+            src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1400&auto=format&fit=crop"
+            class="w-full h-[720px] object-cover"
+            alt="Moto premium"
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
+
+<!-- CATALOGO -->
 
 <section id="catalogo" class="section">
 
-<div class="max-w-7xl mx-auto">
+  <div class="max-w-7xl mx-auto">
 
-<div class="mb-20">
+    <div class="max-w-3xl mb-24">
 
-<p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-6">
-Smart Catalog
-</p>
+      <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-6">
+        Smart Catalog
+      </p>
 
-<h2 class="text-4xl lg:text-6xl font-black leading-tight mb-8">
-Motocicletas premium.
-</h2>
+      <h2 class="text-4xl lg:text-6xl font-black leading-tight mb-8">
+        Motocicletas inteligentes.
+      </h2>
 
-<p class="text-lg subtle max-w-3xl leading-relaxed">
-Sistema inteligente conectado a IA comercial, crédito y experiencia visual cinematográfica.
-</p>
+      <p class="text-lg subtle leading-relaxed">
+        Sistema conectado a IA comercial, crédito inteligente y experiencia premium.
+      </p>
 
-</div>
+    </div>
 
-<div class="catalog-grid">
+    <div class="catalog-grid">
 
-<div class="moto-card glass rounded-[34px] overflow-hidden">
+      <!-- CARD 1 -->
 
-<img
-src="https://images.unsplash.com/photo-1517846693594-1567da72af75?q=80&w=1400&auto=format&fit=crop"
-class="moto-image"
-alt="CRX 300"
->
+      <div class="moto-card glass rounded-[34px] overflow-hidden">
 
-<div class="p-8">
+        <img
+          src="https://images.unsplash.com/photo-1517846693594-1567da72af75?q=80&w=1400&auto=format&fit=crop"
+          class="moto-image"
+          alt="CRX 300"
+        >
 
-<div class="flex items-center justify-between mb-5">
+        <div class="p-8">
 
-<div>
-<h3 class="text-3xl font-black mb-2">
-CRX 300
-</h3>
+          <div class="flex items-center justify-between mb-5">
 
-<p class="subtle">
-Adventure Premium
-</p>
-</div>
+            <div>
 
-<div class="badge px-4 py-2 rounded-full text-sm">
-300cc
-</div>
+              <h3 class="text-3xl font-black mb-2">
+                CRX 300
+              </h3>
 
-</div>
+              <p class="subtle">
+                Adventure Premium
+              </p>
 
-<p class="subtle leading-relaxed mb-8">
-Diseñada para ciudad y carretera con presencia deportiva premium.
-</p>
+            </div>
 
-<div class="flex items-center justify-between mb-8">
+            <div class="badge px-4 py-2 rounded-full text-sm">
+              300cc
+            </div>
 
-<div>
-<p class="subtle text-sm">
-Desde
-</p>
+          </div>
 
-<p class="text-3xl font-black">
-$54,499
-</p>
-</div>
+          <p class="subtle leading-relaxed mb-8">
+            Diseñada para carretera, ciudad y experiencia premium touring.
+          </p>
 
-<div>
-<p class="subtle text-sm text-right">
-Mensualidad
-</p>
+          <div class="flex items-center justify-between mb-8">
 
-<p class="text-xl font-bold text-blue-400">
-$1,999
-</p>
-</div>
+            <div>
 
-</div>
+              <p class="subtle text-sm">
+                Desde
+              </p>
 
-<div class="grid grid-cols-2 gap-4">
+              <p class="text-3xl font-black">
+                $54,499
+              </p>
 
-<a
-href="https://wa.me/522441252948?text=Hola%20quiero%20informaci%C3%B3n%20de%20la%20CRX%20300"
-target="_blank"
-class="primary-btn py-4 rounded-2xl text-center font-semibold"
->
-Cotizar
-</a>
+            </div>
 
-<button
-class="glass rounded-2xl font-semibold"
->
-Comparar
-</button>
+            <div>
 
-</div>
+              <p class="subtle text-sm text-right">
+                Mensualidad
+              </p>
 
-</div>
+              <p class="text-xl font-bold text-blue-400">
+                $1,999
+              </p>
 
-</div>
+            </div>
 
-<div class="moto-card glass rounded-[34px] overflow-hidden">
+          </div>
 
-<img
-src="https://images.unsplash.com/photo-1529429617124-aee711a5ac1c?q=80&w=1400&auto=format&fit=crop"
-class="moto-image"
-alt="Nitro 250"
->
+          <div class="grid grid-cols-2 gap-4">
 
-<div class="p-8">
+            <a
+              href="https://wa.me/522441252948?text=Hola%20quiero%20información%20de%20la%20CRX%20300"
+              target="_blank"
+              class="primary-btn py-4 rounded-2xl text-center font-semibold"
+            >
+              Cotizar
+            </a>
 
-<div class="flex items-center justify-between mb-5">
+            <button
+              class="glass rounded-2xl font-semibold"
+            >
+              Comparar
+            </button>
 
-<div>
-<h3 class="text-3xl font-black mb-2">
-Nitro 250
-</h3>
+          </div>
 
-<p class="subtle">
-Street Sport
-</p>
-</div>
+        </div>
 
-<div class="badge px-4 py-2 rounded-full text-sm">
-250cc
-</div>
+      </div>
 
-</div>
+      <!-- CARD 2 -->
 
-<p class="subtle leading-relaxed mb-8">
-Motor potente, diseño agresivo y excelente presencia urbana.
-</p>
+      <div class="moto-card glass rounded-[34px] overflow-hidden">
 
-<div class="flex items-center justify-between mb-8">
+        <img
+          src="https://images.unsplash.com/photo-1529429617124-aee711a5ac1c?q=80&w=1400&auto=format&fit=crop"
+          class="moto-image"
+          alt="Nitro 250"
+        >
 
-<div>
-<p class="subtle text-sm">
-Desde
-</p>
+        <div class="p-8">
 
-<p class="text-3xl font-black">
-$44,499
-</p>
-</div>
+          <div class="flex items-center justify-between mb-5">
 
-<div>
-<p class="subtle text-sm text-right">
-Mensualidad
-</p>
+            <div>
 
-<p class="text-xl font-bold text-blue-400">
-$1,699
-</p>
-</div>
+              <h3 class="text-3xl font-black mb-2">
+                Nitro 250
+              </h3>
 
-</div>
+              <p class="subtle">
+                Street Sport
+              </p>
 
-<div class="grid grid-cols-2 gap-4">
+            </div>
 
-<a
-href="https://wa.me/522441252948?text=Hola%20quiero%20informaci%C3%B3n%20de%20la%20Nitro%20250"
-target="_blank"
-class="primary-btn py-4 rounded-2xl text-center font-semibold"
->
-Cotizar
-</a>
+            <div class="badge px-4 py-2 rounded-full text-sm">
+              250cc
+            </div>
 
-<button
-class="glass rounded-2xl font-semibold"
->
-Comparar
-</button>
+          </div>
 
-</div>
+          <p class="subtle leading-relaxed mb-8">
+            Diseño agresivo, gran presencia urbana y conducción deportiva.
+          </p>
 
-</div>
+          <div class="flex items-center justify-between mb-8">
 
-</div>
+            <div>
 
-<div class="moto-card glass rounded-[34px] overflow-hidden">
+              <p class="subtle text-sm">
+                Desde
+              </p>
 
-<img
-src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1400&auto=format&fit=crop"
-class="moto-image"
-alt="AD-1.5 150"
->
+              <p class="text-3xl font-black">
+                $44,499
+              </p>
 
-<div class="p-8">
+            </div>
 
-<div class="flex items-center justify-between mb-5">
+            <div>
 
-<div>
-<h3 class="text-3xl font-black mb-2">
-AD-1.5 150
-</h3>
+              <p class="subtle text-sm text-right">
+                Mensualidad
+              </p>
 
-<p class="subtle">
-Trabajo Urbano
-</p>
-</div>
+              <p class="text-xl font-bold text-blue-400">
+                $1,699
+              </p>
 
-<div class="badge px-4 py-2 rounded-full text-sm">
-150cc
-</div>
+            </div>
 
-</div>
+          </div>
 
-<p class="subtle leading-relaxed mb-8">
-Excelente consumo, cómoda para ciudad y optimizada para trabajo diario.
-</p>
+          <div class="grid grid-cols-2 gap-4">
 
-<div class="flex items-center justify-between mb-8">
+            <a
+              href="https://wa.me/522441252948"
+              target="_blank"
+              class="primary-btn py-4 rounded-2xl text-center font-semibold"
+            >
+              Cotizar
+            </a>
 
-<div>
-<p class="subtle text-sm">
-Desde
-</p>
+            <button
+              class="glass rounded-2xl font-semibold"
+            >
+              Comparar
+            </button>
 
-<p class="text-3xl font-black">
-$24,999
-</p>
-</div>
+          </div>
 
-<div>
-<p class="subtle text-sm text-right">
-Mensualidad
-</p>
+        </div>
 
-<p class="text-xl font-bold text-blue-400">
-$999
-</p>
-</div>
+      </div>
 
-</div>
+    </div>
 
-<div class="grid grid-cols-2 gap-4">
-
-<a
-href="https://wa.me/522441252948?text=Hola%20quiero%20informaci%C3%B3n%20de%20la%20AD-1.5%20150"
-target="_blank"
-class="primary-btn py-4 rounded-2xl text-center font-semibold"
->
-Cotizar
-</a>
-
-<button
-class="glass rounded-2xl font-semibold"
->
-Comparar
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
-<section id="ia" class="section pt-0">
+<!-- REDES -->
 
-<div class="max-w-7xl mx-auto">
+<section id="redes" class="section pt-0">
 
-<div class="glass rounded-[44px] p-10 lg:p-16">
+  <div class="max-w-7xl mx-auto">
 
-<p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-6">
-AI Commercial System™
-</p>
+    <div class="glass rounded-[44px] p-10 lg:p-16">
 
-<h2 class="text-4xl lg:text-6xl font-black leading-tight mb-10">
-La IA recomienda la mejor motocicleta.
-</h2>
+      <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-6">
+        Social Ecosystem™
+      </p>
 
-<p class="text-lg subtle leading-relaxed max-w-4xl mb-12">
-El sistema interpreta presupuesto, estilo de vida y uso ideal para recomendar automáticamente el mejor modelo.
-</p>
+      <h2 class="text-4xl lg:text-6xl font-black leading-tight mb-10">
+        Conecta con Velver.
+      </h2>
 
-<div class="grid lg:grid-cols-3 gap-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-<div class="glass rounded-3xl p-8">
-<h3 class="text-2xl font-black mb-4">
-Trabajo
-</h3>
+        <a
+          href="#"
+          class="social-btn glass rounded-3xl p-8 text-center"
+        >
+          <h3 class="text-2xl font-black mb-3">
+            Facebook
+          </h3>
 
-<p class="subtle leading-relaxed">
-Modelos optimizados para ciudad, ahorro y uso diario.
-</p>
-</div>
+          <p class="subtle">
+            Comunidad y promociones
+          </p>
+        </a>
 
-<div class="glass rounded-3xl p-8">
-<h3 class="text-2xl font-black mb-4">
-Sport
-</h3>
+        <a
+          href="#"
+          class="social-btn glass rounded-3xl p-8 text-center"
+        >
+          <h3 class="text-2xl font-black mb-3">
+            Instagram
+          </h3>
 
-<p class="subtle leading-relaxed">
-Motocicletas deportivas con diseño premium y presencia urbana.
-</p>
-</div>
+          <p class="subtle">
+            Experiencia visual premium
+          </p>
+        </a>
 
-<div class="glass rounded-3xl p-8">
-<h3 class="text-2xl font-black mb-4">
-Adventure
-</h3>
+        <a
+          href="#"
+          class="social-btn glass rounded-3xl p-8 text-center"
+        >
+          <h3 class="text-2xl font-black mb-3">
+            TikTok
+          </h3>
 
-<p class="subtle leading-relaxed">
-Configuraciones ideales para carretera y trayectos largos.
-</p>
-</div>
+          <p class="subtle">
+            Contenido cinematográfico
+          </p>
+        </a>
 
-</div>
+        <a
+          href="https://wa.me/522441252948"
+          target="_blank"
+          class="social-btn glass rounded-3xl p-8 text-center"
+        >
+          <h3 class="text-2xl font-black mb-3">
+            WhatsApp IA
+          </h3>
 
-</div>
+          <p class="subtle">
+            Atención inteligente
+          </p>
+        </a>
 
-</div>
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
+
+<!-- CONTACTO -->
 
 <section id="contacto" class="section pt-0">
 
-<div class="max-w-7xl mx-auto">
+  <div class="max-w-7xl mx-auto">
 
-<div class="glass rounded-[44px] p-10 lg:p-16 text-center">
+    <div class="glass rounded-[44px] p-10 lg:p-16 text-center">
 
-<img
-src="/logo-main.png"
-alt="Velver Motos"
-class="w-[120px] mx-auto mb-10"
->
+      <img
+        src="/logo-main.png"
+        alt="Velver Motos"
+        class="w-[120px] mx-auto mb-10"
+      >
 
-<h2 class="text-4xl lg:text-6xl font-black mb-8">
-Conecta con la IA comercial.
-</h2>
+      <h2 class="text-4xl lg:text-6xl font-black mb-8">
+        Habla con la IA comercial.
+      </h2>
 
-<p class="text-lg subtle max-w-3xl mx-auto leading-relaxed mb-12">
-Cotiza, compara motocicletas y recibe recomendaciones inteligentes directamente desde WhatsApp.
-</p>
+      <p class="text-lg subtle max-w-3xl mx-auto leading-relaxed mb-12">
 
-<a
-href="https://wa.me/522441252948"
-target="_blank"
-class="primary-btn inline-flex px-10 py-5 rounded-2xl font-bold"
->
-Abrir WhatsApp IA
-</a>
+        Cotiza motocicletas, compara modelos y recibe recomendaciones inteligentes.
 
-</div>
+      </p>
 
-</div>
+      <a
+        href="https://wa.me/522441252948"
+        target="_blank"
+        class="primary-btn inline-flex px-10 py-5 rounded-2xl font-bold"
+      >
+        Abrir WhatsApp
+      </a>
+
+    </div>
+
+  </div>
 
 </section>
 
+<!-- FOOTER -->
+
 <footer class="px-6 pb-14">
 
-<div class="max-w-7xl mx-auto">
+  <div class="max-w-7xl mx-auto">
 
-<div class="glass rounded-[34px] p-10 lg:p-14">
+    <div class="glass rounded-[34px] p-10 lg:p-14">
 
-<div class="grid lg:grid-cols-2 gap-12">
+      <div class="grid lg:grid-cols-2 gap-12">
 
-<div>
+        <div>
 
-<div class="flex items-center gap-5 mb-6">
+          <div class="flex items-center gap-5 mb-6">
 
-<img
-src="/logo-secondary.png"
-alt="Velver Motos"
-class="w-[70px] h-auto object-contain"
->
+            <img
+              src="/logo-secondary.png"
+              alt="Velver Motos"
+              class="w-[70px] h-auto object-contain"
+            >
 
-<h3 class="text-3xl font-black">
-Velver Motos Atlixco™
-</h3>
+            <h3 class="text-3xl font-black">
+              Velver Motos Atlixco™
+            </h3>
 
-</div>
+          </div>
 
-<p class="subtle leading-relaxed max-w-xl">
-AI Luxury Motorcycle Sales Platform™
-</p>
+          <p class="subtle leading-relaxed max-w-xl">
+            AI Luxury Motorcycle Sales Platform™
+          </p>
 
-</div>
+        </div>
 
-<div class="lg:text-right">
+        <div class="lg:text-right">
 
-<p class="subtle mb-3">
-KNJO BLACK CODE™
-</p>
+          <div class="opacity-[0.018] text-[9px] tracking-[5px] uppercase select-none">
+            KNJO-BLK-1141015
+          </div>
 
-<p class="text-2xl font-black">
-AI Smart Catalog System™
-</p>
+        </div>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
-</div>
-
-</div>
+  </div>
 
 </footer>
 
 <script>
 
-window.addEventListener("load",()=>{
+window.addEventListener("load", ()=>{
+
+  gsap.to("#introLogo",{
+    opacity:1,
+    scale:1,
+    duration:1.2
+  });
+
+  gsap.to("#introTitle",{
+    opacity:1,
+    y:-10,
+    duration:1,
+    delay:.3
+  });
+
+  gsap.to("#introSub",{
+    opacity:1,
+    y:-10,
+    duration:1,
+    delay:.6
+  });
+
+  gsap.to("#intro",{
+    opacity:0,
+    duration:1.4,
+    delay:2.8,
+    pointerEvents:"none"
+  });
 
   gsap.from(".moto-card",{
     opacity:0,
     y:40,
     stagger:.15,
-    duration:1
+    duration:1,
+    delay:3.1
   });
 
 });
