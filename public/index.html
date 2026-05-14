@@ -3,11 +3,19 @@
 <head>
 
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-<title>Velver Motos Atlixco™</title>
+<title>Velver Motos Atlixco™ | Digital Experience System</title>
 
+<meta name="description" content="Experiencia premium de movilidad inteligente en Atlixco Puebla. Motocicletas, crédito flexible y atención IA.">
 <meta name="theme-color" content="#050505">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta property="og:title" content="Velver Motos Atlixco™">
+<meta property="og:description" content="Nueva generación de movilidad premium.">
+<meta property="og:type" content="website">
+
 <meta name="architecture" content="KNJO-BLK-1141015">
 
 <script src="https://cdn.tailwindcss.com"></script>
@@ -21,11 +29,19 @@
 
 <style>
 
+/* ====================================== */
+/* RESET */
+/* ====================================== */
+
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
   font-family:'Inter',sans-serif;
+  -webkit-tap-highlight-color:transparent;
+}
+
+html{
   scroll-behavior:smooth;
 }
 
@@ -35,38 +51,55 @@ body{
   overflow-x:hidden;
 }
 
-/* ============================= */
-/* ATMOSPHERE */
-/* ============================= */
+/* ====================================== */
+/* SCROLLBAR */
+/* ====================================== */
 
-.atmosphere{
-  position:fixed;
-  inset:0;
-  overflow:hidden;
-  z-index:-1;
+::-webkit-scrollbar{
+  width:8px;
 }
 
-.light-1{
+::-webkit-scrollbar-track{
+  background:#050505;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#1A1F2A;
+  border-radius:999px;
+}
+
+/* ====================================== */
+/* ATMOSPHERE */
+/* ====================================== */
+
+.bg-system{
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  overflow:hidden;
+}
+
+.glow-1{
   position:absolute;
   width:700px;
   height:700px;
-  background:#0057FF;
   border-radius:999px;
-  top:-220px;
-  left:-200px;
-  opacity:.09;
+  background:#0057FF;
+  top:-250px;
+  left:-250px;
+  opacity:.08;
   filter:blur(160px);
 }
 
-.light-2{
+.glow-2{
   position:absolute;
   width:600px;
   height:600px;
-  background:#3BA0FF;
   border-radius:999px;
-  bottom:-260px;
-  right:-180px;
-  opacity:.08;
+  background:#3BA0FF;
+  bottom:-250px;
+  right:-220px;
+  opacity:.06;
   filter:blur(160px);
 }
 
@@ -74,33 +107,45 @@ body{
   position:absolute;
   inset:0;
   opacity:.018;
+
   background-image:
-  radial-gradient(#ffffff 0.6px, transparent 0.6px);
+  radial-gradient(#ffffff .6px, transparent .6px);
+
   background-size:12px 12px;
 }
 
-/* ============================= */
+/* ====================================== */
 /* GLASS */
-/* ============================= */
+/* ====================================== */
 
 .glass{
+
   background:rgba(255,255,255,.035);
+
   backdrop-filter:blur(18px);
+
   border:1px solid rgba(255,255,255,.06);
+
 }
 
 .glass-soft{
+
   background:rgba(255,255,255,.02);
+
   backdrop-filter:blur(12px);
+
   border:1px solid rgba(255,255,255,.04);
+
 }
 
-/* ============================= */
+/* ====================================== */
 /* TYPOGRAPHY */
-/* ============================= */
+/* ====================================== */
 
 .gradient-text{
-  background:linear-gradient(
+
+  background:
+  linear-gradient(
     90deg,
     #FFFFFF,
     #A8D1FF
@@ -108,19 +153,29 @@ body{
 
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
+
 }
 
-.subtle-text{
+.subtle{
   color:#8B949E;
 }
 
-/* ============================= */
+.massive-title{
+
+  font-size:clamp(3rem,10vw,8rem);
+  line-height:.95;
+  font-weight:900;
+
+}
+
+/* ====================================== */
 /* BUTTONS */
-/* ============================= */
+/* ====================================== */
 
 .primary-btn{
 
-  background:linear-gradient(
+  background:
+  linear-gradient(
     135deg,
     #0057FF,
     #3BA0FF
@@ -129,16 +184,16 @@ body{
   transition:.45s ease;
 
   box-shadow:
-  0 10px 40px rgba(0,87,255,.22);
+  0 20px 60px rgba(0,87,255,.22);
 
 }
 
 .primary-btn:hover{
 
-  transform:translateY(-2px);
+  transform:translateY(-3px);
 
   box-shadow:
-  0 20px 60px rgba(0,87,255,.28);
+  0 25px 80px rgba(0,87,255,.32);
 
 }
 
@@ -150,59 +205,46 @@ body{
 
 .secondary-btn:hover{
 
-  border-color:rgba(59,160,255,.35);
+  border-color:rgba(59,160,255,.25);
 
   background:rgba(255,255,255,.05);
 
 }
 
-/* ============================= */
-/* INTRO */
-/* ============================= */
+/* ====================================== */
+/* NAVBAR */
+/* ====================================== */
 
-#intro{
+.navbar{
 
   position:fixed;
-  inset:0;
-  background:#050505;
-  z-index:9999;
+  top:18px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  width:calc(100% - 24px);
+  max-width:1400px;
+
+  z-index:1000;
+
+}
+
+/* ====================================== */
+/* HERO */
+/* ====================================== */
+
+.hero{
+
+  position:relative;
+  min-height:100vh;
 
   display:flex;
   align-items:center;
-  justify-content:center;
+
   overflow:hidden;
 
 }
-
-.intro-logo{
-
-  width:110px;
-  height:110px;
-
-  border-radius:32px;
-
-  background:
-  linear-gradient(
-    135deg,
-    #0057FF,
-    #3BA0FF
-  );
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  font-size:48px;
-  font-weight:900;
-
-  box-shadow:
-  0 0 80px rgba(0,87,255,.32);
-
-}
-
-/* ============================= */
-/* HERO */
-/* ============================= */
 
 .hero-video{
 
@@ -214,7 +256,7 @@ body{
 
   object-fit:cover;
 
-  opacity:.28;
+  opacity:.24;
 
 }
 
@@ -232,95 +274,114 @@ body{
 
 }
 
-.hero-grid{
+/* ====================================== */
+/* SECTION */
+/* ====================================== */
 
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:80px;
-
-}
-
-@media(max-width:980px){
-
-  .hero-grid{
-    grid-template-columns:1fr;
-  }
-
-}
-
-/* ============================= */
-/* CONFIGURATOR */
-/* ============================= */
-
-.config-card{
-
-  transition:.45s ease;
-
-}
-
-.config-card:hover{
-
-  transform:translateY(-6px);
-
-  border-color:rgba(59,160,255,.18);
-
-  background:rgba(255,255,255,.045);
-
-}
-
-.selector{
-
-  background:#0D1117;
-  border:1px solid rgba(255,255,255,.06);
-
-}
-
-.range{
-
-  appearance:none;
-  width:100%;
-  height:6px;
-  border-radius:999px;
-  background:#111317;
-}
-
-.range::-webkit-slider-thumb{
-
-  appearance:none;
-
-  width:22px;
-  height:22px;
-
-  border-radius:999px;
-
-  background:#0057FF;
-
-  box-shadow:
-  0 0 25px rgba(0,87,255,.45);
-
-}
-
-/* ============================= */
-/* SECTION SPACING */
-/* ============================= */
-
-.section-space{
-  padding:160px 24px;
+.section{
+  padding:140px 24px;
 }
 
 @media(max-width:768px){
 
-  .section-space{
+  .section{
     padding:110px 22px;
   }
 
 }
 
-/* ============================= */
-/* FADE */
-/* ============================= */
+/* ====================================== */
+/* CARDS */
+/* ====================================== */
 
-.fade-up{
+.card{
+
+  transition:.45s ease;
+
+}
+
+.card:hover{
+
+  transform:translateY(-6px);
+
+  border-color:rgba(59,160,255,.18);
+
+  background:rgba(255,255,255,.05);
+
+}
+
+/* ====================================== */
+/* MOBILE */
+/* ====================================== */
+
+.mobile-menu{
+  display:none;
+}
+
+@media(max-width:980px){
+
+  .desktop-nav{
+    display:none;
+  }
+
+  .mobile-menu{
+    display:flex;
+  }
+
+}
+
+/* ====================================== */
+/* INTRO */
+/* ====================================== */
+
+#intro{
+
+  position:fixed;
+  inset:0;
+
+  background:#050505;
+
+  z-index:9999;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  overflow:hidden;
+
+}
+
+.intro-logo{
+
+  width:110px;
+  height:110px;
+
+  border-radius:30px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #0057FF,
+    #3BA0FF
+  );
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:48px;
+  font-weight:900;
+
+  box-shadow:
+  0 0 80px rgba(0,87,255,.3);
+
+}
+
+/* ====================================== */
+/* REVEAL */
+/* ====================================== */
+
+.reveal{
 
   opacity:0;
   transform:translateY(40px);
@@ -333,57 +394,62 @@ body{
 
 <body>
 
-<!-- ============================= -->
-<!-- ATMOSPHERE -->
-<!-- ============================= -->
+<!-- ====================================== -->
+<!-- BACKGROUND -->
+<!-- ====================================== -->
 
-<div class="atmosphere">
+<div class="bg-system">
 
-  <div class="light-1"></div>
-  <div class="light-2"></div>
+  <div class="glow-1"></div>
+  <div class="glow-2"></div>
   <div class="noise"></div>
 
 </div>
 
-<!-- ============================= -->
+<!-- ====================================== -->
 <!-- INTRO -->
-<!-- ============================= -->
+<!-- ====================================== -->
 
 <div id="intro">
 
   <div class="absolute w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[140px]"></div>
 
-  <div class="text-center relative z-10">
+  <div class="relative z-10 text-center">
 
-    <div id="introLogo" class="intro-logo opacity-0 scale-75 mx-auto">
+    <div
+      id="introLogo"
+      class="intro-logo opacity-0 scale-75 mx-auto"
+    >
       V
     </div>
 
     <h1
       id="introTitle"
-      class="mt-8 text-4xl lg:text-6xl font-black tracking-[10px] opacity-0"
+      class="mt-8 text-5xl lg:text-7xl font-black tracking-[10px] opacity-0"
     >
       VELVER
     </h1>
 
     <p
       id="introSub"
-      class="mt-4 text-sm tracking-[6px] text-blue-300 opacity-0"
+      class="mt-5 text-sm tracking-[6px] text-blue-300 opacity-0"
     >
-      CINEMATIC INTELLIGENCE SYSTEM™
+      DIGITAL EXPERIENCE SYSTEM™
     </p>
 
   </div>
 
 </div>
 
-<!-- ============================= -->
+<!-- ====================================== -->
 <!-- NAVBAR -->
-<!-- ============================= -->
+<!-- ====================================== -->
 
-<header class="fixed top-0 left-0 w-full z-50 px-5 lg:px-10 py-5">
+<header class="navbar">
 
-  <div class="glass rounded-[24px] px-6 lg:px-8 py-5 flex items-center justify-between">
+  <div class="glass rounded-[26px] px-5 lg:px-8 py-4 flex items-center justify-between">
+
+    <!-- BRAND -->
 
     <div class="flex items-center gap-4">
 
@@ -393,11 +459,11 @@ body{
 
       <div>
 
-        <h2 class="font-black tracking-wide">
+        <h1 class="font-black tracking-wide">
           VELVER MOTOS
-        </h2>
+        </h1>
 
-        <p class="text-xs subtle-text tracking-[3px] uppercase">
+        <p class="text-xs subtle tracking-[3px] uppercase">
           Atlixco™
         </p>
 
@@ -405,18 +471,20 @@ body{
 
     </div>
 
-    <nav class="hidden lg:flex items-center gap-10 text-sm subtle-text">
+    <!-- DESKTOP -->
 
-      <a href="#configurador" class="hover:text-white transition">
-        Configurador
+    <nav class="desktop-nav flex items-center gap-10 text-sm subtle">
+
+      <a href="#catalogo" class="hover:text-white transition">
+        Catálogo
       </a>
 
       <a href="#financiamiento" class="hover:text-white transition">
         Crédito
       </a>
 
-      <a href="#experiencia" class="hover:text-white transition">
-        Experiencia
+      <a href="#ecosistema" class="hover:text-white transition">
+        Ecosistema
       </a>
 
       <a href="#contacto" class="hover:text-white transition">
@@ -425,10 +493,12 @@ body{
 
     </nav>
 
+    <!-- CTA -->
+
     <a
-      href="https://wa.me/522441252948?text=Hola%20quiero%20información%20sobre%20las%20motocicletas"
+      href="https://wa.me/522441252948?text=Hola%20quiero%20información%20sobre%20motocicletas"
       target="_blank"
-      class="primary-btn px-6 py-3 rounded-2xl font-semibold"
+      class="primary-btn px-5 lg:px-6 py-3 rounded-2xl text-sm font-semibold"
     >
       IA Comercial
     </a>
@@ -437,11 +507,11 @@ body{
 
 </header>
 
-<!-- ============================= -->
+<!-- ====================================== -->
 <!-- HERO -->
-<!-- ============================= -->
+<!-- ====================================== -->
 
-<section class="relative min-h-screen flex items-center overflow-hidden px-6 lg:px-10">
+<section class="hero px-6 lg:px-10">
 
   <!-- VIDEO -->
 
@@ -454,7 +524,7 @@ body{
   >
 
     <source
-      src="https://cdn.coverr.co/videos/coverr-man-riding-a-motorcycle-at-night-1565932555366?download=1080p"
+      src="https://cdn.coverr.co/videos/coverr-a-man-riding-a-motorcycle-1565932555366?download=1080p"
       type="video/mp4"
     >
 
@@ -464,9 +534,9 @@ body{
 
   <!-- CONTENT -->
 
-  <div class="max-w-7xl mx-auto relative z-10 w-full pt-36">
+  <div class="max-w-7xl mx-auto relative z-10 w-full pt-40">
 
-    <div class="hero-grid items-center">
+    <div class="grid lg:grid-cols-[1.1fr_.9fr] gap-16 items-center">
 
       <!-- LEFT -->
 
@@ -476,15 +546,15 @@ body{
 
           <div class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
 
-          <span class="text-sm tracking-[3px] uppercase subtle-text">
-            Smart Mobility Platform
+          <span class="text-sm subtle tracking-[3px] uppercase">
+            Cinematic Mobility Platform
           </span>
 
         </div>
 
-        <h1 class="fade-up text-5xl lg:text-8xl font-black leading-[1.05] max-w-4xl">
+        <h1 class="massive-title reveal max-w-5xl">
 
-          Una nueva forma de vivir la
+          La evolución de la
 
           <span class="gradient-text">
             movilidad premium.
@@ -492,23 +562,23 @@ body{
 
         </h1>
 
-        <p class="fade-up mt-10 text-lg lg:text-xl subtle-text max-w-2xl leading-relaxed">
+        <p class="reveal mt-10 text-lg lg:text-xl subtle max-w-2xl leading-relaxed">
 
-          Tecnología, financiamiento inteligente y experiencia cinematográfica diseñadas para una nueva generación de motociclistas.
+          Tecnología, diseño y experiencia digital inteligente para una nueva generación de motociclistas.
 
         </p>
 
-        <div class="fade-up mt-14 flex flex-col sm:flex-row gap-5">
+        <div class="reveal mt-14 flex flex-col sm:flex-row gap-5">
 
           <a
-            href="#configurador"
+            href="#catalogo"
             class="primary-btn px-10 py-5 rounded-2xl font-bold text-center"
           >
-            Configurar experiencia
+            Explorar experiencia
           </a>
 
           <a
-            href="https://wa.me/522441252948?text=Hola%20quiero%20que%20me%20recomienden%20una%20motocicleta"
+            href="https://wa.me/522441252948"
             target="_blank"
             class="secondary-btn glass px-10 py-5 rounded-2xl font-semibold text-center"
           >
@@ -523,12 +593,12 @@ body{
 
       <div class="hidden lg:flex justify-end">
 
-        <div class="glass rounded-[40px] overflow-hidden w-[520px]">
+        <div class="glass rounded-[42px] overflow-hidden w-[520px]">
 
           <img
             src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1400&auto=format&fit=crop"
             class="w-full h-[720px] object-cover"
-            alt="Moto premium"
+            alt="Motocicleta premium"
           >
 
         </div>
@@ -541,13 +611,13 @@ body{
 
 </section>
 
-<!-- ============================= -->
-<!-- CONFIGURADOR -->
-<!-- ============================= -->
+<!-- ====================================== -->
+<!-- CATALOG -->
+<!-- ====================================== -->
 
 <section
-id="configurador"
-class="section-space">
+id="catalogo"
+class="section">
 
 <div class="max-w-7xl mx-auto">
 
@@ -561,13 +631,13 @@ class="section-space">
 
     <h2 class="text-4xl lg:text-6xl font-black leading-tight mb-8">
 
-      Encuentra la motocicleta perfecta para tu estilo de vida.
+      Encuentra la motocicleta ideal para tu estilo de vida.
 
     </h2>
 
-    <p class="text-lg subtle-text leading-relaxed">
+    <p class="text-lg subtle leading-relaxed">
 
-      Nuestro sistema inteligente analiza presupuesto, uso y preferencias para recomendarte la mejor experiencia de movilidad.
+      Sistema diseñado para ayudarte a elegir movilidad, financiamiento y experiencia premium.
 
     </p>
 
@@ -575,176 +645,56 @@ class="section-space">
 
   <!-- GRID -->
 
-  <div class="grid lg:grid-cols-[1fr_.8fr] gap-12 items-start">
+  <div class="grid lg:grid-cols-3 gap-8">
 
-    <!-- LEFT -->
+    <!-- CARD -->
 
-    <div class="glass rounded-[40px] p-8 lg:p-12">
-
-      <!-- SELECT -->
-
-      <div class="mb-12">
-
-        <label class="block text-sm uppercase tracking-[3px] subtle-text mb-5">
-          Tipo de experiencia
-        </label>
-
-        <select class="selector w-full rounded-2xl px-6 py-5 outline-none">
-
-          <option>Deportiva Premium</option>
-          <option>Trabajo Inteligente</option>
-          <option>Movilidad Urbana</option>
-          <option>Delivery Pro</option>
-
-        </select>
-
-      </div>
-
-      <!-- ENGANCHE -->
-
-      <div class="mb-12">
-
-        <div class="flex justify-between mb-5">
-
-          <span class="subtle-text">
-            Enganche inicial
-          </span>
-
-          <span class="font-bold text-lg">
-            $8,500
-          </span>
-
-        </div>
-
-        <input
-          type="range"
-          class="range"
-        >
-
-      </div>
-
-      <!-- PLAZO -->
-
-      <div class="mb-14">
-
-        <div class="flex justify-between mb-5">
-
-          <span class="subtle-text">
-            Plazo
-          </span>
-
-          <span class="font-bold text-lg">
-            24 meses
-          </span>
-
-        </div>
-
-        <input
-          type="range"
-          class="range"
-        >
-
-      </div>
-
-      <!-- RESULTS -->
-
-      <div class="grid md:grid-cols-3 gap-6">
-
-        <div class="glass-soft rounded-3xl p-7">
-
-          <p class="subtle-text text-sm mb-3">
-            Semanal
-          </p>
-
-          <h3 class="text-3xl font-black">
-            $599
-          </h3>
-
-        </div>
-
-        <div class="glass-soft rounded-3xl p-7">
-
-          <p class="subtle-text text-sm mb-3">
-            Quincenal
-          </p>
-
-          <h3 class="text-3xl font-black">
-            $1,198
-          </h3>
-
-        </div>
-
-        <div class="glass-soft rounded-3xl p-7">
-
-          <p class="subtle-text text-sm mb-3">
-            Mensual
-          </p>
-
-          <h3 class="text-3xl font-black">
-            $2,396
-          </h3>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- RIGHT -->
-
-    <div class="glass rounded-[40px] overflow-hidden">
+    <div class="glass rounded-[36px] overflow-hidden card">
 
       <img
-        src="https://images.unsplash.com/photo-1517846693594-1567da72af75?q=80&w=1400&auto=format&fit=crop"
-        class="w-full h-[420px] object-cover"
-        alt="Moto"
+        src="https://images.unsplash.com/photo-1515777315835-281b94c9589f?q=80&w=1400&auto=format&fit=crop"
+        class="w-full h-[340px] object-cover"
       >
 
       <div class="p-8">
 
-        <div class="flex items-center justify-between mb-8">
+        <div class="flex justify-between items-start mb-8">
 
           <div>
 
-            <p class="subtle-text text-sm mb-2">
-              Recomendación IA
+            <p class="subtle text-sm mb-2">
+              Deportiva Premium
             </p>
 
             <h3 class="text-3xl font-black">
-              Ryder RS200
+              JL Racing X
             </h3>
 
           </div>
 
           <div class="text-blue-400 font-bold">
-            95%
+            IA 94%
           </div>
 
         </div>
 
-        <p class="subtle-text leading-relaxed mb-10">
+        <div class="space-y-4 mb-10">
 
-          Ideal para quienes buscan presencia deportiva, eficiencia urbana y mensualidades accesibles.
+          <div class="glass-soft rounded-2xl p-4 flex justify-between">
 
-        </p>
-
-        <div class="space-y-5 mb-10">
-
-          <div class="glass-soft rounded-2xl p-5 flex justify-between">
-
-            <span class="subtle-text">
-              Uso urbano
+            <span class="subtle">
+              Semanal
             </span>
 
             <span>
-              Excelente
+              $699
             </span>
 
           </div>
 
-          <div class="glass-soft rounded-2xl p-5 flex justify-between">
+          <div class="glass-soft rounded-2xl p-4 flex justify-between">
 
-            <span class="subtle-text">
+            <span class="subtle">
               Consumo
             </span>
 
@@ -754,14 +704,73 @@ class="section-space">
 
           </div>
 
-          <div class="glass-soft rounded-2xl p-5 flex justify-between">
+        </div>
 
-            <span class="subtle-text">
-              Presencia
+        <a
+          href="https://wa.me/522441252948"
+          target="_blank"
+          class="primary-btn block text-center py-5 rounded-2xl font-bold"
+        >
+          Solicitar información
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- CARD -->
+
+    <div class="glass rounded-[36px] overflow-hidden card">
+
+      <img
+        src="https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?q=80&w=1400&auto=format&fit=crop"
+        class="w-full h-[340px] object-cover"
+      >
+
+      <div class="p-8">
+
+        <div class="flex justify-between items-start mb-8">
+
+          <div>
+
+            <p class="subtle text-sm mb-2">
+              Movilidad Urbana
+            </p>
+
+            <h3 class="text-3xl font-black">
+              ZMoto Urban
+            </h3>
+
+          </div>
+
+          <div class="text-blue-400 font-bold">
+            IA 91%
+          </div>
+
+        </div>
+
+        <div class="space-y-4 mb-10">
+
+          <div class="glass-soft rounded-2xl p-4 flex justify-between">
+
+            <span class="subtle">
+              Semanal
             </span>
 
             <span>
-              Premium
+              $499
+            </span>
+
+          </div>
+
+          <div class="glass-soft rounded-2xl p-4 flex justify-between">
+
+            <span class="subtle">
+              Uso
+            </span>
+
+            <span>
+              Urbano
             </span>
 
           </div>
@@ -769,7 +778,78 @@ class="section-space">
         </div>
 
         <a
-          href="https://wa.me/522441252948?text=Hola%20vi%20la%20Ryder%20RS200%20y%20quiero%20información"
+          href="https://wa.me/522441252948"
+          target="_blank"
+          class="primary-btn block text-center py-5 rounded-2xl font-bold"
+        >
+          Solicitar información
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- CARD -->
+
+    <div class="glass rounded-[36px] overflow-hidden card">
+
+      <img
+        src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1400&auto=format&fit=crop"
+        class="w-full h-[340px] object-cover"
+      >
+
+      <div class="p-8">
+
+        <div class="flex justify-between items-start mb-8">
+
+          <div>
+
+            <p class="subtle text-sm mb-2">
+              Trabajo Inteligente
+            </p>
+
+            <h3 class="text-3xl font-black">
+              Huaihai Cargo
+            </h3>
+
+          </div>
+
+          <div class="text-blue-400 font-bold">
+            IA 96%
+          </div>
+
+        </div>
+
+        <div class="space-y-4 mb-10">
+
+          <div class="glass-soft rounded-2xl p-4 flex justify-between">
+
+            <span class="subtle">
+              Semanal
+            </span>
+
+            <span>
+              $549
+            </span>
+
+          </div>
+
+          <div class="glass-soft rounded-2xl p-4 flex justify-between">
+
+            <span class="subtle">
+              Carga
+            </span>
+
+            <span>
+              Alta
+            </span>
+
+          </div>
+
+        </div>
+
+        <a
+          href="https://wa.me/522441252948"
           target="_blank"
           class="primary-btn block text-center py-5 rounded-2xl font-bold"
         >
@@ -786,13 +866,137 @@ class="section-space">
 
 </section>
 
-<!-- ============================= -->
-<!-- EXPERIENCE -->
-<!-- ============================= -->
+<!-- ====================================== -->
+<!-- FINANCING -->
+<!-- ====================================== -->
 
 <section
-id="experiencia"
-class="section-space pt-0">
+id="financiamiento"
+class="section pt-0">
+
+<div class="max-w-7xl mx-auto">
+
+  <div class="glass rounded-[44px] overflow-hidden">
+
+    <div class="grid lg:grid-cols-2">
+
+      <!-- LEFT -->
+
+      <div class="p-10 lg:p-16">
+
+        <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-6">
+          Crédito Inteligente
+        </p>
+
+        <h2 class="text-4xl lg:text-6xl font-black leading-tight mb-10">
+
+          Financiamiento diseñado para convertir.
+
+        </h2>
+
+        <p class="text-lg subtle leading-relaxed mb-14">
+
+          Simula pagos, enganches y mensualidades en tiempo real desde cualquier dispositivo.
+
+        </p>
+
+        <div class="space-y-8">
+
+          <div>
+
+            <div class="flex justify-between mb-4">
+
+              <span class="subtle">
+                Enganche
+              </span>
+
+              <span class="font-bold">
+                $8,500
+              </span>
+
+            </div>
+
+            <input type="range" class="w-full">
+          </div>
+
+          <div>
+
+            <div class="flex justify-between mb-4">
+
+              <span class="subtle">
+                Plazo
+              </span>
+
+              <span class="font-bold">
+                24 meses
+              </span>
+
+            </div>
+
+            <input type="range" class="w-full">
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+
+      <div class="bg-[#0B0F17] p-10 lg:p-16 flex flex-col justify-center">
+
+        <div class="space-y-6">
+
+          <div class="glass-soft rounded-3xl p-7 flex justify-between items-center">
+
+            <span class="subtle">
+              Pago semanal
+            </span>
+
+            <span class="text-3xl font-black">
+              $599
+            </span>
+
+          </div>
+
+          <div class="glass-soft rounded-3xl p-7 flex justify-between items-center">
+
+            <span class="subtle">
+              Aprobación IA
+            </span>
+
+            <span class="text-blue-400 font-black">
+              Alta
+            </span>
+
+          </div>
+
+        </div>
+
+        <a
+          href="https://wa.me/522441252948"
+          target="_blank"
+          class="primary-btn mt-10 py-5 rounded-2xl text-center font-bold"
+        >
+          Solicitar evaluación
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+<!-- ====================================== -->
+<!-- ECOSYSTEM -->
+<!-- ====================================== -->
+
+<section
+id="ecosistema"
+class="section pt-0">
 
 <div class="max-w-7xl mx-auto">
 
@@ -803,55 +1007,55 @@ class="section-space pt-0">
     <div>
 
       <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-6">
-        Experience System™
+        Ecosistema Digital
       </p>
 
       <h2 class="text-4xl lg:text-6xl font-black leading-tight mb-10">
 
-        Diseñado para sentirse diferente.
+        Una plataforma conectada para vender más.
 
       </h2>
 
-      <p class="text-lg subtle-text leading-relaxed mb-14">
+      <p class="text-lg subtle leading-relaxed mb-14">
 
-        Velver combina experiencia cinematográfica, automatización inteligente y atención premium para crear una nueva forma de descubrir motocicletas.
+        TikTok, Facebook, WhatsApp IA, SEO local y experiencia premium conectados en un mismo sistema digital.
 
       </p>
 
       <div class="space-y-6">
 
-        <div class="glass-soft rounded-3xl p-7 config-card">
+        <div class="glass-soft rounded-3xl p-7 card">
 
-          <h3 class="text-xl font-bold mb-3">
+          <h3 class="text-2xl font-bold mb-3">
             IA Comercial 24/7
           </h3>
 
-          <p class="subtle-text">
-            Conversaciones humanas, rápidas y enfocadas en conversión.
+          <p class="subtle">
+            Conversaciones inteligentes enfocadas en cierre de ventas.
           </p>
 
         </div>
 
-        <div class="glass-soft rounded-3xl p-7 config-card">
+        <div class="glass-soft rounded-3xl p-7 card">
 
-          <h3 class="text-xl font-bold mb-3">
-            Crédito Inteligente
+          <h3 class="text-2xl font-bold mb-3">
+            SEO Local Premium
           </h3>
 
-          <p class="subtle-text">
-            Simulación financiera diseñada para reducir fricción psicológica.
+          <p class="subtle">
+            Posicionamiento estratégico para Atlixco y Puebla.
           </p>
 
         </div>
 
-        <div class="glass-soft rounded-3xl p-7 config-card">
+        <div class="glass-soft rounded-3xl p-7 card">
 
-          <h3 class="text-xl font-bold mb-3">
-            Plataforma Premium
+          <h3 class="text-2xl font-bold mb-3">
+            Remarketing Inteligente
           </h3>
 
-          <p class="subtle-text">
-            Arquitectura visual inspirada en marcas luxury-tech globales.
+          <p class="subtle">
+            Recuperación de leads mediante automatización emocional.
           </p>
 
         </div>
@@ -862,12 +1066,11 @@ class="section-space pt-0">
 
     <!-- RIGHT -->
 
-    <div class="glass rounded-[44px] overflow-hidden">
+    <div class="glass rounded-[42px] overflow-hidden">
 
       <img
-        src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1400&auto=format&fit=crop"
-        class="w-full h-[720px] object-cover"
-        alt="Experience"
+        src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1400&auto=format&fit=crop"
+        class="w-full h-[760px] object-cover"
       >
 
     </div>
@@ -878,9 +1081,9 @@ class="section-space pt-0">
 
 </section>
 
-<!-- ============================= -->
+<!-- ====================================== -->
 <!-- FOOTER -->
-<!-- ============================= -->
+<!-- ====================================== -->
 
 <footer
 id="contacto"
@@ -906,9 +1109,9 @@ class="px-6 lg:px-10 pb-20">
 
         </h2>
 
-        <p class="text-lg subtle-text leading-relaxed max-w-xl">
+        <p class="text-lg subtle leading-relaxed max-w-xl">
 
-          Descubre motocicletas, crédito flexible y atención inteligente diseñadas para una nueva generación de movilidad.
+          Plataforma diseñada para una nueva generación de movilidad premium en México.
 
         </p>
 
@@ -918,11 +1121,11 @@ class="px-6 lg:px-10 pb-20">
 
       <div>
 
-        <div class="space-y-6 mb-10">
+        <div class="space-y-5 mb-10">
 
           <div class="glass-soft rounded-2xl p-6">
 
-            <p class="subtle-text text-sm mb-2">
+            <p class="subtle text-sm mb-2">
               Dirección
             </p>
 
@@ -934,7 +1137,7 @@ class="px-6 lg:px-10 pb-20">
 
           <div class="glass-soft rounded-2xl p-6">
 
-            <p class="subtle-text text-sm mb-2">
+            <p class="subtle text-sm mb-2">
               WhatsApp IA
             </p>
 
@@ -944,10 +1147,22 @@ class="px-6 lg:px-10 pb-20">
 
           </div>
 
+          <div class="glass-soft rounded-2xl p-6">
+
+            <p class="subtle text-sm mb-2">
+              Teléfono
+            </p>
+
+            <h3 class="font-semibold">
+              244 445 2887
+            </h3>
+
+          </div>
+
         </div>
 
         <a
-          href="https://wa.me/522441252948?text=Hola%20quiero%20información%20sobre%20las%20motocicletas"
+          href="https://wa.me/522441252948"
           target="_blank"
           class="primary-btn block text-center py-5 rounded-2xl font-bold"
         >
@@ -960,7 +1175,7 @@ class="px-6 lg:px-10 pb-20">
 
   </div>
 
-  <div class="mt-10 flex flex-col lg:flex-row justify-between gap-5 text-sm subtle-text px-2">
+  <div class="mt-10 flex flex-col lg:flex-row justify-between gap-5 px-2 text-sm subtle">
 
     <p>
       © 2026 Velver Motos Atlixco™
@@ -976,25 +1191,25 @@ class="px-6 lg:px-10 pb-20">
 
 </footer>
 
-<!-- ============================= -->
+<!-- ====================================== -->
 <!-- GSAP -->
-<!-- ============================= -->
+<!-- ====================================== -->
 
 <script>
 
-/* ============================= */
+/* ====================================== */
 /* INTRO */
-/* ============================= */
+/* ====================================== */
 
 const intro = document.getElementById("intro");
 
-if(sessionStorage.getItem("velver_intro_done")){
+if(sessionStorage.getItem("velver_intro")){
 
   intro.style.display = "none";
 
 }else{
 
-  sessionStorage.setItem("velver_intro_done","true");
+  sessionStorage.setItem("velver_intro","true");
 
   const tl = gsap.timeline();
 
@@ -1030,11 +1245,11 @@ if(sessionStorage.getItem("velver_intro_done")){
 
 }
 
-/* ============================= */
-/* FADE UPS */
-/* ============================= */
+/* ====================================== */
+/* REVEAL */
+/* ====================================== */
 
-gsap.to(".fade-up",{
+gsap.to(".reveal",{
   opacity:1,
   y:0,
   duration:1.2,
