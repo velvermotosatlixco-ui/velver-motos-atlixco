@@ -2,752 +2,430 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Velver Motos Atlixco</title>
-  <meta name="description" content="Agencia premium de motocicletas en Atlixco, Puebla. Ryder, ZMoto, JL Racing y Huaihai. Créditos accesibles y atención inteligente por WhatsApp." />  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <title>Velver Motos Atlixco™</title>  <script src="https://cdn.tailwindcss.com"></script>  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">  <style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">  <style>
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
       scroll-behavior: smooth;
     }
 
     body {
-      background: linear-gradient(180deg, #020202 0%, #05070d 45%, #020202 100%);
-      color: white;
-      font-family: 'Inter', sans-serif;
+      background: #050505;
       overflow-x: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background:
-        radial-gradient(circle at top right, rgba(255,120,0,0.15), transparent 30%),
-        radial-gradient(circle at bottom left, rgba(255,255,255,0.05), transparent 25%);
-      pointer-events: none;
-      z-index: -1;
-    }
-
-    nav {
-      width: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      padding: 18px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(3,6,15,0.72);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      z-index: 999;
-    }
-
-    .logo {
-      font-size: 1.4rem;
-      font-weight: 800;
-      letter-spacing: 3px;
-    }
-
-    .logo span {
-      color: #0057FF;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      align-items: center;
-    }
-
-    .nav-links a {
-      color: rgba(255,255,255,0.75);
-      text-decoration: none;
-      font-size: 0.95rem;
-      transition: 0.3s;
-    }
-
-    .nav-links a:hover {
       color: white;
     }
 
-    .whatsapp-btn {
-      background: linear-gradient(135deg, #0057FF, #3BA0FF);
-      padding: 12px 22px;
-      border-radius: 999px;
-      color: white;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 0 30px rgba(0,87,255,0.28);
+    .glass {
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,0.08);
     }
 
-    .hero {
-      overflow:hidden;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 7%;
-      position: relative;
-    }
-
-    .hero-video {
-      position:absolute;
-      inset:0;
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      opacity:0.22;
-      z-index:0;
+    .blue-glow {
+      box-shadow:
+        0 0 20px rgba(0,87,255,.25),
+        0 0 50px rgba(0,87,255,.15);
     }
 
     .hero-overlay {
-      position:absolute;
-      inset:0;
       background:
-        linear-gradient(to bottom, rgba(0,0,0,0.72), rgba(0,0,0,0.85)),
-        radial-gradient(circle at center, rgba(0,87,255,0.18), transparent 45%);
-      z-index:1;
+      linear-gradient(to bottom,
+      rgba(0,0,0,.65),
+      rgba(5,5,5,.95));
     }
 
-    .hero-content {
-      max-width: 760px;
-      z-index: 2;
+    .card-hover:hover {
+      transform: translateY(-10px);
+      border-color: rgba(59,160,255,.6);
+      box-shadow:
+      0 0 20px rgba(59,160,255,.25),
+      0 0 80px rgba(0,87,255,.15);
     }
 
-    .tag {
-      display: inline-flex;
-      padding: 8px 16px;
+    .gradient-text {
+      background: linear-gradient(90deg,#ffffff,#3BA0FF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .noise {
+      position: absolute;
+      inset: 0;
+      opacity: .03;
+      background-image:
+      radial-gradient(#ffffff 0.5px, transparent 0.5px);
+      background-size: 12px 12px;
+      pointer-events: none;
+    }
+
+    .floating-light {
+      position: absolute;
+      width: 400px;
+      height: 400px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.08);
-      margin-bottom: 24px;
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.75);
+      filter: blur(120px);
+      opacity: .18;
+      background: #0057FF;
+      animation: pulse 8s infinite ease-in-out;
     }
 
-    h1 {
-      font-size: 5rem;
-      line-height: 1;
-      margin-bottom: 24px;
-      font-weight: 800;
-      letter-spacing: -3px;
-    }
-
-    h1 span {
-      color: #0057FF;
-    }
-
-    .hero p {
-      font-size: 1.15rem;
-      line-height: 1.8;
-      color: rgba(255,255,255,0.75);
-      margin-bottom: 40px;
-      max-width: 620px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .primary-btn,
-    .secondary-btn {
-      padding: 16px 28px;
-      border-radius: 18px;
-      text-decoration: none;
-      transition: 0.35s;
-      font-weight: 600;
-    }
-
-    .primary-btn {
-      background: linear-gradient(135deg, #0057FF, #3BA0FF);
-      color: white;
-      box-shadow: 0 0 40px rgba(0,87,255,0.28);
-    }
-
-    .primary-btn:hover {
-      transform: translateY(-4px);
-    }
-
-    .secondary-btn {
-      border: 1px solid rgba(255,255,255,0.15);
-      color: white;
-      background: rgba(10,18,35,0.55);
-      backdrop-filter: blur(10px);
-    }
-
-    .hero-stats {
-      margin-top:60px;
-      display:flex;
-      gap:22px;
-      flex-wrap:wrap;
-    }
-
-    .hero-stat {
-      min-width:180px;
-      padding:22px;
-      border-radius:24px;
-      background:rgba(8,16,32,0.62);
-      border:1px solid rgba(255,255,255,0.08);
-      backdrop-filter:blur(12px);
-      box-shadow:0 0 30px rgba(0,87,255,0.12);
-    }
-
-    .hero-stat h3 {
-      font-size:2rem;
-      color:#3BA0FF;
-      margin-bottom:8px;
-    }
-
-    .hero-stat span {
-      color:rgba(255,255,255,0.68);
-      font-size:0.92rem;
-    }
-
-    section {
-      padding: 120px 7%;
-    }
-
-    .section-title {
-      font-size: 3rem;
-      margin-bottom: 16px;
-      font-weight: 800;
-      letter-spacing: -2px;
-    }
-
-    .section-description {
-      color: rgba(255,255,255,0.65);
-      max-width: 680px;
-      line-height: 1.8;
-      margin-bottom: 60px;
-    }
-
-    .catalog-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 28px;
-    }
-
-    .bike-card {
-      background: linear-gradient(180deg, rgba(12,24,52,0.82), rgba(7,10,18,0.92));
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 32px;
-      overflow: hidden;
-      transition: 0.4s ease;
-      backdrop-filter: blur(10px);
-      position: relative;
-    }
-
-    .bike-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(59,160,255,0.45);
-      box-shadow: 0 0 40px rgba(0,87,255,0.14);
-    }
-
-    .bike-card img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-    }
-
-    .bike-info {
-      padding: 28px;
-    }
-
-    .bike-brand {
-      color: #0057FF;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-    }
-
-    .bike-name {
-      font-size: 1.7rem;
-      margin-bottom: 14px;
-      font-weight: 700;
-    }
-
-    .bike-description {
-      color: rgba(255,255,255,0.65);
-      line-height: 1.7;
-      margin-bottom: 24px;
-    }
-
-    .bike-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 28px;
-    }
-
-    .price {
-      font-size: 1.4rem;
-      font-weight: 700;
-    }
-
-    .weekly {
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.55);
-    }
-
-    .card-btn {
-      width: 100%;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      padding: 16px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, #0057FF, #3BA0FF);
-      text-decoration: none;
-      color: white;
-      font-weight: 600;
-    }
-
-    .intelligent-section {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 32px;
-      align-items: center;
-    }
-
-    .intelligent-box {
-      background: rgba(10,18,35,0.55);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 32px;
-      padding: 40px;
-    }
-
-    .intelligent-box h3 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .intelligent-box p {
-      color: rgba(255,255,255,0.7);
-      line-height: 1.8;
-    }
-
-    .smart-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 28px;
-    }
-
-    .smart-tags span {
-      padding: 12px 18px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.08);
-      color: rgba(255,255,255,0.8);
-      font-size: 0.92rem;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px;
-      margin-top: 40px;
-    }
-
-    .stat-card {
-      padding: 32px;
-      border-radius: 28px;
-      background: rgba(10,18,35,0.55);
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .stat-card h2 {
-      font-size: 3rem;
-      color: #0057FF;
-      margin-bottom: 10px;
-    }
-
-    .stat-card p {
-      color: rgba(255,255,255,0.7);
-    }
-
-    .cta {
-      text-align: center;
-      padding: 140px 7%;
-    }
-
-    .cta-box {
-      background: linear-gradient(135deg, rgba(0,87,255,0.14), rgba(255,255,255,0.04));
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 42px;
-      padding: 80px 40px;
-    }
-
-    .cta-box h2 {
-      font-size: 4rem;
-      margin-bottom: 24px;
-      line-height: 1.1;
-    }
-
-    .cta-box p {
-      max-width: 760px;
-      margin: auto;
-      color: rgba(255,255,255,0.7);
-      line-height: 1.8;
-      margin-bottom: 40px;
-    }
-
-    footer {
-      padding: 60px 7%;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      color: rgba(255,255,255,0.45);
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .smart-selector-grid,
-    .proof-grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:28px;
-      margin-top:50px;
-    }
-
-    .selector-card,
-    .proof-card {
-      padding:34px;
-      border-radius:28px;
-      background:linear-gradient(180deg, rgba(10,20,40,0.92), rgba(5,8,15,0.96));
-      border:1px solid rgba(255,255,255,0.08);
-      transition:0.35s ease;
-    }
-
-    .selector-card:hover,
-    .proof-card:hover {
-      transform:translateY(-8px);
-      border-color:rgba(59,160,255,0.35);
-      box-shadow:0 0 35px rgba(0,87,255,0.18);
-    }
-
-    .selector-card h3,
-    .proof-card h3 {
-      font-size:1.5rem;
-      margin-bottom:14px;
-      color:#F5F7FA;
-    }
-
-    .selector-card p,
-    .proof-card p {
-      color:rgba(255,255,255,0.65);
-      line-height:1.7;
-    }
-
-    @media(max-width: 980px) {
-      h1 {
-        font-size: 3.5rem;
+    @keyframes pulse {
+      0%,100% {
+        transform: scale(1);
       }
-
-      .hero-bike {
-        opacity: 0.18;
-        width: 100%;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .cta-box h2 {
-        font-size: 2.8rem;
+      50% {
+        transform: scale(1.15);
       }
     }
 
-    @media(max-width: 640px) {
-      h1 {
-        font-size: 2.8rem;
-      }
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeUp 1s forwards;
+    }
 
-      .section-title {
-        font-size: 2.2rem;
-      }
-
-      .hero-buttons {
-        flex-direction: column;
-      }
-
-      .primary-btn,
-      .secondary-btn {
-        width: 100%;
-        text-align: center;
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
+
   </style></head>
-<body>  <nav>
-    <div class="logo" style="display:flex;align-items:center;gap:14px;">
-      <img src="logo-premium.png" alt="Velver Motos Premium" style="height:52px;filter:drop-shadow(0 0 18px rgba(59,160,255,0.35));">
-    </div><div class="nav-links">
-  <a href="#catalogo">Catálogo</a>
-  <a href="#inteligencia">IA Comercial</a>
-  <a href="#financiamiento">Financiamiento</a>
-  <a href="#contacto">Contacto</a>
-</div>
-
-<a href="https://wa.me/522441252948" class="whatsapp-btn">
-  WhatsApp IA
-</a>
-
-  </nav>  <section class="hero"><video autoplay muted loop playsinline class="hero-video">
-  <source src="https://cdn.coverr.co/videos/coverr-a-motorcycle-on-a-road-1565637303945?download=1080p" type="video/mp4">
-</video>
-
-<div class="hero-overlay"></div>
-
-<div class="hero-content">
-
-  <div class="tag">
-    VELVER MOTOS ATLIXCO • DIGITAL PREMIUM EXPERIENCE
-  </div>
-
-  <h1>
-    El futuro de las
-    <span>motocicletas premium</span>
-    en Puebla.
-  </h1>
-
-  <p>
-    Una nueva generación de agencia digital enfocada en experiencia,
-    automatización inteligente y motocicletas diseñadas para dominar la ciudad.
-  </p>
-
-  <div class="hero-buttons">
-
-    <a href="#catalogo" class="primary-btn">
-      Explorar Catálogo Inteligente
-    </a>
-
-    <a href="https://wa.me/522441252948" class="secondary-btn">
-      Hablar con IA Comercial
-    </a>
-
-  </div>
-
-  <div class="hero-stats">
-
-    <div class="hero-stat">
-      <h3>24/7</h3>
-      <span>Atención Inteligente</span>
+<body>  <!-- NAVBAR -->  <header class="fixed top-0 left-0 w-full z-50 px-4 lg:px-10 py-4">
+    <div class="glass rounded-2xl px-6 py-4 flex items-center justify-between blue-glow"><div class="flex items-center gap-3">
+    <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center font-black text-lg">
+      V
     </div>
 
-    <div class="hero-stat">
-      <h3>5★</h3>
-      <span>Confianza Local</span>
+    <div>
+      <h1 class="font-black text-lg tracking-wide">VELVER MOTOS</h1>
+      <p class="text-xs text-gray-400">ATLIXCO™ DIGITAL EXPERIENCE</p>
     </div>
-
-    <div class="hero-stat">
-      <h3>+IA</h3>
-      <span>Experiencia Humanizada</span>
-    </div>
-
   </div>
+
+  <nav class="hidden lg:flex items-center gap-8 text-sm text-gray-300">
+    <a href="#catalogo" class="hover:text-blue-400 transition">Catálogo</a>
+    <a href="#inteligencia" class="hover:text-blue-400 transition">IA</a>
+    <a href="#credito" class="hover:text-blue-400 transition">Crédito</a>
+    <a href="#marcas" class="hover:text-blue-400 transition">Marcas</a>
+    <a href="#contacto" class="hover:text-blue-400 transition">Contacto</a>
+  </nav>
+
+  <a
+    href="https://wa.me/522441252948?text=Hola%20quiero%20informaci%C3%B3n%20de%20las%20motocicletas"
+    target="_blank"
+    class="bg-blue-600 hover:bg-blue-500 transition px-5 py-3 rounded-xl font-semibold text-sm blue-glow"
+  >
+    IA Comercial
+  </a>
 
 </div>
 
-  </section>  <section id="catalogo"><h2 class="section-title">
-  Catálogo Inteligente
-</h2>
+  </header>  <!-- HERO -->  <section class="relative min-h-screen flex items-center overflow-hidden"><div class="absolute inset-0">
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    class="w-full h-full object-cover"
+  >
+    <source src="https://cdn.coverr.co/videos/coverr-a-man-riding-a-motorcycle-1565932555366?download=1080p" type="video/mp4">
+  </video>
 
-<p class="section-description">
-  Diseñado para ayudarte a encontrar la motocicleta ideal según tu estilo,
-  necesidades, presupuesto y tipo de uso.
-</p>
-
-<div class="catalog-grid">
-
-  <div class="bike-card">
-    <img src="https://images.unsplash.com/photo-1517846693594-1567da72af75?q=80&w=1200&auto=format&fit=crop" alt="Ryder" />
-
-    <div class="bike-info">
-      <div class="bike-brand">RYDER</div>
-
-      <div class="bike-name">RX Work 150</div>
-
-      <div class="bike-description">
-        Ideal para trabajo diario, excelente consumo y gran confiabilidad.
-      </div>
-
-      <div class="bike-meta">
-        <div>
-          <div class="price">$32,999</div>
-          <div class="weekly">Desde $327 semanales</div>
-        </div>
-      </div>
-
-      <a href="https://wa.me/522441252948" class="card-btn">
-        Solicitar Información
-      </a>
-    </div>
-  </div>
-
-  <div class="bike-card">
-    <img src="https://images.unsplash.com/photo-1529429617124-aee711a5ac1c?q=80&w=1200&auto=format&fit=crop" alt="JL Racing" />
-
-    <div class="bike-info">
-      <div class="bike-brand">JL RACING</div>
-
-      <div class="bike-name">R8 Street</div>
-
-      <div class="bike-description">
-        Diseño agresivo, presencia deportiva y experiencia urbana premium.
-      </div>
-
-      <div class="bike-meta">
-        <div>
-          <div class="price">$41,990</div>
-          <div class="weekly">Desde $449 semanales</div>
-        </div>
-      </div>
-
-      <a href="https://wa.me/522441252948" class="card-btn">
-        Solicitar Información
-      </a>
-    </div>
-  </div>
-
-  <div class="bike-card">
-    <img src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?q=80&w=1200&auto=format&fit=crop" alt="ZMoto" />
-
-    <div class="bike-info">
-      <div class="bike-brand">ZMOTO</div>
-
-      <div class="bike-name">Nitro Urban</div>
-
-      <div class="bike-description">
-        Equilibrio perfecto entre ciudad, estilo moderno y bajo consumo.
-      </div>
-
-      <div class="bike-meta">
-        <div>
-          <div class="price">$36,490</div>
-          <div class="weekly">Desde $389 semanales</div>
-        </div>
-      </div>
-
-      <a href="https://wa.me/522441252948" class="card-btn">
-        Solicitar Información
-      </a>
-    </div>
-  </div>
-
+  <div class="absolute inset-0 hero-overlay"></div>
 </div>
 
-  </section>  <section id="selector-premium"><h2 class="section-title">
-  Encuentra tu moto ideal
-</h2>
+<div class="floating-light top-[-100px] left-[-100px]"></div>
+<div class="floating-light bottom-[-120px] right-[-120px]"></div>
 
-<p class="section-description">
-  Nuestro sistema inteligente analiza tu estilo de vida para recomendarte la motocicleta perfecta.
-</p>
+<div class="noise"></div>
 
-<div class="smart-selector-grid">
+<div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center pt-40">
 
-  <div class="selector-card">
-    <h3>Trabajo Diario</h3>
-    <p>Máximo rendimiento y consumo eficiente para trayectos constantes.</p>
-  </div>
+  <div class="fade-up">
 
-  <div class="selector-card">
-    <h3>Primera Moto</h3>
-    <p>Modelos cómodos, seguros y fáciles de manejar.</p>
-  </div>
+    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm mb-8 border border-blue-500/30">
+      <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+      Plataforma Inteligente Premium
+    </div>
 
-  <div class="selector-card">
-    <h3>Uso Urbano</h3>
-    <p>Diseño moderno y movilidad inteligente para ciudad.</p>
-  </div>
+    <h1 class="text-5xl lg:text-7xl font-black leading-tight mb-8">
+      La nueva generación de
+      <span class="gradient-text">movilidad premium.</span>
+    </h1>
 
-  <div class="selector-card">
-    <h3>Deportiva</h3>
-    <p>Presencia agresiva y experiencia emocionante.</p>
-  </div>
-
-</div>
-
-  </section>  <section class="social-proof"><h2 class="section-title">
-  Clientes reales. Experiencias reales.
-</h2>
-
-<p class="section-description">
-  Construimos confianza mediante atención humana, entregas auténticas y experiencia premium.
-</p>
-
-<div class="proof-grid">
-
-  <div class="proof-card">
-    <h3>Google Maps 5★</h3>
-    <p>Excelente reputación local en Atlixco Puebla.</p>
-  </div>
-
-  <div class="proof-card">
-    <h3>WhatsApp Inteligente</h3>
-    <p>Asistencia rápida y conversación natural enfocada en confianza.</p>
-  </div>
-
-  <div class="proof-card">
-    <h3>Entrega Personalizada</h3>
-    <p>Experiencia cercana desde el primer contacto hasta la entrega.</p>
-  </div>
-
-</div>
-
-  </section>  <section id="inteligencia"><div class="intelligent-section">
-
-  <div class="intelligent-box">
-
-    <h3>
-      Inteligencia Comercial Integrada
-    </h3>
-
-    <p>
-      Nuestro ecosistema digital está diseñado para ayudarte a encontrar la
-      motocicleta ideal mediante atención inteligente, recomendaciones
-      personalizadas y asesoría humana por WhatsApp.
+    <p class="text-gray-300 text-lg lg:text-xl leading-relaxed max-w-xl mb-10">
+      Tecnología, diseño y potencia en una experiencia digital creada para quienes quieren destacar.
     </p>
 
-    <div class="smart-tags">
-      <span>Trabajo Diario</span>
-      <span>Primera Moto</span>
-      <span>Bajo Consumo</span>
-      <span>Entrega Rápida</span>
-      <span>Crédito Fácil</span>
-      <span>Uso Urbano</span>
+    <div class="flex flex-col sm:flex-row gap-5">
+
+      <a
+        href="#catalogo"
+        class="bg-blue-600 hover:bg-blue-500 transition px-8 py-5 rounded-2xl font-bold text-center blue-glow"
+      >
+        Explorar catálogo
+      </a>
+
+      <a
+        href="https://wa.me/522441252948?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20las%20motocicletas"
+        target="_blank"
+        class="glass px-8 py-5 rounded-2xl font-semibold text-center hover:border-blue-500 transition"
+      >
+        Hablar con IA comercial
+      </a>
+
     </div>
 
   </div>
 
-  <div class="intelligent-box">
+  <div class="hidden lg:flex justify-center relative fade-up">
 
-    <h3>
-      ¿Qué hace diferente a Velver?
-    </h3>
+    <img
+      src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1400&auto=format&fit=crop"
+      class="w-[700px] rounded-3xl object-cover border border-white/10 blue-glow"
+      alt="Moto Premium"
+    >
 
-    <p>
-      Combinamos branding premium, experiencia digital moderna y atención
-      estratégica para crear una nueva generación de agencia de motocicletas
-      en Puebla.
+  </div>
+
+</div>
+
+  </section>  <!-- EXPERIENCE CARDS -->  <section class="py-24 px-6 lg:px-10"><div class="max-w-7xl mx-auto">
+
+  <div class="mb-16 text-center">
+    <p class="text-blue-400 font-semibold tracking-[4px] uppercase mb-4">
+      EXPERIENCIAS
     </p>
 
-    <div class="stats">
+    <h2 class="text-4xl lg:text-6xl font-black mb-6">
+      ¿Qué tipo de moto necesitas?
+    </h2>
 
-      <div class="stat-card">
-        <h2>24/7</h2>
-        <p>Atención Inteligente</p>
+    <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+      Elige tu estilo y descubre motocicletas diseñadas para tu forma de vivir.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <div class="glass rounded-3xl p-8 transition duration-500 card-hover cursor-pointer">
+      <div class="text-5xl mb-6">⚡</div>
+      <h3 class="text-2xl font-bold mb-4">Primera Moto</h3>
+      <p class="text-gray-400 leading-relaxed mb-6">
+        Fácil de manejar, moderna y perfecta para comenzar.
+      </p>
+      <button class="text-blue-400 font-semibold">Explorar →</button>
+    </div>
+
+    <div class="glass rounded-3xl p-8 transition duration-500 card-hover cursor-pointer">
+      <div class="text-5xl mb-6">🏍️</div>
+      <h3 class="text-2xl font-bold mb-4">Deportiva</h3>
+      <p class="text-gray-400 leading-relaxed mb-6">
+        Diseñadas para quienes quieren presencia y adrenalina.
+      </p>
+      <button class="text-blue-400 font-semibold">Explorar →</button>
+    </div>
+
+    <div class="glass rounded-3xl p-8 transition duration-500 card-hover cursor-pointer">
+      <div class="text-5xl mb-6">💼</div>
+      <h3 class="text-2xl font-bold mb-4">Trabajo Diario</h3>
+      <p class="text-gray-400 leading-relaxed mb-6">
+        Rendimiento inteligente y ahorro para cada trayecto.
+      </p>
+      <button class="text-blue-400 font-semibold">Explorar →</button>
+    </div>
+
+  </div>
+
+</div>
+
+  </section>  <!-- CATALOGO -->  <section id="catalogo" class="py-24 px-6 lg:px-10 bg-[#0A0A0A]"><div class="max-w-7xl mx-auto">
+
+  <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-10 mb-16">
+
+    <div>
+      <p class="text-blue-400 uppercase tracking-[4px] font-semibold mb-4">
+        Catálogo Inteligente
+      </p>
+
+      <h2 class="text-4xl lg:text-6xl font-black max-w-3xl leading-tight">
+        Motocicletas seleccionadas para cada estilo de vida.
+      </h2>
+    </div>
+
+    <div class="flex flex-wrap gap-4">
+      <button class="glass px-5 py-3 rounded-xl hover:border-blue-500 transition">
+        Deportivas
+      </button>
+
+      <button class="glass px-5 py-3 rounded-xl hover:border-blue-500 transition">
+        Urbanas
+      </button>
+
+      <button class="glass px-5 py-3 rounded-xl hover:border-blue-500 transition">
+        Trabajo
+      </button>
+    </div>
+
+  </div>
+
+  <div class="grid lg:grid-cols-3 gap-8">
+
+    <!-- CARD -->
+    <div class="glass rounded-3xl overflow-hidden transition duration-500 card-hover">
+
+      <div class="relative overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1517846693594-1567da72af75?q=80&w=1200&auto=format&fit=crop"
+          class="w-full h-[280px] object-cover"
+          alt="Ryder RS200"
+        >
+
+        <div class="absolute top-5 left-5 bg-blue-600 text-xs font-bold px-4 py-2 rounded-full">
+          Deportiva
+        </div>
       </div>
 
-      <div class="stat-card">
-        <h2>5★</h2>
-        <p>Confianza Local</p>
+      <div class="p-8">
+
+        <div class="flex items-center justify-between mb-5">
+          <h3 class="text-3xl font-black">Ryder RS200</h3>
+          <span class="text-blue-400 font-bold">2026</span>
+        </div>
+
+        <p class="text-gray-400 leading-relaxed mb-8">
+          Diseñada para quienes quieren destacar en cada trayecto.
+        </p>
+
+        <div class="mb-8">
+          <p class="text-sm text-gray-500 mb-2">Mensualidades desde</p>
+          <h4 class="text-4xl font-black">$599</h4>
+          <span class="text-gray-400">semanales</span>
+        </div>
+
+        <div class="flex gap-4">
+
+          <button class="flex-1 bg-blue-600 hover:bg-blue-500 transition py-4 rounded-2xl font-bold blue-glow">
+            Ver detalles
+          </button>
+
+          <a
+            href="https://wa.me/522441252948?text=Hola%20vi%20la%20Ryder%20RS200%20negra%20y%20quiero%20informaci%C3%B3n%20sobre%20mensualidades"
+            target="_blank"
+            class="flex-1 glass py-4 rounded-2xl font-semibold text-center hover:border-blue-500 transition"
+          >
+            Cotizar
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD -->
+    <div class="glass rounded-3xl overflow-hidden transition duration-500 card-hover">
+
+      <div class="relative overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1529429617124-aee711a5ac1c?q=80&w=1200&auto=format&fit=crop"
+          class="w-full h-[280px] object-cover"
+          alt="ZMoto Urban"
+        >
+
+        <div class="absolute top-5 left-5 bg-white/10 backdrop-blur-lg text-xs font-bold px-4 py-2 rounded-full border border-white/10">
+          Urbana
+        </div>
+      </div>
+
+      <div class="p-8">
+
+        <div class="flex items-center justify-between mb-5">
+          <h3 class="text-3xl font-black">ZMoto Urban X</h3>
+          <span class="text-blue-400 font-bold">2026</span>
+        </div>
+
+        <p class="text-gray-400 leading-relaxed mb-8">
+          Compacta, moderna y creada para dominar la ciudad.
+        </p>
+
+        <div class="mb-8">
+          <p class="text-sm text-gray-500 mb-2">Mensualidades desde</p>
+          <h4 class="text-4xl font-black">$449</h4>
+          <span class="text-gray-400">semanales</span>
+        </div>
+
+        <div class="flex gap-4">
+
+          <button class="flex-1 bg-blue-600 hover:bg-blue-500 transition py-4 rounded-2xl font-bold blue-glow">
+            Ver detalles
+          </button>
+
+          <a
+            href="https://wa.me/522441252948?text=Hola%20quiero%20informaci%C3%B3n%20de%20la%20ZMoto%20Urban%20X"
+            target="_blank"
+            class="flex-1 glass py-4 rounded-2xl font-semibold text-center hover:border-blue-500 transition"
+          >
+            Cotizar
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD -->
+    <div class="glass rounded-3xl overflow-hidden transition duration-500 card-hover">
+
+      <div class="relative overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1200&auto=format&fit=crop"
+          class="w-full h-[280px] object-cover"
+          alt="Huaihai Cargo"
+        >
+
+        <div class="absolute top-5 left-5 bg-white/10 backdrop-blur-lg text-xs font-bold px-4 py-2 rounded-full border border-white/10">
+          Trabajo
+        </div>
+      </div>
+
+      <div class="p-8">
+
+        <div class="flex items-center justify-between mb-5">
+          <h3 class="text-3xl font-black">Huaihai Cargo Pro</h3>
+          <span class="text-blue-400 font-bold">2026</span>
+        </div>
+
+        <p class="text-gray-400 leading-relaxed mb-8">
+          Potencia y productividad para quienes viven del movimiento.
+        </p>
+
+        <div class="mb-8">
+          <p class="text-sm text-gray-500 mb-2">Mensualidades desde</p>
+          <h4 class="text-4xl font-black">$529</h4>
+          <span class="text-gray-400">semanales</span>
+        </div>
+
+        <div class="flex gap-4">
+
+          <button class="flex-1 bg-blue-600 hover:bg-blue-500 transition py-4 rounded-2xl font-bold blue-glow">
+            Ver detalles
+          </button>
+
+          <a
+            href="https://wa.me/522441252948?text=Hola%20quiero%20informaci%C3%B3n%20de%20la%20Huaihai%20Cargo%20Pro"
+            target="_blank"
+            class="flex-1 glass py-4 rounded-2xl font-semibold text-center hover:border-blue-500 transition"
+          >
+            Cotizar
+          </a>
+
+        </div>
+
       </div>
 
     </div>
@@ -756,46 +434,167 @@
 
 </div>
 
-  </section>  <section class="cta" id="contacto"><div class="cta-box">
+  </section>  <!-- IA SECTION -->  <section id="inteligencia" class="py-24 px-6 lg:px-10 relative overflow-hidden"><div class="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-transparent"></div>
 
-  <h2>
-    La nueva generación de agencias de motos empieza aquí.
-  </h2>
-
-  <p>
-    Descubre motocicletas premium, financiamiento accesible y una atención
-    diseñada para generar confianza desde el primer contacto.
-  </p>
-
-  <div class="hero-buttons" style="justify-content:center;">
-
-    <a href="https://wa.me/522441252948" class="primary-btn">
-      Hablar con IA Comercial
-    </a>
-
-    <a href="tel:+522444452887" class="secondary-btn">
-      Llamar a Sucursal
-    </a>
-
-  </div>
-
-</div>
-
-  </section>  <footer><div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;">
-  <img
-    src="logo-oficial.png"
-    alt="Velver Motos Oficial"
-    style="height:54px;opacity:0.92;"
-  />
+<div class="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-16 items-center">
 
   <div>
-    © 2026 Velver Motos Atlixco<br>
-    KNJO BLACK CODE™ DIGITAL EXPERIENCE
+    <p class="text-blue-400 uppercase tracking-[4px] font-semibold mb-4">
+      Inteligencia Comercial
+    </p>
+
+    <h2 class="text-4xl lg:text-6xl font-black leading-tight mb-8">
+      Una IA diseñada para ayudarte a elegir mejor.
+    </h2>
+
+    <p class="text-gray-400 text-lg leading-relaxed mb-10 max-w-xl">
+      Nuestro sistema inteligente recomienda motocicletas según tu presupuesto, uso y estilo de vida.
+    </p>
+
+    <div class="space-y-5 mb-10">
+
+      <div class="glass rounded-2xl p-5 flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center">
+          ⚡
+        </div>
+        <div>
+          <h3 class="font-bold text-lg">Recomendaciones inteligentes</h3>
+          <p class="text-gray-400 text-sm">Modelos adaptados a tu necesidad real.</p>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-5 flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center">
+          💳
+        </div>
+        <div>
+          <h3 class="font-bold text-lg">Opciones de crédito</h3>
+          <p class="text-gray-400 text-sm">Mensualidades accesibles y procesos rápidos.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <a
+      href="https://wa.me/522441252948?text=Hola%20quiero%20que%20la%20IA%20me%20recomiende%20una%20motocicleta"
+      target="_blank"
+      class="inline-flex bg-blue-600 hover:bg-blue-500 transition px-8 py-5 rounded-2xl font-bold blue-glow"
+    >
+      Hablar con IA
+    </a>
+
   </div>
+
+  <div class="glass rounded-[40px] p-8 blue-glow">
+
+    <div class="space-y-6">
+
+      <div class="glass rounded-2xl p-5 max-w-sm">
+        <p class="text-sm text-gray-400 mb-2">Cliente</p>
+        <p>
+          Busco una moto para trabajar diario y ahorrar gasolina.
+        </p>
+      </div>
+
+      <div class="bg-blue-600 rounded-2xl p-5 max-w-sm ml-auto blue-glow">
+        <p class="text-sm text-blue-100 mb-2">IA Velver</p>
+        <p>
+          Te recomiendo modelos Huaihai y Ryder de bajo consumo con crédito accesible.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
 </div>
 
-<div>
-  Av Independencia 1903 A, Francisco I. Madero, Atlixco Puebla
+  </section>  <!-- TRUST -->  <section class="py-24 px-6 lg:px-10 bg-[#0B0F17]"><div class="max-w-7xl mx-auto">
+
+  <div class="text-center mb-16">
+    <p class="text-blue-400 uppercase tracking-[4px] font-semibold mb-4">
+      Confianza Premium
+    </p>
+
+    <h2 class="text-4xl lg:text-6xl font-black">
+      Diseñado para generar confianza real.
+    </h2>
+  </div>
+
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+
+    <div class="glass rounded-3xl p-8 text-center">
+      <h3 class="text-5xl font-black text-blue-400 mb-4">500+</h3>
+      <p class="text-gray-400">Clientes satisfechos</p>
+    </div>
+
+    <div class="glass rounded-3xl p-8 text-center">
+      <h3 class="text-5xl font-black text-blue-400 mb-4">5★</h3>
+      <p class="text-gray-400">Experiencia premium</p>
+    </div>
+
+    <div class="glass rounded-3xl p-8 text-center">
+      <h3 class="text-5xl font-black text-blue-400 mb-4">24/7</h3>
+      <p class="text-gray-400">IA comercial activa</p>
+    </div>
+
+    <div class="glass rounded-3xl p-8 text-center">
+      <h3 class="text-5xl font-black text-blue-400 mb-4">100%</h3>
+      <p class="text-gray-400">Atención personalizada</p>
+    </div>
+
+  </div>
+
+</div>
+
+  </section>  <!-- FOOTER -->  <footer id="contacto" class="py-20 px-6 lg:px-10 border-t border-white/5"><div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
+
+  <div>
+    <h2 class="text-4xl lg:text-5xl font-black mb-6">
+      Velver Motos Atlixco™
+    </h2>
+
+    <p class="text-gray-400 text-lg leading-relaxed max-w-xl mb-8">
+      Plataforma premium enfocada en movilidad, tecnología y experiencia digital inteligente.
+    </p>
+
+    <div class="space-y-4 text-gray-300">
+      <p>📍 Av Independencia 1903 A, Atlixco Puebla</p>
+      <p>📞 244 445 2887</p>
+      <p>💬 244 125 2948</p>
+    </div>
+  </div>
+
+  <div class="glass rounded-3xl p-8 blue-glow">
+
+    <h3 class="text-3xl font-black mb-6">
+      Habla con un asesor inteligente
+    </h3>
+
+    <p class="text-gray-400 mb-8">
+      Descubre motocicletas, mensualidades y promociones disponibles.
+    </p>
+
+    <a
+      href="https://wa.me/522441252948?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20las%20motocicletas"
+      target="_blank"
+      class="block w-full bg-blue-600 hover:bg-blue-500 transition text-center py-5 rounded-2xl font-black blue-glow"
+    >
+      Iniciar conversación
+    </a>
+
+  </div>
+
+</div>
+
+<div class="max-w-7xl mx-auto border-t border-white/5 mt-16 pt-8 flex flex-col lg:flex-row justify-between gap-5 text-gray-500 text-sm">
+  <p>
+    © 2026 Velver Motos Atlixco™ — Digital Experience System
+  </p>
+
+  <p>
+    KNJO BLACK CODE™ STRUCTURE
+  </p>
 </div>
 
   </footer></body>
