@@ -5,15 +5,14 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-<title>Velver Motos Atlixco™ | Digital Experience System</title>
+<title>Velver Motos Atlixco™ | AI Sales Operating System</title>
 
-<meta name="description" content="Experiencia premium de movilidad inteligente en Atlixco Puebla. Motocicletas, crédito flexible y atención IA.">
+<meta name="description" content="Plataforma premium de movilidad inteligente en Atlixco Puebla. IA comercial, crédito inteligente y experiencia cinematográfica.">
+
 <meta name="theme-color" content="#050505">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
 
 <meta property="og:title" content="Velver Motos Atlixco™">
-<meta property="og:description" content="Nueva generación de movilidad premium.">
+<meta property="og:description" content="AI Sales Operating System™">
 <meta property="og:type" content="website">
 
 <meta name="architecture" content="KNJO-BLK-1141015">
@@ -29,9 +28,9 @@
 
 <style>
 
-/* ====================================== */
+/* ========================================= */
 /* RESET */
-/* ====================================== */
+/* ========================================= */
 
 *{
   margin:0;
@@ -51,26 +50,9 @@ body{
   overflow-x:hidden;
 }
 
-/* ====================================== */
-/* SCROLLBAR */
-/* ====================================== */
-
-::-webkit-scrollbar{
-  width:8px;
-}
-
-::-webkit-scrollbar-track{
-  background:#050505;
-}
-
-::-webkit-scrollbar-thumb{
-  background:#1A1F2A;
-  border-radius:999px;
-}
-
-/* ====================================== */
-/* ATMOSPHERE */
-/* ====================================== */
+/* ========================================= */
+/* BACKGROUND SYSTEM */
+/* ========================================= */
 
 .bg-system{
   position:fixed;
@@ -79,33 +61,34 @@ body{
   overflow:hidden;
 }
 
-.glow-1{
+.glow-a{
+  position:absolute;
+  width:800px;
+  height:800px;
+  background:#0057FF;
+  border-radius:999px;
+  top:-320px;
+  left:-260px;
+  opacity:.08;
+  filter:blur(180px);
+}
+
+.glow-b{
   position:absolute;
   width:700px;
   height:700px;
-  border-radius:999px;
-  background:#0057FF;
-  top:-250px;
-  left:-250px;
-  opacity:.08;
-  filter:blur(160px);
-}
-
-.glow-2{
-  position:absolute;
-  width:600px;
-  height:600px;
-  border-radius:999px;
   background:#3BA0FF;
-  bottom:-250px;
+  border-radius:999px;
+  bottom:-300px;
   right:-220px;
   opacity:.06;
-  filter:blur(160px);
+  filter:blur(180px);
 }
 
 .noise{
   position:absolute;
   inset:0;
+
   opacity:.018;
 
   background-image:
@@ -114,15 +97,15 @@ body{
   background-size:12px 12px;
 }
 
-/* ====================================== */
+/* ========================================= */
 /* GLASS */
-/* ====================================== */
+/* ========================================= */
 
 .glass{
 
   background:rgba(255,255,255,.035);
 
-  backdrop-filter:blur(18px);
+  backdrop-filter:blur(20px);
 
   border:1px solid rgba(255,255,255,.06);
 
@@ -138,17 +121,17 @@ body{
 
 }
 
-/* ====================================== */
+/* ========================================= */
 /* TYPOGRAPHY */
-/* ====================================== */
+/* ========================================= */
 
-.gradient-text{
+.gradient{
 
   background:
   linear-gradient(
     90deg,
     #FFFFFF,
-    #A8D1FF
+    #9FD3FF
   );
 
   -webkit-background-clip:text;
@@ -160,17 +143,15 @@ body{
   color:#8B949E;
 }
 
-.massive-title{
-
-  font-size:clamp(3rem,10vw,8rem);
+.massive{
+  font-size:clamp(3.2rem,10vw,8rem);
   line-height:.95;
   font-weight:900;
-
 }
 
-/* ====================================== */
+/* ========================================= */
 /* BUTTONS */
-/* ====================================== */
+/* ========================================= */
 
 .primary-btn{
 
@@ -184,7 +165,7 @@ body{
   transition:.45s ease;
 
   box-shadow:
-  0 20px 60px rgba(0,87,255,.22);
+  0 20px 70px rgba(0,87,255,.22);
 
 }
 
@@ -193,7 +174,7 @@ body{
   transform:translateY(-3px);
 
   box-shadow:
-  0 25px 80px rgba(0,87,255,.32);
+  0 25px 90px rgba(0,87,255,.35);
 
 }
 
@@ -211,9 +192,9 @@ body{
 
 }
 
-/* ====================================== */
+/* ========================================= */
 /* NAVBAR */
-/* ====================================== */
+/* ========================================= */
 
 .navbar{
 
@@ -224,20 +205,21 @@ body{
   transform:translateX(-50%);
 
   width:calc(100% - 24px);
-  max-width:1400px;
+  max-width:1450px;
 
   z-index:1000;
 
 }
 
-/* ====================================== */
+/* ========================================= */
 /* HERO */
-/* ====================================== */
+/* ========================================= */
 
 .hero{
 
-  position:relative;
   min-height:100vh;
+
+  position:relative;
 
   display:flex;
   align-items:center;
@@ -256,7 +238,7 @@ body{
 
   object-fit:cover;
 
-  opacity:.24;
+  opacity:.20;
 
 }
 
@@ -274,12 +256,12 @@ body{
 
 }
 
-/* ====================================== */
-/* SECTION */
-/* ====================================== */
+/* ========================================= */
+/* SECTIONS */
+/* ========================================= */
 
 .section{
-  padding:140px 24px;
+  padding:150px 24px;
 }
 
 @media(max-width:768px){
@@ -290,9 +272,9 @@ body{
 
 }
 
-/* ====================================== */
+/* ========================================= */
 /* CARDS */
-/* ====================================== */
+/* ========================================= */
 
 .card{
 
@@ -304,19 +286,15 @@ body{
 
   transform:translateY(-6px);
 
-  border-color:rgba(59,160,255,.18);
+  border-color:rgba(59,160,255,.16);
 
   background:rgba(255,255,255,.05);
 
 }
 
-/* ====================================== */
+/* ========================================= */
 /* MOBILE */
-/* ====================================== */
-
-.mobile-menu{
-  display:none;
-}
+/* ========================================= */
 
 @media(max-width:980px){
 
@@ -324,15 +302,11 @@ body{
     display:none;
   }
 
-  .mobile-menu{
-    display:flex;
-  }
-
 }
 
-/* ====================================== */
+/* ========================================= */
 /* INTRO */
-/* ====================================== */
+/* ========================================= */
 
 #intro{
 
@@ -353,10 +327,10 @@ body{
 
 .intro-logo{
 
-  width:110px;
-  height:110px;
+  width:115px;
+  height:115px;
 
-  border-radius:30px;
+  border-radius:32px;
 
   background:
   linear-gradient(
@@ -369,23 +343,21 @@ body{
   align-items:center;
   justify-content:center;
 
-  font-size:48px;
+  font-size:52px;
   font-weight:900;
 
   box-shadow:
-  0 0 80px rgba(0,87,255,.3);
+  0 0 90px rgba(0,87,255,.32);
 
 }
 
-/* ====================================== */
+/* ========================================= */
 /* REVEAL */
-/* ====================================== */
+/* ========================================= */
 
 .reveal{
-
   opacity:0;
   transform:translateY(40px);
-
 }
 
 </style>
@@ -394,25 +366,25 @@ body{
 
 <body>
 
-<!-- ====================================== -->
+<!-- ========================================= -->
 <!-- BACKGROUND -->
-<!-- ====================================== -->
+<!-- ========================================= -->
 
 <div class="bg-system">
 
-  <div class="glow-1"></div>
-  <div class="glow-2"></div>
+  <div class="glow-a"></div>
+  <div class="glow-b"></div>
   <div class="noise"></div>
 
 </div>
 
-<!-- ====================================== -->
+<!-- ========================================= -->
 <!-- INTRO -->
-<!-- ====================================== -->
+<!-- ========================================= -->
 
 <div id="intro">
 
-  <div class="absolute w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[140px]"></div>
+  <div class="absolute w-[550px] h-[550px] bg-blue-600/10 rounded-full blur-[150px]"></div>
 
   <div class="relative z-10 text-center">
 
@@ -434,20 +406,20 @@ body{
       id="introSub"
       class="mt-5 text-sm tracking-[6px] text-blue-300 opacity-0"
     >
-      DIGITAL EXPERIENCE SYSTEM™
+      AI SALES OPERATING SYSTEM™
     </p>
 
   </div>
 
 </div>
 
-<!-- ====================================== -->
+<!-- ========================================= -->
 <!-- NAVBAR -->
-<!-- ====================================== -->
+<!-- ========================================= -->
 
 <header class="navbar">
 
-  <div class="glass rounded-[26px] px-5 lg:px-8 py-4 flex items-center justify-between">
+  <div class="glass rounded-[28px] px-5 lg:px-8 py-4 flex items-center justify-between">
 
     <!-- BRAND -->
 
@@ -476,10 +448,10 @@ body{
     <nav class="desktop-nav flex items-center gap-10 text-sm subtle">
 
       <a href="#catalogo" class="hover:text-white transition">
-        Catálogo
+        Catálogo IA
       </a>
 
-      <a href="#financiamiento" class="hover:text-white transition">
+      <a href="#credito" class="hover:text-white transition">
         Crédito
       </a>
 
@@ -496,7 +468,7 @@ body{
     <!-- CTA -->
 
     <a
-      href="https://wa.me/522441252948?text=Hola%20quiero%20información%20sobre%20motocicletas"
+      href="https://wa.me/522441252948?text=Hola%20quiero%20que%20la%20IA%20me%20recomiende%20una%20motocicleta"
       target="_blank"
       class="primary-btn px-5 lg:px-6 py-3 rounded-2xl text-sm font-semibold"
     >
@@ -507,9 +479,9 @@ body{
 
 </header>
 
-<!-- ====================================== -->
+<!-- ========================================= -->
 <!-- HERO -->
-<!-- ====================================== -->
+<!-- ========================================= -->
 
 <section class="hero px-6 lg:px-10">
 
@@ -524,7 +496,7 @@ body{
   >
 
     <source
-      src="https://cdn.coverr.co/videos/coverr-a-man-riding-a-motorcycle-1565932555366?download=1080p"
+      src="https://cdn.coverr.co/videos/coverr-riding-a-motorcycle-at-night-1565932555366?download=1080p"
       type="video/mp4"
     >
 
@@ -547,24 +519,24 @@ body{
           <div class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
 
           <span class="text-sm subtle tracking-[3px] uppercase">
-            Cinematic Mobility Platform
+            Intelligent Mobility Platform
           </span>
 
         </div>
 
-        <h1 class="massive-title reveal max-w-5xl">
+        <h1 class="massive reveal max-w-5xl">
 
-          La evolución de la
+          La plataforma de
 
-          <span class="gradient-text">
-            movilidad premium.
+          <span class="gradient">
+            movilidad inteligente.
           </span>
 
         </h1>
 
         <p class="reveal mt-10 text-lg lg:text-xl subtle max-w-2xl leading-relaxed">
 
-          Tecnología, diseño y experiencia digital inteligente para una nueva generación de motociclistas.
+          IA comercial, financiamiento inteligente y experiencia cinematográfica integrados en un ecosistema digital premium.
 
         </p>
 
@@ -598,7 +570,7 @@ body{
           <img
             src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1400&auto=format&fit=crop"
             class="w-full h-[720px] object-cover"
-            alt="Motocicleta premium"
+            alt="Moto premium"
           >
 
         </div>
@@ -611,9 +583,9 @@ body{
 
 </section>
 
-<!-- ====================================== -->
-<!-- CATALOG -->
-<!-- ====================================== -->
+<!-- ========================================= -->
+<!-- SMART CATALOG -->
+<!-- ========================================= -->
 
 <section
 id="catalogo"
@@ -626,18 +598,18 @@ class="section">
   <div class="max-w-3xl mb-24">
 
     <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-6">
-      Configurador Inteligente
+      Smart Catalog AI™
     </p>
 
     <h2 class="text-4xl lg:text-6xl font-black leading-tight mb-8">
 
-      Encuentra la motocicleta ideal para tu estilo de vida.
+      Elige una experiencia, no solo una motocicleta.
 
     </h2>
 
     <p class="text-lg subtle leading-relaxed">
 
-      Sistema diseñado para ayudarte a elegir movilidad, financiamiento y experiencia premium.
+      Nuestro sistema inteligente interpreta intención, presupuesto y estilo de vida para recomendar la mejor opción.
 
     </p>
 
@@ -652,7 +624,7 @@ class="section">
     <div class="glass rounded-[36px] overflow-hidden card">
 
       <img
-        src="https://images.unsplash.com/photo-1515777315835-281b94c9589f?q=80&w=1400&auto=format&fit=crop"
+        src="https://images.unsplash.com/photo-1517846693594-1567da72af75?q=80&w=1400&auto=format&fit=crop"
         class="w-full h-[340px] object-cover"
       >
 
@@ -695,11 +667,11 @@ class="section">
           <div class="glass-soft rounded-2xl p-4 flex justify-between">
 
             <span class="subtle">
-              Consumo
+              Perfil
             </span>
 
             <span>
-              Eficiente
+              Performance
             </span>
 
           </div>
@@ -707,11 +679,11 @@ class="section">
         </div>
 
         <a
-          href="https://wa.me/522441252948"
+          href="https://wa.me/522441252948?text=Hola%20quiero%20información%20de%20la%20JL%20Racing"
           target="_blank"
           class="primary-btn block text-center py-5 rounded-2xl font-bold"
         >
-          Solicitar información
+          Solicitar experiencia
         </a>
 
       </div>
@@ -766,7 +738,7 @@ class="section">
           <div class="glass-soft rounded-2xl p-4 flex justify-between">
 
             <span class="subtle">
-              Uso
+              Perfil
             </span>
 
             <span>
@@ -778,11 +750,11 @@ class="section">
         </div>
 
         <a
-          href="https://wa.me/522441252948"
+          href="https://wa.me/522441252948?text=Hola%20quiero%20información%20de%20la%20ZMoto"
           target="_blank"
           class="primary-btn block text-center py-5 rounded-2xl font-bold"
         >
-          Solicitar información
+          Solicitar experiencia
         </a>
 
       </div>
@@ -837,11 +809,11 @@ class="section">
           <div class="glass-soft rounded-2xl p-4 flex justify-between">
 
             <span class="subtle">
-              Carga
+              Perfil
             </span>
 
             <span>
-              Alta
+              Productividad
             </span>
 
           </div>
@@ -849,11 +821,11 @@ class="section">
         </div>
 
         <a
-          href="https://wa.me/522441252948"
+          href="https://wa.me/522441252948?text=Hola%20quiero%20información%20de%20la%20Huaihai"
           target="_blank"
           class="primary-btn block text-center py-5 rounded-2xl font-bold"
         >
-          Solicitar información
+          Solicitar experiencia
         </a>
 
       </div>
@@ -866,12 +838,12 @@ class="section">
 
 </section>
 
-<!-- ====================================== -->
-<!-- FINANCING -->
-<!-- ====================================== -->
+<!-- ========================================= -->
+<!-- CREDIT SYSTEM -->
+<!-- ========================================= -->
 
 <section
-id="financiamiento"
+id="credito"
 class="section pt-0">
 
 <div class="max-w-7xl mx-auto">
@@ -885,7 +857,7 @@ class="section pt-0">
       <div class="p-10 lg:p-16">
 
         <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-6">
-          Crédito Inteligente
+          Intelligent Credit System™
         </p>
 
         <h2 class="text-4xl lg:text-6xl font-black leading-tight mb-10">
@@ -896,7 +868,7 @@ class="section pt-0">
 
         <p class="text-lg subtle leading-relaxed mb-14">
 
-          Simula pagos, enganches y mensualidades en tiempo real desde cualquier dispositivo.
+          Sistema de simulación financiera optimizado para reducir fricción psicológica y acelerar decisiones.
 
         </p>
 
@@ -973,7 +945,7 @@ class="section pt-0">
         </div>
 
         <a
-          href="https://wa.me/522441252948"
+          href="https://wa.me/522441252948?text=Hola%20quiero%20información%20sobre%20crédito"
           target="_blank"
           class="primary-btn mt-10 py-5 rounded-2xl text-center font-bold"
         >
@@ -990,9 +962,9 @@ class="section pt-0">
 
 </section>
 
-<!-- ====================================== -->
+<!-- ========================================= -->
 <!-- ECOSYSTEM -->
-<!-- ====================================== -->
+<!-- ========================================= -->
 
 <section
 id="ecosistema"
@@ -1007,18 +979,18 @@ class="section pt-0">
     <div>
 
       <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-6">
-        Ecosistema Digital
+        AI Ecosystem™
       </p>
 
       <h2 class="text-4xl lg:text-6xl font-black leading-tight mb-10">
 
-        Una plataforma conectada para vender más.
+        Todo conectado para vender más.
 
       </h2>
 
       <p class="text-lg subtle leading-relaxed mb-14">
 
-        TikTok, Facebook, WhatsApp IA, SEO local y experiencia premium conectados en un mismo sistema digital.
+        TikTok, Facebook, WhatsApp IA, remarketing, SEO local y experiencia premium integrados en un mismo ecosistema.
 
       </p>
 
@@ -1031,7 +1003,7 @@ class="section pt-0">
           </h3>
 
           <p class="subtle">
-            Conversaciones inteligentes enfocadas en cierre de ventas.
+            Conversaciones humanas enfocadas en conversión.
           </p>
 
         </div>
@@ -1039,11 +1011,11 @@ class="section pt-0">
         <div class="glass-soft rounded-3xl p-7 card">
 
           <h3 class="text-2xl font-bold mb-3">
-            SEO Local Premium
+            SEO Local Inteligente
           </h3>
 
           <p class="subtle">
-            Posicionamiento estratégico para Atlixco y Puebla.
+            Posicionamiento premium en Atlixco y Puebla.
           </p>
 
         </div>
@@ -1051,11 +1023,11 @@ class="section pt-0">
         <div class="glass-soft rounded-3xl p-7 card">
 
           <h3 class="text-2xl font-bold mb-3">
-            Remarketing Inteligente
+            Remarketing Emocional
           </h3>
 
           <p class="subtle">
-            Recuperación de leads mediante automatización emocional.
+            Recuperación inteligente de leads mediante automatización.
           </p>
 
         </div>
@@ -1081,9 +1053,9 @@ class="section pt-0">
 
 </section>
 
-<!-- ====================================== -->
+<!-- ========================================= -->
 <!-- FOOTER -->
-<!-- ====================================== -->
+<!-- ========================================= -->
 
 <footer
 id="contacto"
@@ -1105,13 +1077,13 @@ class="px-6 lg:px-10 pb-20">
 
         <h2 class="text-4xl lg:text-6xl font-black leading-tight mb-8">
 
-          Comienza tu siguiente experiencia.
+          La nueva experiencia de movilidad.
 
         </h2>
 
         <p class="text-lg subtle leading-relaxed max-w-xl">
 
-          Plataforma diseñada para una nueva generación de movilidad premium en México.
+          Plataforma premium diseñada para una nueva generación de movilidad inteligente en México.
 
         </p>
 
@@ -1182,7 +1154,7 @@ class="px-6 lg:px-10 pb-20">
     </p>
 
     <p>
-      Digital Experience Architecture
+      AI Sales Operating System™
     </p>
 
   </div>
@@ -1191,15 +1163,15 @@ class="px-6 lg:px-10 pb-20">
 
 </footer>
 
-<!-- ====================================== -->
+<!-- ========================================= -->
 <!-- GSAP -->
-<!-- ====================================== -->
+<!-- ========================================= -->
 
 <script>
 
-/* ====================================== */
+/* ========================================= */
 /* INTRO */
-/* ====================================== */
+/* ========================================= */
 
 const intro = document.getElementById("intro");
 
@@ -1245,9 +1217,9 @@ if(sessionStorage.getItem("velver_intro")){
 
 }
 
-/* ====================================== */
-/* REVEAL */
-/* ====================================== */
+/* ========================================= */
+/* REVEALS */
+/* ========================================= */
 
 gsap.to(".reveal",{
   opacity:1,
