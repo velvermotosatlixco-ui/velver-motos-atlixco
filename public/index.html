@@ -1,86 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Velver Motos Atlixco™</title>
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+/>
 
-<!-- tus estilos -->
-<link rel="stylesheet" href="style.css">
+<title>
+Velver Motos Atlixco™ | AI Sales Operating System
+</title>
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FE66FC9261"></script>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-
-function gtag(){
-  dataLayer.push(arguments);
-}
-
-gtag('js', new Date());
-
-gtag('config', 'G-FE66FC9261');
-</script>
-
-</head>
-
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Velver Motos Atlixco™</title>
-
-<!-- tus estilos -->
-<link rel="stylesheet" href="style.css">
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FE66FC9261"></script>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-
-function gtag(){
-  dataLayer.push(arguments);
-}
-
-gtag('js', new Date());
-
-gtag('config', 'G-FE66FC9261');
-</script>
-
-</head>
-
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-
-<title>Velver Motos Atlixco™ | AI Sales Operating System</title>
-
-<meta name="description" content="Plataforma premium de movilidad inteligente en Atlixco Puebla. IA comercial, crédito inteligente y experiencia cinematográfica.">
+<meta
+name="description"
+content="Plataforma premium de movilidad inteligente en Atlixco Puebla. IA comercial, crédito inteligente y experiencia cinematográfica."
+>
 
 <meta name="theme-color" content="#050505">
 
 <meta property="og:title" content="Velver Motos Atlixco™">
-<meta property="og:description" content="AI Sales Operating System™">
+
+<meta
+property="og:description"
+content="AI Sales Operating System™"
+>
+
 <meta property="og:type" content="website">
 
 <meta name="architecture" content="KNJO-BLK-1141015">
 
+<!-- ========================================= -->
+<!-- GOOGLE ANALYTICS -->
+<!-- ========================================= -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FE66FC9261"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){
+  dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+
+gtag('config', 'G-FE66FC9261');
+</script>
+
+<!-- ========================================= -->
+<!-- TAILWIND -->
+<!-- ========================================= -->
+
 <script src="https://cdn.tailwindcss.com"></script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- ========================================= -->
+<!-- FONTS -->
+<!-- ========================================= -->
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin
+>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+rel="stylesheet"
+>
+
+<!-- ========================================= -->
+<!-- GSAP -->
+<!-- ========================================= -->
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
-<style>
+<!-- ========================================= -->
+<!-- STYLES -->
+<!-- ========================================= -->
 
-/* ========================================= */
-/* RESET */
-/* ========================================= */
+<style>
 
 *{
   margin:0;
@@ -99,10 +102,6 @@ body{
   color:#F5F7FA;
   overflow-x:hidden;
 }
-
-/* ========================================= */
-/* BACKGROUND SYSTEM */
-/* ========================================= */
 
 .bg-system{
   position:fixed;
@@ -138,7 +137,6 @@ body{
 .noise{
   position:absolute;
   inset:0;
-
   opacity:.018;
 
   background-image:
@@ -147,36 +145,19 @@ body{
   background-size:12px 12px;
 }
 
-/* ========================================= */
-/* GLASS */
-/* ========================================= */
-
 .glass{
-
   background:rgba(255,255,255,.035);
-
   backdrop-filter:blur(20px);
-
   border:1px solid rgba(255,255,255,.06);
-
 }
 
 .glass-soft{
-
   background:rgba(255,255,255,.02);
-
   backdrop-filter:blur(12px);
-
   border:1px solid rgba(255,255,255,.04);
-
 }
 
-/* ========================================= */
-/* TYPOGRAPHY */
-/* ========================================= */
-
 .gradient{
-
   background:
   linear-gradient(
     90deg,
@@ -186,7 +167,6 @@ body{
 
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-
 }
 
 .subtle{
@@ -199,12 +179,7 @@ body{
   font-weight:900;
 }
 
-/* ========================================= */
-/* BUTTONS */
-/* ========================================= */
-
 .primary-btn{
-
   background:
   linear-gradient(
     135deg,
@@ -216,84 +191,52 @@ body{
 
   box-shadow:
   0 20px 70px rgba(0,87,255,.22);
-
 }
 
 .primary-btn:hover{
-
   transform:translateY(-3px);
 
   box-shadow:
   0 25px 90px rgba(0,87,255,.35);
-
 }
 
 .secondary-btn{
-
   transition:.35s ease;
-
 }
 
 .secondary-btn:hover{
-
   border-color:rgba(59,160,255,.25);
-
   background:rgba(255,255,255,.05);
-
 }
 
-/* ========================================= */
-/* NAVBAR */
-/* ========================================= */
-
 .navbar{
-
   position:fixed;
   top:18px;
   left:50%;
-
   transform:translateX(-50%);
-
   width:calc(100% - 24px);
   max-width:1450px;
-
   z-index:1000;
-
 }
 
-/* ========================================= */
-/* HERO */
-/* ========================================= */
-
 .hero{
-
   min-height:100vh;
-
   position:relative;
-
   display:flex;
   align-items:center;
-
   overflow:hidden;
-
 }
 
 .hero-video{
-
   position:absolute;
   inset:0;
-
   width:100%;
   height:100%;
-
   object-fit:cover;
-
   opacity:.20;
-
 }
 
 .hero-overlay{
-
   position:absolute;
   inset:0;
 
@@ -303,83 +246,40 @@ body{
     rgba(0,0,0,.25),
     rgba(5,5,5,.96)
   );
-
 }
-
-/* ========================================= */
-/* SECTIONS */
-/* ========================================= */
 
 .section{
   padding:150px 24px;
 }
 
-@media(max-width:768px){
-
-  .section{
-    padding:110px 22px;
-  }
-
-}
-
-/* ========================================= */
-/* CARDS */
-/* ========================================= */
-
 .card{
-
   transition:.45s ease;
-
 }
 
 .card:hover{
-
   transform:translateY(-6px);
-
   border-color:rgba(59,160,255,.16);
-
   background:rgba(255,255,255,.05);
-
 }
 
-/* ========================================= */
-/* MOBILE */
-/* ========================================= */
-
-@media(max-width:980px){
-
-  .desktop-nav{
-    display:none;
-  }
-
+.desktop-nav{
+  display:flex;
 }
-
-/* ========================================= */
-/* INTRO */
-/* ========================================= */
 
 #intro{
-
   position:fixed;
   inset:0;
-
   background:#050505;
-
   z-index:9999;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   overflow:hidden;
-
 }
 
 .intro-logo{
-
   width:115px;
   height:115px;
-
   border-radius:32px;
 
   background:
@@ -398,16 +298,27 @@ body{
 
   box-shadow:
   0 0 90px rgba(0,87,255,.32);
-
 }
-
-/* ========================================= */
-/* REVEAL */
-/* ========================================= */
 
 .reveal{
   opacity:0;
   transform:translateY(40px);
+}
+
+@media(max-width:980px){
+
+  .desktop-nav{
+    display:none;
+  }
+
+  .section{
+    padding:110px 22px;
+  }
+
+  .massive{
+    font-size:3.4rem;
+  }
+
 }
 
 </style>
@@ -421,11 +332,9 @@ body{
 <!-- ========================================= -->
 
 <div class="bg-system">
-
   <div class="glow-a"></div>
   <div class="glow-b"></div>
   <div class="noise"></div>
-
 </div>
 
 <!-- ========================================= -->
@@ -471,8 +380,6 @@ body{
 
   <div class="glass rounded-[28px] px-5 lg:px-8 py-4 flex items-center justify-between">
 
-    <!-- BRAND -->
-
     <div class="flex items-center gap-4">
 
       <div class="w-11 h-11 rounded-xl bg-blue-600 flex items-center justify-center font-black">
@@ -493,9 +400,7 @@ body{
 
     </div>
 
-    <!-- DESKTOP -->
-
-    <nav class="desktop-nav flex items-center gap-10 text-sm subtle">
+    <nav class="desktop-nav items-center gap-10 text-sm subtle">
 
       <a href="#catalogo" class="hover:text-white transition">
         Catálogo IA
@@ -509,16 +414,10 @@ body{
         Ecosistema
       </a>
 
-      <a href="#contacto" class="hover:text-white transition">
-        Contacto
-      </a>
-
     </nav>
 
-    <!-- CTA -->
-
     <a
-      href="https://wa.me/522441252948?text=Hola%20quiero%20que%20la%20IA%20me%20recomiende%20una%20motocicleta"
+      href="https://wa.me/522441252948"
       target="_blank"
       class="primary-btn px-5 lg:px-6 py-3 rounded-2xl text-sm font-semibold"
     >
@@ -534,8 +433,6 @@ body{
 <!-- ========================================= -->
 
 <section class="hero px-6 lg:px-10">
-
-  <!-- VIDEO -->
 
   <video
     autoplay
@@ -554,13 +451,9 @@ body{
 
   <div class="hero-overlay"></div>
 
-  <!-- CONTENT -->
-
   <div class="max-w-7xl mx-auto relative z-10 w-full pt-40">
 
     <div class="grid lg:grid-cols-[1.1fr_.9fr] gap-16 items-center">
-
-      <!-- LEFT -->
 
       <div>
 
@@ -611,8 +504,6 @@ body{
 
       </div>
 
-      <!-- RIGHT -->
-
       <div class="hidden lg:flex justify-end">
 
         <div class="glass rounded-[42px] overflow-hidden w-[520px]">
@@ -634,649 +525,104 @@ body{
 </section>
 
 <!-- ========================================= -->
-<!-- SMART CATALOG -->
-<!-- ========================================= -->
-
-<section
-id="catalogo"
-class="section">
-
-<div class="max-w-7xl mx-auto">
-
-  <!-- TITLE -->
-
-  <div class="max-w-3xl mb-24">
-
-    <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-6">
-      Smart Catalog AI™
-    </p>
-
-    <h2 class="text-4xl lg:text-6xl font-black leading-tight mb-8">
-
-      Elige una experiencia, no solo una motocicleta.
-
-    </h2>
-
-    <p class="text-lg subtle leading-relaxed">
-
-      Nuestro sistema inteligente interpreta intención, presupuesto y estilo de vida para recomendar la mejor opción.
-
-    </p>
-
-  </div>
-
-  <!-- GRID -->
-
-  <div class="grid lg:grid-cols-3 gap-8">
-
-    <!-- CARD -->
-
-    <div class="glass rounded-[36px] overflow-hidden card">
-
-      <img
-        src="https://images.unsplash.com/photo-1517846693594-1567da72af75?q=80&w=1400&auto=format&fit=crop"
-        class="w-full h-[340px] object-cover"
-      >
-
-      <div class="p-8">
-
-        <div class="flex justify-between items-start mb-8">
-
-          <div>
-
-            <p class="subtle text-sm mb-2">
-              Deportiva Premium
-            </p>
-
-            <h3 class="text-3xl font-black">
-              JL Racing X
-            </h3>
-
-          </div>
-
-          <div class="text-blue-400 font-bold">
-            IA 94%
-          </div>
-
-        </div>
-
-        <div class="space-y-4 mb-10">
-
-          <div class="glass-soft rounded-2xl p-4 flex justify-between">
-
-            <span class="subtle">
-              Semanal
-            </span>
-
-            <span>
-              $699
-            </span>
-
-          </div>
-
-          <div class="glass-soft rounded-2xl p-4 flex justify-between">
-
-            <span class="subtle">
-              Perfil
-            </span>
-
-            <span>
-              Performance
-            </span>
-
-          </div>
-
-        </div>
-
-        <a
-          href="https://wa.me/522441252948?text=Hola%20quiero%20información%20de%20la%20JL%20Racing"
-          target="_blank"
-          class="primary-btn block text-center py-5 rounded-2xl font-bold"
-        >
-          Solicitar experiencia
-        </a>
-
-      </div>
-
-    </div>
-
-    <!-- CARD -->
-
-    <div class="glass rounded-[36px] overflow-hidden card">
-
-      <img
-        src="https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?q=80&w=1400&auto=format&fit=crop"
-        class="w-full h-[340px] object-cover"
-      >
-
-      <div class="p-8">
-
-        <div class="flex justify-between items-start mb-8">
-
-          <div>
-
-            <p class="subtle text-sm mb-2">
-              Movilidad Urbana
-            </p>
-
-            <h3 class="text-3xl font-black">
-              ZMoto Urban
-            </h3>
-
-          </div>
-
-          <div class="text-blue-400 font-bold">
-            IA 91%
-          </div>
-
-        </div>
-
-        <div class="space-y-4 mb-10">
-
-          <div class="glass-soft rounded-2xl p-4 flex justify-between">
-
-            <span class="subtle">
-              Semanal
-            </span>
-
-            <span>
-              $499
-            </span>
-
-          </div>
-
-          <div class="glass-soft rounded-2xl p-4 flex justify-between">
-
-            <span class="subtle">
-              Perfil
-            </span>
-
-            <span>
-              Urbano
-            </span>
-
-          </div>
-
-        </div>
-
-        <a
-          href="https://wa.me/522441252948?text=Hola%20quiero%20información%20de%20la%20ZMoto"
-          target="_blank"
-          class="primary-btn block text-center py-5 rounded-2xl font-bold"
-        >
-          Solicitar experiencia
-        </a>
-
-      </div>
-
-    </div>
-
-    <!-- CARD -->
-
-    <div class="glass rounded-[36px] overflow-hidden card">
-
-      <img
-        src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1400&auto=format&fit=crop"
-        class="w-full h-[340px] object-cover"
-      >
-
-      <div class="p-8">
-
-        <div class="flex justify-between items-start mb-8">
-
-          <div>
-
-            <p class="subtle text-sm mb-2">
-              Trabajo Inteligente
-            </p>
-
-            <h3 class="text-3xl font-black">
-              Huaihai Cargo
-            </h3>
-
-          </div>
-
-          <div class="text-blue-400 font-bold">
-            IA 96%
-          </div>
-
-        </div>
-
-        <div class="space-y-4 mb-10">
-
-          <div class="glass-soft rounded-2xl p-4 flex justify-between">
-
-            <span class="subtle">
-              Semanal
-            </span>
-
-            <span>
-              $549
-            </span>
-
-          </div>
-
-          <div class="glass-soft rounded-2xl p-4 flex justify-between">
-
-            <span class="subtle">
-              Perfil
-            </span>
-
-            <span>
-              Productividad
-            </span>
-
-          </div>
-
-        </div>
-
-        <a
-          href="https://wa.me/522441252948?text=Hola%20quiero%20información%20de%20la%20Huaihai"
-          target="_blank"
-          class="primary-btn block text-center py-5 rounded-2xl font-bold"
-        >
-          Solicitar experiencia
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
-</section>
-
-<!-- ========================================= -->
-<!-- CREDIT SYSTEM -->
-<!-- ========================================= -->
-
-<section
-id="credito"
-class="section pt-0">
-
-<div class="max-w-7xl mx-auto">
-
-  <div class="glass rounded-[44px] overflow-hidden">
-
-    <div class="grid lg:grid-cols-2">
-
-      <!-- LEFT -->
-
-      <div class="p-10 lg:p-16">
-
-        <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-6">
-          Intelligent Credit System™
-        </p>
-
-        <h2 class="text-4xl lg:text-6xl font-black leading-tight mb-10">
-
-          Financiamiento diseñado para convertir.
-
-        </h2>
-
-        <p class="text-lg subtle leading-relaxed mb-14">
-
-          Sistema de simulación financiera optimizado para reducir fricción psicológica y acelerar decisiones.
-
-        </p>
-
-        <div class="space-y-8">
-
-          <div>
-
-            <div class="flex justify-between mb-4">
-
-              <span class="subtle">
-                Enganche
-              </span>
-
-              <span class="font-bold">
-                $8,500
-              </span>
-
-            </div>
-
-            <input type="range" class="w-full">
-          </div>
-
-          <div>
-
-            <div class="flex justify-between mb-4">
-
-              <span class="subtle">
-                Plazo
-              </span>
-
-              <span class="font-bold">
-                24 meses
-              </span>
-
-            </div>
-
-            <input type="range" class="w-full">
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- RIGHT -->
-
-      <div class="bg-[#0B0F17] p-10 lg:p-16 flex flex-col justify-center">
-
-        <div class="space-y-6">
-
-          <div class="glass-soft rounded-3xl p-7 flex justify-between items-center">
-
-            <span class="subtle">
-              Pago semanal
-            </span>
-
-            <span class="text-3xl font-black">
-              $599
-            </span>
-
-          </div>
-
-          <div class="glass-soft rounded-3xl p-7 flex justify-between items-center">
-
-            <span class="subtle">
-              Aprobación IA
-            </span>
-
-            <span class="text-blue-400 font-black">
-              Alta
-            </span>
-
-          </div>
-
-        </div>
-
-        <a
-          href="https://wa.me/522441252948?text=Hola%20quiero%20información%20sobre%20crédito"
-          target="_blank"
-          class="primary-btn mt-10 py-5 rounded-2xl text-center font-bold"
-        >
-          Solicitar evaluación
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
-</section>
-
-<!-- ========================================= -->
-<!-- ECOSYSTEM -->
-<!-- ========================================= -->
-
-<section
-id="ecosistema"
-class="section pt-0">
-
-<div class="max-w-7xl mx-auto">
-
-  <div class="grid lg:grid-cols-2 gap-20 items-center">
-
-    <!-- LEFT -->
-
-    <div>
-
-      <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-6">
-        AI Ecosystem™
-      </p>
-
-      <h2 class="text-4xl lg:text-6xl font-black leading-tight mb-10">
-
-        Todo conectado para vender más.
-
-      </h2>
-
-      <p class="text-lg subtle leading-relaxed mb-14">
-
-        TikTok, Facebook, WhatsApp IA, remarketing, SEO local y experiencia premium integrados en un mismo ecosistema.
-
-      </p>
-
-      <div class="space-y-6">
-
-        <div class="glass-soft rounded-3xl p-7 card">
-
-          <h3 class="text-2xl font-bold mb-3">
-            IA Comercial 24/7
-          </h3>
-
-          <p class="subtle">
-            Conversaciones humanas enfocadas en conversión.
-          </p>
-
-        </div>
-
-        <div class="glass-soft rounded-3xl p-7 card">
-
-          <h3 class="text-2xl font-bold mb-3">
-            SEO Local Inteligente
-          </h3>
-
-          <p class="subtle">
-            Posicionamiento premium en Atlixco y Puebla.
-          </p>
-
-        </div>
-
-        <div class="glass-soft rounded-3xl p-7 card">
-
-          <h3 class="text-2xl font-bold mb-3">
-            Remarketing Emocional
-          </h3>
-
-          <p class="subtle">
-            Recuperación inteligente de leads mediante automatización.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- RIGHT -->
-
-    <div class="glass rounded-[42px] overflow-hidden">
-
-      <img
-        src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1400&auto=format&fit=crop"
-        class="w-full h-[760px] object-cover"
-      >
-
-    </div>
-
-  </div>
-
-</div>
-
-</section>
-
-<!-- ========================================= -->
 <!-- FOOTER -->
 <!-- ========================================= -->
 
-<footer
-id="contacto"
-class="px-6 lg:px-10 pb-20">
+<footer class="px-6 pb-14">
 
-<div class="max-w-7xl mx-auto">
+  <div class="max-w-7xl mx-auto">
 
-  <div class="glass rounded-[44px] p-10 lg:p-16">
+    <div class="glass rounded-[34px] p-10 lg:p-14">
 
-    <div class="grid lg:grid-cols-2 gap-20 items-center">
+      <div class="grid lg:grid-cols-2 gap-12">
 
-      <!-- LEFT -->
+        <div>
 
-      <div>
+          <h3 class="text-3xl font-black mb-6">
+            Velver Motos Atlixco™
+          </h3>
 
-        <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-6">
-          Velver Motos Atlixco™
-        </p>
+          <p class="subtle leading-relaxed max-w-xl">
 
-        <h2 class="text-4xl lg:text-6xl font-black leading-tight mb-8">
+            Plataforma premium de movilidad inteligente diseñada para conectar branding, IA comercial y conversión digital.
 
-          La nueva experiencia de movilidad.
-
-        </h2>
-
-        <p class="text-lg subtle leading-relaxed max-w-xl">
-
-          Plataforma premium diseñada para una nueva generación de movilidad inteligente en México.
-
-        </p>
-
-      </div>
-
-      <!-- RIGHT -->
-
-      <div>
-
-        <div class="space-y-5 mb-10">
-
-          <div class="glass-soft rounded-2xl p-6">
-
-            <p class="subtle text-sm mb-2">
-              Dirección
-            </p>
-
-            <h3 class="font-semibold">
-              Av Independencia 1903 A, Atlixco Puebla
-            </h3>
-
-          </div>
-
-          <div class="glass-soft rounded-2xl p-6">
-
-            <p class="subtle text-sm mb-2">
-              WhatsApp IA
-            </p>
-
-            <h3 class="font-semibold">
-              244 125 2948
-            </h3>
-
-          </div>
-
-          <div class="glass-soft rounded-2xl p-6">
-
-            <p class="subtle text-sm mb-2">
-              Teléfono
-            </p>
-
-            <h3 class="font-semibold">
-              244 445 2887
-            </h3>
-
-          </div>
+          </p>
 
         </div>
 
-        <a
-          href="https://wa.me/522441252948"
-          target="_blank"
-          class="primary-btn block text-center py-5 rounded-2xl font-bold"
-        >
-          Hablar con IA Comercial
-        </a>
+        <div class="lg:text-right">
+
+          <p class="subtle mb-3">
+            WhatsApp IA
+          </p>
+
+          <a
+            href="https://wa.me/522441252948"
+            target="_blank"
+            class="text-2xl font-black hover:text-blue-400 transition"
+          >
+            244 125 2948
+          </a>
+
+          <p class="subtle mt-8">
+            Av Independencia 1903 A
+            <br>
+            Atlixco Puebla
+          </p>
+
+        </div>
 
       </div>
 
     </div>
 
   </div>
-
-  <div class="mt-10 flex flex-col lg:flex-row justify-between gap-5 px-2 text-sm subtle">
-
-    <p>
-      © 2026 Velver Motos Atlixco™
-    </p>
-
-    <p>
-      AI Sales Operating System™
-    </p>
-
-  </div>
-
-</div>
 
 </footer>
 
 <!-- ========================================= -->
-<!-- GSAP -->
+<!-- SCRIPTS -->
 <!-- ========================================= -->
 
 <script>
 
-/* ========================================= */
-/* INTRO */
-/* ========================================= */
+window.addEventListener("load", ()=>{
 
-const intro = document.getElementById("intro");
-
-if(sessionStorage.getItem("velver_intro")){
-
-  intro.style.display = "none";
-
-}else{
-
-  sessionStorage.setItem("velver_intro","true");
-
-  const tl = gsap.timeline();
-
-  tl.to("#introLogo",{
+  gsap.to("#introLogo",{
     opacity:1,
     scale:1,
-    duration:1,
-    ease:"power4.out"
-  })
-
-  .to("#introTitle",{
-    opacity:1,
-    duration:.8
-  },"-=.5")
-
-  .to("#introSub",{
-    opacity:1,
-    duration:.8
-  },"-=.5")
-
-  .to({},{
-    duration:.5
-  })
-
-  .to("#intro",{
-    opacity:0,
-    duration:1.2,
-    ease:"power4.inOut",
-    onComplete:()=>{
-      intro.remove();
-    }
+    duration:1
   });
 
-}
+  gsap.to("#introTitle",{
+    opacity:1,
+    y:-10,
+    duration:1,
+    delay:.3
+  });
 
-/* ========================================= */
-/* REVEALS */
-/* ========================================= */
+  gsap.to("#introSub",{
+    opacity:1,
+    y:-10,
+    duration:1,
+    delay:.6
+  });
 
-gsap.to(".reveal",{
-  opacity:1,
-  y:0,
-  duration:1.2,
-  stagger:.18,
-  ease:"power3.out"
+  gsap.to("#intro",{
+    opacity:0,
+    duration:1.2,
+    delay:2.3,
+    pointerEvents:"none"
+  });
+
+  gsap.to(".reveal",{
+    opacity:1,
+    y:0,
+    stagger:.18,
+    duration:1.2,
+    delay:2.7
+  });
+
 });
 
 </script>
