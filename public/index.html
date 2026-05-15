@@ -45,6 +45,21 @@ rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 />
 
+<!-- GOOGLE ANALYTICS -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G1JRYB0WW5"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){
+  dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+
+gtag('config', 'G-G1JRYB0WW5');
+</script>
+
 <style>
 
 *{
@@ -192,6 +207,32 @@ body{
   overflow:hidden;
 }
 
+/* HERO VIDEO */
+
+.hero-video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:.22;
+  filter:blur(0px);
+}
+
+/* OVERLAY */
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    to bottom,
+    rgba(5,5,5,.65),
+    rgba(5,5,5,.88)
+  );
+}
+
 /* SECTION */
 
 .section{
@@ -220,6 +261,40 @@ body{
 .social-btn:hover{
   transform:translateY(-6px);
   border-color:rgba(59,160,255,.35);
+}
+
+/* FLOATING WHATSAPP */
+
+.floating-whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:999;
+
+  width:68px;
+  height:68px;
+
+  border-radius:999px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:
+  linear-gradient(
+    135deg,
+    #0057FF,
+    #3BA0FF
+  );
+
+  box-shadow:
+  0 20px 80px rgba(0,87,255,.45);
+
+  transition:.4s ease;
+}
+
+.floating-whatsapp:hover{
+  transform:translateY(-6px) scale(1.05);
 }
 
 /* MOBILE */
@@ -289,7 +364,7 @@ body{
       Intelligent Mobility Platform™
     </p>
 
-    <!-- BLACK CODE INVISIBLE -->
+    <!-- BLACK CODE -->
 
     <div
       class="absolute bottom-[-80px] left-1/2 -translate-x-1/2 opacity-[0.018] text-[9px] tracking-[5px] uppercase whitespace-nowrap select-none"
@@ -335,6 +410,10 @@ body{
         Redes
       </a>
 
+      <a href="#catalogo" class="hover:text-white transition">
+        Catálogo
+      </a>
+
       <a href="#contacto" class="hover:text-white transition">
         Contacto
       </a>
@@ -344,6 +423,14 @@ body{
     <a
       href="https://wa.me/522441252948"
       target="_blank"
+
+      onclick="
+      gtag('event','whatsapp_click',{
+      event_category:'conversion',
+      event_label:'navbar_whatsapp'
+      });
+      "
+
       class="primary-btn px-5 lg:px-6 py-3 rounded-2xl text-sm font-semibold"
     >
       WhatsApp IA
@@ -356,6 +443,20 @@ body{
 <!-- HERO -->
 
 <section class="hero px-6 lg:px-10">
+
+  <!-- VIDEO -->
+
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    class="hero-video"
+  >
+    <source src="/videobg.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-overlay"></div>
 
   <div class="max-w-7xl mx-auto relative z-10 w-full pt-40">
 
@@ -389,6 +490,231 @@ body{
 
         </p>
 
+        <div class="flex flex-wrap gap-5 mt-12">
+
+          <a
+            href="#catalogo"
+            class="primary-btn px-8 py-4 rounded-2xl font-bold"
+          >
+            Explorar catálogo
+          </a>
+
+          <a
+            href="https://wa.me/522441252948"
+            target="_blank"
+
+            onclick="
+            gtag('event','whatsapp_click',{
+            event_category:'conversion',
+            event_label:'hero_whatsapp'
+            });
+            "
+
+            class="glass px-8 py-4 rounded-2xl font-semibold"
+          >
+            IA Comercial
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CATALOGO -->
+
+<section id="catalogo" class="section">
+
+  <div class="max-w-7xl mx-auto">
+
+    <div class="mb-16">
+
+      <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-5">
+        Smart Catalog™
+      </p>
+
+      <h2 class="text-4xl lg:text-6xl font-black mb-8">
+        Experiencia premium inteligente.
+      </h2>
+
+      <p class="text-lg subtle max-w-3xl leading-relaxed">
+        Explora motocicletas diseñadas para rendimiento, presencia y experiencia elite.
+      </p>
+
+    </div>
+
+    <!-- FILTERS -->
+
+    <div class="flex flex-wrap gap-4 mb-12">
+
+      <button class="glass px-6 py-3 rounded-2xl text-sm font-semibold">
+        Deportivas
+      </button>
+
+      <button class="glass px-6 py-3 rounded-2xl text-sm font-semibold">
+        Urbanas
+      </button>
+
+      <button class="glass px-6 py-3 rounded-2xl text-sm font-semibold">
+        Trabajo
+      </button>
+
+      <button class="glass px-6 py-3 rounded-2xl text-sm font-semibold">
+        Touring
+      </button>
+
+    </div>
+
+    <!-- CARDS -->
+
+    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+      <!-- CARD -->
+
+      <div class="glass rounded-[34px] overflow-hidden group">
+
+        <div class="h-[280px] overflow-hidden">
+
+          <img
+            src="/moto1.jpg"
+            alt="Neo 200"
+            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+          >
+
+        </div>
+
+        <div class="p-8">
+
+          <div class="flex items-center justify-between mb-5">
+
+            <h3 class="text-3xl font-black">
+              Neo 200
+            </h3>
+
+            <span class="text-blue-400 text-sm font-semibold">
+              Deportiva
+            </span>
+
+          </div>
+
+          <div class="space-y-3 subtle mb-8">
+
+            <p>140 km/h</p>
+            <p>200cc</p>
+            <p>Transmisión manual</p>
+
+          </div>
+
+          <div class="flex items-center justify-between">
+
+            <div>
+
+              <p class="text-sm subtle mb-1">
+                Desde
+              </p>
+
+              <h4 class="text-2xl font-black">
+                $52,999
+              </h4>
+
+            </div>
+
+            <a
+              href="https://wa.me/522441252948"
+              target="_blank"
+
+              onclick="
+              gtag('event','whatsapp_click',{
+              event_category:'conversion',
+              event_label:'catalog_neo200'
+              });
+              "
+
+              class="primary-btn px-5 py-3 rounded-2xl font-semibold"
+            >
+              Cotizar
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- CARD -->
+
+      <div class="glass rounded-[34px] overflow-hidden group">
+
+        <div class="h-[280px] overflow-hidden">
+
+          <img
+            src="/moto2.jpg"
+            alt="CXR 300"
+            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+          >
+
+        </div>
+
+        <div class="p-8">
+
+          <div class="flex items-center justify-between mb-5">
+
+            <h3 class="text-3xl font-black">
+              CXR 300
+            </h3>
+
+            <span class="text-cyan-400 text-sm font-semibold">
+              Touring
+            </span>
+
+          </div>
+
+          <div class="space-y-3 subtle mb-8">
+
+            <p>165 km/h</p>
+            <p>300cc</p>
+            <p>ABS inteligente</p>
+
+          </div>
+
+          <div class="flex items-center justify-between">
+
+            <div>
+
+              <p class="text-sm subtle mb-1">
+                Desde
+              </p>
+
+              <h4 class="text-2xl font-black">
+                $74,999
+              </h4>
+
+            </div>
+
+            <a
+              href="https://wa.me/522441252948"
+              target="_blank"
+
+              onclick="
+              gtag('event','whatsapp_click',{
+              event_category:'conversion',
+              event_label:'catalog_cxr300'
+              });
+              "
+
+              class="primary-btn px-5 py-3 rounded-2xl font-semibold"
+            >
+              Cotizar
+            </a>
+
+          </div>
+
+        </div>
+
       </div>
 
     </div>
@@ -413,13 +739,7 @@ body{
         Conecta con Velver.
       </h2>
 
-      <p class="text-lg subtle leading-relaxed max-w-3xl mb-14">
-        Ecosistema social conectado a contenido cinematográfico, branding premium y conversión inteligente.
-      </p>
-
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <!-- FACEBOOK -->
 
         <a
           href="https://www.facebook.com/share/1GsfHLH1q2/"
@@ -428,22 +748,14 @@ body{
         >
 
           <div class="mb-6">
-
-            <i class="fa-brands fa-facebook-f text-5xl text-blue-500 group-hover:scale-110 transition duration-300"></i>
-
+            <i class="fa-brands fa-facebook-f text-5xl text-blue-500"></i>
           </div>
 
-          <h3 class="text-2xl font-black mb-3 group-hover:text-blue-400 transition">
+          <h3 class="text-2xl font-black">
             Facebook
           </h3>
 
-          <p class="subtle leading-relaxed">
-            Comunidad, promociones y catálogo Velver.
-          </p>
-
         </a>
-
-        <!-- INSTAGRAM -->
 
         <a
           href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=10qgygz2"
@@ -452,22 +764,14 @@ body{
         >
 
           <div class="mb-6">
-
-            <i class="fa-brands fa-instagram text-5xl text-pink-500 group-hover:scale-110 transition duration-300"></i>
-
+            <i class="fa-brands fa-instagram text-5xl text-pink-500"></i>
           </div>
 
-          <h3 class="text-2xl font-black mb-3 group-hover:text-pink-400 transition">
+          <h3 class="text-2xl font-black">
             Instagram
           </h3>
 
-          <p class="subtle leading-relaxed">
-            Branding cinematográfico y contenido premium.
-          </p>
-
         </a>
-
-        <!-- TIKTOK -->
 
         <a
           href="https://www.tiktok.com/@velvermotosatlixc0?_r=1&_t=ZS-96KW6vHqTz8"
@@ -476,22 +780,14 @@ body{
         >
 
           <div class="mb-6">
-
-            <i class="fa-brands fa-tiktok text-5xl text-cyan-400 group-hover:scale-110 transition duration-300"></i>
-
+            <i class="fa-brands fa-tiktok text-5xl text-cyan-400"></i>
           </div>
 
-          <h3 class="text-2xl font-black mb-3 group-hover:text-cyan-300 transition">
+          <h3 class="text-2xl font-black">
             TikTok
           </h3>
 
-          <p class="subtle leading-relaxed">
-            Videos virales y experiencia visual elite.
-          </p>
-
         </a>
-
-        <!-- MAPS -->
 
         <a
           href="https://maps.app.goo.gl/qTegJLWbNGXa4p117?g_st=ac"
@@ -500,18 +796,12 @@ body{
         >
 
           <div class="mb-6">
-
-            <i class="fa-solid fa-location-dot text-5xl text-green-400 group-hover:scale-110 transition duration-300"></i>
-
+            <i class="fa-solid fa-location-dot text-5xl text-green-400"></i>
           </div>
 
-          <h3 class="text-2xl font-black mb-3 group-hover:text-green-300 transition">
-            Google Maps
+          <h3 class="text-2xl font-black">
+            Maps
           </h3>
-
-          <p class="subtle leading-relaxed">
-            Ubicación física y navegación inteligente.
-          </p>
 
         </a>
 
@@ -560,6 +850,14 @@ body{
           <a
             href="https://wa.me/522441252948"
             target="_blank"
+
+            onclick="
+            gtag('event','whatsapp_click',{
+            event_category:'conversion',
+            event_label:'footer_whatsapp'
+            });
+            "
+
             class="inline-block primary-btn px-8 py-4 rounded-2xl font-bold"
           >
             Contactar IA Comercial
@@ -579,6 +877,26 @@ body{
 
 </footer>
 
+<!-- FLOATING WHATSAPP -->
+
+<a
+  href="https://wa.me/522441252948"
+  target="_blank"
+
+  onclick="
+  gtag('event','whatsapp_click',{
+  event_category:'conversion',
+  event_label:'floating_whatsapp'
+  });
+  "
+
+  class="floating-whatsapp"
+>
+
+  <i class="fa-brands fa-whatsapp text-3xl text-white"></i>
+
+</a>
+
 <!-- GSAP -->
 
 <script>
@@ -588,28 +906,44 @@ window.addEventListener("load", ()=>{
   gsap.to("#introLogo",{
     opacity:1,
     scale:1,
-    duration:1.2
+    duration:1
   });
 
   gsap.to("#introTitle",{
     opacity:1,
     y:-10,
-    duration:1,
-    delay:.3
+    duration:.9,
+    delay:.2
   });
 
   gsap.to("#introSub",{
     opacity:1,
     y:-10,
-    duration:1,
-    delay:.6
+    duration:.9,
+    delay:.4
   });
 
   gsap.to("#intro",{
     opacity:0,
-    duration:1.4,
-    delay:2.8,
+    duration:1.2,
+    delay:1.6,
     pointerEvents:"none"
+  });
+
+});
+
+/* SCROLL ANIMATIONS */
+
+gsap.utils.toArray(".glass").forEach((box)=>{
+
+  gsap.from(box,{
+    opacity:0,
+    y:60,
+    duration:1,
+    scrollTrigger:{
+      trigger:box,
+      start:"top 88%"
+    }
   });
 
 });
