@@ -233,7 +233,7 @@
 
       <img
         id="introLogo"
-        src="/logo-secondary.png"
+        src="/logo-main.png"
         alt="Velver"
         class="w-[170px] lg:w-[240px] mx-auto opacity-0 scale-75"
       >
@@ -349,7 +349,7 @@
           <div class="absolute inset-0 bg-blue-500/10 rounded-full blur-[120px]"></div>
 
           <img
-            src="/logo-main.png"
+            src="/hero-bike.webp"
             alt="Motocicleta Velver"
             class="relative z-10 w-full object-contain drop-shadow-[0_0_60px_rgba(59,130,246,.25)]"
           >
@@ -539,17 +539,54 @@
 
         <div class="grid lg:grid-cols-2 gap-8">
 
-          <select id="use" class="glass px-5 py-4 rounded-2xl bg-transparent outline-none">
-            <option value="city">Ciudad</option>
-            <option value="travel">Viajes</option>
-            <option value="sport">Deportivo</option>
-          </select>
+          <div>
+            <label class="block mb-4 font-semibold">Uso principal</label>
+            <select id="use" class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none">
+              <option value="city">Ciudad</option>
+              <option value="travel">Viajes</option>
+              <option value="sport">Deportivo</option>
+            </select>
+          </div>
 
-          <select id="experience" class="glass px-5 py-4 rounded-2xl bg-transparent outline-none">
-            <option value="beginner">Principiante</option>
-            <option value="mid">Intermedio</option>
-            <option value="advanced">Avanzado</option>
-          </select>
+          <div>
+            <label class="block mb-4 font-semibold">Experiencia</label>
+            <select id="experience" class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none">
+              <option value="beginner">Principiante</option>
+              <option value="mid">Intermedio</option>
+              <option value="advanced">Avanzado</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block mb-4 font-semibold">Presupuesto estimado</label>
+            <select id="budget" class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none">
+              <option value="20-30k">20K - 30K</option>
+              <option value="30-50k">30K - 50K</option>
+              <option value="50-80k">50K - 80K</option>
+              <option value="80k+">80K+</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block mb-4 font-semibold">Método de compra</label>
+            <select id="payment" class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none">
+              <option value="contado">Contado</option>
+              <option value="financiamiento">Financiamiento</option>
+              <option value="apartado">Apartado</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block mb-4 font-semibold">Nombre</label>
+            <input id="leadName" type="text" placeholder="Tu nombre" class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none">
+          </div>
+
+          <div>
+            <label class="block mb-4 font-semibold">WhatsApp</label>
+            <input id="leadWhatsapp" type="tel" placeholder="Tu número" class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none">
+          </div>
+
+          
 
         </div>
 
@@ -715,7 +752,7 @@
         velocidad:'165 km/h',
         motor:'300cc',
         descripcion:'Experiencia touring elite con presencia cinematográfica.',
-        imagen:'/crx300.png'
+        imagen:'/moto2.webp'
       },
 
       {
@@ -814,6 +851,21 @@
 
     aiMatchBtn.addEventListener('click',()=>{
 
+      const leadName = document.getElementById('leadName').value;
+      const leadWhatsapp = document.getElementById('leadWhatsapp').value;
+      const budget = document.getElementById('budget').value;
+      const payment = document.getElementById('payment').value;
+
+      if(!leadName || !leadWhatsapp){
+        alert('Completa nombre y WhatsApp para continuar.');
+        return;
+      }
+
+      gtag('event','ai_match_completed',{
+        event_category:'lead_generation',
+        event_label:'AI Match Lead'
+      });
+
       const use = document.getElementById('use').value;
 
       let moto = {};
@@ -849,7 +901,7 @@
 
       document.getElementById('resultDescription').innerText = moto.descripcion;
 
-      document.getElementById('resultWhatsapp').href = `https://wa.me/522441252948?text=Hola,%20la%20IA%20me%20recomendó%20la%20${encodeURIComponent(moto.nombre)}`;
+      document.getElementById('resultWhatsapp').href = `https://wa.me/522441252948?text=${encodeURIComponent(`Hola Velver Motos, soy ${leadName}. La IA me recomendó la motocicleta ${moto.nombre}. Mi presupuesto es ${budget} y me interesa ${payment}. Mi WhatsApp es ${leadWhatsapp}`)}`;
 
       aiResult.classList.remove('hidden');
 
