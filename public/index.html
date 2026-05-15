@@ -216,7 +216,6 @@ body{
   height:100%;
   object-fit:cover;
   opacity:.22;
-  filter:blur(0px);
 }
 
 /* OVERLAY */
@@ -261,6 +260,31 @@ body{
 .social-btn:hover{
   transform:translateY(-6px);
   border-color:rgba(59,160,255,.35);
+}
+
+/* FILTERS */
+
+.filter-btn{
+  transition:.35s ease;
+}
+
+.filter-btn:hover{
+  transform:translateY(-3px);
+  border-color:rgba(59,160,255,.25);
+}
+
+.active-filter{
+  background:
+  linear-gradient(
+    135deg,
+    #0057FF,
+    #3BA0FF
+  );
+
+  border-color:transparent;
+
+  box-shadow:
+  0 15px 60px rgba(0,87,255,.25);
 }
 
 /* FLOATING WHATSAPP */
@@ -364,8 +388,6 @@ body{
       Intelligent Mobility Platform™
     </p>
 
-    <!-- BLACK CODE -->
-
     <div
       class="absolute bottom-[-80px] left-1/2 -translate-x-1/2 opacity-[0.018] text-[9px] tracking-[5px] uppercase whitespace-nowrap select-none"
     >
@@ -444,8 +466,6 @@ body{
 
 <section class="hero px-6 lg:px-10">
 
-  <!-- VIDEO -->
-
   <video
     autoplay
     muted
@@ -486,7 +506,7 @@ body{
 
         <p class="mt-10 text-lg lg:text-xl subtle max-w-2xl leading-relaxed">
 
-          Catálogo inteligente conectado a IA comercial, experiencia cinematográfica y conversión digital avanzada.
+          Plataforma inteligente enfocada en experiencia cinematográfica, IA comercial y movilidad premium.
 
         </p>
 
@@ -542,7 +562,7 @@ body{
       </h2>
 
       <p class="text-lg subtle max-w-3xl leading-relaxed">
-        Explora motocicletas diseñadas para rendimiento, presencia y experiencia elite.
+        Explora motocicletas diseñadas para movilidad moderna, presencia y rendimiento elite.
       </p>
 
     </div>
@@ -551,173 +571,42 @@ body{
 
     <div class="flex flex-wrap gap-4 mb-12">
 
-      <button class="glass px-6 py-3 rounded-2xl text-sm font-semibold">
+      <button
+        class="filter-btn active-filter glass px-6 py-3 rounded-2xl text-sm font-semibold"
+        data-filter="all"
+      >
+        Todas
+      </button>
+
+      <button
+        class="filter-btn glass px-6 py-3 rounded-2xl text-sm font-semibold"
+        data-filter="Deportiva"
+      >
         Deportivas
       </button>
 
-      <button class="glass px-6 py-3 rounded-2xl text-sm font-semibold">
+      <button
+        class="filter-btn glass px-6 py-3 rounded-2xl text-sm font-semibold"
+        data-filter="Urbana"
+      >
         Urbanas
       </button>
 
-      <button class="glass px-6 py-3 rounded-2xl text-sm font-semibold">
-        Trabajo
-      </button>
-
-      <button class="glass px-6 py-3 rounded-2xl text-sm font-semibold">
+      <button
+        class="filter-btn glass px-6 py-3 rounded-2xl text-sm font-semibold"
+        data-filter="Touring"
+      >
         Touring
       </button>
 
     </div>
 
-    <!-- CARDS -->
+    <!-- GRID -->
 
-    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
-
-      <!-- CARD -->
-
-      <div class="glass rounded-[34px] overflow-hidden group">
-
-        <div class="h-[280px] overflow-hidden">
-
-          <img
-            src="/moto1.jpg"
-            alt="Neo 200"
-            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-          >
-
-        </div>
-
-        <div class="p-8">
-
-          <div class="flex items-center justify-between mb-5">
-
-            <h3 class="text-3xl font-black">
-              Neo 200
-            </h3>
-
-            <span class="text-blue-400 text-sm font-semibold">
-              Deportiva
-            </span>
-
-          </div>
-
-          <div class="space-y-3 subtle mb-8">
-
-            <p>140 km/h</p>
-            <p>200cc</p>
-            <p>Transmisión manual</p>
-
-          </div>
-
-          <div class="flex items-center justify-between">
-
-            <div>
-
-              <p class="text-sm subtle mb-1">
-                Desde
-              </p>
-
-              <h4 class="text-2xl font-black">
-                $52,999
-              </h4>
-
-            </div>
-
-            <a
-              href="https://wa.me/522441252948"
-              target="_blank"
-
-              onclick="
-              gtag('event','whatsapp_click',{
-              event_category:'conversion',
-              event_label:'catalog_neo200'
-              });
-              "
-
-              class="primary-btn px-5 py-3 rounded-2xl font-semibold"
-            >
-              Cotizar
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- CARD -->
-
-      <div class="glass rounded-[34px] overflow-hidden group">
-
-        <div class="h-[280px] overflow-hidden">
-
-          <img
-            src="/moto2.jpg"
-            alt="CXR 300"
-            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-          >
-
-        </div>
-
-        <div class="p-8">
-
-          <div class="flex items-center justify-between mb-5">
-
-            <h3 class="text-3xl font-black">
-              CXR 300
-            </h3>
-
-            <span class="text-cyan-400 text-sm font-semibold">
-              Touring
-            </span>
-
-          </div>
-
-          <div class="space-y-3 subtle mb-8">
-
-            <p>165 km/h</p>
-            <p>300cc</p>
-            <p>ABS inteligente</p>
-
-          </div>
-
-          <div class="flex items-center justify-between">
-
-            <div>
-
-              <p class="text-sm subtle mb-1">
-                Desde
-              </p>
-
-              <h4 class="text-2xl font-black">
-                $74,999
-              </h4>
-
-            </div>
-
-            <a
-              href="https://wa.me/522441252948"
-              target="_blank"
-
-              onclick="
-              gtag('event','whatsapp_click',{
-              event_category:'conversion',
-              event_label:'catalog_cxr300'
-              });
-              "
-
-              class="primary-btn px-5 py-3 rounded-2xl font-semibold"
-            >
-              Cotizar
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
+    <div
+      id="catalog-grid"
+      class="grid md:grid-cols-2 xl:grid-cols-3 gap-8"
+    ></div>
 
   </div>
 
@@ -897,9 +786,11 @@ body{
 
 </a>
 
-<!-- GSAP -->
+<!-- SCRIPTS -->
 
 <script>
+
+/* INTRO */
 
 window.addEventListener("load", ()=>{
 
@@ -932,18 +823,170 @@ window.addEventListener("load", ()=>{
 
 });
 
-/* SCROLL ANIMATIONS */
+/* MOTORCYCLES */
 
-gsap.utils.toArray(".glass").forEach((box)=>{
+const motos = [
 
-  gsap.from(box,{
-    opacity:0,
-    y:60,
-    duration:1,
-    scrollTrigger:{
-      trigger:box,
-      start:"top 88%"
+  {
+    nombre:'Neo 200',
+    categoria:'Deportiva',
+    velocidad:'140 km/h',
+    motor:'200cc',
+    descripcion:'Diseñada para ciudad y adrenalina premium.',
+    imagen:'/moto1.jpg',
+    color:'blue'
+  },
+
+  {
+    nombre:'CXR 300',
+    categoria:'Touring',
+    velocidad:'165 km/h',
+    motor:'300cc',
+    descripcion:'Experiencia touring elite con presencia cinematográfica.',
+    imagen:'/moto2.jpg',
+    color:'cyan'
+  },
+
+  {
+    nombre:'Urban X',
+    categoria:'Urbana',
+    velocidad:'110 km/h',
+    motor:'150cc',
+    descripcion:'Movilidad inteligente urbana premium.',
+    imagen:'/moto3.jpg',
+    color:'white'
+  }
+
+];
+
+const catalogGrid =
+document.getElementById('catalog-grid');
+
+function renderCatalog(items){
+
+  catalogGrid.innerHTML = '';
+
+  items.forEach((moto,index)=>{
+
+    const card =
+    document.createElement('div');
+
+    card.className =
+    'glass rounded-[34px] overflow-hidden group';
+
+    card.innerHTML = `
+
+      <div class="h-[280px] overflow-hidden relative">
+
+        <img
+          src="${moto.imagen}"
+          alt="${moto.nombre}"
+          class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+
+      </div>
+
+      <div class="p-8">
+
+        <div class="flex items-center justify-between mb-5 gap-4">
+
+          <h3 class="text-3xl font-black">
+            ${moto.nombre}
+          </h3>
+
+          <span class="text-${moto.color}-400 text-sm font-semibold whitespace-nowrap">
+            ${moto.categoria}
+          </span>
+
+        </div>
+
+        <p class="subtle leading-relaxed mb-6">
+          ${moto.descripcion}
+        </p>
+
+        <div class="space-y-3 subtle mb-8">
+
+          <div class="flex items-center justify-between">
+            <span>Velocidad</span>
+            <span>${moto.velocidad}</span>
+          </div>
+
+          <div class="flex items-center justify-between">
+            <span>Motor</span>
+            <span>${moto.motor}</span>
+          </div>
+
+        </div>
+
+        <a
+          href="https://wa.me/522441252948?text=Hola,%20me%20interesa%20la%20${encodeURIComponent(moto.nombre)}"
+          target="_blank"
+
+          onclick="
+          gtag('event','whatsapp_click',{
+          event_category:'conversion',
+          event_label:'${moto.nombre}'
+          });
+          "
+
+          class="primary-btn w-full text-center block px-5 py-4 rounded-2xl font-semibold"
+        >
+          Solicitar información
+        </a>
+
+      </div>
+
+    `;
+
+    catalogGrid.appendChild(card);
+
+    gsap.from(card,{
+      opacity:0,
+      y:80,
+      duration:1,
+      delay:index * .12
+    });
+
+  });
+
+}
+
+renderCatalog(motos);
+
+/* FILTER SYSTEM */
+
+const filterButtons =
+document.querySelectorAll('.filter-btn');
+
+filterButtons.forEach((button)=>{
+
+  button.addEventListener('click',()=>{
+
+    filterButtons.forEach((btn)=>{
+      btn.classList.remove('active-filter');
+    });
+
+    button.classList.add('active-filter');
+
+    const filter =
+    button.dataset.filter;
+
+    if(filter === 'all'){
+
+      renderCatalog(motos);
+
+      return;
     }
+
+    const filtered =
+    motos.filter((moto)=>
+      moto.categoria === filter
+    );
+
+    renderCatalog(filtered);
+
   });
 
 });
