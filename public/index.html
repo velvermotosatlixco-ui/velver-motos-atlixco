@@ -233,7 +233,7 @@
 
       <img
         id="introLogo"
-        src="/logo-main.png"
+        src="/logo-secondary.png"
         alt="Velver"
         class="w-[170px] lg:w-[240px] mx-auto opacity-0 scale-75"
       >
@@ -349,7 +349,7 @@
           <div class="absolute inset-0 bg-blue-500/10 rounded-full blur-[120px]"></div>
 
           <img
-            src="/hero-bike.webp"
+            src="/logo-main.png"
             alt="Motocicleta Velver"
             class="relative z-10 w-full object-contain drop-shadow-[0_0_60px_rgba(59,130,246,.25)]"
           >
@@ -600,6 +600,10 @@
 
         <div id="aiResult" class="hidden mt-14 glass rounded-[34px] p-10 text-center">
 
+          <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-5">
+            AI Recommendation™
+          </p>
+
           <h3 id="resultTitle" class="text-4xl font-black mb-6"></h3>
 
           <p id="resultDescription" class="subtle text-lg leading-relaxed mb-10"></p>
@@ -612,6 +616,76 @@
           >
             Solicitar información
           </a>
+
+        </div>
+
+                <div id="financePrequalify" class="hidden mt-10 glass-soft rounded-[30px] p-8 text-left max-w-3xl mx-auto">
+
+            <div class="mb-8 text-center">
+
+              <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-4">
+                Precalificación Express™
+              </p>
+
+              <h3 class="text-3xl font-black mb-4">
+                Activa tu evaluación financiera inteligente.
+              </h3>
+
+              <p class="subtle leading-relaxed max-w-2xl mx-auto">
+                Nuestro equipo y sistema IA te ayudarán a encontrar la mejor opción de financiamiento según tu perfil.
+              </p>
+
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-6 mb-8">
+
+              <div class="glass rounded-[24px] p-6">
+                <p class="font-bold mb-3">Requisitos básicos</p>
+                <ul class="space-y-3 subtle">
+                  <li>• INE frontal y reverso</li>
+                  <li>• Correo electrónico</li>
+                  <li>• Número celular activo</li>
+                </ul>
+              </div>
+
+              <div class="glass rounded-[24px] p-6">
+                <p class="font-bold mb-3">Opciones de financiamiento</p>
+                <ul class="space-y-3 subtle">
+                  <li>• Galgo</li>
+                  <li>• MaxiKash</li>
+                  <li>• Atrato</li>
+                  <li>• Moto Ya</li>
+                  <li>• Crédito Elektra</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="glass rounded-[28px] p-6 mb-8">
+              <label class="block mb-4 font-semibold">Historial crediticio</label>
+
+              <select id="creditProfile" class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none">
+                <option value="bueno">Bueno</option>
+                <option value="regular">Regular</option>
+                <option value="sin historial">Sin historial</option>
+              </select>
+            </div>
+
+            <div class="text-center">
+
+              <a
+                id="financeWhatsapp"
+                href="#"
+                target="_blank"
+                class="primary-btn inline-flex items-center gap-3 px-8 py-5 rounded-2xl font-bold"
+              >
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                Continuar precalificación por WhatsApp
+              </a>
+
+            </div>
+
+          </div>
 
         </div>
 
@@ -677,7 +751,7 @@
 
         <div class="flex items-center gap-5">
 
-          <img src="/logo-secondary.png" alt="Velver" class="w-[70px]">
+          <img src="/logo-main.png" alt="Velver" class="w-[70px]">
 
           <div>
             <h3 class="text-3xl font-black">Velver Motos Atlixco™</h3>
@@ -752,7 +826,7 @@
         velocidad:'165 km/h',
         motor:'300cc',
         descripcion:'Experiencia touring elite con presencia cinematográfica.',
-        imagen:'/moto2.webp'
+        imagen:'/crx300.png'
       },
 
       {
@@ -904,6 +978,12 @@
       document.getElementById('resultWhatsapp').href = `https://wa.me/522441252948?text=${encodeURIComponent(`Hola Velver Motos, soy ${leadName}. La IA me recomendó la motocicleta ${moto.nombre}. Mi presupuesto es ${budget} y me interesa ${payment}. Mi WhatsApp es ${leadWhatsapp}`)}`;
 
       aiResult.classList.remove('hidden');
+
+      document.getElementById('financePrequalify').classList.remove('hidden');
+
+      const creditProfile = document.getElementById('creditProfile');
+
+      document.getElementById('financeWhatsapp').href = `https://wa.me/522441252948?text=${encodeURIComponent(`Hola Velver Motos. Deseo continuar mi precalificación financiera para la motocicleta ${moto.nombre}. Mi nombre es ${leadName}, mi presupuesto es ${budget}, me interesa ${payment} y mi historial crediticio es ${creditProfile ? creditProfile.value : 'pendiente'}. Me gustaría recibir instrucciones para enviar mi documentación.`)}`;
 
       gsap.from('#aiResult',{
         opacity:0,
