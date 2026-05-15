@@ -765,17 +765,21 @@
 
     <!-- GRID -->
 
-    <div class="grid lg:grid-cols-2">
-
+    <div class="grid lg:grid-cols-[1.1fr_.9fr] min-h-[700px]">
       <!-- IMAGEN -->
 
-      <div class="relative h-[320px] lg:h-full">
+      <div class="relative h-[420px] lg:h-full overflow-hidden">
 
         <img
-          id="modalImage"
-          src=""
-          alt=""
-          class="w-full h-full object-cover"
+  id="modalImage"
+  src=""
+  alt=""
+  class="w-full h-full object-cover scale-105"
+/>
+
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
+
+<div class="absolute inset-0 bg-blue-500/10 mix-blend-screen"></div>
         >
 
       </div>
@@ -1147,7 +1151,7 @@ document.addEventListener('click',(e)=>{
       `https://wa.me/522441252948?text=${encodeURIComponent(`Hola Velver Motos. Deseo información sobre la ${btn.dataset.nombre}`)}`;
 
     motoModal.classList.remove('hidden');
-
+document.body.style.overflow = 'hidden';
     motoModal.classList.add('flex');
 
     gsap.from('#modalContent',{
@@ -1172,7 +1176,7 @@ document.addEventListener('click',(e)=>{
     onComplete:()=>{
 
       motoModal.classList.add('hidden');
-
+document.body.style.overflow = 'auto';
       motoModal.classList.remove('flex');
 
       gsap.set('#modalContent',{
@@ -1189,6 +1193,13 @@ document.addEventListener('click',(e)=>{
 closeModal.addEventListener('click',closeModalSystem);
 
 closeModalBottom.addEventListener('click',closeModalSystem);
+    motoModal.addEventListener('click',(e)=>{
+
+  if(e.target === motoModal){
+    closeModalSystem();
+  }
+
+});
   </script>
 
 </body>
