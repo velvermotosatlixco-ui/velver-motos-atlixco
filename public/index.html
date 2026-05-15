@@ -23,8 +23,10 @@ Velver Motos Atlixco™ | AI Smart Catalog
 
 <link rel="icon" type="image/png" href="/logo-secondary.png">
 
+<!-- TAILWIND -->
 <script src="https://cdn.tailwindcss.com"></script>
 
+<!-- GOOGLE FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,11 +36,15 @@ href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;80
 rel="stylesheet"
 >
 
+<!-- GSAP -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+<!-- FONT AWESOME -->
 <link
 rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 />
+
 <style>
 
 *{
@@ -164,15 +170,6 @@ body{
   0 25px 90px rgba(0,87,255,.35);
 }
 
-.secondary-btn{
-  transition:.35s ease;
-}
-
-.secondary-btn:hover{
-  border-color:rgba(59,160,255,.25);
-  background:rgba(255,255,255,.05);
-}
-
 /* NAVBAR */
 
 .navbar{
@@ -214,35 +211,6 @@ body{
   overflow:hidden;
 }
 
-/* CARDS */
-
-.catalog-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:28px;
-}
-
-.moto-card{
-  transition:.45s ease;
-  overflow:hidden;
-}
-
-.moto-card:hover{
-  transform:translateY(-8px);
-  border-color:rgba(59,160,255,.22);
-}
-
-.moto-image{
-  height:260px;
-  object-fit:cover;
-  width:100%;
-}
-
-.badge{
-  background:rgba(59,160,255,.14);
-  border:1px solid rgba(59,160,255,.25);
-}
-
 /* SOCIAL */
 
 .social-btn{
@@ -250,7 +218,7 @@ body{
 }
 
 .social-btn:hover{
-  transform:translateY(-4px);
+  transform:translateY(-6px);
   border-color:rgba(59,160,255,.35);
 }
 
@@ -321,6 +289,8 @@ body{
       Intelligent Mobility Platform™
     </p>
 
+    <!-- BLACK CODE INVISIBLE -->
+
     <div
       class="absolute bottom-[-80px] left-1/2 -translate-x-1/2 opacity-[0.018] text-[9px] tracking-[5px] uppercase whitespace-nowrap select-none"
     >
@@ -360,14 +330,6 @@ body{
     </div>
 
     <nav class="desktop-nav flex items-center gap-10 text-sm subtle">
-
-      <a href="#catalogo" class="hover:text-white transition">
-        Catálogo
-      </a>
-
-      <a href="#ia" class="hover:text-white transition">
-        IA Comercial
-      </a>
 
       <a href="#redes" class="hover:text-white transition">
         Redes
@@ -435,11 +397,7 @@ body{
 
 </section>
 
-📍</div>
-
-      <h3 class="text-2xl font
-        
-        -<!-- REDES -->
+<!-- REDES -->
 
 <section id="redes" class="section pt-0">
 
@@ -567,7 +525,7 @@ body{
 
 <!-- FOOTER -->
 
-<footer class="px-6 pb-14">
+<footer id="contacto" class="px-6 pb-14">
 
   <div class="max-w-7xl mx-auto">
 
@@ -599,7 +557,15 @@ body{
 
         <div class="lg:text-right">
 
-          <div class="opacity-[0.018] text-[9px] tracking-[5px] uppercase select-none">
+          <a
+            href="https://wa.me/522441252948"
+            target="_blank"
+            class="inline-block primary-btn px-8 py-4 rounded-2xl font-bold"
+          >
+            Contactar IA Comercial
+          </a>
+
+          <div class="mt-8 opacity-[0.018] text-[9px] tracking-[5px] uppercase select-none">
             KNJO-BLK-1141015
           </div>
 
@@ -612,6 +578,8 @@ body{
   </div>
 
 </footer>
+
+<!-- GSAP -->
 
 <script>
 
