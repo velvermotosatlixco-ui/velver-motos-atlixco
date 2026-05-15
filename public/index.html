@@ -3,7 +3,6 @@
 
 <head>
 
-  <!-- BLACK CODE™ DIGITAL ECOSYSTEM -->
   <meta charset="UTF-8" />
 
   <meta
@@ -11,22 +10,12 @@
     content="width=device-width, initial-scale=1.0, viewport-fit=cover"
   />
 
-  <!-- PRIMARY SEO -->
   <title>Velver Motos Atlixco™ | Black Code Digital Ecosystem</title>
 
   <meta
     name="description"
-    content="Experiencia premium inteligente de motocicletas en Atlixco. Ecosistema cinematográfico con financiamiento, catálogo inteligente y experiencia BLACK CODE™."
+    content="Experiencia premium inteligente de motocicletas en Atlixco."
   />
-
-  <meta
-    name="keywords"
-    content="motos atlixco, motocicletas puebla, motos premium, financiamiento motos, velver motos atlixco, motos deportivas, black code"
-  />
-
-  <meta name="author" content="Velver Motos Atlixco™" />
-
-  <meta name="robots" content="index, follow" />
 
   <meta name="theme-color" content="#050505" />
 
@@ -40,27 +29,11 @@
     content="Ecosistema cinematográfico premium de motocicletas."
   />
 
+  <meta property="og:image" content="/logo-main.png" />
+
   <meta property="og:type" content="website" />
 
   <meta property="og:url" content="https://velvermotos.com" />
-
-  <meta property="og:image" content="/og-cover.webp" />
-
-  <!-- TWITTER -->
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- GEO -->
-  <meta name="geo.region" content="MX-PUE" />
-
-  <meta name="geo.placename" content="Atlixco" />
-
-  <!-- APPLE -->
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-
-  <meta
-    name="apple-mobile-web-app-status-bar-style"
-    content="black-translucent"
-  />
 
   <!-- PERFORMANCE -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -78,15 +51,16 @@
   />
 
   <!-- PRELOAD -->
-  <link rel="preload" as="image" href="/hero-poster.webp" />
+  <link rel="preload" as="image" href="/logo-secondary.webp" />
 
-  <link rel="preload" as="image" href="/logo-main.webp" />
+  <link rel="preload" as="image" href="/logo-main.png" />
 
-  <!-- PWA -->
-  <link rel="manifest" href="/manifest.json" />
+  <link rel="preload" as="image" href="/crx200.webp" />
+
+  <link rel="preload" as="image" href="/fighter200.webp" />
 
   <!-- ICON -->
-  <link rel="icon" type="image/webp" href="/logo-main.webp" />
+  <link rel="icon" type="image/png" href="/logo-main.png" />
 
   <!-- GSAP -->
   <script
@@ -100,43 +74,8 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
 
-  <!-- ANALYTICS -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G1JRYB0WW5"></script>
-
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-    gtag('config', 'G-G1JRYB0WW5');
-  </script>
-
-  <!-- SCHEMA -->
-  <script type="application/ld+json">
-{
-"@context":"https://schema.org",
-"@type":"MotorcycleDealer",
-"name":"Velver Motos Atlixco",
-"url":"https://velvermotos.com",
-"logo":"https://velvermotos.com/logo-main.webp",
-"telephone":"+522441252948",
-"address":{
-"@type":"PostalAddress",
-"addressLocality":"Atlixco",
-"addressRegion":"Puebla",
-"addressCountry":"MX"
-},
-"sameAs":[
-"https://facebook.com/",
-"https://instagram.com/"
-]
-}
-</script>
-
   <style>
+
     :root {
 
       --bg: #050505;
@@ -148,11 +87,13 @@
     }
 
     * {
+
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Inter', sans-serif;
       -webkit-tap-highlight-color: transparent;
+
     }
 
     html {
@@ -169,13 +110,17 @@
     }
 
     img {
+
       max-width: 100%;
       display: block;
+
     }
 
     a {
+
       text-decoration: none;
       color: inherit;
+
     }
 
     .container-system {
@@ -185,18 +130,12 @@
 
     }
 
-    .section {
-
-      padding: 120px 0;
-      position: relative;
-      z-index: 2;
-
-    }
-
     .glass {
 
-      background: rgba(255, 255, 255, .045);
+      background: rgba(255, 255, 255, .04);
+
       backdrop-filter: blur(18px);
+
       border: 1px solid rgba(255, 255, 255, .06);
 
     }
@@ -204,26 +143,26 @@
     .glass-soft {
 
       background: rgba(255, 255, 255, .02);
+
       backdrop-filter: blur(12px);
+
       border: 1px solid rgba(255, 255, 255, .04);
 
     }
 
     .gradient-text {
 
-      background: linear-gradient(
-        90deg,
-        #FFFFFF,
-        #9FD3FF
-      );
+      background:
+        linear-gradient(
+          90deg,
+          #FFFFFF,
+          #9FD3FF
+        );
 
       -webkit-background-clip: text;
+
       -webkit-text-fill-color: transparent;
 
-    }
-
-    .subtle {
-      color: var(--muted);
     }
 
     .primary-btn {
@@ -251,6 +190,12 @@
 
     }
 
+    .subtle {
+
+      color: var(--muted);
+
+    }
+
     .bg-system {
 
       position: fixed;
@@ -263,13 +208,19 @@
     .glow-a {
 
       position: absolute;
+
       width: 700px;
       height: 700px;
+
       border-radius: 999px;
+
       background: var(--blue);
+
       opacity: .08;
+
       top: -250px;
       left: -250px;
+
       filter: blur(100px);
 
     }
@@ -277,13 +228,19 @@
     .glow-b {
 
       position: absolute;
+
       width: 650px;
       height: 650px;
+
       border-radius: 999px;
+
       background: var(--cyan);
+
       opacity: .07;
+
       bottom: -250px;
       right: -250px;
+
       filter: blur(100px);
 
     }
@@ -308,10 +265,14 @@
     .navbar {
 
       position: fixed;
+
       top: 16px;
       left: 50%;
+
       transform: translateX(-50%);
+
       width: min(1450px, calc(100% - 24px));
+
       z-index: 1000;
 
     }
@@ -321,7 +282,9 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       padding: 16px 24px;
+
       border-radius: 28px;
 
     }
@@ -329,9 +292,12 @@
     .hero {
 
       position: relative;
+
       min-height: 100dvh;
+
       display: flex;
       align-items: center;
+
       overflow: hidden;
 
     }
@@ -340,10 +306,14 @@
 
       position: absolute;
       inset: 0;
+
       width: 100%;
       height: 100%;
+
       object-fit: cover;
+
       opacity: .18;
+
       z-index: -2;
 
     }
@@ -356,7 +326,7 @@
       background:
         linear-gradient(
           to bottom,
-          rgba(0, 0, 0, .25),
+          rgba(0, 0, 0, .3),
           rgba(5, 5, 5, .96)
         );
 
@@ -367,44 +337,43 @@
     .massive {
 
       font-size: clamp(3rem, 9vw, 7rem);
+
       line-height: .92;
+
       font-weight: 900;
+
       letter-spacing: -3px;
 
     }
 
-    .micro-brand {
+    .section {
 
-      position: fixed;
-      bottom: 30px;
-      right: -30px;
+      padding: 120px 0;
 
-      transform: rotate(11deg);
-
-      font-size: 10px;
-      letter-spacing: 5px;
-
-      opacity: .045;
-
-      pointer-events: none;
-
-      user-select: none;
+      position: relative;
 
     }
 
     .catalog-grid {
 
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(320px, 1fr));
+
       gap: 28px;
+
+      margin-top: 60px;
 
     }
 
     .catalog-card {
 
-      border-radius: 32px;
+      border-radius: 30px;
+
       overflow: hidden;
-      transition: .5s ease;
+
+      transition: .45s ease;
 
     }
 
@@ -414,64 +383,36 @@
         translateY(-8px)
         scale(1.01);
 
-      border-color:
-        rgba(59, 160, 255, .18);
-
     }
 
     .bike-image {
 
       aspect-ratio: 16/10;
+
       object-fit: cover;
 
-    }
-
-    .badge {
-
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-
-      padding: 12px 18px;
-
-      border-radius: 999px;
+      width: 100%;
 
     }
 
-    .section-title {
+    .micro-brand {
 
-      font-size: clamp(2rem, 6vw, 4rem);
-      font-weight: 900;
-      line-height: 1;
+      position: fixed;
 
-    }
+      bottom: 30px;
+      right: -30px;
 
-    .social-grid {
+      transform: rotate(11deg);
 
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px;
+      font-size: 10px;
 
-    }
+      letter-spacing: 5px;
 
-    .social-card {
+      opacity: .04;
 
-      padding: 32px;
-      border-radius: 28px;
-      transition: .4s ease;
+      pointer-events: none;
 
-    }
-
-    .social-card:hover {
-
-      transform: translateY(-8px);
-
-    }
-
-    .reveal {
-
-      opacity: 0;
-      transform: translateY(30px);
+      user-select: none;
 
     }
 
@@ -481,22 +422,39 @@
         display: none;
       }
 
-      .section {
-        padding: 90px 0;
+      .hero-grid {
+
+        grid-template-columns: 1fr !important;
+
+      }
+
+      .hero-bike {
+
+        display: none;
+
       }
 
       .massive {
-        font-size: 3.4rem;
+
+        font-size: 3.5rem;
+
+      }
+
+      .section {
+
+        padding: 90px 0;
+
       }
 
     }
+
   </style>
 
 </head>
 
 <body>
 
-  <!-- BLACK CODE™ MICROTEXTURE -->
+  <!-- BLACK CODE -->
   <div class="micro-brand">
     BLACK CODE by KNJO · KNJO-BLK-1141015
   </div>
@@ -528,20 +486,19 @@
 
     <div style="text-align:center;">
 
+      <!-- CORREGIDO -->
       <img
-        src="/logo-main.webp"
+        id="introLogo"
+        src="/logo-secondary.webp"
         alt="Velver"
-        width="240"
-        height="240"
         loading="eager"
         decoding="async"
         style="
-          width:180px;
+          width:190px;
           margin:auto;
           opacity:0;
           transform:scale(.8);
         "
-        id="introLogo"
       >
 
       <h1
@@ -589,12 +546,10 @@
       >
 
         <img
-          src="/logo-main.webp"
-          alt="Velver Motos"
+          src="/logo-secondary.png"
+          alt="Velver"
           width="48"
           height="48"
-          loading="eager"
-          decoding="async"
         >
 
         <div>
@@ -634,25 +589,23 @@
 
         <a href="#catalogo">Catálogo</a>
 
-        <a href="#experience">Experience</a>
+        <a href="#">Experience</a>
 
-        <a href="#ai">AI Match™</a>
+        <a href="#">AI Match™</a>
 
-        <a href="#social">Redes</a>
+        <a href="#">Redes</a>
 
       </nav>
 
       <a
         href="https://wa.me/522441252948?text=Hola%20quiero%20información%20sobre%20las%20motocicletas"
         target="_blank"
-        rel="noopener noreferrer"
         class="primary-btn"
         style="
           padding:14px 24px;
           border-radius:18px;
           font-weight:700;
         "
-        aria-label="Contactar por WhatsApp"
       >
         WhatsApp IA
       </a>
@@ -671,7 +624,7 @@
       muted
       loop
       playsinline
-      poster="/hero-poster.webp"
+      poster="/ad1.5.webp"
     >
 
       <source src="/hero-video.mp4" type="video/mp4">
@@ -683,6 +636,7 @@
     <div class="container-system">
 
       <div
+        class="hero-grid"
         style="
           display:grid;
           grid-template-columns:1.1fr .9fr;
@@ -696,8 +650,15 @@
         <div class="parallax" data-speed="0.04">
 
           <div
-            class="badge glass-soft"
-            style="margin-bottom:34px;"
+            class="glass-soft"
+            style="
+              display:inline-flex;
+              align-items:center;
+              gap:12px;
+              padding:12px 18px;
+              border-radius:999px;
+              margin-bottom:34px;
+            "
           >
 
             <div
@@ -744,9 +705,6 @@
             Ecosistema cinematográfico inteligente diseñado
             para nueva generación.
 
-            Financiamiento, catálogo premium y experiencia
-            BLACK CODE™ de nivel internacional.
-
           </p>
 
           <div
@@ -770,43 +728,22 @@
               Explorar catálogo
             </a>
 
-            <a
-              href="#experience"
-              class="glass"
-              style="
-                padding:18px 34px;
-                border-radius:20px;
-                font-weight:800;
-              "
-            >
-              Velver Experience™
-            </a>
-
           </div>
 
         </div>
 
         <!-- RIGHT -->
         <div
-          class="parallax"
+          class="hero-bike parallax"
           data-speed="0.08"
           style="
             position:relative;
           "
         >
 
-          <div
-            style="
-              position:absolute;
-              inset:0;
-              background:rgba(59,130,246,.08);
-              border-radius:999px;
-              filter:blur(90px);
-            "
-          ></div>
-
+          <!-- CORREGIDO -->
           <img
-            src="/hero-bike.webp"
+            src="/logo-main.png"
             alt="Motocicleta premium Velver"
             loading="eager"
             decoding="async"
@@ -827,319 +764,146 @@
 
   </section>
 
-  <!-- CATALOG -->
-  <section id="catalogo" class="section">
-
-    <div class="container-system">
-
-      <div class="reveal">
-
-        <p
-          class="subtle"
-          style="
-            letter-spacing:4px;
-            text-transform:uppercase;
-            margin-bottom:18px;
-          "
-        >
-          Premium Collection™
-        </p>
-
-        <h2 class="section-title">
-
-          Catálogo
-          <span class="gradient-text">
-            cinematográfico.
-          </span>
-
-        </h2>
-
-      </div>
-
-      <div
-        class="catalog-grid"
-        style="margin-top:60px;"
-      >
-
-        <!-- CARD -->
-        <article class="catalog-card glass reveal">
-
-          <img
-            src="/crx300.webp"
-            alt="CRX300"
-            class="bike-image"
-            loading="lazy"
-            decoding="async"
-            width="1200"
-            height="800"
-          >
-
-          <div style="padding:28px;">
-
-            <h3
-              style="
-                font-size:1.7rem;
-                font-weight:800;
-              "
-            >
-              CRX300
-            </h3>
-
-            <p
-              class="subtle"
-              style="
-                margin-top:14px;
-                line-height:1.8;
-              "
-            >
-              Rendimiento premium, estética agresiva y
-              experiencia deportiva inspirada en superbikes.
-            </p>
-
-            <a
-              href="#"
-              class="primary-btn"
-              style="
-                display:inline-flex;
-                margin-top:24px;
-                padding:14px 22px;
-                border-radius:16px;
-                font-weight:700;
-              "
-            >
-              Ver motocicleta
-            </a>
-
-          </div>
-
-        </article>
-
-        <!-- CARD -->
-        <article class="catalog-card glass reveal">
-
-          <img
-            src="/neo200.webp"
-            alt="Neo200"
-            class="bike-image"
-            loading="lazy"
-            decoding="async"
-            width="1200"
-            height="800"
-          >
-
-          <div style="padding:28px;">
-
-            <h3
-              style="
-                font-size:1.7rem;
-                font-weight:800;
-              "
-            >
-              NEO200
-            </h3>
-
-            <p
-              class="subtle"
-              style="
-                margin-top:14px;
-                line-height:1.8;
-              "
-            >
-              Tecnología urbana inteligente diseñada para
-              movilidad premium moderna.
-            </p>
-
-            <a
-              href="#"
-              class="primary-btn"
-              style="
-                display:inline-flex;
-                margin-top:24px;
-                padding:14px 22px;
-                border-radius:16px;
-                font-weight:700;
-              "
-            >
-              Ver motocicleta
-            </a>
-
-          </div>
-
-        </article>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- SOCIAL -->
-  <section id="social" class="section">
-
-    <div class="container-system">
-
-      <div class="reveal">
-
-        <p
-          class="subtle"
-          style="
-            letter-spacing:4px;
-            text-transform:uppercase;
-            margin-bottom:18px;
-          "
-        >
-          Velver Network™
-        </p>
-
-        <h2 class="section-title">
-
-          Ecosistema
-          <span class="gradient-text">
-            social premium.
-          </span>
-
-        </h2>
-
-      </div>
-
-      <div
-        class="social-grid"
-        style="margin-top:50px;"
-      >
-
-        <a
-          href="#"
-          class="social-card glass reveal"
-        >
-
-          <i
-            class="fab fa-instagram"
-            style="
-              font-size:2rem;
-              margin-bottom:20px;
-            "
-          ></i>
-
-          <h3
-            style="
-              font-size:1.3rem;
-              font-weight:800;
-            "
-          >
-            Instagram
-          </h3>
-
-          <p
-            class="subtle"
-            style="
-              margin-top:12px;
-              line-height:1.7;
-            "
-          >
-            Contenido cinematográfico premium y lifestyle.
-          </p>
-
-        </a>
-
-        <a
-          href="#"
-          class="social-card glass reveal"
-        >
-
-          <i
-            class="fab fa-tiktok"
-            style="
-              font-size:2rem;
-              margin-bottom:20px;
-            "
-          ></i>
-
-          <h3
-            style="
-              font-size:1.3rem;
-              font-weight:800;
-            "
-          >
-            TikTok
-          </h3>
-
-          <p
-            class="subtle"
-            style="
-              margin-top:12px;
-              line-height:1.7;
-            "
-          >
-            Experiencia visual BLACK CODE™ de nueva generación.
-          </p>
-
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- FOOTER -->
-  <footer
-    style="
-      border-top:1px solid rgba(255,255,255,.06);
-      padding:40px 0;
-    "
+  <!-- CATALOGO -->
+  <section
+    id="catalogo"
+    class="section"
   >
 
-    <div
-      class="container-system"
-      style="
-        display:flex;
-        flex-wrap:wrap;
-        gap:20px;
-        align-items:center;
-        justify-content:space-between;
-      "
-    >
+    <div class="container-system">
 
-      <div>
+      <h2
+        class="massive"
+        style="
+          font-size:clamp(2.5rem,6vw,4.5rem);
+        "
+      >
+        Catálogo
+        <span class="gradient-text">
+          premium.
+        </span>
+      </h2>
 
-        <h3
-          style="
-            font-weight:900;
-            letter-spacing:2px;
-          "
-        >
-          VELVER MOTOS ATLIXCO™
-        </h3>
+      <div class="catalog-grid">
 
-        <p
-          class="subtle"
-          style="
-            margin-top:10px;
-            font-size:.9rem;
-          "
-        >
-          BLACK CODE DIGITAL ECOSYSTEM™
-        </p>
+        <!-- CARD 1 -->
+        <article class="catalog-card glass">
+
+          <img
+            src="/crx200.webp"
+            alt="CRX200"
+            class="bike-image"
+            loading="lazy"
+            decoding="async"
+          >
+
+          <div style="padding:28px;">
+
+            <h3
+              style="
+                font-size:1.7rem;
+                font-weight:800;
+              "
+            >
+              CRX200
+            </h3>
+
+            <p
+              class="subtle"
+              style="
+                margin-top:14px;
+                line-height:1.8;
+              "
+            >
+              Diseño deportivo premium con esencia agresiva.
+            </p>
+
+          </div>
+
+        </article>
+
+        <!-- CARD 2 -->
+        <article class="catalog-card glass">
+
+          <img
+            src="/fighter200.webp"
+            alt="Fighter200"
+            class="bike-image"
+            loading="lazy"
+            decoding="async"
+          >
+
+          <div style="padding:28px;">
+
+            <h3
+              style="
+                font-size:1.7rem;
+                font-weight:800;
+              "
+            >
+              Fighter200
+            </h3>
+
+            <p
+              class="subtle"
+              style="
+                margin-top:14px;
+                line-height:1.8;
+              "
+            >
+              Potencia urbana inspirada en street performance.
+            </p>
+
+          </div>
+
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="catalog-card glass">
+
+          <img
+            src="/ad1.5.webp"
+            alt="AD1.5"
+            class="bike-image"
+            loading="lazy"
+            decoding="async"
+          >
+
+          <div style="padding:28px;">
+
+            <h3
+              style="
+                font-size:1.7rem;
+                font-weight:800;
+              "
+            >
+              AD1.5
+            </h3>
+
+            <p
+              class="subtle"
+              style="
+                margin-top:14px;
+                line-height:1.8;
+              "
+            >
+              Movilidad premium diseñada para nueva generación.
+            </p>
+
+          </div>
+
+        </article>
 
       </div>
 
-      <p
-        class="subtle"
-        style="
-          font-size:.9rem;
-        "
-      >
-        © 2026 Velver Motos™ · All Rights Reserved
-      </p>
-
     </div>
 
-  </footer>
+  </section>
 
   <!-- SCRIPTS -->
   <script>
 
-    // GSAP SAFE LOAD
+    // INTRO
 
     window.addEventListener('load', () => {
 
@@ -1176,7 +940,7 @@
 
     });
 
-    // PARALLAX OPTIMIZED
+    // PARALLAX
 
     const parallaxItems =
       document.querySelectorAll('.parallax');
@@ -1214,36 +978,6 @@
     }
 
     animateParallax();
-
-    // REVEAL SYSTEM
-
-    const reveals =
-      document.querySelectorAll('.reveal');
-
-    const observer =
-      new IntersectionObserver(entries => {
-
-        entries.forEach(entry => {
-
-          if (entry.isIntersecting) {
-
-            entry.target.style.transition =
-              '1s cubic-bezier(.19,1,.22,1)';
-
-            entry.target.style.opacity = 1;
-
-            entry.target.style.transform =
-              'translateY(0px)';
-
-          }
-
-        });
-
-      }, {
-        threshold: .12
-      });
-
-    reveals.forEach(el => observer.observe(el));
 
   </script>
 
