@@ -740,7 +740,116 @@
     </div>
 
   </section>
+<!-- CINEMATIC MODAL -->
 
+<div
+  id="motoModal"
+  class="fixed inset-0 z-[9999] hidden items-center justify-center p-4 bg-black/80 backdrop-blur-xl"
+>
+
+  <!-- CAJA MODAL -->
+
+  <div
+    id="modalContent"
+    class="glass w-full max-w-6xl rounded-[40px] overflow-hidden relative"
+  >
+
+    <!-- BOTON CERRAR -->
+
+    <button
+      id="closeModal"
+      class="absolute top-5 right-5 z-50 w-12 h-12 rounded-full glass flex items-center justify-center text-xl"
+    >
+      ✕
+    </button>
+
+    <!-- GRID -->
+
+    <div class="grid lg:grid-cols-2">
+
+      <!-- IMAGEN -->
+
+      <div class="relative h-[320px] lg:h-full">
+
+        <img
+          id="modalImage"
+          src=""
+          alt=""
+          class="w-full h-full object-cover"
+        >
+
+      </div>
+
+      <!-- INFO -->
+
+      <div class="p-8 lg:p-14">
+
+        <p
+          id="modalCategory"
+          class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-4"
+        >
+          Categoría
+        </p>
+
+        <h2
+          id="modalTitle"
+          class="text-4xl lg:text-6xl font-black mb-6"
+        >
+          Moto
+        </h2>
+
+        <p
+          id="modalDescription"
+          class="subtle text-lg leading-relaxed mb-10"
+        >
+          Descripción
+        </p>
+
+        <!-- SPECS -->
+
+        <div class="space-y-5 mb-10">
+
+          <div class="flex items-center justify-between glass rounded-2xl p-5">
+            <span>Motor</span>
+            <span id="modalMotor">200cc</span>
+          </div>
+
+          <div class="flex items-center justify-between glass rounded-2xl p-5">
+            <span>Velocidad</span>
+            <span id="modalSpeed">120 km/h</span>
+          </div>
+
+        </div>
+
+        <!-- BOTONES -->
+
+        <div class="flex flex-col sm:flex-row gap-5">
+
+          <a
+            id="modalWhatsapp"
+            href="#"
+            target="_blank"
+            class="primary-btn px-8 py-5 rounded-2xl font-bold text-center"
+          >
+            WhatsApp IA
+          </a>
+
+          <button
+            id="closeModalBottom"
+            class="glass px-8 py-5 rounded-2xl font-bold"
+          >
+            Cerrar
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
   <!-- FOOTER -->
 
   <footer class="px-6 pb-14">
@@ -897,9 +1006,17 @@
 
             </div>
 
-            <button class="primary-btn w-full px-5 py-4 rounded-2xl font-semibold">
-              Explorar experiencia
-            </button>
+           <button
+  class="open-modal-btn primary-btn w-full px-5 py-4 rounded-2xl font-semibold"
+  data-nombre="${moto.nombre}"
+  data-categoria="${moto.categoria}"
+  data-velocidad="${moto.velocidad}"
+  data-motor="${moto.motor}"
+  data-descripcion="${moto.descripcion}"
+  data-imagen="${moto.imagen}"
+>
+  Explorar experiencia
+</button>
 
           </div>
 
@@ -992,7 +1109,86 @@
       });
 
     });
+// MODAL SYSTEM
 
+const motoModal = document.getElementById('motoModal');
+
+const modalImage = document.getElementById('modalImage');
+const modalTitle = document.getElementById('modalTitle');
+const modalCategory = document.getElementById('modalCategory');
+const modalDescription = document.getElementById('modalDescription');
+const modalMotor = document.getElementById('modalMotor');
+const modalSpeed = document.getElementById('modalSpeed');
+
+const modalWhatsapp = document.getElementById('modalWhatsapp');
+
+const closeModal = document.getElementById('closeModal');
+const closeModalBottom = document.getElementById('closeModalBottom');
+
+document.addEventListener('click',(e)=>{
+
+  if(e.target.classList.contains('open-modal-btn')){
+
+    const btn = e.target;
+
+    modalImage.src = btn.dataset.imagen;
+
+    modalTitle.innerText = btn.dataset.nombre;
+
+    modalCategory.innerText = btn.dataset.categoria;
+
+    modalDescription.innerText = btn.dataset.descripcion;
+
+    modalMotor.innerText = btn.dataset.motor;
+
+    modalSpeed.innerText = btn.dataset.velocidad;
+
+    modalWhatsapp.href =
+      `https://wa.me/522441252948?text=${encodeURIComponent(`Hola Velver Motos. Deseo información sobre la ${btn.dataset.nombre}`)}`;
+
+    motoModal.classList.remove('hidden');
+
+    motoModal.classList.add('flex');
+
+    gsap.from('#modalContent',{
+      opacity:0,
+      y:80,
+      scale:.95,
+      duration:.7,
+      ease:'power3.out'
+    });
+
+  }
+
+});
+    function closeModalSystem(){
+
+  gsap.to('#modalContent',{
+    opacity:0,
+    y:40,
+    scale:.96,
+    duration:.4,
+    ease:'power2.in',
+    onComplete:()=>{
+
+      motoModal.classList.add('hidden');
+
+      motoModal.classList.remove('flex');
+
+      gsap.set('#modalContent',{
+        opacity:1,
+        y:0,
+        scale:1
+      });
+
+    }
+  });
+
+}
+
+closeModal.addEventListener('click',closeModalSystem);
+
+closeModalBottom.addEventListener('click',closeModalSystem);
   </script>
 
 </body>
