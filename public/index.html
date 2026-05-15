@@ -1,21 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
+  <!-- SEO PREMIUM SYSTEM -->
   <meta charset="UTF-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
   <title>Velver Motos Atlixco™ | AI Smart Catalog</title>
 
-  <meta name="description" content="Experiencia premium inteligente de motocicletas en Atlixco.">
+  <meta name="description"
+    content="Experiencia premium inteligente de motocicletas en Atlixco. Catálogo cinematográfico, financiamiento y ecosistema IA.">
+
+  <meta name="keywords"
+    content="motos atlixco, motocicletas atlixco, motos puebla, motocicletas puebla, financiamiento motos, velver motos, motos deportivas atlixco">
+
+  <meta name="author" content="Velver Motos Atlixco">
+
+  <meta name="robots" content="index, follow">
+
   <meta name="theme-color" content="#050505">
 
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="Velver Motos Atlixco™">
+
+  <meta property="og:description"
+    content="Catálogo inteligente premium de motocicletas en Atlixco.">
+
+  <meta property="og:image" content="/logo-main.png">
+
+  <meta property="og:type" content="website">
+
+  <meta property="og:url" content="https://TU-DOMINIO.pages.dev">
+
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- GEO -->
+  <meta name="geo.region" content="MX-PUE">
+
+  <meta name="geo.placename" content="Atlixco">
+
+  <!-- PERFORMANCE -->
+  <link rel="preload" as="image" href="/crx200.webp">
+
+  <link rel="preload" as="image" href="/fighter200.webp">
+
+  <link rel="preload" as="image" href="/ad1.5.webp">
+
+  <!-- ICON -->
   <link rel="icon" type="image/png" href="/logo-main.png">
 
   <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
   <!-- TAILWIND -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -24,205 +68,300 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
   <!-- FONT AWESOME -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- GOOGLE ANALYTICS -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G1JRYB0WW5"></script>
+  <script async
+    src="https://www.googletagmanager.com/gtag/js?id=G-G1JRYB0WW5"></script>
 
   <script>
     window.dataLayer = window.dataLayer || [];
 
-    function gtag(){
+    function gtag() {
       dataLayer.push(arguments);
     }
 
     gtag('js', new Date());
+
     gtag('config', 'G-G1JRYB0WW5');
   </script>
 
+  <!-- SCHEMA SEO -->
+  <script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"MotorcycleDealer",
+"name":"Velver Motos Atlixco",
+"url":"https://TU-DOMINIO.pages.dev",
+"logo":"https://TU-DOMINIO.pages.dev/logo-main.png",
+"address":{
+"@type":"PostalAddress",
+"addressLocality":"Atlixco",
+"addressRegion":"Puebla",
+"addressCountry":"MX"
+},
+"telephone":"+52 2441252948"
+}
+</script>
+
   <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Inter',sans-serif;
-      -webkit-tap-highlight-color:transparent;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+      -webkit-tap-highlight-color: transparent;
     }
 
-    html{
-      scroll-behavior:smooth;
+    html {
+      scroll-behavior: smooth;
     }
 
-    body{
-      background:#050505;
-      color:#F5F7FA;
-      overflow-x:hidden;
+    body {
+      background: #050505;
+      color: #F5F7FA;
+      overflow-x: hidden;
     }
 
-    .container-system{
-      max-width:1450px;
-      margin:auto;
+    .container-system {
+      max-width: 1450px;
+      margin: auto;
     }
 
-    .section{
-      padding:140px 24px;
-      position:relative;
-      z-index:2;
+    .section {
+      padding: 140px 24px;
+      position: relative;
+      z-index: 2;
     }
 
-    .glass{
-      background:rgba(255,255,255,.035);
-      backdrop-filter:blur(20px);
-      border:1px solid rgba(255,255,255,.06);
+    .glass {
+      background: rgba(255, 255, 255, .035);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, .06);
     }
 
-    .glass-soft{
-      background:rgba(255,255,255,.02);
-      backdrop-filter:blur(14px);
-      border:1px solid rgba(255,255,255,.04);
+    .glass-soft {
+      background: rgba(255, 255, 255, .02);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, .04);
     }
 
-    .gradient-text{
-      background:linear-gradient(90deg,#FFFFFF,#9FD3FF);
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
+    .gradient-text {
+      background: linear-gradient(90deg, #FFFFFF, #9FD3FF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    .subtle{
-      color:#8B949E;
+    .subtle {
+      color: #8B949E;
     }
 
-    .primary-btn{
-      background:linear-gradient(135deg,#0057FF,#3BA0FF);
-      transition:.4s ease;
-      box-shadow:0 20px 70px rgba(0,87,255,.22);
+    .primary-btn {
+      background: linear-gradient(135deg, #0057FF, #3BA0FF);
+      transition: .4s ease;
+      box-shadow: 0 20px 70px rgba(0, 87, 255, .22);
     }
 
-    .primary-btn:hover{
-      transform:translateY(-4px);
-      box-shadow:0 25px 90px rgba(0,87,255,.35);
+    .primary-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 25px 90px rgba(0, 87, 255, .35);
     }
 
-    .bg-system{
-      position:fixed;
-      inset:0;
-      z-index:-2;
-      overflow:hidden;
+    .bg-system {
+      position: fixed;
+      inset: 0;
+      z-index: -3;
+      overflow: hidden;
     }
 
-    .glow-a{
-      position:absolute;
-      width:900px;
-      height:900px;
-      border-radius:999px;
-      background:#0057FF;
-      top:-300px;
-      left:-300px;
-      opacity:.08;
-      filter:blur(180px);
+    .glow-a {
+      position: absolute;
+      width: 900px;
+      height: 900px;
+      border-radius: 999px;
+      background: #0057FF;
+      top: -300px;
+      left: -300px;
+      opacity: .08;
+      filter: blur(180px);
+      animation: floatGlow 12s infinite alternate ease-in-out;
     }
 
-    .glow-b{
-      position:absolute;
-      width:700px;
-      height:700px;
-      border-radius:999px;
-      background:#3BA0FF;
-      bottom:-250px;
-      right:-220px;
-      opacity:.08;
-      filter:blur(180px);
+    .glow-b {
+      position: absolute;
+      width: 700px;
+      height: 700px;
+      border-radius: 999px;
+      background: #3BA0FF;
+      bottom: -250px;
+      right: -220px;
+      opacity: .08;
+      filter: blur(180px);
+      animation: floatGlow 14s infinite alternate ease-in-out;
     }
 
-    .noise{
-      position:absolute;
-      inset:0;
-      opacity:.02;
-      background-image:radial-gradient(#fff .5px,transparent .5px);
-      background-size:12px 12px;
+    .noise {
+      position: absolute;
+      inset: 0;
+      opacity: .02;
+      background-image: radial-gradient(#fff .5px, transparent .5px);
+      background-size: 12px 12px;
     }
 
-    .navbar{
-      position:fixed;
-      top:18px;
-      left:50%;
-      transform:translateX(-50%);
-      width:calc(100% - 24px);
-      max-width:1450px;
-      z-index:1000;
+    .particles {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
     }
 
-    .hero{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      position:relative;
-      overflow:hidden;
-      padding:0 24px;
+    .particle {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: rgba(255, 255, 255, .35);
+      border-radius: 50%;
+      animation: particleFloat linear infinite;
     }
 
-    .massive{
-      font-size:clamp(3.2rem,10vw,8rem);
-      line-height:.95;
-      font-weight:900;
-    }
-
-    .catalog-card{
-      transition:.45s ease;
-      overflow:hidden;
-    }
-
-    .catalog-card:hover{
-      transform:translateY(-10px);
-      border-color:rgba(59,160,255,.25);
-    }
-
-    .social-btn{
-      transition:.4s ease;
-    }
-
-    .social-btn:hover{
-      transform:translateY(-6px);
-      border-color:rgba(59,160,255,.3);
-    }
-
-    #intro{
-      position:fixed;
-      inset:0;
-      background:#050505;
-      z-index:9999;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-
-    @media(max-width:980px){
-
-      .desktop-nav{
-        display:none;
+    @keyframes particleFloat {
+      from {
+        transform: translateY(100vh);
       }
 
-      .section{
-        padding:110px 22px;
+      to {
+        transform: translateY(-120vh);
+      }
+    }
+
+    @keyframes floatGlow {
+      from {
+        transform: translateY(0px) translateX(0px);
       }
 
-      .massive{
-        font-size:3.7rem;
+      to {
+        transform: translateY(40px) translateX(20px);
+      }
+    }
+
+    .navbar {
+      position: fixed;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 24px);
+      max-width: 1450px;
+      z-index: 1000;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 0 24px;
+    }
+
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: .18;
+      z-index: -2;
+      filter: saturate(120%);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(0, 0, 0, .45), rgba(5, 5, 5, .9));
+      z-index: -1;
+    }
+
+    .massive {
+      font-size: clamp(3.2rem, 10vw, 8rem);
+      line-height: .95;
+      font-weight: 900;
+    }
+
+    .catalog-card {
+      transition: .45s ease;
+      overflow: hidden;
+      transform-style: preserve-3d;
+    }
+
+    .catalog-card:hover {
+      transform: translateY(-10px) rotateX(2deg) rotateY(-2deg);
+      border-color: rgba(59, 160, 255, .25);
+    }
+
+    .social-btn {
+      transition: .4s ease;
+    }
+
+    .social-btn:hover {
+      transform: translateY(-6px);
+      border-color: rgba(59, 160, 255, .3);
+    }
+
+    #intro {
+      position: fixed;
+      inset: 0;
+      background: #050505;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .blur-circle {
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(120px);
+      opacity: .08;
+    }
+
+    .parallax {
+      will-change: transform;
+    }
+
+    @media(max-width:980px) {
+
+      .desktop-nav {
+        display: none;
+      }
+
+      .section {
+        padding: 110px 22px;
+      }
+
+      .massive {
+        font-size: 3.7rem;
       }
 
     }
-
   </style>
+
 </head>
+
 <body>
 
   <!-- BACKGROUND -->
 
   <div class="bg-system">
+
     <div class="glow-a"></div>
+
     <div class="glow-b"></div>
+
     <div class="noise"></div>
+
+    <div class="particles" id="particles"></div>
+
   </div>
 
   <!-- INTRO -->
@@ -305,11 +444,24 @@
 
   <section class="hero">
 
+    <!-- VIDEO BACKGROUND -->
+    <video
+      class="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+    >
+      <source src="/hero-video.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay"></div>
+
     <div class="container-system relative z-10 pt-40">
 
       <div class="grid lg:grid-cols-[1.1fr_.9fr] gap-16 items-center">
 
-        <div>
+        <div class="parallax" data-speed="0.05">
 
           <div class="glass-soft inline-flex items-center gap-3 px-5 py-3 rounded-full mb-10">
 
@@ -344,7 +496,7 @@
 
         </div>
 
-        <div class="relative hidden lg:block">
+        <div class="relative hidden lg:block parallax" data-speed="0.12">
 
           <div class="absolute inset-0 bg-blue-500/10 rounded-full blur-[120px]"></div>
 
@@ -362,845 +514,86 @@
 
   </section>
 
-  <!-- CATALOGO -->
-
-  <section id="catalogo" class="section pt-0">
-
-    <div class="container-system">
-
-      <div class="mb-16">
-
-        <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-5">
-          Smart Collection™
-        </p>
-
-        <h2 class="text-4xl lg:text-6xl font-black mb-8">
-          Catálogo inteligente.
-        </h2>
-
-      </div>
-
-      <div id="catalog-grid" class="grid md:grid-cols-2 xl:grid-cols-3 gap-8"></div>
-
-    </div>
-
-  </section>
-
-  <!-- VELVER CARE -->
-
-  <section id="velver-care" class="section pt-0">
-
-    <div class="container-system">
-
-      <div class="glass rounded-[44px] overflow-hidden relative p-10 lg:p-16">
-
-        <div class="absolute top-[-120px] right-[-120px] w-[320px] h-[320px] bg-blue-500/10 rounded-full blur-[120px]"></div>
-
-        <div class="absolute bottom-[-120px] left-[-120px] w-[300px] h-[300px] bg-cyan-400/10 rounded-full blur-[120px]"></div>
-
-        <div class="relative z-10">
-
-          <div class="max-w-4xl mb-16">
-
-            <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-5">
-              Velver Care System™
-            </p>
-
-            <h2 class="text-4xl lg:text-6xl font-black leading-tight mb-8">
-              Más que garantía.
-              <span class="gradient-text">Un sistema inteligente de respaldo premium.</span>
-            </h2>
-
-            <p class="text-lg subtle leading-relaxed max-w-3xl">
-              Diseñado para proteger tu experiencia, acompañar tu motocicleta y mantener una conexión continua entre Velver y cada cliente.
-            </p>
-
-          </div>
-
-          <div class="grid lg:grid-cols-4 gap-6 mb-16">
-
-            <div class="glass-soft rounded-[30px] p-8">
-              <i class="fa-solid fa-shield-halved text-4xl text-blue-400 mb-6"></i>
-              <h3 class="text-2xl font-black mb-4">Protección Inteligente</h3>
-              <p class="subtle leading-relaxed">Sistema diseñado para brindar confianza y respaldo premium.</p>
-            </div>
-
-            <div class="glass-soft rounded-[30px] p-8">
-              <i class="fa-solid fa-screwdriver-wrench text-4xl text-cyan-400 mb-6"></i>
-              <h3 class="text-2xl font-black mb-4">Smart Maintenance™</h3>
-              <p class="subtle leading-relaxed">Mantenimiento progresivo estructurado para seguridad y rendimiento.</p>
-            </div>
-
-            <div class="glass-soft rounded-[30px] p-8">
-              <i class="fa-solid fa-qrcode text-4xl text-white mb-6"></i>
-              <h3 class="text-2xl font-black mb-4">QR Digital</h3>
-              <p class="subtle leading-relaxed">Acceso rápido a soporte y seguimiento desde cualquier dispositivo.</p>
-            </div>
-
-            <div class="glass-soft rounded-[30px] p-8">
-              <i class="fa-solid fa-headset text-4xl text-green-400 mb-6"></i>
-              <h3 class="text-2xl font-black mb-4">Premium Support™</h3>
-              <p class="subtle leading-relaxed">Ecosistema postventa diseñado para acompañar al cliente.</p>
-            </div>
-
-          </div>
-
-          <div class="glass-soft rounded-[38px] p-8 lg:p-12 mb-16">
-
-            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 mb-12">
-
-              <div>
-                <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-4">
-                  Smart Maintenance™
-                </p>
-
-                <h3 class="text-3xl lg:text-5xl font-black leading-tight">
-                  Seguimiento inteligente de servicios.
-                </h3>
-              </div>
-
-              <p class="subtle max-w-xl leading-relaxed text-lg">
-                Sistema estructurado para mantener rendimiento y seguridad.
-              </p>
-
-            </div>
-
-            <div class="grid grid-cols-2 lg:grid-cols-5 gap-6">
-
-              <div class="glass rounded-[28px] p-6 text-center">
-                <p class="text-4xl font-black text-blue-400 mb-3">500</p>
-                <p class="font-semibold">Primer servicio</p>
-              </div>
-
-              <div class="glass rounded-[28px] p-6 text-center">
-                <p class="text-4xl font-black text-cyan-400 mb-3">3K</p>
-                <p class="font-semibold">3,000 km</p>
-              </div>
-
-              <div class="glass rounded-[28px] p-6 text-center">
-                <p class="text-4xl font-black text-white mb-3">6K</p>
-                <p class="font-semibold">6,000 km</p>
-              </div>
-
-              <div class="glass rounded-[28px] p-6 text-center">
-                <p class="text-4xl font-black text-blue-300 mb-3">12K</p>
-                <p class="font-semibold">12,000 km</p>
-              </div>
-
-              <div class="glass rounded-[28px] p-6 text-center">
-                <p class="text-4xl font-black text-cyan-300 mb-3">24K</p>
-                <p class="font-semibold">24,000 km</p>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="text-center">
-
-            <a
-              href="https://wa.me/522441252948"
-              target="_blank"
-              class="primary-btn inline-flex items-center gap-3 px-10 py-5 rounded-2xl font-bold"
-            >
-              <i class="fa-brands fa-whatsapp text-xl"></i>
-              Activar soporte inteligente
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- AI MATCH -->
-
-  <section id="ai-match" class="section pt-0">
-
-    <div class="container-system max-w-5xl">
-
-      <div class="glass rounded-[40px] p-8 lg:p-14">
-
-        <div class="text-center mb-14">
-
-          <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-5">
-            AI Match™
-          </p>
-
-          <h2 class="text-4xl lg:text-6xl font-black mb-8">
-            Descubre tu moto ideal.
-          </h2>
-
-        </div>
-
-        <div class="grid lg:grid-cols-2 gap-8">
-
-          <div>
-            <label class="block mb-4 font-semibold">Uso principal</label>
-            <select id="use" class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none">
-              <option value="city">Ciudad</option>
-              <option value="travel">Viajes</option>
-              <option value="sport">Deportivo</option>
-            </select>
-          </div>
-
-          <div>
-            <label class="block mb-4 font-semibold">Experiencia</label>
-            <select id="experience" class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none">
-              <option value="beginner">Principiante</option>
-              <option value="mid">Intermedio</option>
-              <option value="advanced">Avanzado</option>
-            </select>
-          </div>
-
-          <div>
-            <label class="block mb-4 font-semibold">Presupuesto estimado</label>
-            <select id="budget" class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none">
-              <option value="20-30k">20K - 30K</option>
-              <option value="30-50k">30K - 50K</option>
-              <option value="50-80k">50K - 80K</option>
-              <option value="80k+">80K+</option>
-            </select>
-          </div>
-
-          <div>
-            <label class="block mb-4 font-semibold">Método de compra</label>
-            <select id="payment" class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none">
-              <option value="contado">Contado</option>
-              <option value="financiamiento">Financiamiento</option>
-              <option value="apartado">Apartado</option>
-            </select>
-          </div>
-
-          <div>
-            <label class="block mb-4 font-semibold">Nombre</label>
-            <input id="leadName" type="text" placeholder="Tu nombre" class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none">
-          </div>
-
-          <div>
-            <label class="block mb-4 font-semibold">WhatsApp</label>
-            <input id="leadWhatsapp" type="tel" placeholder="Tu número" class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none">
-          </div>
-
-          
-
-        </div>
-
-        <div class="text-center mt-12">
-
-          <button id="aiMatchBtn" class="primary-btn px-10 py-5 rounded-2xl font-bold">
-            Analizar perfil
-          </button>
-
-        </div>
-
-        <div id="aiResult" class="hidden mt-14 glass rounded-[34px] p-10 text-center">
-
-          <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-5">
-            AI Recommendation™
-          </p>
-
-          <h3 id="resultTitle" class="text-4xl font-black mb-6"></h3>
-
-          <p id="resultDescription" class="subtle text-lg leading-relaxed mb-10"></p>
-
-          <a
-            id="resultWhatsapp"
-            href="#"
-            target="_blank"
-            class="primary-btn inline-block px-8 py-4 rounded-2xl font-bold"
-          >
-            Solicitar información
-          </a>
-
-        </div>
-
-                <div id="financePrequalify" class="hidden mt-10 glass-soft rounded-[30px] p-8 text-left max-w-3xl mx-auto">
-
-            <div class="mb-8 text-center">
-
-              <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-4">
-                Precalificación Express™
-              </p>
-
-              <h3 class="text-3xl font-black mb-4">
-                Activa tu evaluación financiera inteligente.
-              </h3>
-
-              <p class="subtle leading-relaxed max-w-2xl mx-auto">
-                Nuestro equipo y sistema IA te ayudarán a encontrar la mejor opción de financiamiento según tu perfil.
-              </p>
-
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-6 mb-8">
-
-              <div class="glass rounded-[24px] p-6">
-                <p class="font-bold mb-3">Requisitos básicos</p>
-                <ul class="space-y-3 subtle">
-                  <li>• INE frontal y reverso</li>
-                  <li>• Correo electrónico</li>
-                  <li>• Número celular activo</li>
-                </ul>
-              </div>
-
-              <div class="glass rounded-[24px] p-6">
-                <p class="font-bold mb-3">Opciones de financiamiento</p>
-                <ul class="space-y-3 subtle">
-                  <li>• Galgo</li>
-                  <li>• MaxiKash</li>
-                  <li>• Atrato</li>
-                  <li>• Moto Ya</li>
-                  <li>• Crédito Elektra</li>
-                </ul>
-              </div>
-
-            </div>
-
-            <div class="glass rounded-[28px] p-6 mb-8">
-              <label class="block mb-4 font-semibold">Historial crediticio</label>
-
-              <select id="creditProfile" class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none">
-                <option value="bueno">Bueno</option>
-                <option value="regular">Regular</option>
-                <option value="sin historial">Sin historial</option>
-              </select>
-            </div>
-
-            <div class="text-center">
-
-              <a
-                id="financeWhatsapp"
-                href="#"
-                target="_blank"
-                class="primary-btn inline-flex items-center gap-3 px-8 py-5 rounded-2xl font-bold"
-              >
-                <i class="fa-brands fa-whatsapp text-xl"></i>
-                Continuar precalificación por WhatsApp
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- REDES -->
-
-  <section id="redes" class="section pt-0">
-
-    <div class="container-system">
-
-      <div class="glass rounded-[44px] p-10 lg:p-16">
-
-        <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-6">
-          Social Ecosystem™
-        </p>
-
-        <h2 class="text-4xl lg:text-6xl font-black leading-tight mb-10">
-          Conecta con Velver.
-        </h2>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-          <a href="https://facebook.com" target="_blank" class="social-btn glass rounded-3xl p-8 text-center">
-            <i class="fa-brands fa-facebook-f text-5xl text-blue-500 mb-6"></i>
-            <h3 class="text-2xl font-black">Facebook</h3>
-          </a>
-
-          <a href="https://instagram.com" target="_blank" class="social-btn glass rounded-3xl p-8 text-center">
-            <i class="fa-brands fa-instagram text-5xl text-pink-500 mb-6"></i>
-            <h3 class="text-2xl font-black">Instagram</h3>
-          </a>
-
-          <a href="https://tiktok.com" target="_blank" class="social-btn glass rounded-3xl p-8 text-center">
-            <i class="fa-brands fa-tiktok text-5xl text-cyan-400 mb-6"></i>
-            <h3 class="text-2xl font-black">TikTok</h3>
-          </a>
-
-          <a href="https://maps.google.com" target="_blank" class="social-btn glass rounded-3xl p-8 text-center">
-            <i class="fa-solid fa-location-dot text-5xl text-green-400 mb-6"></i>
-            <h3 class="text-2xl font-black">Maps</h3>
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-<!-- CINEMATIC MODAL -->
-
-<div
-  id="motoModal"
-  class="fixed inset-0 z-[9999] hidden items-center justify-center p-4 bg-black/80 backdrop-blur-xl"
->
-
-  <!-- CAJA MODAL -->
-
-  <div
-    id="modalContent"
-    class="glass w-full max-w-6xl rounded-[40px] overflow-hidden relative"
-  >
-
-    <!-- BOTON CERRAR -->
-
-    <button
-      id="closeModal"
-      class="absolute top-5 right-5 z-50 w-12 h-12 rounded-full glass flex items-center justify-center text-xl"
-    >
-      ✕
-    </button>
-
-    <!-- GRID -->
-
-    <div class="grid lg:grid-cols-[1.1fr_.9fr] min-h-[700px]">
-      <!-- IMAGEN -->
-
-      <div class="relative h-[420px] lg:h-full overflow-hidden">
-
-        <img
-  id="modalImage"
-  src=""
-  alt=""
-  class="w-full h-full object-cover scale-105"
-/>
-
-<div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
-
-<div class="absolute inset-0 bg-blue-500/10 mix-blend-screen"></div>
-        >
-
-      </div>
-
-      <!-- INFO -->
-
-      <div class="p-8 lg:p-14">
-
-        <p
-          id="modalCategory"
-          class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-4"
-        >
-          Categoría
-        </p>
-
-        <h2
-          id="modalTitle"
-          class="text-4xl lg:text-6xl font-black mb-6"
-        >
-          Moto
-        </h2>
-
-        <p
-          id="modalDescription"
-          class="subtle text-lg leading-relaxed mb-10"
-        >
-          Descripción
-        </p>
-
-        <!-- SPECS -->
-
-        <div class="space-y-5 mb-10">
-
-          <div class="flex items-center justify-between glass rounded-2xl p-5">
-            <span>Motor</span>
-            <span id="modalMotor">200cc</span>
-          </div>
-
-          <div class="flex items-center justify-between glass rounded-2xl p-5">
-            <span>Velocidad</span>
-            <span id="modalSpeed">120 km/h</span>
-          </div>
-
-        </div>
-
-        <!-- BOTONES -->
-
-        <div class="flex flex-col sm:flex-row gap-5">
-
-          <a
-            id="modalWhatsapp"
-            href="#"
-            target="_blank"
-            class="primary-btn px-8 py-5 rounded-2xl font-bold text-center"
-          >
-            WhatsApp IA
-          </a>
-
-          <button
-            id="closeModalBottom"
-            class="glass px-8 py-5 rounded-2xl font-bold"
-          >
-            Cerrar
-          </button>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-  <!-- FOOTER -->
-
-  <footer class="px-6 pb-14">
-
-    <div class="container-system">
-
-      <div class="glass rounded-[34px] p-10 lg:p-14 flex flex-col lg:flex-row items-center justify-between gap-10">
-
-        <div class="flex items-center gap-5">
-
-          <img src="/logo-secondary.png" alt="Velver" class="w-[70px]">
-
-          <div>
-            <h3 class="text-3xl font-black">Velver Motos Atlixco™</h3>
-            <p class="subtle">AI Luxury Motorcycle Platform™</p>
-          </div>
-
-        </div>
-
-        <a
-          href="https://wa.me/522441252948"
-          target="_blank"
-          class="primary-btn px-8 py-4 rounded-2xl font-bold"
-        >
-          Contactar IA Comercial
-        </a>
-
-      </div>
-
-    </div>
-
-  </footer>
-
-  <!-- SCRIPT -->
-
   <script>
 
-    window.addEventListener('load',()=>{
+    // INTRO
 
-      gsap.to('#introLogo',{
-        opacity:1,
-        scale:1,
-        duration:1.2
+    window.addEventListener('load', () => {
+
+      gsap.to('#introLogo', {
+        opacity: 1,
+        scale: 1,
+        duration: 1.2
       });
 
-      gsap.to('#introTitle',{
-        opacity:1,
-        y:-10,
-        duration:1,
-        delay:.3
+      gsap.to('#introTitle', {
+        opacity: 1,
+        y: -10,
+        duration: 1,
+        delay: .3
       });
 
-      gsap.to('#introSub',{
-        opacity:1,
-        y:-10,
-        duration:1,
-        delay:.6
+      gsap.to('#introSub', {
+        opacity: 1,
+        y: -10,
+        duration: 1,
+        delay: .6
       });
 
-      gsap.to('#intro',{
-        opacity:0,
-        duration:1.4,
-        delay:2.8,
-        pointerEvents:'none'
+      gsap.to('#intro', {
+        opacity: 0,
+        duration: 1.4,
+        delay: 2.8,
+        pointerEvents: 'none'
       });
 
     });
 
-    const motos = [
+    // PARTICLES
 
-      {
-        nombre:'CRX 200',
-        categoria:'Deportiva',
-        velocidad:'105 km/h',
-        motor:'200cc',
-        descripcion:'Diseñada para adrenalina premium y experiencia deportiva.',
-        imagen:'/crx200.webp'
-      },
+    const particles = document.getElementById('particles');
 
-      {
-        nombre:'Fighter 200',
-        categoria:'Touring',
-        velocidad:'115 km/h',
-        motor:'200cc',
-        descripcion:'Experiencia touring elite con presencia cinematográfica.',
-        imagen:'/fighter200.webp'
-      },
+    for (let i = 0; i < 70; i++) {
 
-      {
-        nombre:'AD1.5 150',
-        categoria:'Urbana',
-        velocidad:'90 km/h',
-        motor:'150cc',
-        descripcion:'Movilidad urbana premium inteligente.',
-        imagen:'/ad1.5.webp'
-      }
+      const particle = document.createElement('div');
 
-    ];
+      particle.classList.add('particle');
 
-    const catalogGrid = document.getElementById('catalog-grid');
+      particle.style.left = Math.random() * 100 + 'vw';
 
-    function renderCatalog(items){
+      particle.style.animationDuration = (Math.random() * 12 + 8) + 's';
 
-      catalogGrid.innerHTML = '';
+      particle.style.opacity = Math.random();
 
-      items.forEach((moto,index)=>{
+      particle.style.transform = `scale(${Math.random() * 2})`;
 
-        const card = document.createElement('div');
-
-        card.className = 'catalog-card glass rounded-[34px] overflow-hidden';
-
-        card.innerHTML = `
-
-          <div class="h-[280px] overflow-hidden relative">
-
-            <img
-              src="${moto.imagen}"
-              alt="${moto.nombre}"
-              loading="lazy"
-              class="w-full h-full object-cover hover:scale-110 transition duration-700"
-            >
-
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-
-          </div>
-
-          <div class="p-8">
-
-            <div class="flex items-center justify-between mb-5 gap-4">
-
-              <h3 class="text-3xl font-black">${moto.nombre}</h3>
-
-              <span class="text-blue-400 text-sm font-semibold whitespace-nowrap">
-                ${moto.categoria}
-              </span>
-
-            </div>
-
-            <p class="subtle leading-relaxed mb-8">
-              ${moto.descripcion}
-            </p>
-
-            <div class="space-y-3 subtle mb-8">
-
-              <div class="flex items-center justify-between">
-                <span>Velocidad</span>
-                <span>${moto.velocidad}</span>
-              </div>
-
-              <div class="flex items-center justify-between">
-                <span>Motor</span>
-                <span>${moto.motor}</span>
-              </div>
-
-            </div>
-
-           <button
-  class="open-modal-btn primary-btn w-full px-5 py-4 rounded-2xl font-semibold"
-  data-nombre="${moto.nombre}"
-  data-categoria="${moto.categoria}"
-  data-velocidad="${moto.velocidad}"
-  data-motor="${moto.motor}"
-  data-descripcion="${moto.descripcion}"
-  data-imagen="${moto.imagen}"
->
-  Explorar experiencia
-</button>
-
-          </div>
-
-        `;
-
-        catalogGrid.appendChild(card);
-
-        gsap.from(card,{
-          opacity:0,
-          y:80,
-          duration:1,
-          delay:index * .12
-        });
-
-      });
+      particles.appendChild(particle);
 
     }
 
-    renderCatalog(motos);
+    // PARALLAX
 
-    const aiMatchBtn = document.getElementById('aiMatchBtn');
-    const aiResult = document.getElementById('aiResult');
+    document.addEventListener('mousemove', (e) => {
 
-    aiMatchBtn.addEventListener('click',()=>{
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
 
-      const leadName = document.getElementById('leadName').value;
-      const leadWhatsapp = document.getElementById('leadWhatsapp').value;
-      const budget = document.getElementById('budget').value;
-      const payment = document.getElementById('payment').value;
+      document.querySelectorAll('.parallax').forEach(el => {
 
-      if(!leadName || !leadWhatsapp){
-        alert('Completa nombre y WhatsApp para continuar.');
-        return;
-      }
+        const speed = el.dataset.speed;
 
-      gtag('event','ai_match_completed',{
-        event_category:'lead_generation',
-        event_label:'AI Match Lead'
-      });
+        const moveX = (x - .5) * 50 * speed;
+        const moveY = (y - .5) * 50 * speed;
 
-      const use = document.getElementById('use').value;
+        el.style.transform =
+          `translate(${moveX}px, ${moveY}px)`;
 
-      let moto = {};
-
-      if(use === 'sport'){
-
-        moto = {
-          nombre:'Neo 200',
-          descripcion:'Ideal para adrenalina urbana y experiencia deportiva premium.'
-        };
-
-      }
-
-      else if(use === 'travel'){
-
-        moto = {
-          nombre:'CRX 300',
-          descripcion:'Perfecta para viajes, confort y presencia touring elite.'
-        };
-
-      }
-
-      else{
-
-        moto = {
-          nombre:'Urban X',
-          descripcion:'Movilidad urbana inteligente diseñada para ciudad.'
-        };
-
-      }
-
-      document.getElementById('resultTitle').innerText = moto.nombre;
-
-      document.getElementById('resultDescription').innerText = moto.descripcion;
-
-      document.getElementById('resultWhatsapp').href = `https://wa.me/522441252948?text=${encodeURIComponent(`Hola Velver Motos, soy ${leadName}. La IA me recomendó la motocicleta ${moto.nombre}. Mi presupuesto es ${budget} y me interesa ${payment}. Mi WhatsApp es ${leadWhatsapp}`)}`;
-
-      aiResult.classList.remove('hidden');
-
-      document.getElementById('financePrequalify').classList.remove('hidden');
-
-      const creditProfile = document.getElementById('creditProfile');
-
-      document.getElementById('financeWhatsapp').href = `https://wa.me/522441252948?text=${encodeURIComponent(`Hola Velver Motos. Deseo continuar mi precalificación financiera para la motocicleta ${moto.nombre}. Mi nombre es ${leadName}, mi presupuesto es ${budget}, me interesa ${payment} y mi historial crediticio es ${creditProfile ? creditProfile.value : 'pendiente'}. Me gustaría recibir instrucciones para enviar mi documentación.`)}`;
-
-      gsap.from('#aiResult',{
-        opacity:0,
-        y:50,
-        duration:1
       });
 
     });
-// MODAL SYSTEM
 
-const motoModal = document.getElementById('motoModal');
-
-const modalImage = document.getElementById('modalImage');
-const modalTitle = document.getElementById('modalTitle');
-const modalCategory = document.getElementById('modalCategory');
-const modalDescription = document.getElementById('modalDescription');
-const modalMotor = document.getElementById('modalMotor');
-const modalSpeed = document.getElementById('modalSpeed');
-
-const modalWhatsapp = document.getElementById('modalWhatsapp');
-
-const closeModal = document.getElementById('closeModal');
-const closeModalBottom = document.getElementById('closeModalBottom');
-
-document.addEventListener('click',(e)=>{
-
-  if(e.target.classList.contains('open-modal-btn')){
-
-    const btn = e.target;
-
-    modalImage.src = btn.dataset.imagen;
-
-    modalTitle.innerText = btn.dataset.nombre;
-
-    modalCategory.innerText = btn.dataset.categoria;
-
-    modalDescription.innerText = btn.dataset.descripcion;
-
-    modalMotor.innerText = btn.dataset.motor;
-
-    modalSpeed.innerText = btn.dataset.velocidad;
-
-    modalWhatsapp.href =
-      `https://wa.me/522441252948?text=${encodeURIComponent(`Hola Velver Motos. Deseo información sobre la ${btn.dataset.nombre}`)}`;
-
-    motoModal.classList.remove('hidden');
-document.body.style.overflow = 'hidden';
-    motoModal.classList.add('flex');
-
-    gsap.from('#modalContent',{
-      opacity:0,
-      y:80,
-      scale:.95,
-      duration:.7,
-      ease:'power3.out'
-    });
-
-  }
-
-});
-    function closeModalSystem(){
-
-  gsap.to('#modalContent',{
-    opacity:0,
-    y:40,
-    scale:.96,
-    duration:.4,
-    ease:'power2.in',
-    onComplete:()=>{
-
-      motoModal.classList.add('hidden');
-document.body.style.overflow = 'auto';
-      motoModal.classList.remove('flex');
-
-      gsap.set('#modalContent',{
-        opacity:1,
-        y:0,
-        scale:1
-      });
-
-    }
-  });
-
-}
-
-closeModal.addEventListener('click',closeModalSystem);
-
-closeModalBottom.addEventListener('click',closeModalSystem);
-    motoModal.addEventListener('click',(e)=>{
-
-  if(e.target === motoModal){
-    closeModalSystem();
-  }
-
-});
   </script>
 
 </body>
+
 </html>
