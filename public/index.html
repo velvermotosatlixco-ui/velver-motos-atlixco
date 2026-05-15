@@ -1,479 +1,193 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-  />
+  <title>Velver Motos Atlixco™ | AI Smart Catalog</title>
 
-  <title>Velver Motos Atlixco™ | Black Code Digital Ecosystem</title>
+  <meta name="description" content="Experiencia premium inteligente de motocicletas en Atlixco.">
+  <meta name="theme-color" content="#050505">
 
-  <meta
-    name="description"
-    content="Experiencia premium inteligente de motocicletas en Atlixco."
-  />
+  <link rel="icon" type="image/png" href="/logo-main.png">
 
-  <meta name="theme-color" content="#050505" />
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link rel="canonical" href="https://velvermotos.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- OPEN GRAPH -->
-  <meta property="og:title" content="Velver Motos Atlixco™" />
-
-  <meta
-    property="og:description"
-    content="Ecosistema cinematográfico premium de motocicletas."
-  />
-
-  <meta property="og:image" content="/logo-main.png" />
-
-  <meta property="og:type" content="website" />
-
-  <meta property="og:url" content="https://velvermotos.com" />
-
-  <!-- PERFORMANCE -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-
-  <!-- FONT -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- PRELOAD -->
-  <link rel="preload" as="image" href="/logo-secondary.webp" />
-
-  <link rel="preload" as="image" href="/logo-main.png" />
-
-  <link rel="preload" as="image" href="/crx200.webp" />
-
-  <link rel="preload" as="image" href="/fighter200.webp" />
-
-  <!-- ICON -->
-  <link rel="icon" type="image/png" href="/logo-main.png" />
+  <!-- TAILWIND -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- GSAP -->
-  <script
-    defer
-    src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
-  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
   <!-- FONT AWESOME -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- GOOGLE ANALYTICS -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G1JRYB0WW5"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag(){
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-G1JRYB0WW5');
+  </script>
 
   <style>
 
-    :root {
-
-      --bg: #050505;
-      --white: #F5F7FA;
-      --muted: #8B949E;
-      --blue: #0057FF;
-      --cyan: #3BA0FF;
-
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Inter',sans-serif;
+      -webkit-tap-highlight-color:transparent;
     }
 
-    * {
-
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-      -webkit-tap-highlight-color: transparent;
-
+    html{
+      scroll-behavior:smooth;
     }
 
-    html {
-      scroll-behavior: smooth;
+    body{
+      background:#050505;
+      color:#F5F7FA;
+      overflow-x:hidden;
     }
 
-    body {
-
-      background: var(--bg);
-      color: var(--white);
-      overflow-x: hidden;
-      min-height: 100dvh;
-
+    .container-system{
+      max-width:1450px;
+      margin:auto;
     }
 
-    img {
-
-      max-width: 100%;
-      display: block;
-
+    .section{
+      padding:140px 24px;
+      position:relative;
+      z-index:2;
     }
 
-    a {
-
-      text-decoration: none;
-      color: inherit;
-
+    .glass{
+      background:rgba(255,255,255,.035);
+      backdrop-filter:blur(20px);
+      border:1px solid rgba(255,255,255,.06);
     }
 
-    .container-system {
-
-      width: min(1450px, calc(100% - 40px));
-      margin-inline: auto;
-
+    .glass-soft{
+      background:rgba(255,255,255,.02);
+      backdrop-filter:blur(14px);
+      border:1px solid rgba(255,255,255,.04);
     }
 
-    .glass {
-
-      background: rgba(255, 255, 255, .04);
-
-      backdrop-filter: blur(18px);
-
-      border: 1px solid rgba(255, 255, 255, .06);
-
+    .gradient-text{
+      background:linear-gradient(90deg,#FFFFFF,#9FD3FF);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
     }
 
-    .glass-soft {
-
-      background: rgba(255, 255, 255, .02);
-
-      backdrop-filter: blur(12px);
-
-      border: 1px solid rgba(255, 255, 255, .04);
-
+    .subtle{
+      color:#8B949E;
     }
 
-    .gradient-text {
-
-      background:
-        linear-gradient(
-          90deg,
-          #FFFFFF,
-          #9FD3FF
-        );
-
-      -webkit-background-clip: text;
-
-      -webkit-text-fill-color: transparent;
-
+    .primary-btn{
+      background:linear-gradient(135deg,#0057FF,#3BA0FF);
+      transition:.4s ease;
+      box-shadow:0 20px 70px rgba(0,87,255,.22);
     }
 
-    .primary-btn {
-
-      background:
-        linear-gradient(
-          135deg,
-          var(--blue),
-          var(--cyan)
-        );
-
-      transition: .4s ease;
-
-      box-shadow:
-        0 20px 80px rgba(0, 87, 255, .22);
-
+    .primary-btn:hover{
+      transform:translateY(-4px);
+      box-shadow:0 25px 90px rgba(0,87,255,.35);
     }
 
-    .primary-btn:hover {
-
-      transform: translateY(-4px);
-
-      box-shadow:
-        0 30px 90px rgba(0, 87, 255, .35);
-
+    .bg-system{
+      position:fixed;
+      inset:0;
+      z-index:-2;
+      overflow:hidden;
     }
 
-    .subtle {
-
-      color: var(--muted);
-
+    .glow-a{
+      position:absolute;
+      width:900px;
+      height:900px;
+      border-radius:999px;
+      background:#0057FF;
+      top:-300px;
+      left:-300px;
+      opacity:.08;
+      filter:blur(180px);
     }
 
-    .bg-system {
-
-      position: fixed;
-      inset: 0;
-      z-index: -10;
-      overflow: hidden;
-
+    .glow-b{
+      position:absolute;
+      width:700px;
+      height:700px;
+      border-radius:999px;
+      background:#3BA0FF;
+      bottom:-250px;
+      right:-220px;
+      opacity:.08;
+      filter:blur(180px);
     }
 
-    .glow-a {
-
-      position: absolute;
-
-      width: 700px;
-      height: 700px;
-
-      border-radius: 999px;
-
-      background: var(--blue);
-
-      opacity: .08;
-
-      top: -250px;
-      left: -250px;
-
-      filter: blur(100px);
-
+    .noise{
+      position:absolute;
+      inset:0;
+      opacity:.02;
+      background-image:radial-gradient(#fff .5px,transparent .5px);
+      background-size:12px 12px;
     }
 
-    .glow-b {
-
-      position: absolute;
-
-      width: 650px;
-      height: 650px;
-
-      border-radius: 999px;
-
-      background: var(--cyan);
-
-      opacity: .07;
-
-      bottom: -250px;
-      right: -250px;
-
-      filter: blur(100px);
-
+    .navbar{
+      position:fixed;
+      top:18px;
+      left:50%;
+      transform:translateX(-50%);
+      width:calc(100% - 24px);
+      max-width:1450px;
+      z-index:1000;
     }
 
-    .noise {
-
-      position: absolute;
-      inset: 0;
-
-      background-image:
-        radial-gradient(
-          rgba(255, 255, 255, .08) .6px,
-          transparent .6px
-        );
-
-      background-size: 12px 12px;
-
-      opacity: .02;
-
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+      padding:0 24px;
     }
 
-    .navbar {
-
-      position: fixed;
-
-      top: 16px;
-      left: 50%;
-
-      transform: translateX(-50%);
-
-      width: min(1450px, calc(100% - 24px));
-
-      z-index: 1000;
-
+    .massive{
+      font-size:clamp(3.2rem,10vw,8rem);
+      line-height:.95;
+      font-weight:900;
     }
 
-    .nav-wrapper {
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      padding: 16px 24px;
-
-      border-radius: 28px;
-
+    .catalog-card{
+      transition:.45s ease;
+      overflow:hidden;
     }
 
-    .hero {
-
-      position: relative;
-
-      min-height: 100dvh;
-
-      display: flex;
-      align-items: center;
-
-      overflow: hidden;
-
+    .catalog-card:hover{
+      transform:translateY(-10px);
+      border-color:rgba(59,160,255,.25);
     }
 
-    .hero-video {
-
-      position: absolute;
-      inset: 0;
-
-      width: 100%;
-      height: 100%;
-
-      object-fit: cover;
-
-      opacity: .18;
-
-      z-index: -2;
-
+    .social-btn{
+      transition:.4s ease;
     }
 
-    .hero-overlay {
-
-      position: absolute;
-      inset: 0;
-
-      background:
-        linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, .3),
-          rgba(5, 5, 5, .96)
-        );
-
-      z-index: -1;
-
+    .social-btn:hover{
+      transform:translateY(-6px);
+      border-color:rgba(59,160,255,.3);
     }
 
-    .massive {
-
-      font-size: clamp(3rem, 9vw, 7rem);
-
-      line-height: .92;
-
-      font-weight: 900;
-
-      letter-spacing: -3px;
-
-    }
-
-    .section {
-
-      padding: 120px 0;
-
-      position: relative;
-
-    }
-
-    .catalog-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(auto-fit, minmax(320px, 1fr));
-
-      gap: 28px;
-
-      margin-top: 60px;
-
-    }
-
-    .catalog-card {
-
-      border-radius: 30px;
-
-      overflow: hidden;
-
-      transition: .45s ease;
-
-    }
-
-    .catalog-card:hover {
-
-      transform:
-        translateY(-8px)
-        scale(1.01);
-
-    }
-
-    .bike-image {
-
-      aspect-ratio: 16/10;
-
-      object-fit: cover;
-
-      width: 100%;
-
-    }
-
-    .micro-brand {
-
-      position: fixed;
-
-      bottom: 30px;
-      right: -30px;
-
-      transform: rotate(11deg);
-
-      font-size: 10px;
-
-      letter-spacing: 5px;
-
-      opacity: .04;
-
-      pointer-events: none;
-
-      user-select: none;
-
-    }
-
-    @media(max-width:980px) {
-
-      .desktop-nav {
-        display: none;
-      }
-
-      .hero-grid {
-
-        grid-template-columns: 1fr !important;
-
-      }
-
-      .hero-bike {
-
-        display: none;
-
-      }
-
-      .massive {
-
-        font-size: 3.5rem;
-
-      }
-
-      .section {
-
-        padding: 90px 0;
-
-      }
-
-    }
-
-  </style>
-
-</head>
-
-<body>
-
-  <!-- BLACK CODE -->
-  <div class="micro-brand">
-    BLACK CODE by KNJO · KNJO-BLK-1141015
-  </div>
-
-  <!-- BACKGROUND -->
-  <div class="bg-system">
-
-    <div class="glow-a"></div>
-
-    <div class="glow-b"></div>
-
-    <div class="noise"></div>
-
-  </div>
-
-  <!-- INTRO -->
-  <div
-    id="intro"
-    style="
+    #intro{
       position:fixed;
       inset:0;
       background:#050505;
@@ -481,51 +195,61 @@
       display:flex;
       align-items:center;
       justify-content:center;
-    "
-  >
+    }
 
-    <div style="text-align:center;">
+    @media(max-width:980px){
 
-      <!-- CORREGIDO -->
+      .desktop-nav{
+        display:none;
+      }
+
+      .section{
+        padding:110px 22px;
+      }
+
+      .massive{
+        font-size:3.7rem;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- BACKGROUND -->
+
+  <div class="bg-system">
+    <div class="glow-a"></div>
+    <div class="glow-b"></div>
+    <div class="noise"></div>
+  </div>
+
+  <!-- INTRO -->
+
+  <div id="intro">
+
+    <div class="text-center px-6">
+
       <img
         id="introLogo"
-        src="/logo-secondary.webp"
+        src="/logo-secondary.png"
         alt="Velver"
-        loading="eager"
-        decoding="async"
-        style="
-          width:190px;
-          margin:auto;
-          opacity:0;
-          transform:scale(.8);
-        "
+        class="w-[170px] lg:w-[240px] mx-auto opacity-0 scale-75"
       >
 
       <h1
         id="introTitle"
-        style="
-          margin-top:28px;
-          font-size:clamp(3rem,8vw,7rem);
-          font-weight:900;
-          letter-spacing:12px;
-          opacity:0;
-        "
+        class="mt-10 text-5xl lg:text-8xl font-black tracking-[12px] opacity-0"
       >
         VELVER
       </h1>
 
       <p
         id="introSub"
-        style="
-          margin-top:20px;
-          color:#3BA0FF;
-          opacity:0;
-          letter-spacing:6px;
-          text-transform:uppercase;
-          font-size:.8rem;
-        "
+        class="mt-6 text-xs lg:text-sm tracking-[8px] uppercase text-blue-300 opacity-0"
       >
-        BLACK CODE DIGITAL ECOSYSTEM™
+        Intelligent Mobility Platform™
       </p>
 
     </div>
@@ -533,79 +257,42 @@
   </div>
 
   <!-- NAVBAR -->
+
   <header class="navbar">
 
-    <div class="nav-wrapper glass">
+    <div class="glass rounded-[28px] px-5 lg:px-8 py-4 flex items-center justify-between">
 
-      <div
-        style="
-          display:flex;
-          align-items:center;
-          gap:16px;
-        "
-      >
+      <div class="flex items-center gap-4">
 
         <img
           src="/logo-secondary.png"
           alt="Velver"
-          width="48"
-          height="48"
+          class="w-11 h-11 object-contain"
         >
 
         <div>
-
-          <h2
-            style="
-              font-weight:900;
-              letter-spacing:2px;
-            "
-          >
-            VELVER MOTOS
-          </h2>
-
-          <p
-            class="subtle"
-            style="
-              font-size:.75rem;
-              letter-spacing:4px;
-              text-transform:uppercase;
-            "
-          >
-            Atlixco™
-          </p>
-
+          <h1 class="font-black tracking-wide">VELVER MOTOS</h1>
+          <p class="text-xs subtle tracking-[3px] uppercase">Atlixco™</p>
         </div>
 
       </div>
 
-      <nav
-        class="desktop-nav"
-        style="
-          display:flex;
-          align-items:center;
-          gap:42px;
-        "
-      >
+      <nav class="desktop-nav flex items-center gap-10 text-sm subtle">
 
-        <a href="#catalogo">Catálogo</a>
+        <a href="#catalogo" class="hover:text-white transition">Catálogo</a>
 
-        <a href="#">Experience</a>
+        <a href="#velver-care" class="hover:text-white transition">Velver Care™</a>
 
-        <a href="#">AI Match™</a>
+        <a href="#ai-match" class="hover:text-white transition">AI Match™</a>
 
-        <a href="#">Redes</a>
+        <a href="#redes" class="hover:text-white transition">Redes</a>
 
       </nav>
 
       <a
-        href="https://wa.me/522441252948?text=Hola%20quiero%20información%20sobre%20las%20motocicletas"
+        href="https://wa.me/522441252948"
         target="_blank"
-        class="primary-btn"
-        style="
-          padding:14px 24px;
-          border-radius:18px;
-          font-weight:700;
-        "
+        class="primary-btn px-6 py-3 rounded-2xl text-sm font-semibold"
       >
         WhatsApp IA
       </a>
@@ -615,145 +302,56 @@
   </header>
 
   <!-- HERO -->
+
   <section class="hero">
 
-    <!-- VIDEO -->
-    <video
-      class="hero-video"
-      autoplay
-      muted
-      loop
-      playsinline
-      poster="/ad1.5.webp"
-    >
+    <div class="container-system relative z-10 pt-40">
 
-      <source src="/hero-video.mp4" type="video/mp4">
+      <div class="grid lg:grid-cols-[1.1fr_.9fr] gap-16 items-center">
 
-    </video>
+        <div>
 
-    <div class="hero-overlay"></div>
+          <div class="glass-soft inline-flex items-center gap-3 px-5 py-3 rounded-full mb-10">
 
-    <div class="container-system">
+            <div class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
 
-      <div
-        class="hero-grid"
-        style="
-          display:grid;
-          grid-template-columns:1.1fr .9fr;
-          gap:60px;
-          align-items:center;
-          padding-top:140px;
-        "
-      >
-
-        <!-- LEFT -->
-        <div class="parallax" data-speed="0.04">
-
-          <div
-            class="glass-soft"
-            style="
-              display:inline-flex;
-              align-items:center;
-              gap:12px;
-              padding:12px 18px;
-              border-radius:999px;
-              margin-bottom:34px;
-            "
-          >
-
-            <div
-              style="
-                width:8px;
-                height:8px;
-                border-radius:999px;
-                background:#3BA0FF;
-              "
-            ></div>
-
-            <span
-              class="subtle"
-              style="
-                font-size:.8rem;
-                letter-spacing:4px;
-                text-transform:uppercase;
-              "
-            >
-              AI Smart Ecosystem™
+            <span class="text-sm subtle tracking-[3px] uppercase">
+              AI Smart Catalog™
             </span>
 
           </div>
 
-          <h1 class="massive">
-
+          <h1 class="massive max-w-5xl leading-none">
             El futuro de las
-            <span class="gradient-text">
-              motocicletas premium.
-            </span>
-
+            <span class="gradient-text">motocicletas premium.</span>
           </h1>
 
-          <p
-            class="subtle"
-            style="
-              margin-top:34px;
-              font-size:1.15rem;
-              line-height:1.9;
-              max-width:720px;
-            "
-          >
-
-            Ecosistema cinematográfico inteligente diseñado
-            para nueva generación.
-
+          <p class="mt-10 text-lg lg:text-xl subtle max-w-2xl leading-relaxed">
+            Ecosistema cinematográfico diseñado para nueva generación.
           </p>
 
-          <div
-            style="
-              display:flex;
-              flex-wrap:wrap;
-              gap:18px;
-              margin-top:42px;
-            "
-          >
+          <div class="flex flex-wrap gap-5 mt-12">
 
-            <a
-              href="#catalogo"
-              class="primary-btn"
-              style="
-                padding:18px 34px;
-                border-radius:20px;
-                font-weight:800;
-              "
-            >
+            <a href="#catalogo" class="primary-btn px-8 py-5 rounded-2xl font-bold">
               Explorar catálogo
+            </a>
+
+            <a href="#velver-care" class="glass px-8 py-5 rounded-2xl font-bold">
+              Velver Care™
             </a>
 
           </div>
 
         </div>
 
-        <!-- RIGHT -->
-        <div
-          class="hero-bike parallax"
-          data-speed="0.08"
-          style="
-            position:relative;
-          "
-        >
+        <div class="relative hidden lg:block">
 
-          <!-- CORREGIDO -->
+          <div class="absolute inset-0 bg-blue-500/10 rounded-full blur-[120px]"></div>
+
           <img
-            src="/logo-main.png"
-            alt="Motocicleta premium Velver"
-            loading="eager"
-            decoding="async"
-            width="900"
-            height="700"
-            style="
-              position:relative;
-              z-index:2;
-              filter:drop-shadow(0 0 60px rgba(59,130,246,.22));
-            "
+            src="/hero-bike.webp"
+            alt="Motocicleta Velver"
+            class="relative z-10 w-full object-contain drop-shadow-[0_0_60px_rgba(59,130,246,.25)]"
           >
 
         </div>
@@ -765,134 +363,153 @@
   </section>
 
   <!-- CATALOGO -->
-  <section
-    id="catalogo"
-    class="section"
-  >
+
+  <section id="catalogo" class="section pt-0">
 
     <div class="container-system">
 
-      <h2
-        class="massive"
-        style="
-          font-size:clamp(2.5rem,6vw,4.5rem);
-        "
-      >
-        Catálogo
-        <span class="gradient-text">
-          premium.
-        </span>
-      </h2>
+      <div class="mb-16">
 
-      <div class="catalog-grid">
+        <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-5">
+          Smart Collection™
+        </p>
 
-        <!-- CARD 1 -->
-        <article class="catalog-card glass">
+        <h2 class="text-4xl lg:text-6xl font-black mb-8">
+          Catálogo inteligente.
+        </h2>
 
-          <img
-            src="/crx200.webp"
-            alt="CRX200"
-            class="bike-image"
-            loading="lazy"
-            decoding="async"
-          >
+      </div>
 
-          <div style="padding:28px;">
+      <div id="catalog-grid" class="grid md:grid-cols-2 xl:grid-cols-3 gap-8"></div>
 
-            <h3
-              style="
-                font-size:1.7rem;
-                font-weight:800;
-              "
-            >
-              CRX200
-            </h3>
+    </div>
 
-            <p
-              class="subtle"
-              style="
-                margin-top:14px;
-                line-height:1.8;
-              "
-            >
-              Diseño deportivo premium con esencia agresiva.
+  </section>
+
+  <!-- VELVER CARE -->
+
+  <section id="velver-care" class="section pt-0">
+
+    <div class="container-system">
+
+      <div class="glass rounded-[44px] overflow-hidden relative p-10 lg:p-16">
+
+        <div class="absolute top-[-120px] right-[-120px] w-[320px] h-[320px] bg-blue-500/10 rounded-full blur-[120px]"></div>
+
+        <div class="absolute bottom-[-120px] left-[-120px] w-[300px] h-[300px] bg-cyan-400/10 rounded-full blur-[120px]"></div>
+
+        <div class="relative z-10">
+
+          <div class="max-w-4xl mb-16">
+
+            <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-5">
+              Velver Care System™
+            </p>
+
+            <h2 class="text-4xl lg:text-6xl font-black leading-tight mb-8">
+              Más que garantía.
+              <span class="gradient-text">Un sistema inteligente de respaldo premium.</span>
+            </h2>
+
+            <p class="text-lg subtle leading-relaxed max-w-3xl">
+              Diseñado para proteger tu experiencia, acompañar tu motocicleta y mantener una conexión continua entre Velver y cada cliente.
             </p>
 
           </div>
 
-        </article>
+          <div class="grid lg:grid-cols-4 gap-6 mb-16">
 
-        <!-- CARD 2 -->
-        <article class="catalog-card glass">
+            <div class="glass-soft rounded-[30px] p-8">
+              <i class="fa-solid fa-shield-halved text-4xl text-blue-400 mb-6"></i>
+              <h3 class="text-2xl font-black mb-4">Protección Inteligente</h3>
+              <p class="subtle leading-relaxed">Sistema diseñado para brindar confianza y respaldo premium.</p>
+            </div>
 
-          <img
-            src="/fighter200.webp"
-            alt="Fighter200"
-            class="bike-image"
-            loading="lazy"
-            decoding="async"
-          >
+            <div class="glass-soft rounded-[30px] p-8">
+              <i class="fa-solid fa-screwdriver-wrench text-4xl text-cyan-400 mb-6"></i>
+              <h3 class="text-2xl font-black mb-4">Smart Maintenance™</h3>
+              <p class="subtle leading-relaxed">Mantenimiento progresivo estructurado para seguridad y rendimiento.</p>
+            </div>
 
-          <div style="padding:28px;">
+            <div class="glass-soft rounded-[30px] p-8">
+              <i class="fa-solid fa-qrcode text-4xl text-white mb-6"></i>
+              <h3 class="text-2xl font-black mb-4">QR Digital</h3>
+              <p class="subtle leading-relaxed">Acceso rápido a soporte y seguimiento desde cualquier dispositivo.</p>
+            </div>
 
-            <h3
-              style="
-                font-size:1.7rem;
-                font-weight:800;
-              "
-            >
-              Fighter200
-            </h3>
-
-            <p
-              class="subtle"
-              style="
-                margin-top:14px;
-                line-height:1.8;
-              "
-            >
-              Potencia urbana inspirada en street performance.
-            </p>
+            <div class="glass-soft rounded-[30px] p-8">
+              <i class="fa-solid fa-headset text-4xl text-green-400 mb-6"></i>
+              <h3 class="text-2xl font-black mb-4">Premium Support™</h3>
+              <p class="subtle leading-relaxed">Ecosistema postventa diseñado para acompañar al cliente.</p>
+            </div>
 
           </div>
 
-        </article>
+          <div class="glass-soft rounded-[38px] p-8 lg:p-12 mb-16">
 
-        <!-- CARD 3 -->
-        <article class="catalog-card glass">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 mb-12">
 
-          <img
-            src="/ad1.5.webp"
-            alt="AD1.5"
-            class="bike-image"
-            loading="lazy"
-            decoding="async"
-          >
+              <div>
+                <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-4">
+                  Smart Maintenance™
+                </p>
 
-          <div style="padding:28px;">
+                <h3 class="text-3xl lg:text-5xl font-black leading-tight">
+                  Seguimiento inteligente de servicios.
+                </h3>
+              </div>
 
-            <h3
-              style="
-                font-size:1.7rem;
-                font-weight:800;
-              "
-            >
-              AD1.5
-            </h3>
+              <p class="subtle max-w-xl leading-relaxed text-lg">
+                Sistema estructurado para mantener rendimiento y seguridad.
+              </p>
 
-            <p
-              class="subtle"
-              style="
-                margin-top:14px;
-                line-height:1.8;
-              "
-            >
-              Movilidad premium diseñada para nueva generación.
-            </p>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-5 gap-6">
+
+              <div class="glass rounded-[28px] p-6 text-center">
+                <p class="text-4xl font-black text-blue-400 mb-3">500</p>
+                <p class="font-semibold">Primer servicio</p>
+              </div>
+
+              <div class="glass rounded-[28px] p-6 text-center">
+                <p class="text-4xl font-black text-cyan-400 mb-3">3K</p>
+                <p class="font-semibold">3,000 km</p>
+              </div>
+
+              <div class="glass rounded-[28px] p-6 text-center">
+                <p class="text-4xl font-black text-white mb-3">6K</p>
+                <p class="font-semibold">6,000 km</p>
+              </div>
+
+              <div class="glass rounded-[28px] p-6 text-center">
+                <p class="text-4xl font-black text-blue-300 mb-3">12K</p>
+                <p class="font-semibold">12,000 km</p>
+              </div>
+
+              <div class="glass rounded-[28px] p-6 text-center">
+                <p class="text-4xl font-black text-cyan-300 mb-3">24K</p>
+                <p class="font-semibold">24,000 km</p>
+              </div>
+
+            </div>
 
           </div>
 
-        </article>
+          <div class="text-center">
+
+            <a
+              href="https://wa.me/522441252948"
+              target="_blank"
+              class="primary-btn inline-flex items-center gap-3 px-10 py-5 rounded-2xl font-bold"
+            >
+              <i class="fa-brands fa-whatsapp text-xl"></i>
+              Activar soporte inteligente
+            </a>
+
+          </div>
+
+        </div>
 
       </div>
 
@@ -900,87 +517,483 @@
 
   </section>
 
-  <!-- SCRIPTS -->
+  <!-- AI MATCH -->
+
+  <section id="ai-match" class="section pt-0">
+
+    <div class="container-system max-w-5xl">
+
+      <div class="glass rounded-[40px] p-8 lg:p-14">
+
+        <div class="text-center mb-14">
+
+          <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-5">
+            AI Match™
+          </p>
+
+          <h2 class="text-4xl lg:text-6xl font-black mb-8">
+            Descubre tu moto ideal.
+          </h2>
+
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8">
+
+          <div>
+            <label class="block mb-4 font-semibold">Uso principal</label>
+            <select id="use" class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none">
+              <option value="city">Ciudad</option>
+              <option value="travel">Viajes</option>
+              <option value="sport">Deportivo</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block mb-4 font-semibold">Experiencia</label>
+            <select id="experience" class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none">
+              <option value="beginner">Principiante</option>
+              <option value="mid">Intermedio</option>
+              <option value="advanced">Avanzado</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block mb-4 font-semibold">Presupuesto estimado</label>
+            <select id="budget" class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none">
+              <option value="20-30k">20K - 30K</option>
+              <option value="30-50k">30K - 50K</option>
+              <option value="50-80k">50K - 80K</option>
+              <option value="80k+">80K+</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block mb-4 font-semibold">Método de compra</label>
+            <select id="payment" class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none">
+              <option value="contado">Contado</option>
+              <option value="financiamiento">Financiamiento</option>
+              <option value="apartado">Apartado</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block mb-4 font-semibold">Nombre</label>
+            <input id="leadName" type="text" placeholder="Tu nombre" class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none">
+          </div>
+
+          <div>
+            <label class="block mb-4 font-semibold">WhatsApp</label>
+            <input id="leadWhatsapp" type="tel" placeholder="Tu número" class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none">
+          </div>
+
+          
+
+        </div>
+
+        <div class="text-center mt-12">
+
+          <button id="aiMatchBtn" class="primary-btn px-10 py-5 rounded-2xl font-bold">
+            Analizar perfil
+          </button>
+
+        </div>
+
+        <div id="aiResult" class="hidden mt-14 glass rounded-[34px] p-10 text-center">
+
+          <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-5">
+            AI Recommendation™
+          </p>
+
+          <h3 id="resultTitle" class="text-4xl font-black mb-6"></h3>
+
+          <p id="resultDescription" class="subtle text-lg leading-relaxed mb-10"></p>
+
+          <a
+            id="resultWhatsapp"
+            href="#"
+            target="_blank"
+            class="primary-btn inline-block px-8 py-4 rounded-2xl font-bold"
+          >
+            Solicitar información
+          </a>
+
+        </div>
+
+                <div id="financePrequalify" class="hidden mt-10 glass-soft rounded-[30px] p-8 text-left max-w-3xl mx-auto">
+
+            <div class="mb-8 text-center">
+
+              <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-4">
+                Precalificación Express™
+              </p>
+
+              <h3 class="text-3xl font-black mb-4">
+                Activa tu evaluación financiera inteligente.
+              </h3>
+
+              <p class="subtle leading-relaxed max-w-2xl mx-auto">
+                Nuestro equipo y sistema IA te ayudarán a encontrar la mejor opción de financiamiento según tu perfil.
+              </p>
+
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-6 mb-8">
+
+              <div class="glass rounded-[24px] p-6">
+                <p class="font-bold mb-3">Requisitos básicos</p>
+                <ul class="space-y-3 subtle">
+                  <li>• INE frontal y reverso</li>
+                  <li>• Correo electrónico</li>
+                  <li>• Número celular activo</li>
+                </ul>
+              </div>
+
+              <div class="glass rounded-[24px] p-6">
+                <p class="font-bold mb-3">Opciones de financiamiento</p>
+                <ul class="space-y-3 subtle">
+                  <li>• Galgo</li>
+                  <li>• MaxiKash</li>
+                  <li>• Atrato</li>
+                  <li>• Moto Ya</li>
+                  <li>• Crédito Elektra</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="glass rounded-[28px] p-6 mb-8">
+              <label class="block mb-4 font-semibold">Historial crediticio</label>
+
+              <select id="creditProfile" class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none">
+                <option value="bueno">Bueno</option>
+                <option value="regular">Regular</option>
+                <option value="sin historial">Sin historial</option>
+              </select>
+            </div>
+
+            <div class="text-center">
+
+              <a
+                id="financeWhatsapp"
+                href="#"
+                target="_blank"
+                class="primary-btn inline-flex items-center gap-3 px-8 py-5 rounded-2xl font-bold"
+              >
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                Continuar precalificación por WhatsApp
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- REDES -->
+
+  <section id="redes" class="section pt-0">
+
+    <div class="container-system">
+
+      <div class="glass rounded-[44px] p-10 lg:p-16">
+
+        <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-6">
+          Social Ecosystem™
+        </p>
+
+        <h2 class="text-4xl lg:text-6xl font-black leading-tight mb-10">
+          Conecta con Velver.
+        </h2>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <a href="https://facebook.com" target="_blank" class="social-btn glass rounded-3xl p-8 text-center">
+            <i class="fa-brands fa-facebook-f text-5xl text-blue-500 mb-6"></i>
+            <h3 class="text-2xl font-black">Facebook</h3>
+          </a>
+
+          <a href="https://instagram.com" target="_blank" class="social-btn glass rounded-3xl p-8 text-center">
+            <i class="fa-brands fa-instagram text-5xl text-pink-500 mb-6"></i>
+            <h3 class="text-2xl font-black">Instagram</h3>
+          </a>
+
+          <a href="https://tiktok.com" target="_blank" class="social-btn glass rounded-3xl p-8 text-center">
+            <i class="fa-brands fa-tiktok text-5xl text-cyan-400 mb-6"></i>
+            <h3 class="text-2xl font-black">TikTok</h3>
+          </a>
+
+          <a href="https://maps.google.com" target="_blank" class="social-btn glass rounded-3xl p-8 text-center">
+            <i class="fa-solid fa-location-dot text-5xl text-green-400 mb-6"></i>
+            <h3 class="text-2xl font-black">Maps</h3>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="px-6 pb-14">
+
+    <div class="container-system">
+
+      <div class="glass rounded-[34px] p-10 lg:p-14 flex flex-col lg:flex-row items-center justify-between gap-10">
+
+        <div class="flex items-center gap-5">
+
+          <img src="/logo-secondary.png" alt="Velver" class="w-[70px]">
+
+          <div>
+            <h3 class="text-3xl font-black">Velver Motos Atlixco™</h3>
+            <p class="subtle">AI Luxury Motorcycle Platform™</p>
+          </div>
+
+        </div>
+
+        <a
+          href="https://wa.me/522441252948"
+          target="_blank"
+          class="primary-btn px-8 py-4 rounded-2xl font-bold"
+        >
+          Contactar IA Comercial
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- SCRIPT -->
+
   <script>
 
-    // INTRO
+    window.addEventListener('load',()=>{
 
-    window.addEventListener('load', () => {
+      gsap.to('#introLogo',{
+        opacity:1,
+        scale:1,
+        duration:1.2
+      });
 
-      if (typeof gsap !== 'undefined') {
+      gsap.to('#introTitle',{
+        opacity:1,
+        y:-10,
+        duration:1,
+        delay:.3
+      });
 
-        gsap.to('#introLogo', {
-          opacity: 1,
-          scale: 1,
-          duration: 1
-        });
+      gsap.to('#introSub',{
+        opacity:1,
+        y:-10,
+        duration:1,
+        delay:.6
+      });
 
-        gsap.to('#introTitle', {
-          opacity: 1,
-          y: -10,
-          duration: 1,
-          delay: .2
-        });
+      gsap.to('#intro',{
+        opacity:0,
+        duration:1.4,
+        delay:2.8,
+        pointerEvents:'none'
+      });
 
-        gsap.to('#introSub', {
-          opacity: 1,
-          y: -10,
-          duration: 1,
-          delay: .4
-        });
+    });
 
-        gsap.to('#intro', {
-          opacity: 0,
-          duration: 1,
-          delay: 1.5,
-          pointerEvents: 'none'
-        });
+    const motos = [
 
+      {
+        nombre:'CRX 200',
+        categoria:'Deportiva',
+        velocidad:'105 km/h',
+        motor:'200cc',
+        descripcion:'Diseñada para adrenalina premium y experiencia deportiva.',
+        imagen:'/crx200.webp'
+      },
+
+      {
+        nombre:'Fighter 200',
+        categoria:'Touring',
+        velocidad:'115 km/h',
+        motor:'200cc',
+        descripcion:'Experiencia touring elite con presencia cinematográfica.',
+        imagen:'/fighter200.webp'
+      },
+
+      {
+        nombre:'AD1.5 150',
+        categoria:'Urbana',
+        velocidad:'90 km/h',
+        motor:'150cc',
+        descripcion:'Movilidad urbana premium inteligente.',
+        imagen:'/ad1.5.webp'
       }
 
-    });
+    ];
 
-    // PARALLAX
+    const catalogGrid = document.getElementById('catalog-grid');
 
-    const parallaxItems =
-      document.querySelectorAll('.parallax');
+    function renderCatalog(items){
 
-    let mouseX = 0;
-    let mouseY = 0;
+      catalogGrid.innerHTML = '';
 
-    document.addEventListener('mousemove', (e) => {
+      items.forEach((moto,index)=>{
 
-      mouseX = e.clientX / window.innerWidth;
-      mouseY = e.clientY / window.innerHeight;
+        const card = document.createElement('div');
 
-    });
+        card.className = 'catalog-card glass rounded-[34px] overflow-hidden';
 
-    function animateParallax() {
+        card.innerHTML = `
 
-      parallaxItems.forEach(el => {
+          <div class="h-[280px] overflow-hidden relative">
 
-        const speed =
-          parseFloat(el.dataset.speed);
+            <img
+              src="${moto.imagen}"
+              alt="${moto.nombre}"
+              loading="lazy"
+              class="w-full h-full object-cover hover:scale-110 transition duration-700"
+            >
 
-        const moveX =
-          (mouseX - .5) * 40 * speed;
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
 
-        const moveY =
-          (mouseY - .5) * 40 * speed;
+          </div>
 
-        el.style.transform =
-          `translate3d(${moveX}px, ${moveY}px, 0)`;
+          <div class="p-8">
+
+            <div class="flex items-center justify-between mb-5 gap-4">
+
+              <h3 class="text-3xl font-black">${moto.nombre}</h3>
+
+              <span class="text-blue-400 text-sm font-semibold whitespace-nowrap">
+                ${moto.categoria}
+              </span>
+
+            </div>
+
+            <p class="subtle leading-relaxed mb-8">
+              ${moto.descripcion}
+            </p>
+
+            <div class="space-y-3 subtle mb-8">
+
+              <div class="flex items-center justify-between">
+                <span>Velocidad</span>
+                <span>${moto.velocidad}</span>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <span>Motor</span>
+                <span>${moto.motor}</span>
+              </div>
+
+            </div>
+
+            <button class="primary-btn w-full px-5 py-4 rounded-2xl font-semibold">
+              Explorar experiencia
+            </button>
+
+          </div>
+
+        `;
+
+        catalogGrid.appendChild(card);
+
+        gsap.from(card,{
+          opacity:0,
+          y:80,
+          duration:1,
+          delay:index * .12
+        });
 
       });
 
-      requestAnimationFrame(animateParallax);
-
     }
 
-    animateParallax();
+    renderCatalog(motos);
+
+    const aiMatchBtn = document.getElementById('aiMatchBtn');
+    const aiResult = document.getElementById('aiResult');
+
+    aiMatchBtn.addEventListener('click',()=>{
+
+      const leadName = document.getElementById('leadName').value;
+      const leadWhatsapp = document.getElementById('leadWhatsapp').value;
+      const budget = document.getElementById('budget').value;
+      const payment = document.getElementById('payment').value;
+
+      if(!leadName || !leadWhatsapp){
+        alert('Completa nombre y WhatsApp para continuar.');
+        return;
+      }
+
+      gtag('event','ai_match_completed',{
+        event_category:'lead_generation',
+        event_label:'AI Match Lead'
+      });
+
+      const use = document.getElementById('use').value;
+
+      let moto = {};
+
+      if(use === 'sport'){
+
+        moto = {
+          nombre:'Neo 200',
+          descripcion:'Ideal para adrenalina urbana y experiencia deportiva premium.'
+        };
+
+      }
+
+      else if(use === 'travel'){
+
+        moto = {
+          nombre:'CRX 300',
+          descripcion:'Perfecta para viajes, confort y presencia touring elite.'
+        };
+
+      }
+
+      else{
+
+        moto = {
+          nombre:'Urban X',
+          descripcion:'Movilidad urbana inteligente diseñada para ciudad.'
+        };
+
+      }
+
+      document.getElementById('resultTitle').innerText = moto.nombre;
+
+      document.getElementById('resultDescription').innerText = moto.descripcion;
+
+      document.getElementById('resultWhatsapp').href = `https://wa.me/522441252948?text=${encodeURIComponent(`Hola Velver Motos, soy ${leadName}. La IA me recomendó la motocicleta ${moto.nombre}. Mi presupuesto es ${budget} y me interesa ${payment}. Mi WhatsApp es ${leadWhatsapp}`)}`;
+
+      aiResult.classList.remove('hidden');
+
+      document.getElementById('financePrequalify').classList.remove('hidden');
+
+      const creditProfile = document.getElementById('creditProfile');
+
+      document.getElementById('financeWhatsapp').href = `https://wa.me/522441252948?text=${encodeURIComponent(`Hola Velver Motos. Deseo continuar mi precalificación financiera para la motocicleta ${moto.nombre}. Mi nombre es ${leadName}, mi presupuesto es ${budget}, me interesa ${payment} y mi historial crediticio es ${creditProfile ? creditProfile.value : 'pendiente'}. Me gustaría recibir instrucciones para enviar mi documentación.`)}`;
+
+      gsap.from('#aiResult',{
+        opacity:0,
+        y:50,
+        duration:1
+      });
+
+    });
 
   </script>
 
 </body>
-
 </html>
