@@ -4,34 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-  <title>Velver Motos Atlixco™ | Cinematic Mobility Experience</title>
+  <title>Velver Motos Atlixco™ | AI Smart Catalog</title>
 
-  <meta
-    name="description"
-    content="Velver Motos Atlixco™ — Plataforma premium de motocicletas con experiencia cinematográfica, catálogo inteligente y ecosistema digital de nueva generación."
-  />
+  <meta name="description" content="Experiencia premium inteligente de motocicletas en Atlixco.">
+  <meta name="theme-color" content="#050505">
 
-  <meta name="theme-color" content="#050505" />
+  <link rel="icon" type="image/png" href="/logo-secondary.png">
 
-  <!-- SEO / OPEN GRAPH -->
-  <meta property="og:title" content="Velver Motos Atlixco™" />
-  <meta property="og:description" content="Experiencia premium de motocicletas con diseño cinematográfico y ecosistema inteligente." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="/og-cover.webp" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <link rel="icon" type="image/png" href="/logo-secondary.png" />
-
-  <!-- PRECONNECT -->
+  <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- FONT -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- TAILWIND -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -40,12 +24,9 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
   <!-- FONT AWESOME -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- ANALYTICS -->
+  <!-- GOOGLE ANALYTICS -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G1JRYB0WW5"></script>
 
   <script>
@@ -61,17 +42,6 @@
 
   <style>
 
-    :root{
-      --bg:#050505;
-      --card:rgba(255,255,255,.035);
-      --border:rgba(255,255,255,.08);
-      --text:#F5F7FA;
-      --muted:#8B949E;
-      --blue:#0057FF;
-      --cyan:#3BA0FF;
-      --radius:32px;
-    }
-
     *{
       margin:0;
       padding:0;
@@ -85,93 +55,33 @@
     }
 
     body{
-      background:var(--bg);
-      color:var(--text);
+      background:#050505;
+      color:#F5F7FA;
       overflow-x:hidden;
     }
 
-    img{
-      max-width:100%;
-      display:block;
+    .container-system{
+      max-width:1450px;
+      margin:auto;
     }
 
-    a{
-      text-decoration:none;
-      color:inherit;
+    .section{
+      padding:140px 24px;
+      position:relative;
+      z-index:2;
     }
-
-    /* BACKGROUND SYSTEM */
-
-    .bg-system{
-      position:fixed;
-      inset:0;
-      z-index:-10;
-      overflow:hidden;
-      pointer-events:none;
-    }
-
-    .ambient-a,
-    .ambient-b,
-    .ambient-c{
-      position:absolute;
-      border-radius:999px;
-      filter:blur(180px);
-      will-change:transform;
-    }
-
-    .ambient-a{
-      width:850px;
-      height:850px;
-      background:#0057FF;
-      opacity:.09;
-      top:-350px;
-      left:-250px;
-    }
-
-    .ambient-b{
-      width:700px;
-      height:700px;
-      background:#1E90FF;
-      opacity:.07;
-      bottom:-250px;
-      right:-220px;
-    }
-
-    .ambient-c{
-      width:500px;
-      height:500px;
-      background:#7DD3FC;
-      opacity:.05;
-      top:40%;
-      left:50%;
-      transform:translate(-50%,-50%);
-    }
-
-    .noise{
-      position:absolute;
-      inset:0;
-      opacity:.02;
-      background-image:radial-gradient(#ffffff .6px, transparent .6px);
-      background-size:12px 12px;
-    }
-
-    /* GLASS */
 
     .glass{
       background:rgba(255,255,255,.035);
-      border:1px solid rgba(255,255,255,.08);
-      backdrop-filter:blur(24px);
-      -webkit-backdrop-filter:blur(24px);
+      backdrop-filter:blur(20px);
+      border:1px solid rgba(255,255,255,.06);
     }
 
     .glass-soft{
       background:rgba(255,255,255,.02);
-      border:1px solid rgba(255,255,255,.04);
       backdrop-filter:blur(14px);
-      -webkit-backdrop-filter:blur(14px);
+      border:1px solid rgba(255,255,255,.04);
     }
-
-    /* TYPOGRAPHY */
 
     .gradient-text{
       background:linear-gradient(90deg,#FFFFFF,#9FD3FF);
@@ -180,52 +90,58 @@
     }
 
     .subtle{
-      color:var(--muted);
+      color:#8B949E;
     }
-
-    .hero-title{
-      font-size:clamp(4rem,9vw,9rem);
-      line-height:.92;
-      font-weight:900;
-      letter-spacing:-4px;
-    }
-
-    .section{
-      padding:140px 24px;
-      position:relative;
-    }
-
-    .container-system{
-      max-width:1450px;
-      margin:auto;
-    }
-
-    /* BUTTONS */
 
     .primary-btn{
-      position:relative;
-      overflow:hidden;
-      background:linear-gradient(135deg,var(--blue),var(--cyan));
-      border:1px solid rgba(255,255,255,.12);
-      transition:.45s ease;
-      box-shadow:0 20px 80px rgba(0,87,255,.25);
+      background:linear-gradient(135deg,#0057FF,#3BA0FF);
+      transition:.4s ease;
+      box-shadow:0 20px 70px rgba(0,87,255,.22);
     }
 
     .primary-btn:hover{
       transform:translateY(-4px);
-      box-shadow:0 30px 120px rgba(0,87,255,.4);
+      box-shadow:0 25px 90px rgba(0,87,255,.35);
     }
 
-    .secondary-btn{
-      transition:.4s ease;
+    .bg-system{
+      position:fixed;
+      inset:0;
+      z-index:-2;
+      overflow:hidden;
     }
 
-    .secondary-btn:hover{
-      transform:translateY(-4px);
-      border-color:rgba(59,160,255,.35);
+    .glow-a{
+      position:absolute;
+      width:900px;
+      height:900px;
+      border-radius:999px;
+      background:#0057FF;
+      top:-300px;
+      left:-300px;
+      opacity:.08;
+      filter:blur(180px);
     }
 
-    /* NAVBAR */
+    .glow-b{
+      position:absolute;
+      width:700px;
+      height:700px;
+      border-radius:999px;
+      background:#3BA0FF;
+      bottom:-250px;
+      right:-220px;
+      opacity:.08;
+      filter:blur(180px);
+    }
+
+    .noise{
+      position:absolute;
+      inset:0;
+      opacity:.02;
+      background-image:radial-gradient(#fff .5px,transparent .5px);
+      background-size:12px 12px;
+    }
 
     .navbar{
       position:fixed;
@@ -237,58 +153,24 @@
       z-index:1000;
     }
 
-    /* HERO */
-
     .hero{
       min-height:100vh;
       display:flex;
       align-items:center;
       position:relative;
       overflow:hidden;
+      padding:0 24px;
     }
 
-    .hero-bike-wrap{
-      position:relative;
+    .massive{
+      font-size:clamp(3.2rem,10vw,8rem);
+      line-height:.95;
+      font-weight:900;
     }
-
-    .hero-bike-glow{
-      position:absolute;
-      inset:0;
-      background:radial-gradient(circle,rgba(59,160,255,.25),transparent 70%);
-      filter:blur(100px);
-      z-index:-1;
-    }
-
-    .hero-bike{
-      width:100%;
-      max-width:720px;
-      margin:auto;
-      filter:drop-shadow(0 50px 100px rgba(0,0,0,.65));
-      animation:floatBike 6s ease-in-out infinite;
-    }
-
-    @keyframes floatBike{
-      0%{transform:translateY(0px)}
-      50%{transform:translateY(-10px)}
-      100%{transform:translateY(0px)}
-    }
-
-    /* BADGE */
-
-    .premium-badge{
-      display:inline-flex;
-      align-items:center;
-      gap:12px;
-      padding:14px 22px;
-      border-radius:999px;
-    }
-
-    /* CARDS */
 
     .catalog-card{
       transition:.45s ease;
       overflow:hidden;
-      position:relative;
     }
 
     .catalog-card:hover{
@@ -296,56 +178,24 @@
       border-color:rgba(59,160,255,.25);
     }
 
-    .catalog-card:hover .catalog-image{
-      transform:scale(1.06);
-    }
-
-    .catalog-image{
-      transition:1.2s ease;
-    }
-
-    .card-overlay{
-      position:absolute;
-      inset:0;
-      background:linear-gradient(to top,rgba(0,0,0,.82),transparent 60%);
-    }
-
-    /* STATS */
-
-    .stat-card{
+    .social-btn{
       transition:.4s ease;
     }
 
-    .stat-card:hover{
+    .social-btn:hover{
       transform:translateY(-6px);
-      border-color:rgba(59,160,255,.2);
-    }
-
-    /* SOCIAL */
-
-    .social-card{
-      transition:.4s ease;
-    }
-
-    .social-card:hover{
-      transform:translateY(-8px);
       border-color:rgba(59,160,255,.3);
     }
-
-    /* INTRO */
 
     #intro{
       position:fixed;
       inset:0;
-      z-index:9999;
       background:#050505;
+      z-index:9999;
       display:flex;
       align-items:center;
       justify-content:center;
-      overflow:hidden;
     }
-
-    /* RESPONSIVE */
 
     @media(max-width:980px){
 
@@ -357,28 +207,21 @@
         padding:110px 22px;
       }
 
-      .hero-title{
-        font-size:4.3rem;
-        letter-spacing:-2px;
-      }
-
-      .hero-bike{
-        margin-top:40px;
+      .massive{
+        font-size:3.7rem;
       }
 
     }
 
   </style>
 </head>
-
 <body>
 
   <!-- BACKGROUND -->
 
   <div class="bg-system">
-    <div class="ambient-a"></div>
-    <div class="ambient-b"></div>
-    <div class="ambient-c"></div>
+    <div class="glow-a"></div>
+    <div class="glow-b"></div>
     <div class="noise"></div>
   </div>
 
@@ -386,12 +229,12 @@
 
   <div id="intro">
 
-    <div class="text-center px-6 relative z-10">
+    <div class="text-center px-6">
 
       <img
         id="introLogo"
-        src="/logo-main.webp"
-        alt="Velver Motos"
+        src="/logo-secondary.png"
+        alt="Velver"
         class="w-[170px] lg:w-[240px] mx-auto opacity-0 scale-75"
       >
 
@@ -404,9 +247,9 @@
 
       <p
         id="introSub"
-        class="mt-6 text-xs lg:text-sm tracking-[8px] text-blue-300 uppercase opacity-0"
+        class="mt-6 text-xs lg:text-sm tracking-[8px] uppercase text-blue-300 opacity-0"
       >
-        Cinematic Mobility Platform™
+        Intelligent Mobility Platform™
       </p>
 
     </div>
@@ -422,34 +265,34 @@
       <div class="flex items-center gap-4">
 
         <img
-          src="/logo-secondary.webp"
+          src="/logo-secondary.png"
           alt="Velver"
           class="w-11 h-11 object-contain"
         >
 
         <div>
-          <h1 class="font-black tracking-wide">
-            VELVER MOTOS
-          </h1>
-
-          <p class="text-xs subtle tracking-[3px] uppercase">
-            Atlixco™
-          </p>
+          <h1 class="font-black tracking-wide">VELVER MOTOS</h1>
+          <p class="text-xs subtle tracking-[3px] uppercase">Atlixco™</p>
         </div>
 
       </div>
 
       <nav class="desktop-nav flex items-center gap-10 text-sm subtle">
+
         <a href="#catalogo" class="hover:text-white transition">Catálogo</a>
-        <a href="#ecosystem" class="hover:text-white transition">Ecosistema</a>
+
+        <a href="#velver-care" class="hover:text-white transition">Velver Care™</a>
+
         <a href="#ai-match" class="hover:text-white transition">AI Match™</a>
+
         <a href="#redes" class="hover:text-white transition">Redes</a>
+
       </nav>
 
       <a
         href="https://wa.me/522441252948"
         target="_blank"
-        class="primary-btn px-5 lg:px-6 py-3 rounded-2xl text-sm font-semibold"
+        class="primary-btn px-6 py-3 rounded-2xl text-sm font-semibold"
       >
         WhatsApp IA
       </a>
@@ -460,88 +303,56 @@
 
   <!-- HERO -->
 
-  <section class="hero px-6 lg:px-10">
+  <section class="hero">
 
-    <div class="container-system w-full pt-40 relative z-10">
+    <div class="container-system relative z-10 pt-40">
 
-      <div class="grid lg:grid-cols-[1.05fr_.95fr] gap-16 items-center">
+      <div class="grid lg:grid-cols-[1.1fr_.9fr] gap-16 items-center">
 
         <div>
 
-          <div class="premium-badge glass-soft mb-10">
+          <div class="glass-soft inline-flex items-center gap-3 px-5 py-3 rounded-full mb-10">
+
             <div class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
 
-            <span class="text-sm subtle tracking-[4px] uppercase">
+            <span class="text-sm subtle tracking-[3px] uppercase">
               AI Smart Catalog™
             </span>
+
           </div>
 
-          <h1 class="hero-title max-w-5xl">
-            La nueva era de las
+          <h1 class="massive max-w-5xl leading-none">
+            El futuro de las
             <span class="gradient-text">motocicletas premium.</span>
           </h1>
 
           <p class="mt-10 text-lg lg:text-xl subtle max-w-2xl leading-relaxed">
-            Experiencia cinematográfica, ecosistema digital inteligente y movilidad diseñada para una nueva generación.
+            Ecosistema cinematográfico diseñado para nueva generación.
           </p>
 
           <div class="flex flex-wrap gap-5 mt-12">
 
-            <a
-              href="#catalogo"
-              class="primary-btn px-8 py-5 rounded-2xl font-bold"
-            >
-              Explorar colección
+            <a href="#catalogo" class="primary-btn px-8 py-5 rounded-2xl font-bold">
+              Explorar catálogo
             </a>
 
-            <a
-              href="#ai-match"
-              class="glass secondary-btn px-8 py-5 rounded-2xl font-bold"
-            >
-              AI Match™
+            <a href="#velver-care" class="glass px-8 py-5 rounded-2xl font-bold">
+              Velver Care™
             </a>
-
-          </div>
-
-          <div class="grid sm:grid-cols-3 gap-5 mt-16 max-w-3xl">
-
-            <div class="stat-card glass rounded-[28px] p-6">
-              <p class="text-3xl font-black mb-2">Premium</p>
-              <p class="subtle text-sm">Experiencia cinematográfica</p>
-            </div>
-
-            <div class="stat-card glass rounded-[28px] p-6">
-              <p class="text-3xl font-black mb-2">AI</p>
-              <p class="subtle text-sm">Asistencia comercial inteligente</p>
-            </div>
-
-            <div class="stat-card glass rounded-[28px] p-6">
-              <p class="text-3xl font-black mb-2">24/7</p>
-              <p class="subtle text-sm">Conexión digital permanente</p>
-            </div>
 
           </div>
 
         </div>
 
-        <!-- HERO IMAGE -->
+        <div class="relative hidden lg:block">
 
-        <div class="hero-bike-wrap">
+          <div class="absolute inset-0 bg-blue-500/10 rounded-full blur-[120px]"></div>
 
-          <div class="hero-bike-glow"></div>
-
-          <picture>
-            <source srcset="/hero-bike.webp" type="image/webp">
-
-            <img
-              src="/hero-bike.png"
-              alt="Motocicleta premium Velver"
-              class="hero-bike"
-              loading="eager"
-              fetchpriority="high"
-              decoding="async"
-            >
-          </picture>
+          <img
+            src="/hero-bike.webp"
+            alt="Motocicleta Velver"
+            class="relative z-10 w-full object-contain drop-shadow-[0_0_60px_rgba(59,130,246,.25)]"
+          >
 
         </div>
 
@@ -551,65 +362,7 @@
 
   </section>
 
-  <!-- ECOSYSTEM -->
-
-  <section id="ecosystem" class="section pt-0">
-
-    <div class="container-system">
-
-      <div class="glass rounded-[40px] p-10 lg:p-16">
-
-        <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-5">
-          Digital Ecosystem™
-        </p>
-
-        <h2 class="text-4xl lg:text-6xl font-black max-w-4xl leading-tight mb-10">
-          Infraestructura digital diseñada para convertir.
-        </h2>
-
-        <div class="grid lg:grid-cols-4 gap-6">
-
-          <div class="glass-soft rounded-[30px] p-8">
-            <i class="fa-solid fa-globe text-4xl text-blue-400 mb-6"></i>
-            <h3 class="text-2xl font-black mb-4">Web Premium</h3>
-            <p class="subtle leading-relaxed">
-              Plataforma cinematográfica optimizada para percepción premium y conversión.
-            </p>
-          </div>
-
-          <div class="glass-soft rounded-[30px] p-8">
-            <i class="fa-solid fa-brain text-4xl text-cyan-400 mb-6"></i>
-            <h3 class="text-2xl font-black mb-4">AI Match™</h3>
-            <p class="subtle leading-relaxed">
-              Sistema inteligente de recomendación según perfil y estilo de conducción.
-            </p>
-          </div>
-
-          <div class="glass-soft rounded-[30px] p-8">
-            <i class="fa-solid fa-mobile-screen text-4xl text-white mb-6"></i>
-            <h3 class="text-2xl font-black mb-4">Social System</h3>
-            <p class="subtle leading-relaxed">
-              Ecosistema conectado entre TikTok, Instagram, Maps y WhatsApp.
-            </p>
-          </div>
-
-          <div class="glass-soft rounded-[30px] p-8">
-            <i class="fa-solid fa-chart-line text-4xl text-green-400 mb-6"></i>
-            <h3 class="text-2xl font-black mb-4">Remarketing</h3>
-            <p class="subtle leading-relaxed">
-              Arquitectura preparada para campañas inteligentes y seguimiento digital.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- CATALOG -->
+  <!-- CATALOGO -->
 
   <section id="catalogo" class="section pt-0">
 
@@ -622,40 +375,143 @@
         </p>
 
         <h2 class="text-4xl lg:text-6xl font-black mb-8">
-          Catálogo cinematográfico.
+          Catálogo inteligente.
         </h2>
 
-        <p class="subtle text-lg max-w-3xl leading-relaxed">
-          Selección premium diseñada para movilidad urbana, experiencia deportiva y viajes de nueva generación.
-        </p>
-
       </div>
-
-      <!-- FILTERS -->
-
-      <div class="flex flex-wrap gap-4 mb-14">
-
-        <button class="filter-btn active-filter glass px-6 py-4 rounded-2xl font-semibold" data-filter="all">
-          Todas
-        </button>
-
-        <button class="filter-btn glass px-6 py-4 rounded-2xl font-semibold" data-filter="Deportiva">
-          Deportivas
-        </button>
-
-        <button class="filter-btn glass px-6 py-4 rounded-2xl font-semibold" data-filter="Touring">
-          Touring
-        </button>
-
-        <button class="filter-btn glass px-6 py-4 rounded-2xl font-semibold" data-filter="Urbana">
-          Urbanas
-        </button>
-
-      </div>
-
-      <!-- GRID -->
 
       <div id="catalog-grid" class="grid md:grid-cols-2 xl:grid-cols-3 gap-8"></div>
+
+    </div>
+
+  </section>
+
+  <!-- VELVER CARE -->
+
+  <section id="velver-care" class="section pt-0">
+
+    <div class="container-system">
+
+      <div class="glass rounded-[44px] overflow-hidden relative p-10 lg:p-16">
+
+        <div class="absolute top-[-120px] right-[-120px] w-[320px] h-[320px] bg-blue-500/10 rounded-full blur-[120px]"></div>
+
+        <div class="absolute bottom-[-120px] left-[-120px] w-[300px] h-[300px] bg-cyan-400/10 rounded-full blur-[120px]"></div>
+
+        <div class="relative z-10">
+
+          <div class="max-w-4xl mb-16">
+
+            <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-5">
+              Velver Care System™
+            </p>
+
+            <h2 class="text-4xl lg:text-6xl font-black leading-tight mb-8">
+              Más que garantía.
+              <span class="gradient-text">Un sistema inteligente de respaldo premium.</span>
+            </h2>
+
+            <p class="text-lg subtle leading-relaxed max-w-3xl">
+              Diseñado para proteger tu experiencia, acompañar tu motocicleta y mantener una conexión continua entre Velver y cada cliente.
+            </p>
+
+          </div>
+
+          <div class="grid lg:grid-cols-4 gap-6 mb-16">
+
+            <div class="glass-soft rounded-[30px] p-8">
+              <i class="fa-solid fa-shield-halved text-4xl text-blue-400 mb-6"></i>
+              <h3 class="text-2xl font-black mb-4">Protección Inteligente</h3>
+              <p class="subtle leading-relaxed">Sistema diseñado para brindar confianza y respaldo premium.</p>
+            </div>
+
+            <div class="glass-soft rounded-[30px] p-8">
+              <i class="fa-solid fa-screwdriver-wrench text-4xl text-cyan-400 mb-6"></i>
+              <h3 class="text-2xl font-black mb-4">Smart Maintenance™</h3>
+              <p class="subtle leading-relaxed">Mantenimiento progresivo estructurado para seguridad y rendimiento.</p>
+            </div>
+
+            <div class="glass-soft rounded-[30px] p-8">
+              <i class="fa-solid fa-qrcode text-4xl text-white mb-6"></i>
+              <h3 class="text-2xl font-black mb-4">QR Digital</h3>
+              <p class="subtle leading-relaxed">Acceso rápido a soporte y seguimiento desde cualquier dispositivo.</p>
+            </div>
+
+            <div class="glass-soft rounded-[30px] p-8">
+              <i class="fa-solid fa-headset text-4xl text-green-400 mb-6"></i>
+              <h3 class="text-2xl font-black mb-4">Premium Support™</h3>
+              <p class="subtle leading-relaxed">Ecosistema postventa diseñado para acompañar al cliente.</p>
+            </div>
+
+          </div>
+
+          <div class="glass-soft rounded-[38px] p-8 lg:p-12 mb-16">
+
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 mb-12">
+
+              <div>
+                <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-4">
+                  Smart Maintenance™
+                </p>
+
+                <h3 class="text-3xl lg:text-5xl font-black leading-tight">
+                  Seguimiento inteligente de servicios.
+                </h3>
+              </div>
+
+              <p class="subtle max-w-xl leading-relaxed text-lg">
+                Sistema estructurado para mantener rendimiento y seguridad.
+              </p>
+
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-5 gap-6">
+
+              <div class="glass rounded-[28px] p-6 text-center">
+                <p class="text-4xl font-black text-blue-400 mb-3">500</p>
+                <p class="font-semibold">Primer servicio</p>
+              </div>
+
+              <div class="glass rounded-[28px] p-6 text-center">
+                <p class="text-4xl font-black text-cyan-400 mb-3">3K</p>
+                <p class="font-semibold">3,000 km</p>
+              </div>
+
+              <div class="glass rounded-[28px] p-6 text-center">
+                <p class="text-4xl font-black text-white mb-3">6K</p>
+                <p class="font-semibold">6,000 km</p>
+              </div>
+
+              <div class="glass rounded-[28px] p-6 text-center">
+                <p class="text-4xl font-black text-blue-300 mb-3">12K</p>
+                <p class="font-semibold">12,000 km</p>
+              </div>
+
+              <div class="glass rounded-[28px] p-6 text-center">
+                <p class="text-4xl font-black text-cyan-300 mb-3">24K</p>
+                <p class="font-semibold">24,000 km</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="text-center">
+
+            <a
+              href="https://wa.me/522441252948"
+              target="_blank"
+              class="primary-btn inline-flex items-center gap-3 px-10 py-5 rounded-2xl font-bold"
+            >
+              <i class="fa-brands fa-whatsapp text-xl"></i>
+              Activar soporte inteligente
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
 
     </div>
 
@@ -665,7 +521,7 @@
 
   <section id="ai-match" class="section pt-0">
 
-    <div class="max-w-5xl mx-auto">
+    <div class="container-system max-w-5xl">
 
       <div class="glass rounded-[40px] p-8 lg:p-14">
 
@@ -679,52 +535,27 @@
             Descubre tu moto ideal.
           </h2>
 
-          <p class="text-lg subtle max-w-2xl mx-auto leading-relaxed">
-            Sistema inteligente diseñado para recomendar motocicletas según tu estilo de vida.
-          </p>
-
         </div>
 
-        <div class="grid lg:grid-cols-3 gap-8">
+        <div class="grid lg:grid-cols-2 gap-8">
 
-          <div>
-            <label class="block mb-4 font-semibold">Uso principal</label>
+          <select id="use" class="glass px-5 py-4 rounded-2xl bg-transparent outline-none">
+            <option value="city">Ciudad</option>
+            <option value="travel">Viajes</option>
+            <option value="sport">Deportivo</option>
+          </select>
 
-            <select id="use" class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none">
-              <option value="city">Ciudad</option>
-              <option value="travel">Viajes</option>
-              <option value="sport">Deportivo</option>
-            </select>
-          </div>
-
-          <div>
-            <label class="block mb-4 font-semibold">Experiencia</label>
-
-            <select id="experience" class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none">
-              <option value="beginner">Principiante</option>
-              <option value="mid">Intermedio</option>
-              <option value="advanced">Avanzado</option>
-            </select>
-          </div>
-
-          <div>
-            <label class="block mb-4 font-semibold">Estilo</label>
-
-            <select id="style" class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none">
-              <option value="premium">Premium</option>
-              <option value="aggressive">Deportivo</option>
-              <option value="urban">Urbano</option>
-            </select>
-          </div>
+          <select id="experience" class="glass px-5 py-4 rounded-2xl bg-transparent outline-none">
+            <option value="beginner">Principiante</option>
+            <option value="mid">Intermedio</option>
+            <option value="advanced">Avanzado</option>
+          </select>
 
         </div>
 
         <div class="text-center mt-12">
 
-          <button
-            id="aiMatchBtn"
-            class="primary-btn px-10 py-5 rounded-2xl font-bold"
-          >
+          <button id="aiMatchBtn" class="primary-btn px-10 py-5 rounded-2xl font-bold">
             Analizar perfil
           </button>
 
@@ -732,13 +563,9 @@
 
         <div id="aiResult" class="hidden mt-14 glass rounded-[34px] p-10 text-center">
 
-          <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-5">
-            Resultado IA
-          </p>
+          <h3 id="resultTitle" class="text-4xl font-black mb-6"></h3>
 
-          <h3 id="resultTitle" class="text-4xl lg:text-5xl font-black mb-6"></h3>
-
-          <p id="resultDescription" class="subtle text-lg leading-relaxed max-w-2xl mx-auto mb-10"></p>
+          <p id="resultDescription" class="subtle text-lg leading-relaxed mb-10"></p>
 
           <a
             id="resultWhatsapp"
@@ -757,7 +584,7 @@
 
   </section>
 
-  <!-- SOCIAL -->
+  <!-- REDES -->
 
   <section id="redes" class="section pt-0">
 
@@ -775,28 +602,24 @@
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-          <a href="https://www.facebook.com/share/1GsfHLH1q2/" target="_blank" class="social-card glass rounded-3xl p-8 text-center">
+          <a href="https://facebook.com" target="_blank" class="social-btn glass rounded-3xl p-8 text-center">
             <i class="fa-brands fa-facebook-f text-5xl text-blue-500 mb-6"></i>
-            <h3 class="text-2xl font-black mb-3">Facebook</h3>
-            <p class="subtle text-sm">Contenido, entregas y comunidad.</p>
+            <h3 class="text-2xl font-black">Facebook</h3>
           </a>
 
-          <a href="https://www.instagram.com/" target="_blank" class="social-card glass rounded-3xl p-8 text-center">
+          <a href="https://instagram.com" target="_blank" class="social-btn glass rounded-3xl p-8 text-center">
             <i class="fa-brands fa-instagram text-5xl text-pink-500 mb-6"></i>
-            <h3 class="text-2xl font-black mb-3">Instagram</h3>
-            <p class="subtle text-sm">Branding cinematográfico premium.</p>
+            <h3 class="text-2xl font-black">Instagram</h3>
           </a>
 
-          <a href="https://www.tiktok.com/" target="_blank" class="social-card glass rounded-3xl p-8 text-center">
+          <a href="https://tiktok.com" target="_blank" class="social-btn glass rounded-3xl p-8 text-center">
             <i class="fa-brands fa-tiktok text-5xl text-cyan-400 mb-6"></i>
-            <h3 class="text-2xl font-black mb-3">TikTok</h3>
-            <p class="subtle text-sm">Contenido viral y movilidad visual.</p>
+            <h3 class="text-2xl font-black">TikTok</h3>
           </a>
 
-          <a href="https://maps.app.goo.gl/qTegJLWbNGXa4p117?g_st=ac" target="_blank" class="social-card glass rounded-3xl p-8 text-center">
+          <a href="https://maps.google.com" target="_blank" class="social-btn glass rounded-3xl p-8 text-center">
             <i class="fa-solid fa-location-dot text-5xl text-green-400 mb-6"></i>
-            <h3 class="text-2xl font-black mb-3">Maps</h3>
-            <p class="subtle text-sm">Ubicación y presencia local premium.</p>
+            <h3 class="text-2xl font-black">Maps</h3>
           </a>
 
         </div>
@@ -813,39 +636,26 @@
 
     <div class="container-system">
 
-      <div class="glass rounded-[34px] p-10 lg:p-14">
+      <div class="glass rounded-[34px] p-10 lg:p-14 flex flex-col lg:flex-row items-center justify-between gap-10">
 
-        <div class="flex flex-col lg:flex-row items-center justify-between gap-10">
+        <div class="flex items-center gap-5">
 
-          <div class="flex items-center gap-5">
+          <img src="/logo-secondary.png" alt="Velver" class="w-[70px]">
 
-            <img src="/logo-secondary.webp" alt="Velver" class="w-[70px]">
-
-            <div>
-              <h3 class="text-3xl font-black">
-                Velver Motos Atlixco™
-              </h3>
-
-              <p class="subtle">
-                Cinematic Mobility Experience™
-              </p>
-            </div>
-
+          <div>
+            <h3 class="text-3xl font-black">Velver Motos Atlixco™</h3>
+            <p class="subtle">AI Luxury Motorcycle Platform™</p>
           </div>
 
-          <a
-            href="https://wa.me/522441252948"
-            target="_blank"
-            class="primary-btn px-8 py-4 rounded-2xl font-bold"
-          >
-            Contactar IA Comercial
-          </a>
-
         </div>
 
-        <div class="mt-10 opacity-[0.018] text-[9px] tracking-[5px] uppercase select-none text-center">
-          KNJO-BLK-1141015
-        </div>
+        <a
+          href="https://wa.me/522441252948"
+          target="_blank"
+          class="primary-btn px-8 py-4 rounded-2xl font-bold"
+        >
+          Contactar IA Comercial
+        </a>
 
       </div>
 
@@ -856,8 +666,6 @@
   <!-- SCRIPT -->
 
   <script>
-
-    /* INTRO */
 
     window.addEventListener('load',()=>{
 
@@ -884,13 +692,11 @@
       gsap.to('#intro',{
         opacity:0,
         duration:1.4,
-        delay:2.6,
+        delay:2.8,
         pointerEvents:'none'
       });
 
     });
-
-    /* MOTORCYCLES */
 
     const motos = [
 
@@ -899,9 +705,8 @@
         categoria:'Deportiva',
         velocidad:'140 km/h',
         motor:'200cc',
-        descripcion:'Diseñada para adrenalina premium y conducción cinematográfica.',
-        imagen:'/neo200.webp',
-        color:'blue'
+        descripcion:'Diseñada para adrenalina premium y experiencia deportiva.',
+        imagen:'/moto1.webp'
       },
 
       {
@@ -909,9 +714,8 @@
         categoria:'Touring',
         velocidad:'165 km/h',
         motor:'300cc',
-        descripcion:'Experiencia touring elite con presencia visual dominante.',
-        imagen:'/crx300.webp',
-        color:'cyan'
+        descripcion:'Experiencia touring elite con presencia cinematográfica.',
+        imagen:'/crx300.png'
       },
 
       {
@@ -919,16 +723,13 @@
         categoria:'Urbana',
         velocidad:'110 km/h',
         motor:'150cc',
-        descripcion:'Movilidad urbana premium diseñada para nueva generación.',
-        imagen:'/urbanx.webp',
-        color:'white'
+        descripcion:'Movilidad urbana premium inteligente.',
+        imagen:'/moto3.webp'
       }
 
     ];
 
     const catalogGrid = document.getElementById('catalog-grid');
-
-    /* RENDER */
 
     function renderCatalog(items){
 
@@ -938,33 +739,30 @@
 
         const card = document.createElement('div');
 
-        card.className = 'catalog-card glass rounded-[34px]';
+        card.className = 'catalog-card glass rounded-[34px] overflow-hidden';
 
         card.innerHTML = `
 
-          <div class="h-[320px] overflow-hidden relative">
+          <div class="h-[280px] overflow-hidden relative">
 
             <img
               src="${moto.imagen}"
               alt="${moto.nombre}"
-              class="catalog-image w-full h-full object-cover"
               loading="lazy"
-              decoding="async"
+              class="w-full h-full object-cover hover:scale-110 transition duration-700"
             >
 
-            <div class="card-overlay"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
 
           </div>
 
           <div class="p-8">
 
-            <div class="flex items-center justify-between gap-4 mb-5">
+            <div class="flex items-center justify-between mb-5 gap-4">
 
-              <h3 class="text-3xl font-black">
-                ${moto.nombre}
-              </h3>
+              <h3 class="text-3xl font-black">${moto.nombre}</h3>
 
-              <span class="text-${moto.color}-400 text-sm font-semibold whitespace-nowrap">
+              <span class="text-blue-400 text-sm font-semibold whitespace-nowrap">
                 ${moto.categoria}
               </span>
 
@@ -1011,52 +809,20 @@
 
     renderCatalog(motos);
 
-    /* FILTERS */
-
-    const filterButtons = document.querySelectorAll('.filter-btn');
-
-    filterButtons.forEach((button)=>{
-
-      button.addEventListener('click',()=>{
-
-        filterButtons.forEach((btn)=>{
-          btn.classList.remove('active-filter');
-        });
-
-        button.classList.add('active-filter');
-
-        const filter = button.dataset.filter;
-
-        if(filter === 'all'){
-          renderCatalog(motos);
-          return;
-        }
-
-        const filtered = motos.filter((moto)=> moto.categoria === filter);
-
-        renderCatalog(filtered);
-
-      });
-
-    });
-
-    /* AI MATCH */
-
     const aiMatchBtn = document.getElementById('aiMatchBtn');
     const aiResult = document.getElementById('aiResult');
 
     aiMatchBtn.addEventListener('click',()=>{
 
       const use = document.getElementById('use').value;
-      const style = document.getElementById('style').value;
 
       let moto = {};
 
-      if(use === 'sport' || style === 'aggressive'){
+      if(use === 'sport'){
 
         moto = {
           nombre:'Neo 200',
-          descripcion:'Diseñada para adrenalina premium, presencia deportiva y experiencia visual dominante.'
+          descripcion:'Ideal para adrenalina urbana y experiencia deportiva premium.'
         };
 
       }
@@ -1065,7 +831,7 @@
 
         moto = {
           nombre:'CRX 300',
-          descripcion:'Ideal para viajes, confort premium y movilidad touring inteligente.'
+          descripcion:'Perfecta para viajes, confort y presencia touring elite.'
         };
 
       }
@@ -1074,7 +840,7 @@
 
         moto = {
           nombre:'Urban X',
-          descripcion:'Movilidad urbana premium diseñada para ciudad y nueva generación.'
+          descripcion:'Movilidad urbana inteligente diseñada para ciudad.'
         };
 
       }
@@ -1083,8 +849,7 @@
 
       document.getElementById('resultDescription').innerText = moto.descripcion;
 
-      document.getElementById('resultWhatsapp').href =
-      `https://wa.me/522441252948?text=Hola,%20la%20IA%20me%20recomendó%20la%20${encodeURIComponent(moto.nombre)}`;
+      document.getElementById('resultWhatsapp').href = `https://wa.me/522441252948?text=Hola,%20la%20IA%20me%20recomendó%20la%20${encodeURIComponent(moto.nombre)}`;
 
       aiResult.classList.remove('hidden');
 
@@ -1094,41 +859,6 @@
         duration:1
       });
 
-    });
-
-    /* ANALYTICS */
-
-    document.querySelectorAll('a').forEach((link)=>{
-
-      link.addEventListener('click',()=>{
-
-        gtag('event','click',{
-          event_category:'engagement',
-          event_label:link.href
-        });
-
-      });
-
-    });
-
-    /* BACKGROUND FLOAT */
-
-    gsap.to('.ambient-a',{
-      x:60,
-      y:40,
-      duration:12,
-      repeat:-1,
-      yoyo:true,
-      ease:'sine.inOut'
-    });
-
-    gsap.to('.ambient-b',{
-      x:-40,
-      y:-30,
-      duration:10,
-      repeat:-1,
-      yoyo:true,
-      ease:'sine.inOut'
     });
 
   </script>
