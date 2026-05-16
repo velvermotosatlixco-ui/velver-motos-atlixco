@@ -1,1 +1,32 @@
+[
+  {
+    "id":"crx200",
+    "marca":"ZMoto",
+    "nombre":"CRX 200",
+    "categoria":"Sport",
+    "motor":"200cc",
+    "velocidad":"105 km/h",
+    "precio":"34999",
+    "financiamiento":true,
+    "transmision":"Manual",
+    "uso":"Deportiva",
+    "descripcion":"Diseñada para adrenalina urbana premium.",
+    "imagen":"/catalogo/motos/zmoto/crx200.webp"
+  },
+
+  {
+    "id":"fighter200",
+    "marca":"RGH",
+    "nombre":"Fighter 200",
+    "categoria":"Touring",
+    "motor":"200cc",
+    "velocidad":"115 km/h",
+    "precio":"42999",
+    "financiamiento":true,
+    "transmision":"Manual",
+    "uso":"Viajes",
+    "descripcion":"Experiencia touring elite con presencia cinematográfica.",
+    "imagen":"/catalogo/motos/rgh/fighter200.webp"
+  }
+]
 
