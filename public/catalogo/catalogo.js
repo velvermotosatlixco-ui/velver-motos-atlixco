@@ -1,47 +1,56 @@
-const motos = [
+const container = document.getElementById("motos-container");
+const buscador = document.getElementById("buscador");
 
-  {
-    marca: "Ryder",
-    modelo: "RD-1",
-    precio: 20499,
-    categoria: "Trabajo",
-    cilindrada: 150,
-    imagen: "../ad1.5.webp",
-    descripcion: "Motocicleta confiable, económica y funcional para trabajo diario.",
-    credito: true
-  },
+function mostrarMotos(lista) {
+  container.innerHTML = "";
 
-  {
-    marca: "ZMoto",
-    modelo: "CRX 200",
-    precio: 35999,
-    categoria: "Adventure",
-    cilindrada: 200,
-    imagen: "../crx200.webp",
-    descripcion: "Diseño premium para aventura urbana y carretera.",
-    credito: true
-  },
+  lista.forEach(moto => {
+    const card = document.createElement("div");
+    card.className = "moto-card";
 
-  {
-    marca: "ZMoto",
-    modelo: "300 Pro Sport",
-    precio: 52999,
-    categoria: "Deportiva",
-    cilindrada: 300,
-    imagen: "../crx300.png",
-    descripcion: "Potencia, presencia y estilo de alto impacto.",
-    credito: true
-  },
+    card.innerHTML = `
+      <img src="${moto.imagen}" alt="${moto.modelo}" class="moto-img">
 
-  {
-    marca: "Ryder",
-    modelo: "Fighter 200",
-    precio: 38999,
-    categoria: "Sport",
-    cilindrada: 200,
-    imagen: "../fighter200.webp",
-    descripcion: "Estilo deportivo premium para clientes aspiracionales.",
-    credito: true
-  }
+      <div class="p-5">
+        <h2 class="text-2xl font-bold mb-2">${moto.marca} ${moto.modelo}</h2>
 
-];
+        <p class="text-blue-400 text-lg mb-2">$${moto.precio.toLocaleString()}</p>
+
+        <p class="text-sm text-gray-300 mb-2">
+          ${moto.categoria} | ${moto.cilindrada}cc
+        </p>
+
+        <p class="text-sm text-gray-400 mb-4">
+          ${moto.descripcion}
+        </p>
+
+        <a 
+          href="https://wa.me/522441252948?text=Hola,%20quiero%20información%20sobre%20la%20${encodeURIComponent(moto.modelo)}"
+          target="_blank"
+          class="block text-center bg-blue-600 hover:bg-blue-500 text-white py-2 rounded-xl transition"
+        >
+          Solicitar Información
+        </a>
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+function filtrarMotos() {
+  const texto = buscador.value.toLowerCase();
+
+  const filtradas = motos.filter(moto =>
+    moto.modelo.toLowerCase().includes(texto) ||
+    moto.marca.toLowerCase().includes(texto) ||
+    moto.categoria.toLowerCase().includes(texto)
+  );
+
+  mostrarMotos(filtradas);
+}
+
+buscador.addEventListener("input", filtrarMotos);
+
+// Mostrar todas al inicio
+mostrarMotos(motos);
