@@ -46,9 +46,9 @@ crossorigin>
 href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
 rel="stylesheet">
 
-<script
-src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js">
-</script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
 <style>
 
@@ -76,15 +76,14 @@ src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js">
     --glass-bg:rgba(255,255,255,.04);
     --glass-border:rgba(255,255,255,.08);
 
-    --radius-lg:28px;
+    --radius-lg:30px;
     --radius-md:20px;
 
     --shadow-blue:
-    0 0 60px rgba(0,87,255,.15);
+    0 0 80px rgba(0,87,255,.16);
 
     --transition:
     .45s cubic-bezier(.22,.61,.36,1);
-
 }
 
 html{
@@ -97,9 +96,9 @@ body{
 
     font-family:'Inter',sans-serif;
 
-    background:var(--bg-primary);
+    background:#050505;
 
-    color:var(--text-primary);
+    color:#F5F7FA;
 
     overflow-x:hidden;
 
@@ -109,7 +108,7 @@ body{
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
-/* BACKGROUND SYSTEM */
+/* BACKGROUND */
 /*━━━━━━━━━━━━━━━━━━*/
 
 .ambient-glow{
@@ -136,18 +135,18 @@ body{
 
     background-image:
     linear-gradient(
-    rgba(255,255,255,.025) 1px,
+    rgba(255,255,255,.02) 1px,
     transparent 1px
     ),
     linear-gradient(
     90deg,
-    rgba(255,255,255,.025) 1px,
+    rgba(255,255,255,.02) 1px,
     transparent 1px
     );
 
     background-size:40px 40px;
 
-    opacity:.15;
+    opacity:.14;
 
     pointer-events:none;
 
@@ -159,7 +158,7 @@ body{
     position:fixed;
     inset:0;
 
-    opacity:.03;
+    opacity:.025;
 
     background-image:
     url("https://grainy-gradients.vercel.app/noise.svg");
@@ -193,7 +192,7 @@ body{
 
     width:100%;
 
-    padding:18px 7vw;
+    padding:20px 7vw;
 
     display:flex;
 
@@ -203,7 +202,7 @@ body{
 
     z-index:1000;
 
-    backdrop-filter:blur(20px);
+    backdrop-filter:blur(24px);
 
     background:
     rgba(5,5,5,.45);
@@ -219,22 +218,19 @@ body{
     object-fit:contain;
 }
 
-.topbar-right{
-
-    display:flex;
-
-    gap:16px;
-
-    align-items:center;
-}
-
 .whatsapp-btn{
 
-    padding:14px 22px;
+    border:none;
+
+    cursor:pointer;
+
+    font-family:'Inter',sans-serif;
+
+    font-weight:600;
+
+    padding:16px 24px;
 
     border-radius:999px;
-
-    border:none;
 
     background:
     linear-gradient(
@@ -245,19 +241,15 @@ body{
 
     color:white;
 
-    font-weight:600;
-
-    cursor:pointer;
+    box-shadow:var(--shadow-blue);
 
     transition:var(--transition);
-
-    box-shadow:var(--shadow-blue);
 }
 
 .whatsapp-btn:hover{
 
     transform:
-    translateY(-2px)
+    translateY(-3px)
     scale(1.03);
 }
 
@@ -265,7 +257,7 @@ body{
 /* HERO */
 /*━━━━━━━━━━━━━━━━━━*/
 
-.hero-section{
+.hero{
 
     position:relative;
 
@@ -275,7 +267,8 @@ body{
 
     align-items:center;
 
-    padding:140px 8vw 120px;
+    padding:
+    150px 8vw 120px;
 
     overflow:hidden;
 }
@@ -298,9 +291,9 @@ body{
     opacity:.28;
 
     filter:
-    brightness(.55)
+    brightness(.5)
     contrast(1.15)
-    saturate(1.15);
+    saturate(1.1);
 }
 
 .hero-overlay{
@@ -311,8 +304,8 @@ body{
     background:
     linear-gradient(
     to bottom,
-    rgba(5,5,5,.2),
-    rgba(5,5,5,.95)
+    rgba(5,5,5,.25),
+    rgba(5,5,5,.94)
     );
 
     z-index:-1;
@@ -320,32 +313,33 @@ body{
 
 .hero-content{
 
-    max-width:820px;
+    max-width:850px;
 }
 
 .hero-tag{
 
     display:inline-flex;
 
-    padding:12px 18px;
+    padding:
+    12px 18px;
 
     border-radius:999px;
-
-    border:
-    1px solid rgba(255,255,255,.08);
 
     background:
     rgba(255,255,255,.03);
 
+    border:
+    1px solid rgba(255,255,255,.08);
+
     backdrop-filter:blur(20px);
 
-    font-size:12px;
+    color:#3BA0FF;
 
     letter-spacing:2px;
 
-    color:var(--blue-cyan);
+    font-size:12px;
 
-    margin-bottom:30px;
+    margin-bottom:28px;
 }
 
 .hero-title{
@@ -353,26 +347,26 @@ body{
     font-size:
     clamp(3.5rem,9vw,7rem);
 
-    line-height:.92;
+    line-height:.9;
 
     letter-spacing:-4px;
 
-    font-weight:800;
+    margin-bottom:28px;
 
-    margin-bottom:30px;
+    font-weight:800;
 }
 
 .hero-description{
 
     max-width:650px;
 
-    color:var(--text-secondary);
+    color:#8B949E;
 
     line-height:1.9;
 
     font-size:1.08rem;
 
-    margin-bottom:42px;
+    margin-bottom:40px;
 }
 
 .hero-actions{
@@ -395,14 +389,19 @@ body{
 
     cursor:pointer;
 
-    transition:var(--transition);
-
     font-family:'Inter',sans-serif;
 
     font-weight:600;
+
+    transition:var(--transition);
 }
 
 .primary-btn{
+
+    padding:
+    18px 34px;
+
+    border-radius:20px;
 
     background:
     linear-gradient(
@@ -412,10 +411,6 @@ body{
     );
 
     color:white;
-
-    padding:18px 34px;
-
-    border-radius:18px;
 
     box-shadow:var(--shadow-blue);
 }
@@ -429,9 +424,10 @@ body{
 
 .secondary-btn{
 
-    padding:18px 30px;
+    padding:
+    18px 30px;
 
-    border-radius:18px;
+    border-radius:20px;
 
     background:
     rgba(255,255,255,.03);
@@ -447,7 +443,7 @@ body{
 .secondary-btn:hover{
 
     border-color:
-    rgba(59,160,255,.4);
+    rgba(59,160,255,.3);
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
@@ -456,92 +452,117 @@ body{
 
 section{
 
-    padding:120px 8vw;
-}
-
-.section-header{
-
-    margin-bottom:60px;
+    padding:
+    130px 8vw;
 }
 
 .section-tag{
 
-    display:inline-block;
+    display:inline-flex;
 
-    color:var(--blue-cyan);
-
-    font-size:12px;
+    color:#3BA0FF;
 
     letter-spacing:2px;
 
-    margin-bottom:16px;
+    font-size:12px;
+
+    margin-bottom:18px;
 }
 
 .section-title{
 
     font-size:
-    clamp(2rem,5vw,4rem);
+    clamp(2.2rem,5vw,4.5rem);
 
-    line-height:1.05;
+    line-height:1.02;
 
     letter-spacing:-2px;
+
+    margin-bottom:30px;
 }
 
-/*━━━━━━━━━━━━━━━━━━*/
-/* GLASS */
-/*━━━━━━━━━━━━━━━━━━*/
+.section-description{
 
-.glass{
+    color:#8B949E;
 
-    background:var(--glass-bg);
+    line-height:1.9;
 
-    border:
-    1px solid var(--glass-border);
-
-    backdrop-filter:blur(24px);
-
-    border-radius:var(--radius-lg);
-
-    padding:36px;
+    max-width:760px;
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
 /* INTRO */
 /*━━━━━━━━━━━━━━━━━━*/
 
-.intro-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(320px,1fr));
-
-    gap:60px;
-
-    align-items:center;
-}
-
-.intro-text p{
-
-    color:var(--text-secondary);
-
-    line-height:1.9;
-
-    margin-bottom:24px;
-}
-
-.intro-image{
+.intro{
 
     position:relative;
 
     overflow:hidden;
-
-    border-radius:30px;
-
-    min-height:520px;
 }
 
-.intro-image img{
+.intro-glow{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    width:900px;
+    height:900px;
+
+    transform:
+    translate(-50%,-50%);
+
+    background:
+    radial-gradient(
+    circle,
+    rgba(0,87,255,.12),
+    transparent 70%
+    );
+
+    filter:blur(80px);
+
+    pointer-events:none;
+}
+
+.intro-grid{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(340px,1fr));
+
+    gap:80px;
+
+    align-items:center;
+}
+
+.intro-image-wrapper{
+
+    position:relative;
+
+    min-height:720px;
+
+    overflow:hidden;
+
+    border-radius:36px;
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    background:
+    rgba(255,255,255,.03);
+
+    box-shadow:
+    0 0 80px rgba(0,0,0,.35);
+}
+
+.intro-image{
 
     width:100%;
     height:100%;
@@ -551,50 +572,76 @@ section{
     transition:1.2s ease;
 }
 
-.intro-image:hover img{
+.intro-image-wrapper:hover .intro-image{
 
     transform:scale(1.05);
 }
 
-/*━━━━━━━━━━━━━━━━━━*/
-/* FILTERS */
-/*━━━━━━━━━━━━━━━━━━*/
+.intro-image-overlay{
 
-.filters-grid{
+    position:absolute;
+    inset:0;
 
-    display:grid;
+    background:
+    linear-gradient(
+    to top,
+    rgba(5,5,5,.6),
+    rgba(5,5,5,.1)
+    );
+}
 
-    grid-template-columns:
-    repeat(auto-fit,minmax(200px,1fr));
+.intro-metrics{
+
+    display:flex;
 
     gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-top:42px;
 }
 
-.search-box{
+.metric-card{
 
-    margin-bottom:24px;
-}
+    min-width:160px;
 
-.search-input,
-.filter-select{
+    padding:24px;
 
-    width:100%;
+    border-radius:24px;
 
-    padding:18px 20px;
-
-    border-radius:18px;
+    background:
+    rgba(255,255,255,.04);
 
     border:
     1px solid rgba(255,255,255,.08);
 
-    background:
-    rgba(255,255,255,.03);
+    backdrop-filter:blur(24px);
 
-    color:white;
+    transition:var(--transition);
+}
 
-    outline:none;
+.metric-card:hover{
 
-    font-family:'Inter',sans-serif;
+    transform:
+    translateY(-6px);
+
+    border-color:
+    rgba(59,160,255,.25);
+
+    box-shadow:
+    0 0 40px rgba(0,87,255,.15);
+}
+
+.metric-card h3{
+
+    font-size:2rem;
+
+    margin-bottom:10px;
+}
+
+.metric-card span{
+
+    color:#8B949E;
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
@@ -603,11 +650,19 @@ section{
 
 .ai-panel{
 
+    background:
+    rgba(255,255,255,.04);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(24px);
+
+    border-radius:36px;
+
+    padding:60px;
+
     text-align:center;
-
-    color:var(--text-secondary);
-
-    line-height:1.9;
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
@@ -622,11 +677,9 @@ section{
     repeat(auto-fit,minmax(320px,1fr));
 
     gap:30px;
-}
 
-/*━━━━━━━━━━━━━━━━━━*/
-/* CARD */
-/*━━━━━━━━━━━━━━━━━━*/
+    margin-top:60px;
+}
 
 .bike-card{
 
@@ -653,7 +706,7 @@ section{
     translateY(-10px);
 
     border-color:
-    rgba(59,160,255,.28);
+    rgba(59,160,255,.25);
 
     box-shadow:
     0 0 60px rgba(0,87,255,.15);
@@ -688,11 +741,11 @@ section{
 
 .bike-brand{
 
-    color:var(--blue-cyan);
-
-    font-size:12px;
+    color:#3BA0FF;
 
     letter-spacing:2px;
+
+    font-size:12px;
 
     margin-bottom:14px;
 }
@@ -701,44 +754,16 @@ section{
 
     font-size:2rem;
 
-    margin-bottom:12px;
-}
-
-.bike-specs{
-
-    display:flex;
-
-    gap:12px;
-
-    flex-wrap:wrap;
-
-    margin-bottom:18px;
-}
-
-.spec-badge{
-
-    padding:8px 14px;
-
-    border-radius:999px;
-
-    background:
-    rgba(255,255,255,.05);
-
-    border:
-    1px solid rgba(255,255,255,.08);
-
-    font-size:12px;
-
-    color:var(--text-secondary);
+    margin-bottom:16px;
 }
 
 .bike-description{
 
-    color:var(--text-secondary);
+    color:#8B949E;
 
     line-height:1.8;
 
-    margin-bottom:28px;
+    margin-bottom:24px;
 }
 
 .bike-footer{
@@ -763,21 +788,21 @@ section{
 /* CTA */
 /*━━━━━━━━━━━━━━━━━━*/
 
-.cta-box{
+.cta-panel{
 
     text-align:center;
-}
 
-.cta-box p{
+    padding:80px;
 
-    color:var(--text-secondary);
+    border-radius:40px;
 
-    line-height:1.8;
+    background:
+    rgba(255,255,255,.04);
 
-    margin:
-    20px auto 32px;
+    border:
+    1px solid rgba(255,255,255,.08);
 
-    max-width:700px;
+    backdrop-filter:blur(24px);
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
@@ -786,16 +811,15 @@ section{
 
 footer{
 
-    padding:80px 8vw;
+    padding:
+    80px 8vw;
 
     border-top:
     1px solid rgba(255,255,255,.05);
 
     text-align:center;
 
-    color:var(--text-secondary);
-
-    font-size:.95rem;
+    color:#8B949E;
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
@@ -809,13 +833,13 @@ footer{
     bottom:20px;
     right:20px;
 
-    opacity:.04;
-
-    transform:rotate(-11deg);
+    font-size:10px;
 
     letter-spacing:3px;
 
-    font-size:10px;
+    opacity:.04;
+
+    transform:rotate(-11deg);
 
     pointer-events:none;
 
@@ -825,6 +849,14 @@ footer{
 /*━━━━━━━━━━━━━━━━━━*/
 /* RESPONSIVE */
 /*━━━━━━━━━━━━━━━━━━*/
+
+@media(max-width:980px){
+
+    .intro-image-wrapper{
+
+        min-height:500px;
+    }
+}
 
 @media(max-width:768px){
 
@@ -838,7 +870,7 @@ footer{
         height:46px;
     }
 
-    .hero-section{
+    .hero{
 
         padding:
         140px 6vw 100px;
@@ -846,7 +878,8 @@ footer{
 
     section{
 
-        padding:100px 6vw;
+        padding:
+        100px 6vw;
     }
 
     .hero-actions{
@@ -861,10 +894,30 @@ footer{
         width:100%;
     }
 
+    .intro-metrics{
+
+        flex-direction:column;
+    }
+
+    .metric-card{
+
+        width:100%;
+    }
+
+    .intro-image-wrapper{
+
+        min-height:420px;
+    }
+
     .bike-footer{
 
         flex-direction:column;
         align-items:flex-start;
+    }
+
+    .cta-panel{
+
+        padding:50px 30px;
     }
 }
 
@@ -897,8 +950,6 @@ src="logo-main.png"
 alt="Velver Motos Atlixco"
 class="main-logo">
 
-<div class="topbar-right">
-
 <button
 class="whatsapp-btn"
 onclick="window.open('https://wa.me/522441234567')">
@@ -907,15 +958,13 @@ WhatsApp
 
 </button>
 
-</div>
-
 </header>
 
 <!--━━━━━━━━━━━━━━━━━━-->
 <!-- HERO -->
 <!--━━━━━━━━━━━━━━━━━━-->
 
-<section class="hero-section">
+<section class="hero">
 
 <div class="hero-bg">
 
@@ -942,9 +991,9 @@ MOTORCYCLE EXPERIENCE
 <p class="hero-description">
 
 Velver Motos Atlixco™ redefine la experiencia
-de motocicletas en México mediante un ecosistema
-premium, inteligente y cinematográfico diseñado
-para una nueva generación de riders.
+de motocicletas mediante un ecosistema
+premium, tecnológico y cinematográfico
+inspirado en marcas internacionales.
 
 </p>
 
@@ -965,114 +1014,90 @@ AI Match™
 </section>
 
 <!--━━━━━━━━━━━━━━━━━━-->
-<!-- INTRO -->
+<!-- INTRO EXPERIENCE™ -->
 <!--━━━━━━━━━━━━━━━━━━-->
 
-<section>
+<section class="intro">
+
+<div class="intro-glow"></div>
 
 <div class="intro-grid">
 
-<div class="intro-text">
+<div>
 
 <div class="section-tag">
 VELVER MOTOS ATLIXCO™
 </div>
 
 <h2 class="section-title">
-Experiencia Premium
-Sobre Dos Ruedas
+Más Que
+<br>
+Motocicletas.
 </h2>
 
-<br><br>
-
-<p>
+<p class="section-description">
 
 Velver Motos Atlixco™ nace con la visión
-de ofrecer motocicletas modernas, deportivas,
-urbanas y de trabajo bajo una experiencia
-tecnológica y aspiracional.
+de ofrecer una experiencia premium de nueva
+generación para riders urbanos, deportivos
+y de trabajo.
 
 </p>
 
-<p>
+<br>
 
-Trabajamos con marcas reconocidas como
-Zmoto, Ryder, JL Racing, Huaihai y RGH,
-ofreciendo modelos innovadores, financiamiento
-y atención personalizada.
+<p class="section-description">
 
-</p>
-
-<p>
-
-Nuestro objetivo es transformar la experiencia
-de compra tradicional en una plataforma
-digital premium inspirada en marcas como
-Tesla, Ducati y BMW Motorrad.
+Trabajamos con marcas como Zmoto, Ryder,
+JL Racing, Huaihai y RGH, integrando diseño,
+tecnología, financiamiento y atención personalizada.
 
 </p>
+
+<div class="intro-metrics">
+
+<div class="metric-card">
+
+<h3>+5</h3>
+
+<span>
+Marcas Premium
+</span>
 
 </div>
 
-<div class="intro-image glass">
+<div class="metric-card">
+
+<h3>AI</h3>
+
+<span>
+Smart Match™
+</span>
+
+</div>
+
+<div class="metric-card">
+
+<h3>100%</h3>
+
+<span>
+Experiencia Digital
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="intro-image-wrapper">
+
+<div class="intro-image-overlay"></div>
 
 <img
 src="intro.webp"
-alt="Sucursal Velver Motos Atlixco">
-
-</div>
-
-</div>
-
-</section>
-
-<!--━━━━━━━━━━━━━━━━━━-->
-<!-- FILTERS -->
-<!--━━━━━━━━━━━━━━━━━━-->
-
-<section>
-
-<div class="glass">
-
-<div class="search-box">
-
-<input
-type="text"
-class="search-input"
-placeholder="Buscar motocicleta...">
-
-</div>
-
-<div class="filters-grid">
-
-<select class="filter-select">
-<option>Marca</option>
-<option>Zmoto</option>
-<option>Ryder</option>
-<option>JL Racing</option>
-<option>Huaihai</option>
-<option>RGH</option>
-</select>
-
-<select class="filter-select">
-<option>Categoría</option>
-<option>Deportiva</option>
-<option>Trabajo</option>
-<option>Urbana</option>
-</select>
-
-<select class="filter-select">
-<option>Motor</option>
-<option>150cc</option>
-<option>200cc</option>
-<option>300cc</option>
-</select>
-
-<select class="filter-select">
-<option>Precio</option>
-<option>$20,000 - $40,000</option>
-<option>$40,000+</option>
-</select>
+alt="Sucursal Velver Motos Atlixco"
+class="intro-image">
 
 </div>
 
@@ -1086,8 +1111,6 @@ placeholder="Buscar motocicleta...">
 
 <section>
 
-<div class="section-header">
-
 <div class="section-tag">
 AI MATCH™
 </div>
@@ -1096,15 +1119,13 @@ AI MATCH™
 Inteligencia Comercial Premium
 </h2>
 
-</div>
+<div class="ai-panel">
 
-<div class="glass ai-panel">
-
-<p>
+<p class="section-description" style="margin:auto;">
 
 Sistema inteligente preparado para recomendaciones
 de motocicletas, financiamiento dinámico,
-scoring comercial y experiencia personalizada.
+análisis de presupuesto y experiencia personalizada.
 
 </p>
 
@@ -1118,8 +1139,6 @@ scoring comercial y experiencia personalizada.
 
 <section>
 
-<div class="section-header">
-
 <div class="section-tag">
 PREMIUM CATALOG™
 </div>
@@ -1128,11 +1147,9 @@ PREMIUM CATALOG™
 Catálogo Inteligente
 </h2>
 
-</div>
-
 <div class="catalog-grid">
 
-<!-- CARD 1 -->
+<!-- CARD -->
 
 <article class="bike-card">
 
@@ -1153,22 +1170,6 @@ ZMOTO
 <h3 class="bike-title">
 CRX 200
 </h3>
-
-<div class="bike-specs">
-
-<div class="spec-badge">
-200cc
-</div>
-
-<div class="spec-badge">
-Deportiva
-</div>
-
-<div class="spec-badge">
-Manual
-</div>
-
-</div>
 
 <p class="bike-description">
 
@@ -1194,7 +1195,7 @@ Ver Más
 
 </article>
 
-<!-- CARD 2 -->
+<!-- CARD -->
 
 <article class="bike-card">
 
@@ -1216,27 +1217,10 @@ RGH
 Fighter 200
 </h3>
 
-<div class="bike-specs">
-
-<div class="spec-badge">
-200cc
-</div>
-
-<div class="spec-badge">
-Street
-</div>
-
-<div class="spec-badge">
-LED
-</div>
-
-</div>
-
 <p class="bike-description">
 
 Diseño agresivo con iluminación moderna
-y rendimiento ideal para ciudad
-y carretera.
+y rendimiento ideal para ciudad y carretera.
 
 </p>
 
@@ -1266,7 +1250,7 @@ Ver Más
 
 <section>
 
-<div class="glass cta-box">
+<div class="cta-panel">
 
 <div class="section-tag">
 WHATSAPP EXPERIENCE™
@@ -1276,13 +1260,15 @@ WHATSAPP EXPERIENCE™
 Agenda Tu Experiencia Premium
 </h2>
 
-<p>
+<p class="section-description" style="margin:auto;">
 
 Habla directamente con un asesor especializado,
-conoce opciones de financiamiento y descubre
-qué motocicleta se adapta mejor a tu estilo.
+conoce opciones de financiamiento y encuentra
+la motocicleta perfecta para tu estilo.
 
 </p>
+
+<br><br>
 
 <button
 class="primary-btn"
@@ -1318,10 +1304,14 @@ Experiencia cinematográfica premium de nueva generación.
 
 <script>
 
+gsap.registerPlugin(ScrollTrigger);
+
 gsap.defaults({
     ease:'power3.out',
     duration:1
 });
+
+/* HERO */
 
 gsap.from('.hero-tag',{
     opacity:0,
@@ -1336,21 +1326,76 @@ gsap.from('.hero-title',{
 
 gsap.from('.hero-description',{
     opacity:0,
-    y:30,
+    y:40,
     delay:.4
 });
 
 gsap.from('.hero-actions',{
     opacity:0,
-    y:30,
+    y:40,
     delay:.6
 });
+
+/* INTRO */
+
+gsap.from('.intro .section-tag',{
+    opacity:0,
+    y:30,
+    scrollTrigger:{
+        trigger:'.intro',
+        start:'top 75%'
+    }
+});
+
+gsap.from('.intro .section-title',{
+    opacity:0,
+    y:60,
+    scrollTrigger:{
+        trigger:'.intro',
+        start:'top 75%'
+    }
+});
+
+gsap.from('.section-description',{
+    opacity:0,
+    y:40,
+    stagger:.15,
+    scrollTrigger:{
+        trigger:'.intro',
+        start:'top 70%'
+    }
+});
+
+gsap.from('.metric-card',{
+    opacity:0,
+    y:40,
+    stagger:.15,
+    scrollTrigger:{
+        trigger:'.intro-metrics',
+        start:'top 80%'
+    }
+});
+
+gsap.from('.intro-image-wrapper',{
+    opacity:0,
+    scale:.92,
+    duration:1.2,
+    scrollTrigger:{
+        trigger:'.intro-image-wrapper',
+        start:'top 80%'
+    }
+});
+
+/* CATALOG */
 
 gsap.from('.bike-card',{
     opacity:0,
     y:80,
     stagger:.15,
-    delay:.8
+    scrollTrigger:{
+        trigger:'.catalog-grid',
+        start:'top 80%'
+    }
 });
 
 </script>
