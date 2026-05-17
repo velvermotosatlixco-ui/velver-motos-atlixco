@@ -3,433 +3,941 @@
 
 <head>
 
-  <!--━━━━━━━━━━━━━━━━━━-->
-  <!-- BLACK CODE™ SYSTEM -->
-  <!--━━━━━━━━━━━━━━━━━━-->
+<meta charset="UTF-8">
 
-  <meta charset="UTF-8" />
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>
+Velver Motos Atlixco™ | BLACK CODE™
+</title>
 
-  <title>Velver Motos Atlixco™ | BLACK CODE™ Digital Ecosystem</title>
+<meta
+name="description"
+content="Ecosistema premium inteligente de motocicletas.">
 
-  <meta
-    name="description"
-    content="Experiencia premium inteligente de motocicletas. Ecosistema cinematográfico de nueva generación." />
+<meta
+name="theme-color"
+content="#050505">
 
-  <meta
-    name="theme-color"
-    content="#050505" />
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com">
 
-  <meta
-    name="color-scheme"
-    content="dark" />
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
 
-  <!--━━━━━━━━━━━━━━━━━━-->
-  <!-- OPEN GRAPH -->
-  <!--━━━━━━━━━━━━━━━━━━-->
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
 
-  <meta property="og:type" content="website" />
+<script
+src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js">
+</script>
 
-  <meta
-    property="og:title"
-    content="Velver Motos Atlixco™" />
+<style>
 
-  <meta
-    property="og:description"
-    content="Ecosistema digital premium de motocicletas de nueva generación." />
+/*━━━━━━━━━━━━━━━━━━*/
+/* BLACK CODE™ RESET */
+/*━━━━━━━━━━━━━━━━━━*/
 
-  <meta
-    property="og:image"
-    content="/assets/og-cover.webp" />
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-  <meta
-    property="og:url"
-    content="https://velvermotos.com" />
+:root{
 
-  <!--━━━━━━━━━━━━━━━━━━-->
-  <!-- TWITTER -->
-  <!--━━━━━━━━━━━━━━━━━━-->
+    --bg-primary:#050505;
+    --bg-secondary:#0B0D12;
 
-  <meta
-    name="twitter:card"
-    content="summary_large_image" />
+    --blue-primary:#0057FF;
+    --blue-cyan:#3BA0FF;
 
-  <!--━━━━━━━━━━━━━━━━━━-->
-  <!-- PRELOAD -->
-  <!--━━━━━━━━━━━━━━━━━━-->
+    --text-primary:#F5F7FA;
+    --text-secondary:#8B949E;
 
-  <link
-    rel="preload"
-    as="image"
-    href="/assets/hero.webp" />
+    --glass-bg:rgba(255,255,255,.04);
+    --glass-border:rgba(255,255,255,.08);
 
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com" />
+    --radius-lg:28px;
+    --radius-md:20px;
 
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin />
+    --shadow-blue:
+    0 0 60px rgba(0,87,255,.15);
 
-  <!--━━━━━━━━━━━━━━━━━━-->
-  <!-- FONTS -->
-  <!--━━━━━━━━━━━━━━━━━━-->
+    --transition:
+    .4s cubic-bezier(.22,.61,.36,1);
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
+}
 
-  <!--━━━━━━━━━━━━━━━━━━-->
-  <!-- STYLES -->
-  <!--━━━━━━━━━━━━━━━━━━-->
+html{
 
-  <link
-    rel="stylesheet"
-    href="/styles/tokens.css" />
+    scroll-behavior:smooth;
+    overflow-x:hidden;
+}
 
-  <link
-    rel="stylesheet"
-    href="/styles/globals.css" />
+body{
 
-  <link
-    rel="stylesheet"
-    href="/styles/animations.css" />
+    background:var(--bg-primary);
 
-  <link
-    rel="stylesheet"
-    href="/styles/components.css" />
+    color:var(--text-primary);
 
-  <!--━━━━━━━━━━━━━━━━━━-->
-  <!-- GSAP -->
-  <!--━━━━━━━━━━━━━━━━━━-->
+    font-family:'Inter',sans-serif;
 
-  <script
-    defer
-    src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js">
-  </script>
+    overflow-x:hidden;
 
-  <!--━━━━━━━━━━━━━━━━━━-->
-  <!-- STRUCTURED DATA -->
-  <!--━━━━━━━━━━━━━━━━━━-->
+    min-height:100svh;
 
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"AutoDealer",
-    "name":"Velver Motos Atlixco",
-    "url":"https://velvermotos.com",
-    "description":"Ecosistema premium inteligente de motocicletas."
-  }
-  </script>
+    position:relative;
+}
+
+/*━━━━━━━━━━━━━━━━━━*/
+/* BLACK CODE™ */
+/*━━━━━━━━━━━━━━━━━━*/
+
+.blackcode-signature{
+
+    position:fixed;
+
+    bottom:20px;
+    right:20px;
+
+    font-size:10px;
+
+    letter-spacing:3px;
+
+    opacity:.04;
+
+    transform:rotate(-11deg);
+
+    z-index:1;
+
+    pointer-events:none;
+}
+
+/*━━━━━━━━━━━━━━━━━━*/
+/* AMBIENT SYSTEM */
+/*━━━━━━━━━━━━━━━━━━*/
+
+.ambient-glow{
+
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(
+    circle at top center,
+    rgba(0,87,255,.18),
+    transparent 55%
+    );
+
+    pointer-events:none;
+
+    z-index:0;
+}
+
+.noise-overlay{
+
+    position:fixed;
+    inset:0;
+
+    opacity:.025;
+
+    background-image:
+    url("https://grainy-gradients.vercel.app/noise.svg");
+
+    pointer-events:none;
+
+    z-index:1;
+}
+
+/*━━━━━━━━━━━━━━━━━━*/
+/* APP */
+/*━━━━━━━━━━━━━━━━━━*/
+
+#app{
+
+    position:relative;
+
+    z-index:2;
+}
+
+/*━━━━━━━━━━━━━━━━━━*/
+/* HERO */
+/*━━━━━━━━━━━━━━━━━━*/
+
+.hero-section{
+
+    position:relative;
+
+    min-height:100svh;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:120px 8vw;
+
+    overflow:hidden;
+}
+
+.hero-background{
+
+    position:absolute;
+    inset:0;
+
+    z-index:-2;
+}
+
+.hero-background img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:.32;
+
+    filter:
+    brightness(.55)
+    contrast(1.1)
+    saturate(1.1);
+}
+
+.hero-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+    to bottom,
+    rgba(5,5,5,.2),
+    rgba(5,5,5,.95)
+    );
+
+    z-index:-1;
+}
+
+.hero-content{
+
+    max-width:760px;
+}
+
+.hero-tag{
+
+    display:inline-flex;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    background:
+    rgba(255,255,255,.03);
+
+    backdrop-filter:blur(20px);
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    margin-bottom:32px;
+
+    color:var(--blue-cyan);
+}
+
+.hero-title{
+
+    font-size:
+    clamp(3rem,8vw,7rem);
+
+    line-height:.95;
+
+    letter-spacing:-3px;
+
+    font-weight:800;
+
+    margin-bottom:28px;
+}
+
+.hero-description{
+
+    max-width:620px;
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+
+    color:var(--text-secondary);
+
+    margin-bottom:42px;
+}
+
+.hero-actions{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+}
+
+/*━━━━━━━━━━━━━━━━━━*/
+/* BUTTONS */
+/*━━━━━━━━━━━━━━━━━━*/
+
+.primary-button,
+.secondary-button{
+
+    border:none;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    font-weight:600;
+
+    font-size:.95rem;
+}
+
+.primary-button{
+
+    background:
+    linear-gradient(
+    135deg,
+    var(--blue-primary),
+    var(--blue-cyan)
+    );
+
+    color:white;
+
+    padding:18px 34px;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow-blue);
+}
+
+.primary-button:hover{
+
+    transform:
+    translateY(-3px)
+    scale(1.02);
+}
+
+.secondary-button{
+
+    background:
+    rgba(255,255,255,.03);
+
+    color:var(--text-primary);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    padding:18px 30px;
+
+    border-radius:18px;
+}
+
+.secondary-button:hover{
+
+    border-color:
+    rgba(59,160,255,.4);
+
+    background:
+    rgba(255,255,255,.05);
+}
+
+/*━━━━━━━━━━━━━━━━━━*/
+/* SECTION */
+/*━━━━━━━━━━━━━━━━━━*/
+
+section{
+
+    padding:120px 8vw;
+}
+
+.section-header{
+
+    margin-bottom:60px;
+}
+
+.section-tag{
+
+    display:inline-block;
+
+    color:var(--blue-cyan);
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    margin-bottom:14px;
+}
+
+.section-title{
+
+    font-size:
+    clamp(2rem,5vw,4rem);
+
+    line-height:1.1;
+
+    letter-spacing:-2px;
+}
+
+/*━━━━━━━━━━━━━━━━━━*/
+/* GLASS */
+/*━━━━━━━━━━━━━━━━━━*/
+
+.glass-container{
+
+    background:var(--glass-bg);
+
+    border:
+    1px solid var(--glass-border);
+
+    backdrop-filter:blur(24px);
+
+    border-radius:var(--radius-lg);
+
+    padding:32px;
+
+    box-shadow:
+    0 0 60px rgba(0,0,0,.35);
+}
+
+/*━━━━━━━━━━━━━━━━━━*/
+/* FILTERS */
+/*━━━━━━━━━━━━━━━━━━*/
+
+.filters-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
+
+    gap:18px;
+}
+
+.search-wrapper{
+
+    margin-bottom:24px;
+}
+
+.search-input,
+.filter-select{
+
+    width:100%;
+
+    background:
+    rgba(255,255,255,.04);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    color:white;
+
+    padding:18px 20px;
+
+    border-radius:18px;
+
+    outline:none;
+
+    font-family:'Inter',sans-serif;
+}
+
+.search-input::placeholder{
+
+    color:var(--text-secondary);
+}
+
+/*━━━━━━━━━━━━━━━━━━*/
+/* AI SECTION */
+/*━━━━━━━━━━━━━━━━━━*/
+
+.ai-container{
+
+    min-height:220px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    color:var(--text-secondary);
+
+    line-height:1.8;
+}
+
+/*━━━━━━━━━━━━━━━━━━*/
+/* CATALOG */
+/*━━━━━━━━━━━━━━━━━━*/
+
+.catalog-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+}
+
+/*━━━━━━━━━━━━━━━━━━*/
+/* CARD */
+/*━━━━━━━━━━━━━━━━━━*/
+
+.bike-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    background:
+    rgba(255,255,255,.04);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(24px);
+
+    transition:var(--transition);
+
+    cursor:pointer;
+}
+
+.bike-card:hover{
+
+    transform:
+    translateY(-8px);
+
+    border-color:
+    rgba(59,160,255,.28);
+
+    box-shadow:
+    0 0 60px rgba(0,87,255,.18);
+}
+
+.bike-image{
+
+    height:240px;
+
+    overflow:hidden;
+}
+
+.bike-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:1s ease;
+}
+
+.bike-card:hover img{
+
+    transform:scale(1.08);
+}
+
+.bike-content{
+
+    padding:28px;
+}
+
+.bike-brand{
+
+    color:var(--blue-cyan);
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    margin-bottom:12px;
+}
+
+.bike-title{
+
+    font-size:1.8rem;
+
+    margin-bottom:12px;
+}
+
+.bike-description{
+
+    color:var(--text-secondary);
+
+    line-height:1.7;
+
+    margin-bottom:24px;
+}
+
+.bike-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.bike-price{
+
+    font-size:1.4rem;
+
+    font-weight:700;
+}
+
+/*━━━━━━━━━━━━━━━━━━*/
+/* RESPONSIVE */
+/*━━━━━━━━━━━━━━━━━━*/
+
+@media(max-width:768px){
+
+    .hero-section{
+
+        padding-top:140px;
+    }
+
+    .hero-actions{
+
+        flex-direction:column;
+    }
+
+    .primary-button,
+    .secondary-button{
+
+        width:100%;
+    }
+
+    section{
+
+        padding:100px 6vw;
+    }
+}
+
+</style>
 
 </head>
 
 <body>
 
-  <!--━━━━━━━━━━━━━━━━━━-->
-  <!-- BLACK CODE™ -->
-  <!--━━━━━━━━━━━━━━━━━━-->
+<div class="ambient-glow"></div>
 
-  <div class="blackcode-signature">
-    BLACK CODE by KNJO™
-  </div>
+<div class="noise-overlay"></div>
 
-  <!--━━━━━━━━━━━━━━━━━━-->
-  <!-- APP ROOT -->
-  <!--━━━━━━━━━━━━━━━━━━-->
+<div class="blackcode-signature">
+BLACK CODE by KNJO™
+</div>
 
-  <div id="app">
+<div id="app">
 
-    <!--━━━━━━━━━━━━━━━━━━-->
-    <!-- AMBIENT SYSTEM -->
-    <!--━━━━━━━━━━━━━━━━━━-->
+<!--━━━━━━━━━━━━━━━━━━-->
+<!-- HERO -->
+<!--━━━━━━━━━━━━━━━━━━-->
 
-    <div class="ambient-glow"></div>
+<header class="hero-section">
 
-    <div class="noise-overlay"></div>
+<div class="hero-background">
 
-    <div class="grid-overlay"></div>
+<img
+src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1600&auto=format&fit=crop"
+alt="Velver Motos Atlixco showroom premium">
 
-    <!--━━━━━━━━━━━━━━━━━━-->
-    <!-- HERO -->
-    <!--━━━━━━━━━━━━━━━━━━-->
+</div>
 
-    <header
-      class="hero-section"
-      id="hero-root">
+<div class="hero-overlay"></div>
 
-      <div class="hero-background">
+<div class="hero-content">
 
-        <img
-          src="/assets/hero.webp"
-          alt="Velver Motos Atlixco showroom premium"
-          class="hero-image"
-          loading="eager"
-          fetchpriority="high" />
+<span class="hero-tag">
+BLACK CODE™ DIGITAL ECOSYSTEM
+</span>
 
-      </div>
+<h1 class="hero-title">
+NEXT GENERATION
+<br>
+MOTORCYCLE EXPERIENCE
+</h1>
 
-      <div class="hero-overlay"></div>
+<p class="hero-description">
 
-      <div class="hero-content">
+Ecosistema cinematográfico premium de motocicletas
+diseñado para una experiencia inteligente,
+inmersiva y tecnológica.
 
-        <span class="hero-tag">
-          BLACK CODE™ DIGITAL ECOSYSTEM
-        </span>
+</p>
 
-        <h1 class="hero-title">
-          NEXT GENERATION
-          <br />
-          MOTORCYCLE EXPERIENCE
-        </h1>
+<div class="hero-actions">
 
-        <p class="hero-description">
-          Ecosistema cinematográfico premium de motocicletas
-          diseñado para una experiencia inteligente, inmersiva y tecnológica.
-        </p>
+<button class="primary-button">
+Explorar Catálogo
+</button>
 
-        <div class="hero-actions">
+<button class="secondary-button">
+AI Match™
+</button>
 
-          <button
-            class="primary-button"
-            id="exploreCatalogBtn"
-            aria-label="Explorar catálogo premium">
+</div>
 
-            Explorar Catálogo
+</div>
 
-          </button>
+</header>
 
-          <button
-            class="secondary-button"
-            id="aiMatchBtn"
-            aria-label="Abrir AI Match">
+<!--━━━━━━━━━━━━━━━━━━-->
+<!-- FILTERS -->
+<!--━━━━━━━━━━━━━━━━━━-->
 
-            AI Match™
+<section>
 
-          </button>
+<div class="glass-container">
 
-        </div>
+<div class="search-wrapper">
 
-      </div>
+<input
+type="text"
+class="search-input"
+placeholder="Buscar motocicleta...">
 
-    </header>
+</div>
 
-    <!--━━━━━━━━━━━━━━━━━━-->
-    <!-- MAIN -->
-    <!--━━━━━━━━━━━━━━━━━━-->
+<div class="filters-grid">
 
-    <main>
+<select class="filter-select">
+<option>Marca</option>
+<option>ZMoto</option>
+<option>Ryder</option>
+</select>
 
-      <!--━━━━━━━━━━━━━━━━━━-->
-      <!-- FILTERS -->
-      <!--━━━━━━━━━━━━━━━━━━-->
+<select class="filter-select">
+<option>Categoría</option>
+<option>Deportiva</option>
+<option>Trabajo</option>
+</select>
 
-      <section
-        class="filters-section"
-        id="filters-root">
+<select class="filter-select">
+<option>Motor</option>
+<option>150cc</option>
+<option>200cc</option>
+</select>
 
-        <div class="glass-container">
+<select class="filter-select">
+<option>Precio</option>
+<option>$20,000 - $30,000</option>
+<option>$30,000+</option>
+</select>
 
-          <div class="search-wrapper">
+</div>
 
-            <input
-              type="text"
-              id="searchInput"
-              class="search-input"
-              placeholder="Buscar motocicleta..."
-              aria-label="Buscar motocicleta" />
+</div>
 
-          </div>
+</section>
 
-          <div class="filters-grid">
+<!--━━━━━━━━━━━━━━━━━━-->
+<!-- AI -->
+<!--━━━━━━━━━━━━━━━━━━-->
 
-            <select
-              id="brandFilter"
-              class="filter-select"
-              aria-label="Filtrar por marca">
+<section>
 
-              <option value="">
-                Marca
-              </option>
+<div class="section-header">
 
-            </select>
+<div class="section-tag">
+AI MATCH™
+</div>
 
-            <select
-              id="categoryFilter"
-              class="filter-select"
-              aria-label="Filtrar por categoría">
+<h2 class="section-title">
+Inteligencia Comercial Premium
+</h2>
 
-              <option value="">
-                Categoría
-              </option>
+</div>
 
-            </select>
+<div class="glass-container ai-container">
 
-            <select
-              id="engineFilter"
-              class="filter-select"
-              aria-label="Filtrar por motor">
+<p>
 
-              <option value="">
-                Motor
-              </option>
+Sistema IA preparado para recomendaciones inteligentes,
+financiamiento dinámico y scoring comercial.
 
-            </select>
+</p>
 
-            <select
-              id="priceFilter"
-              class="filter-select"
-              aria-label="Filtrar por precio">
+</div>
 
-              <option value="">
-                Precio
-              </option>
+</section>
 
-            </select>
+<!--━━━━━━━━━━━━━━━━━━-->
+<!-- CATALOG -->
+<!--━━━━━━━━━━━━━━━━━━-->
 
-          </div>
+<section>
 
-        </div>
+<div class="section-header">
 
-      </section>
+<div class="section-tag">
+PREMIUM CATALOG™
+</div>
 
-      <!--━━━━━━━━━━━━━━━━━━-->
-      <!-- AI MATCH -->
-      <!--━━━━━━━━━━━━━━━━━━-->
+<h2 class="section-title">
+Catálogo Inteligente
+</h2>
 
-      <section
-        class="ai-section"
-        id="ai-root">
+</div>
 
-        <div class="section-header">
+<div class="catalog-grid">
 
-          <span class="section-tag">
-            AI MATCH™
-          </span>
+<!-- CARD -->
 
-          <h2 class="section-title">
-            Inteligencia Comercial Premium
-          </h2>
+<article class="bike-card">
 
-        </div>
+<div class="bike-image">
 
-        <div class="glass-container ai-container">
+<img
+src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1200&auto=format&fit=crop"
+alt="CRX 200">
 
-          <div class="ai-placeholder">
+</div>
 
-            <span>
-              Sistema IA preparado para recomendaciones inteligentes,
-              financiamiento dinámico y scoring comercial.
-            </span>
+<div class="bike-content">
 
-          </div>
+<div class="bike-brand">
+ZMOTO
+</div>
 
-        </div>
+<h3 class="bike-title">
+CRX 200
+</h3>
 
-      </section>
+<p class="bike-description">
 
-      <!--━━━━━━━━━━━━━━━━━━-->
-      <!-- CATALOG -->
-      <!--━━━━━━━━━━━━━━━━━━-->
+Motocicleta premium deportiva diseñada
+para una experiencia urbana agresiva y moderna.
 
-      <section
-        class="catalog-section"
-        id="catalog-root">
+</p>
 
-        <div class="section-header">
+<div class="bike-footer">
 
-          <span class="section-tag">
-            PREMIUM CATALOG™
-          </span>
+<div class="bike-price">
+$48,999
+</div>
 
-          <h2 class="section-title">
-            Catálogo Inteligente
-          </h2>
+<button class="secondary-button">
+Ver Más
+</button>
 
-        </div>
+</div>
 
-        <!--━━━━━━━━━━━━━━━━━━-->
-        <!-- SKELETONS -->
-        <!--━━━━━━━━━━━━━━━━━━-->
+</div>
 
-        <div
-          class="catalog-grid skeleton-grid"
-          id="skeletonGrid">
+</article>
 
-          <div class="skeleton-card"></div>
-          <div class="skeleton-card"></div>
-          <div class="skeleton-card"></div>
-          <div class="skeleton-card"></div>
+<!-- CARD -->
 
-        </div>
+<article class="bike-card">
 
-        <!--━━━━━━━━━━━━━━━━━━-->
-        <!-- DYNAMIC GRID -->
-        <!--━━━━━━━━━━━━━━━━━━-->
+<div class="bike-image">
 
-        <div
-          class="catalog-grid"
-          id="catalogGrid">
+<img
+src="https://images.unsplash.com/photo-1517846693594-1567da72af75?q=80&w=1200&auto=format&fit=crop"
+alt="Neo 200">
 
-        </div>
+</div>
 
-      </section>
+<div class="bike-content">
 
-    </main>
+<div class="bike-brand">
+RYDER
+</div>
 
-    <!--━━━━━━━━━━━━━━━━━━-->
-    <!-- MODAL ROOT -->
-    <!--━━━━━━━━━━━━━━━━━━-->
+<h3 class="bike-title">
+Neo 200
+</h3>
 
-    <div id="modal-root"></div>
+<p class="bike-description">
 
-    <!--━━━━━━━━━━━━━━━━━━-->
-    <!-- LOADER -->
-    <!--━━━━━━━━━━━━━━━━━━-->
+Diseño elegante premium con enfoque
+tecnológico y experiencia inteligente.
 
-    <div
-      class="page-loader"
-      id="pageLoader">
+</p>
 
-      <div class="loader-logo">
-        BLACK CODE™
-      </div>
+<div class="bike-footer">
 
-    </div>
+<div class="bike-price">
+$52,999
+</div>
 
-  </div>
+<button class="secondary-button">
+Ver Más
+</button>
 
-  <!--━━━━━━━━━━━━━━━━━━-->
-  <!-- SCRIPTS -->
-  <!--━━━━━━━━━━━━━━━━━━-->
+</div>
 
-  <script
-    defer
-    type="module"
-    src="/scripts/catalog.js">
-  </script>
+</div>
 
-  <script
-    defer
-    type="module"
-    src="/scripts/modal.js">
-  </script>
+</article>
 
-  <script
-    defer
-    type="module"
-    src="/scripts/ai.js">
-  </script>
+</div>
 
-  <script
-    defer
-    type="module"
-    src="/scripts/filters.js">
-  </script>
+</section>
+
+</div>
+
+<script>
+
+gsap.from('.hero-tag',{
+    opacity:0,
+    y:30,
+    duration:.8
+});
+
+gsap.from('.hero-title',{
+    opacity:0,
+    y:60,
+    duration:1,
+    delay:.2
+});
+
+gsap.from('.hero-description',{
+    opacity:0,
+    y:30,
+    duration:.8,
+    delay:.4
+});
+
+gsap.from('.hero-actions',{
+    opacity:0,
+    y:30,
+    duration:.8,
+    delay:.6
+});
+
+gsap.from('.bike-card',{
+    opacity:0,
+    y:60,
+    duration:1,
+    stagger:.15,
+    scrollTrigger:{
+        trigger:'.catalog-grid',
+        start:'top 80%'
+    }
+});
+
+</script>
 
 </body>
 
