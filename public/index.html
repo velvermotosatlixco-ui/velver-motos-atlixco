@@ -2,620 +2,426 @@
 <html lang="es">
 <head>
 
-  <meta charset="UTF-8" />
+<meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-  />
+<meta
+name="viewport"
+content="width=device-width,initial-scale=1,viewport-fit=cover"
+/>
 
-  <title>Velver Motos Atlixco™ | AI Smart Catalog</title>
+<title>Velver Motos Atlixco™ | AI Smart Catalog</title>
 
-  <meta
-    name="description"
-    content="Experiencia premium inteligente de motocicletas en Atlixco."
-  />
+<meta
+name="description"
+content="Experiencia premium inteligente de motocicletas en Atlixco."
+>
 
-  <meta name="theme-color" content="#050505">
+<meta name="theme-color" content="#050505">
+<meta name="robots" content="index,follow">
 
-  <!-- OPEN GRAPH -->
+<meta property="og:title" content="Velver Motos Atlixco™">
+<meta property="og:description" content="AI Smart Catalog™">
+<meta property="og:image" content="/og-cover.webp">
 
-  <meta property="og:title" content="Velver Motos Atlixco™">
-  <meta property="og:description" content="AI Smart Catalog™">
-  <meta property="og:image" content="/og-cover.webp">
+<link rel="canonical" href="https://velvermotos.com">
 
-  <!-- FAVICON -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link
-    rel="icon"
-    type="image/png"
-    href="/logo-main.png"
-  >
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+rel="stylesheet"
+/>
 
-  <!-- GOOGLE FONTS -->
+<link rel="preload" as="image" href="/logo-secondary.webp">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="icon" href="/logo-main.png">
 
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G1JRYB0WW5"></script>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
-  >
+<script>
 
-  <!-- TAILWIND -->
+window.dataLayer=window.dataLayer||[];
 
-  <script src="https://cdn.tailwindcss.com"></script>
+function gtag(){
+dataLayer.push(arguments);
+}
 
-  <!-- GSAP -->
+gtag('js',new Date());
 
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+gtag('config','G-G1JRYB0WW5');
 
-  <!-- FONT AWESOME -->
+</script>
 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  >
+<script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- GOOGLE ANALYTICS -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-G1JRYB0WW5"
-  ></script>
+<style>
 
-  <script>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+-webkit-tap-highlight-color:transparent;
+}
 
-    window.dataLayer = window.dataLayer || [];
+body{
+background:#050505;
+color:#F5F7FA;
+overflow-x:hidden;
+}
 
-    function gtag(){
-      dataLayer.push(arguments);
-    }
+.container-system{
+max-width:1450px;
+margin:auto;
+}
 
-    gtag('js', new Date());
+.section{
+padding:140px 24px;
+}
 
-    gtag('config', 'G-G1JRYB0WW5');
+.glass{
+background:rgba(255,255,255,.03);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.05);
+}
 
-  </script>
+.primary-btn{
+background:linear-gradient(135deg,#0057FF,#3BA0FF);
+}
 
-  <!-- STYLES -->
+.subtle{
+color:#8B949E;
+}
 
-  <style>
+.gradient-text{
+background:linear-gradient(90deg,#FFF,#9FD3FF);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Inter',sans-serif;
-      -webkit-tap-highlight-color:transparent;
-    }
+.massive{
+font-size:clamp(3rem,10vw,8rem);
+font-weight:900;
+line-height:.95;
+}
 
-    html{
-      scroll-behavior:smooth;
-    }
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:24px;
+}
 
-    body{
-      background:#050505;
-      color:#F5F7FA;
-      overflow-x:hidden;
-    }
+.catalog-card{
+transition:.4s;
+cursor:pointer;
+}
 
-    .container-system{
-      max-width:1450px;
-      margin:auto;
-    }
+.catalog-card:hover{
+transform:translateY(-10px);
+}
 
-    .section{
-      padding:140px 24px;
-      position:relative;
-      z-index:2;
-    }
+.search-input::placeholder{
+color:#8B949E;
+}
 
-    .glass{
-      background:rgba(255,255,255,.035);
-      backdrop-filter:blur(20px);
-      border:1px solid rgba(255,255,255,.06);
-    }
+.knjo{
+position:fixed;
+right:12px;
+bottom:10px;
+font-size:8px;
+opacity:.02;
+transform:rotate(11deg);
+pointer-events:none;
+letter-spacing:2px;
+}
 
-    .glass-soft{
-      background:rgba(255,255,255,.02);
-      backdrop-filter:blur(14px);
-      border:1px solid rgba(255,255,255,.04);
-    }
+.skeleton{
+height:420px;
+border-radius:28px;
+animation:pulse 1.5s infinite;
+}
 
-    .gradient-text{
-      background:linear-gradient(90deg,#FFFFFF,#9FD3FF);
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-    }
+@keyframes pulse{
 
-    .subtle{
-      color:#8B949E;
-    }
+0%{opacity:.3;}
 
-    .primary-btn{
-      background:linear-gradient(135deg,#0057FF,#3BA0FF);
-      transition:.4s ease;
-      box-shadow:0 20px 70px rgba(0,87,255,.22);
-    }
+50%{opacity:.1;}
 
-    .primary-btn:hover{
-      transform:translateY(-4px);
-      box-shadow:0 25px 90px rgba(0,87,255,.35);
-    }
+100%{opacity:.3;}
 
-    .bg-system{
-      position:fixed;
-      inset:0;
-      z-index:-2;
-      overflow:hidden;
-    }
+}
 
-    .glow-a{
-      position:absolute;
-      width:900px;
-      height:900px;
-      border-radius:999px;
-      background:#0057FF;
-      top:-300px;
-      left:-300px;
-      opacity:.08;
-      filter:blur(180px);
-    }
-
-    .glow-b{
-      position:absolute;
-      width:700px;
-      height:700px;
-      border-radius:999px;
-      background:#3BA0FF;
-      bottom:-250px;
-      right:-220px;
-      opacity:.08;
-      filter:blur(180px);
-    }
-
-    .noise{
-      position:absolute;
-      inset:0;
-      opacity:.02;
-      background-image:radial-gradient(#fff .5px,transparent .5px);
-      background-size:12px 12px;
-    }
-
-    .navbar{
-      position:fixed;
-      top:18px;
-      left:50%;
-      transform:translateX(-50%);
-      width:calc(100% - 24px);
-      max-width:1450px;
-      z-index:1000;
-    }
-
-    .hero{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      position:relative;
-      overflow:hidden;
-      padding:0 24px;
-    }
-
-    .massive{
-      font-size:clamp(3.2rem,10vw,8rem);
-      line-height:.95;
-      font-weight:900;
-    }
-
-    .catalog-card{
-      transition:.45s ease;
-      overflow:hidden;
-    }
-
-    .catalog-card:hover{
-      transform:translateY(-10px);
-      border-color:rgba(59,160,255,.25);
-    }
-
-    .social-btn{
-      transition:.4s ease;
-    }
-
-    .social-btn:hover{
-      transform:translateY(-6px);
-      border-color:rgba(59,160,255,.3);
-    }
-
-    #intro{
-      position:fixed;
-      inset:0;
-      background:#050505;
-      z-index:9999;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-
-    @media(max-width:980px){
-
-      .desktop-nav{
-        display:none;
-      }
-
-      .section{
-        padding:110px 22px;
-      }
-
-      .massive{
-        font-size:3.7rem;
-      }
-
-    }
-
-  </style>
+</style>
 
 </head>
 
 <body>
 
-  <!-- BACKGROUND -->
+<div class="knjo">
+BLACK CODE by KNJO • KNJO-BLK-1141015
+</div>
 
-  <div class="bg-system">
 
-    <div class="glow-a"></div>
+<section class="hero">
 
-    <div class="glow-b"></div>
+<div class="container-system">
 
-    <div class="noise"></div>
+<h1 class="massive">
 
-  </div>
+El futuro de las
 
-  <!-- INTRO -->
+<span class="gradient-text">
+motocicletas premium.
+</span>
 
-  <div id="intro">
+</h1>
 
-    <div class="text-center px-6">
+<p class="mt-8 text-xl subtle max-w-xl">
+Ecosistema cinematográfico diseñado para nueva generación.
+</p>
 
-      <img
-        id="introLogo"
-        src="/logo-secondary.png"
-        alt="Velver"
-        class="w-[170px] lg:w-[240px] mx-auto opacity-0 scale-75"
-      >
+</div>
 
-      <h1
-        id="introTitle"
-        class="mt-10 text-5xl lg:text-8xl font-black tracking-[12px] opacity-0"
-      >
-        VELVER
-      </h1>
+</section>
 
-      <p
-        id="introSub"
-        class="mt-6 text-xs lg:text-sm tracking-[8px] uppercase text-blue-300 opacity-0"
-      >
-        Intelligent Mobility Platform™
-      </p>
 
-    </div>
+<section class="section" id="catalogo">
 
-  </div>
+<div class="container-system">
 
-  <!-- NAVBAR -->
 
-  <header class="navbar">
+<div class="grid md:grid-cols-3 gap-5 mb-12">
 
-    <div class="glass rounded-[28px] px-5 lg:px-8 py-4 flex items-center justify-between">
 
-      <div class="flex items-center gap-4">
+<input
+id="searchInput"
+placeholder="Buscar moto..."
+class="search-input glass px-5 py-4 rounded-2xl bg-transparent outline-none"
+/>
 
-        <img
-          src="/logo-secondary.png"
-          alt="Velver"
-          class="w-11 h-11 object-contain"
-        >
 
-        <div>
+<select
+id="brandFilter"
+class="glass px-5 py-4 rounded-2xl bg-transparent"
+>
 
-          <h1 class="font-black tracking-wide">
-            VELVER MOTOS
-          </h1>
+<option value="all">Todas las marcas</option>
 
-          <p class="text-xs subtle tracking-[3px] uppercase">
-            Atlixco™
-          </p>
+</select>
 
-        </div>
 
-      </div>
+<select
+id="typeFilter"
+class="glass px-5 py-4 rounded-2xl bg-transparent"
+>
 
-      <nav class="desktop-nav flex items-center gap-10 text-sm subtle">
+<option value="all">Todas las categorías</option>
 
-        <a href="#catalogo" class="hover:text-white transition">
-          Catálogo
-        </a>
+</select>
 
-        <a href="#ai-match" class="hover:text-white transition">
-          AI Match™
-        </a>
+</div>
 
-        <a href="#redes" class="hover:text-white transition">
-          Redes
-        </a>
 
-      </nav>
+<div
+id="catalog-grid"
+class="grid md:grid-cols-2 xl:grid-cols-3 gap-8"
+></div>
 
-      <a
-        href="https://wa.me/522441252948"
-        target="_blank"
-        class="primary-btn px-6 py-3 rounded-2xl text-sm font-semibold"
-      >
-        WhatsApp IA
-      </a>
 
-    </div>
+</div>
 
-  </header>
+</section>
 
-  <!-- HERO -->
 
-  <section class="hero">
+<script>
 
-    <div class="container-system relative z-10 pt-40">
+let motos=[];
 
-      <div class="grid lg:grid-cols-[1.1fr_.9fr] gap-16 items-center">
+const grid=document.getElementById("catalog-grid");
 
-        <div>
+const searchInput=document.getElementById("searchInput");
 
-          <div class="glass-soft inline-flex items-center gap-3 px-5 py-3 rounded-full mb-10">
+const brandFilter=document.getElementById("brandFilter");
 
-            <div class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
+const typeFilter=document.getElementById("typeFilter");
 
-            <span class="text-sm subtle tracking-[3px] uppercase">
-              AI Smart Catalog™
-            </span>
 
-          </div>
+function skeleton(){
 
-          <h1 class="massive max-w-5xl leading-none">
+grid.innerHTML="";
 
-            El futuro de las
+for(let i=0;i<6;i++){
 
-            <span class="gradient-text">
-              motocicletas premium.
-            </span>
+grid.innerHTML+=`
+<div class="glass skeleton"></div>
+`;
 
-          </h1>
+}
 
-          <p class="mt-10 text-lg lg:text-xl subtle max-w-2xl leading-relaxed">
-            Ecosistema cinematográfico diseñado para nueva generación.
-          </p>
+}
 
-          <div class="flex flex-wrap gap-5 mt-12">
 
-            <a
-              href="#catalogo"
-              class="primary-btn px-8 py-5 rounded-2xl font-bold"
-            >
-              Explorar catálogo
-            </a>
+function trackMoto(name){
 
-          </div>
+gtag('event','moto_click',{
 
-        </div>
+event_category:'catalog',
 
-      </div>
+event_label:name
 
-    </div>
+});
 
-  </section>
+}
 
-  <!-- CATALOGO -->
 
-  <section id="catalogo" class="section pt-0">
+function render(data){
 
-    <div class="container-system">
+grid.innerHTML="";
 
-      <div class="mb-16">
 
-        <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-5">
-          Smart Collection™
-        </p>
+data.forEach(moto=>{
 
-        <h2 class="text-4xl lg:text-6xl font-black mb-8">
-          Catálogo inteligente.
-        </h2>
+grid.innerHTML+=`
 
-      </div>
+<div
+onclick="trackMoto('${moto.nombre}')"
+class="catalog-card glass rounded-[28px] p-5"
+>
 
-      <!-- FILTROS -->
+<img
+src="${moto.imagen}"
+loading="lazy"
+class="rounded-2xl mb-5 w-full"
+>
 
-      <div class="grid md:grid-cols-4 gap-5 mb-14">
+<p class="text-sm subtle mb-2">
+${moto.marca}
+</p>
 
-        <select
-          id="brandFilter"
-          class="glass px-5 py-4 rounded-2xl bg-transparent outline-none"
-        >
-          <option value="all">Todas las marcas</option>
-          <option value="ZMoto">ZMoto</option>
-          <option value="RGH">RGH</option>
-          <option value="Ryder">Ryder</option>
-        </select>
+<h3 class="text-2xl font-black mb-3">
+${moto.nombre}
+</h3>
 
-        <select
-          id="typeFilter"
-          class="glass px-5 py-4 rounded-2xl bg-transparent outline-none"
-        >
-          <option value="all">Todas las categorías</option>
-          <option value="Sport">Sport</option>
-          <option value="Touring">Touring</option>
-          <option value="Urbana">Urbana</option>
-        </select>
+<p class="text-blue-400 font-bold">
+${moto.precio}
+</p>
 
-      </div>
+</div>
 
-      <!-- GRID -->
+`;
 
-      <div
-        id="catalog-grid"
-        class="grid md:grid-cols-2 xl:grid-cols-3 gap-8"
-      ></div>
+});
 
-    </div>
+}
 
-  </section>
 
-  <!-- AI MATCH -->
+function filterCatalog(){
 
-  <section id="ai-match" class="section pt-0">
+let filtered=[...motos];
 
-    <div class="container-system max-w-5xl">
 
-      <div class="glass rounded-[40px] p-8 lg:p-14">
+const search=searchInput.value.toLowerCase();
 
-        <div class="text-center mb-14">
+const brand=brandFilter.value;
 
-          <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-5">
-            AI Match™
-          </p>
+const type=typeFilter.value;
 
-          <h2 class="text-4xl lg:text-6xl font-black mb-8">
-            Descubre tu moto ideal.
-          </h2>
 
-        </div>
+if(search){
 
-        <div class="grid lg:grid-cols-2 gap-8">
+filtered=filtered.filter(m=>
 
-          <div>
+m.nombre.toLowerCase().includes(search)
 
-            <label class="block mb-4 font-semibold">
-              Uso principal
-            </label>
+);
 
-            <select
-              id="use"
-              class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none"
-            >
-              <option value="city">Ciudad</option>
-              <option value="travel">Viajes</option>
-              <option value="sport">Deportivo</option>
-            </select>
+}
 
-          </div>
 
-        </div>
+if(brand!=="all"){
 
-      </div>
+filtered=filtered.filter(m=>m.marca===brand);
 
-    </div>
+}
 
-  </section>
 
-  <!-- REDES -->
+if(type!=="all"){
 
-  <section id="redes" class="section pt-0">
+filtered=filtered.filter(m=>m.categoria===type);
 
-    <div class="container-system">
+}
 
-      <div class="glass rounded-[44px] p-10 lg:p-16">
 
-        <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-6">
-          Social Ecosystem™
-        </p>
+render(filtered);
 
-        <h2 class="text-4xl lg:text-6xl font-black leading-tight mb-10">
-          Conecta con Velver.
-        </h2>
+}
 
-      </div>
 
-    </div>
+async function init(){
 
-  </section>
+skeleton();
 
-  <!-- FOOTER -->
 
-  <footer class="px-6 pb-14">
+const res=await fetch('/catalogo/data/motos.json');
 
-    <div class="container-system">
+motos=await res.json();
 
-      <div class="glass rounded-[34px] p-10 lg:p-14 flex flex-col lg:flex-row items-center justify-between gap-10">
 
-        <div class="flex items-center gap-5">
+const brands=[...new Set(motos.map(m=>m.marca))];
 
-          <img
-            src="/logo-secondary.png"
-            alt="Velver"
-            class="w-[70px]"
-          >
+const types=[...new Set(motos.map(m=>m.categoria))];
 
-          <div>
 
-            <h3 class="text-3xl font-black">
-              Velver Motos Atlixco™
-            </h3>
+brands.forEach(b=>{
 
-            <p class="subtle">
-              AI Luxury Motorcycle Platform™
-            </p>
+brandFilter.innerHTML+=`
 
-          </div>
+<option value="${b}">
+${b}
+</option>
 
-        </div>
+`;
 
-      </div>
+});
 
-    </div>
 
-  </footer>
+types.forEach(t=>{
 
-  <!-- INTRO ANIMATION -->
+typeFilter.innerHTML+=`
 
-  <script>
+<option value="${t}">
+${t}
+</option>
 
-    window.addEventListener('load',()=>{
+`;
 
-      gsap.to('#introLogo',{
-        opacity:1,
-        scale:1,
-        duration:1.2
-      });
+});
 
-      gsap.to('#introTitle',{
-        opacity:1,
-        y:-10,
-        duration:1,
-        delay:.3
-      });
 
-      gsap.to('#introSub',{
-        opacity:1,
-        y:-10,
-        duration:1,
-        delay:.6
-      });
+render(motos);
 
-      gsap.to('#intro',{
-        opacity:0,
-        duration:1.4,
-        delay:2.8,
-        pointerEvents:'none'
-      });
+}
 
-    });
 
-  </script>
+searchInput.addEventListener("input",filterCatalog);
 
-  <!-- CATALOG SYSTEM -->
+brandFilter.addEventListener("change",filterCatalog);
 
-  <script src="/catalogo/scripts/catalog.js"></script>
+typeFilter.addEventListener("change",filterCatalog);
+
+
+document.addEventListener('DOMContentLoaded',()=>{
+
+init();
+
+});
+
+
+</script>
 
 </body>
 </html>
