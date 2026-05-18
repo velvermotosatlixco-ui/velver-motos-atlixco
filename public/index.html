@@ -10,12 +10,12 @@ name="viewport"
 content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
 <title>
-Velver Motos Atlixco™ | BLACK CODE™ DIGITAL ECOSYSTEM
+Velver Motos Atlixco™ | BLACK CODE™ Cinematic Ecosystem
 </title>
 
 <meta
 name="description"
-content="Experiencia cinematográfica premium de motocicletas en Atlixco.">
+content="Experiencia premium cinematográfica de motocicletas en Atlixco. Ecosistema inteligente BLACK CODE™.">
 
 <meta
 name="theme-color"
@@ -27,7 +27,7 @@ content="Velver Motos Atlixco™">
 
 <meta
 property="og:description"
-content="BLACK CODE™ Premium Motorcycle Ecosystem">
+content="Showroom digital premium de nueva generación.">
 
 <meta
 property="og:type"
@@ -45,12 +45,6 @@ crossorigin>
 <link
 href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
 rel="stylesheet">
-
-<!-- FONT AWESOME -->
-
-<link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <!-- GSAP -->
 
@@ -91,8 +85,11 @@ box-sizing:border-box;
 :root{
 
 --bg:#050505;
+--bg2:#0B0D12;
+
 --blue:#0057FF;
 --cyan:#3BA0FF;
+
 --white:#F5F7FA;
 --gray:#8B949E;
 
@@ -150,7 +147,7 @@ overflow:hidden;
 transition:1.2s ease;
 }
 
-#intro-bg{
+#intro-video{
 
 position:absolute;
 
@@ -162,11 +159,11 @@ height:100%;
 object-fit:cover;
 
 filter:
-brightness(.35)
-contrast(1.15)
+brightness(.38)
+contrast(1.12)
 saturate(1.15);
 
-transform:scale(1.05);
+transform:scale(1.03);
 }
 
 .intro-overlay{
@@ -195,19 +192,19 @@ flex-direction:column;
 
 align-items:center;
 
-gap:28px;
+gap:30px;
 
 text-align:center;
 }
 
 .intro-logo{
 
-width:min(320px,70vw);
+width:min(340px,75vw);
 
 object-fit:contain;
 
 filter:
-drop-shadow(0 0 40px rgba(0,87,255,.35));
+drop-shadow(0 0 40px rgba(0,87,255,.25));
 }
 
 .intro-text{
@@ -218,7 +215,7 @@ letter-spacing:5px;
 
 color:#3BA0FF;
 
-opacity:.85;
+opacity:.9;
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
@@ -262,7 +259,7 @@ transparent 1px
 
 background-size:40px 40px;
 
-opacity:.1;
+opacity:.12;
 
 pointer-events:none;
 
@@ -320,7 +317,7 @@ z-index:1000;
 backdrop-filter:blur(24px);
 
 background:
-rgba(5,5,5,.45);
+rgba(5,5,5,.42);
 
 border-bottom:
 1px solid rgba(255,255,255,.05);
@@ -362,7 +359,7 @@ text-decoration:none;
 .btn-primary{
 
 padding:
-16px 28px;
+16px 30px;
 
 border-radius:18px;
 
@@ -376,7 +373,7 @@ var(--cyan)
 color:white;
 
 box-shadow:
-0 0 50px rgba(0,87,255,.25);
+0 0 50px rgba(0,87,255,.2);
 }
 
 .btn-primary:hover{
@@ -389,7 +386,7 @@ scale(1.03);
 .btn-secondary{
 
 padding:
-16px 28px;
+16px 30px;
 
 border-radius:18px;
 
@@ -400,8 +397,6 @@ border:
 1px solid rgba(255,255,255,.08);
 
 color:white;
-
-backdrop-filter:blur(20px);
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
@@ -437,8 +432,8 @@ object-fit:cover;
 
 filter:
 brightness(.35)
-contrast(1.15)
-saturate(1.1);
+contrast(1.1)
+saturate(1.08);
 
 z-index:-3;
 }
@@ -453,7 +448,7 @@ background:
 linear-gradient(
 to bottom,
 rgba(5,5,5,.2),
-rgba(5,5,5,.95)
+rgba(5,5,5,.96)
 );
 
 z-index:-2;
@@ -472,7 +467,7 @@ height:900px;
 background:
 radial-gradient(
 circle,
-rgba(0,87,255,.22),
+rgba(0,87,255,.2),
 transparent 70%
 );
 
@@ -501,11 +496,11 @@ rgba(255,255,255,.04);
 border:
 1px solid rgba(255,255,255,.08);
 
-color:#3BA0FF;
-
 font-size:12px;
 
 letter-spacing:2px;
+
+color:#3BA0FF;
 
 margin-bottom:28px;
 }
@@ -513,7 +508,7 @@ margin-bottom:28px;
 .hero-title{
 
 font-size:
-clamp(3.5rem,9vw,7rem);
+clamp(3.6rem,9vw,7rem);
 
 line-height:.88;
 
@@ -528,9 +523,9 @@ margin-bottom:28px;
 
 max-width:650px;
 
-color:#8B949E;
-
 line-height:1.9;
+
+color:#8B949E;
 
 font-size:1.05rem;
 
@@ -547,7 +542,7 @@ flex-wrap:wrap;
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
-/* SECTION */
+/* SECTIONS */
 /*━━━━━━━━━━━━━━━━━━*/
 
 section{
@@ -560,15 +555,15 @@ position:relative;
 
 .section-tag{
 
-color:#3BA0FF;
+display:block;
 
 font-size:12px;
 
 letter-spacing:2px;
 
-margin-bottom:18px;
+color:#3BA0FF;
 
-display:block;
+margin-bottom:18px;
 }
 
 .section-title{
@@ -585,11 +580,11 @@ margin-bottom:28px;
 
 .section-description{
 
-color:#8B949E;
+max-width:760px;
 
 line-height:1.9;
 
-max-width:760px;
+color:#8B949E;
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
@@ -664,8 +659,6 @@ rgba(255,255,255,.04);
 
 border:
 1px solid rgba(255,255,255,.08);
-
-backdrop-filter:blur(20px);
 }
 
 .metric h3{
@@ -681,7 +674,7 @@ color:#8B949E;
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
-/* SOCIAL */
+/* SOCIALS */
 /*━━━━━━━━━━━━━━━━━━*/
 
 .social-grid{
@@ -727,26 +720,6 @@ box-shadow:
 0 0 50px rgba(0,87,255,.12);
 }
 
-.social-card h3{
-
-display:flex;
-
-align-items:center;
-
-gap:14px;
-
-font-size:2rem;
-
-margin-bottom:14px;
-}
-
-.social-card i{
-
-font-size:1.7rem;
-
-color:#3BA0FF;
-}
-
 .social-card span{
 
 display:block;
@@ -760,11 +733,34 @@ color:#3BA0FF;
 margin-bottom:12px;
 }
 
+.social-card h3{
+
+display:flex;
+
+align-items:center;
+
+gap:16px;
+
+font-size:2rem;
+
+margin-bottom:16px;
+}
+
+.social-card svg{
+
+width:28px;
+height:28px;
+
+fill:#3BA0FF;
+
+stroke:#3BA0FF;
+}
+
 .social-card p{
 
-color:#8B949E;
-
 line-height:1.8;
+
+color:#8B949E;
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
@@ -834,7 +830,7 @@ transform:
 translateY(-10px);
 
 border-color:
-rgba(59,160,255,.25);
+rgba(59,160,255,.22);
 }
 
 .bike-image{
@@ -884,9 +880,9 @@ margin-bottom:16px;
 
 .bike-description{
 
-color:#8B949E;
-
 line-height:1.8;
+
+color:#8B949E;
 
 margin-bottom:24px;
 }
@@ -980,16 +976,16 @@ flex-direction:column;
 width:100%;
 }
 
-.intro-image-wrapper{
-min-height:420px;
-}
-
 .metrics{
 flex-direction:column;
 }
 
 .metric{
 width:100%;
+}
+
+.intro-image-wrapper{
+min-height:420px;
 }
 
 .map-wrapper iframe{
@@ -1013,10 +1009,17 @@ gap:20px;
 
 <div id="intro-screen">
 
-<img
-src="intro1.webp"
-alt="Intro Background"
-id="intro-bg">
+<video
+id="intro-video"
+autoplay
+muted
+playsinline>
+
+<source
+src="intro-video.mp4"
+type="video/mp4">
+
+</video>
 
 <div class="intro-overlay"></div>
 
@@ -1183,7 +1186,7 @@ Experiencia Digital
 
 <img
 src="intro.webp"
-alt="Sucursal"
+alt="Sucursal Velver"
 class="intro-image">
 
 </div>
@@ -1216,8 +1219,19 @@ INSTAGRAM
 </span>
 
 <h3>
-<i class="fa-brands fa-instagram"></i>
+
+<svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+
+<rect x="2" y="2" width="20" height="20" rx="5"></rect>
+
+<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+
+<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+
+</svg>
+
 Instagram
+
 </h3>
 
 <p>
@@ -1237,8 +1251,15 @@ TIKTOK
 </span>
 
 <h3>
-<i class="fa-brands fa-tiktok"></i>
+
+<svg viewBox="0 0 24 24">
+
+<path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.229V2h-3.193v13.677c0 1.125-.915 2.04-2.04 2.04s-2.04-.915-2.04-2.04.915-2.04 2.04-2.04c.22 0 .43.035.628.1V10.5a5.24 5.24 0 0 0-.628-.038A5.233 5.233 0 0 0 5.354 15.7 5.233 5.233 0 0 0 10.586 20.93a5.233 5.233 0 0 0 5.233-5.233V8.847a7.978 7.978 0 0 0 4.681 1.512V7.166a4.79 4.79 0 0 1-.911-.48z"/>
+
+</svg>
+
 TikTok
+
 </h3>
 
 <p>
@@ -1258,8 +1279,15 @@ FACEBOOK
 </span>
 
 <h3>
-<i class="fa-brands fa-facebook-f"></i>
+
+<svg viewBox="0 0 24 24">
+
+<path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.25c-1.23 0-1.61.76-1.61 1.54V12h2.74l-.44 2.89h-2.3v6.99A10 10 0 0 0 22 12z"/>
+
+</svg>
+
 Facebook
+
 </h3>
 
 <p>
@@ -1280,151 +1308,6 @@ loading="lazy"
 referrerpolicy="no-referrer-when-downgrade">
 
 </iframe>
-
-</div>
-
-</section>
-
-<section>
-
-<span class="section-tag">
-PREMIUM CATALOG™
-</span>
-
-<h2 class="section-title">
-Catálogo Inteligente
-</h2>
-
-<div class="catalog-grid">
-
-<article class="bike-card">
-
-<div class="bike-image">
-
-<img
-src="crx200.webp"
-alt="CRX 200">
-
-</div>
-
-<div class="bike-content">
-
-<div class="bike-brand">
-ZMOTO
-</div>
-
-<h3 class="bike-title">
-CRX 200
-</h3>
-
-<p class="bike-description">
-
-Diseño deportivo premium inspirado
-en superbikes internacionales.
-
-</p>
-
-<div class="bike-footer">
-
-<div class="price">
-$34,999
-</div>
-
-<button class="btn-secondary">
-Ver Más
-</button>
-
-</div>
-
-</div>
-
-</article>
-
-<article class="bike-card">
-
-<div class="bike-image">
-
-<img
-src="fighter200.webp"
-alt="Fighter 200">
-
-</div>
-
-<div class="bike-content">
-
-<div class="bike-brand">
-RGH
-</div>
-
-<h3 class="bike-title">
-Fighter 200
-</h3>
-
-<p class="bike-description">
-
-Motocicleta urbana agresiva
-de estética cinematográfica.
-
-</p>
-
-<div class="bike-footer">
-
-<div class="price">
-$42,999
-</div>
-
-<button class="btn-secondary">
-Ver Más
-</button>
-
-</div>
-
-</div>
-
-</article>
-
-<article class="bike-card">
-
-<div class="bike-image">
-
-<img
-src="nitro250.webp"
-alt="Nitro 250">
-
-</div>
-
-<div class="bike-content">
-
-<div class="bike-brand">
-RYDER
-</div>
-
-<h3 class="bike-title">
-Nitro 250
-</h3>
-
-<p class="bike-description">
-
-Diseño premium futurista
-para riders modernos.
-
-</p>
-
-<div class="bike-footer">
-
-<div class="price">
-$49,999
-</div>
-
-<button class="btn-secondary">
-Ver Más
-</button>
-
-</div>
-
-</div>
-
-</article>
 
 </div>
 
@@ -1452,29 +1335,14 @@ BLACK CODE™ Cinematic Ecosystem
 Redes
 </h3>
 
-<a
-href="https://www.instagram.com/velver_motos?igsh=MTZ3ZnU1NmhrcWd4Ng=="
-target="_blank">
+<a href="#">
+Instagram</a>
 
-Instagram
+<a href="#">
+TikTok</a>
 
-</a>
-
-<a
-href="https://www.tiktok.com/@velvermotosatlixc0?_r=1&_t=ZS-96KW6vHqTz8"
-target="_blank">
-
-TikTok
-
-</a>
-
-<a
-href="https://www.facebook.com/share/1GsfHLH1q2/"
-target="_blank">
-
-Facebook
-
-</a>
+<a href="#">
+Facebook</a>
 
 </div>
 
@@ -1539,7 +1407,7 @@ intro.style.pointerEvents='none';
 });
 
 /*━━━━━━━━━━━━━━━━━━*/
-/* HERO ANIMATION */
+/* HERO ANIMATIONS */
 /*━━━━━━━━━━━━━━━━━━*/
 
 gsap.from('.hero-tag',{
@@ -1569,10 +1437,6 @@ duration:1,
 delay:.6
 });
 
-/*━━━━━━━━━━━━━━━━━━*/
-/* SCROLL ANIMATIONS */
-/*━━━━━━━━━━━━━━━━━━*/
-
 gsap.from('.metric',{
 opacity:0,
 y:40,
@@ -1589,16 +1453,6 @@ y:60,
 stagger:.15,
 scrollTrigger:{
 trigger:'.social-grid',
-start:'top 80%'
-}
-});
-
-gsap.from('.bike-card',{
-opacity:0,
-y:80,
-stagger:.18,
-scrollTrigger:{
-trigger:'.catalog-grid',
 start:'top 80%'
 }
 });
