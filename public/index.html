@@ -4,107 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VELVER MOTOS ATLIXCO™ | BLACK CODE™ DIGITAL ECOSYSTEM</title>
-    <meta name="description" content="Ecosistema premium cinematográfico de motocicletas en Atlixco.">
-    <meta property="og:title" content="VELVER MOTOS ATLIXCO™ | BLACK CODE™">
-    <meta property="og:image" content="/assets/og-preview.webp">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-[#050505] text-[#F5F7FA] font-sans overflow-x-hidden">
-    <div class="fixed bottom-5 right-5 rotate-[-11deg] opacity-02 pointer-events-none z-[9999] text-[10px]">
-        BLACK CODE by KNJO™ | KNJO-BLK-1141015
-    </div>
     
-    <div id="intro-screen" class="fixed inset-0 z-[99999] flex items-center justify-center bg-[#050505]">
-        <img src="assets/logo-secondary.webp" alt="VELVER MOTOS" class="intro-logo w-[320px] opacity-0 scale-[0.82]">
+    <div class="fixed bottom-5 right-5 rotate-[-11deg] opacity-20 pointer-events-none z-[9999] text-[10px] text-gray-500">
+        BLACK CODE by KNJO™ | KNJO-BLK-1141015
     </div>
 
     <header class="topbar fixed w-full p-[20px_7vw] flex justify-between items-center z-[1000] backdrop-blur-[24px] border-b border-[rgba(255,255,255,0.05)]">
-        <img src="assets/logo-main.webp" class="h-[50px] object-contain">
+        <h1 class="text-xl font-black tracking-widest text-white">VELVER<span class="text-[#0057FF]">MOTOS</span></h1>
         <div class="top-right flex items-center gap-4">
-            <a href="#" class="social-icon flex items-center justify-center w-[46px] h-[46px] border border-[rgba(255,255,255,0.06)] rounded-[16px]">
-                <i class="fab fa-instagram"></i>
+            <a href="#" class="social-icon flex items-center justify-center w-[46px] h-[46px] border border-[rgba(255,255,255,0.06)] rounded-[16px] text-white hover:border-[#0057FF] transition-all">
+                <i class="fa-brands fa-instagram"></i>
             </a>
         </div>
     </header>
 
-    <main id="app">
-        </main>
+    <main class="pt-[120px] px-[7vw] pb-[100px] min-h-screen">
+        <h2 class="text-4xl font-black mb-10 text-center">CATÁLOGO <span class="text-[#3BA0FF]">DIGITAL</span></h2>
+        
+        <div id="catalog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </main>
 
     <script src="scripts/catalog.js" type="module"></script>
 </body>
 </html>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
-
-:root {
-    --bg: #050505;
-    --blue: #0057FF;
-    --cyan: #3BA0FF;
-    --glass: rgba(255, 255, 255, 0.04);
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body { font-family: 'Inter', sans-serif; background: var(--bg); color: #F5F7FA; overflow-x: hidden; }
-
-.exp-card {
-    background: var(--glass);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(24px);
-    border-radius: 34px;
-    padding: 34px;
-    transition: 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-.exp-card:hover {
-    border-color: var(--blue);
-    transform: translateY(-8px);
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, var(--blue), var(--cyan));
-    padding: 18px 34px;
-    border-radius: 22px;
-    color: white;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.3s;
-}
-import { motos } from '../data/motos.js';
-
-const catalogGrid = document.getElementById('catalog-grid');
-
-function renderCatalog(items) {
-    if (!catalogGrid) return;
-    catalogGrid.innerHTML = "";
-    
-    items.forEach((moto, index) => {
-        const card = document.createElement('div');
-        card.className = "exp-card opacity-0 translate-y-10";
-        card.innerHTML = `
-            <div class="h-[280px] overflow-hidden rounded-[24px] mb-6">
-                <img src="${moto.imagen}" alt="${moto.nombre}" class="w-full h-full object-cover hover:scale-110 transition-transform">
-            </div>
-            <h3 class="text-2xl font-bold mb-2">${moto.nombre}</h3>
-            <span class="text-blue-400 font-semibold">${moto.categoria}</span>
-            <p class="text-gray-400 mt-4 mb-6">${moto.descripcion}</p>
-            <button class="btn-primary w-full" onclick="window.open('https://wa.me/2441252948')">
-                Solicitar Información
-            </button>
-        `;
-        catalogGrid.appendChild(card);
-    });
-
-    // Animación GSAP al montar
-    gsap.to(".exp-card", { 
-        opacity: 1, 
-        y: 0, 
-        duration: 0.8, 
-        stagger: 0.15, 
-        ease: "power3.out" 
-    });
-}
-
-// Inicialización de carga inteligente
-document.addEventListener('DOMContentLoaded', () => renderCatalog(motos));
