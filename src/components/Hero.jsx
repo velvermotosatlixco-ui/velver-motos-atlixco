@@ -1,8 +1,7 @@
-
 export default function Hero() {
   return (
-    <section>
-      Hero Section
+    <section className="hero">
+      <h2>BLACK CODE™ EXPERIENCE</h2>
     </section>
   );
 }
