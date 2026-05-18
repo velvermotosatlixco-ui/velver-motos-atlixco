@@ -1,8 +1,7 @@
-
-export default function Footer() {
+export default function Hero() {
   return (
-    <footer>
-      Footer
-    </footer>
+    <section className="hero">
+      <h2>BLACK CODE™ EXPERIENCE</h2>
+    </section>
   );
 }
