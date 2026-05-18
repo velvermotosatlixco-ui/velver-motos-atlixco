@@ -1,7 +1,7 @@
 export default function Navbar() {
   return (
-    <nav>
-      Navbar
+    <nav className="navbar">
+      <h1>VELVER MOTOS</h1>
     </nav>
   );
 }
