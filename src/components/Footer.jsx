@@ -1,7 +1,7 @@
-export default function Hero() {
+export default function Footer() {
   return (
-    <section className="hero">
-      <h2>BLACK CODE™ EXPERIENCE</h2>
-    </section>
+    <footer className="footer">
+      <p>VELVER MOTOS ATLIXCO™</p>
+    </footer>
   );
 }
