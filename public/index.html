@@ -10,7 +10,7 @@ name="viewport"
 content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
 <title>
-Velver Motos Atlixco™ | BLACK CODE™ V5 SHOWROOM SYSTEM
+Velver Motos Atlixco™ | BLACK CODE™ V5.2 SHOWROOM SYSTEM
 </title>
 
 <meta
@@ -35,15 +35,31 @@ content="BLACK CODE™ SHOWROOM SYSTEM">
 
 <meta
 property="og:image"
-content="og-cover.webp">
+content="https://velver-motos-atlixco.velvermotosatlixco.workers.dev/og-cover.webp">
 
 <meta
 property="og:type"
 content="website">
 
 <meta
+property="og:url"
+content="https://velver-motos-atlixco.velvermotosatlixco.workers.dev/">
+
+<meta
 name="twitter:card"
 content="summary_large_image">
+
+<meta
+name="twitter:title"
+content="Velver Motos Atlixco™">
+
+<meta
+name="twitter:description"
+content="BLACK CODE™ SHOWROOM SYSTEM">
+
+<meta
+name="twitter:image"
+content="https://velver-motos-atlixco.velvermotosatlixco.workers.dev/og-cover.webp">
 
 <link
 rel="canonical"
@@ -64,13 +80,8 @@ rel="stylesheet">
 
 <link
 rel="preload"
-href="intro-video.mp4"
-as="video">
-
-<link
-rel="preload"
-href="hero-video.mp4"
-as="video">
+href="hero-bike.webp"
+as="image">
 
 <link
 rel="preload"
@@ -79,8 +90,9 @@ as="image">
 
 <link
 rel="preload"
-href="hero-bike.webp"
-as="image">
+href="hero-video.mp4"
+as="video"
+type="video/mp4">
 
 <!-- SEO JSON-LD -->
 
@@ -90,12 +102,15 @@ as="image">
 "@type":"MotorcycleDealer",
 "name":"Velver Motos Atlixco",
 "url":"https://velver-motos-atlixco.velvermotosatlixco.workers.dev/",
-"logo":"logo-main.webp",
+"logo":"https://velver-motos-atlixco.velvermotosatlixco.workers.dev/logo-main.webp",
+"image":"https://velver-motos-atlixco.velvermotosatlixco.workers.dev/og-cover.webp",
+"telephone":"+52 244 125 2948",
 "address":{
 "@type":"PostalAddress",
 "streetAddress":"Av. Independencia 1903 A",
 "addressLocality":"Atlixco",
 "addressRegion":"Puebla",
+"postalCode":"74240",
 "addressCountry":"MX"
 },
 "sameAs":[
@@ -125,9 +140,9 @@ gtag('config', 'G-G1JRYB0WW5');
 
 <!-- GSAP -->
 
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
 <style>
 
@@ -185,6 +200,28 @@ color:#F5F7FA;
 overflow-x:hidden;
 
 position:relative;
+
+text-rendering:optimizeLegibility;
+
+-webkit-font-smoothing:antialiased;
+
+}
+
+/*━━━━━━━━━━━━━━━━━━*/
+/* SCROLLBAR */
+/*━━━━━━━━━━━━━━━━━━*/
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-track{
+background:#050505;
+}
+
+::-webkit-scrollbar-thumb{
+background:rgba(255,255,255,.15);
+border-radius:999px;
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
@@ -226,7 +263,7 @@ inset:0;
 background:
 radial-gradient(
 circle at top,
-rgba(0,87,255,.18),
+rgba(0,87,255,.16),
 transparent 60%
 );
 
@@ -245,12 +282,12 @@ inset:0;
 
 background-image:
 linear-gradient(
-rgba(255,255,255,.015) 1px,
+rgba(255,255,255,.012) 1px,
 transparent 1px
 ),
 linear-gradient(
 90deg,
-rgba(255,255,255,.015) 1px,
+rgba(255,255,255,.012) 1px,
 transparent 1px
 );
 
@@ -273,7 +310,7 @@ background:
 radial-gradient(
 circle,
 transparent 45%,
-rgba(0,0,0,.82)
+rgba(0,0,0,.84)
 );
 
 pointer-events:none;
@@ -374,8 +411,9 @@ background:
 center center/cover no-repeat;
 
 transition:
-opacity 1.2s ease,
-visibility 1.2s ease;
+opacity 1s ease,
+visibility 1s ease;
+
 }
 
 #intro-video{
@@ -395,6 +433,7 @@ contrast(1.15)
 saturate(1.1);
 
 transform:scale(1.04);
+
 }
 
 .intro-overlay{
@@ -484,6 +523,8 @@ font-size:12px;
 letter-spacing:6px;
 
 color:#3BA0FF;
+
+text-align:center;
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
@@ -510,7 +551,7 @@ justify-content:space-between;
 z-index:1000;
 
 background:
-rgba(5,5,5,.45);
+rgba(5,5,5,.42);
 
 backdrop-filter:
 blur(28px)
@@ -520,6 +561,7 @@ border-bottom:
 1px solid rgba(255,255,255,.05);
 
 transition:var(--transition);
+
 }
 
 .topbar.scrolled{
@@ -528,6 +570,9 @@ padding:18px 7vw;
 
 background:
 rgba(5,5,5,.78);
+
+box-shadow:
+0 10px 40px rgba(0,0,0,.4);
 
 }
 
@@ -557,6 +602,9 @@ font-family:'Inter',sans-serif;
 transition:var(--transition);
 
 cursor:pointer;
+
+min-height:56px;
+
 }
 
 .btn-primary{
@@ -588,6 +636,9 @@ transform:
 translateY(-4px)
 scale(1.03);
 
+box-shadow:
+0 0 80px rgba(0,87,255,.35);
+
 }
 
 .btn-secondary{
@@ -604,6 +655,17 @@ border:
 1px solid rgba(255,255,255,.08);
 
 color:white;
+
+}
+
+.btn-secondary:hover{
+
+background:
+rgba(255,255,255,.08);
+
+transform:
+translateY(-3px);
+
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
@@ -624,6 +686,9 @@ padding:
 170px 8vw 120px;
 
 overflow:hidden;
+
+isolation:isolate;
+
 }
 
 .hero-video{
@@ -638,7 +703,7 @@ height:100%;
 object-fit:cover;
 
 filter:
-brightness(.25)
+brightness(.24)
 contrast(1.15)
 saturate(1.08);
 
@@ -654,7 +719,7 @@ inset:0;
 background:
 linear-gradient(
 to bottom,
-rgba(5,5,5,.15),
+rgba(5,5,5,.12),
 rgba(5,5,5,.96)
 );
 
@@ -725,7 +790,7 @@ z-index:-2;
 position:absolute;
 
 right:4vw;
-bottom:-30px;
+bottom:-20px;
 
 width:min(780px,48vw);
 
@@ -741,6 +806,7 @@ animation:
 bikeFloat 7s ease-in-out infinite;
 
 z-index:-1;
+
 }
 
 @keyframes bikeFloat{
@@ -766,6 +832,7 @@ max-width:760px;
 position:relative;
 
 z-index:3;
+
 }
 
 .hero-tag{
@@ -790,6 +857,9 @@ letter-spacing:2px;
 color:#3BA0FF;
 
 margin-bottom:28px;
+
+backdrop-filter:blur(20px);
+
 }
 
 .hero-title{
@@ -804,6 +874,7 @@ letter-spacing:-6px;
 font-weight:900;
 
 margin-bottom:30px;
+
 }
 
 .hero-description{
@@ -817,6 +888,7 @@ font-size:1.05rem;
 color:#8B949E;
 
 margin-bottom:42px;
+
 }
 
 .hero-actions{
@@ -826,6 +898,7 @@ display:flex;
 gap:18px;
 
 flex-wrap:wrap;
+
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
@@ -838,6 +911,7 @@ padding:
 130px 8vw;
 
 position:relative;
+
 }
 
 .section-tag{
@@ -851,6 +925,7 @@ letter-spacing:2px;
 color:#3BA0FF;
 
 margin-bottom:18px;
+
 }
 
 .section-title{
@@ -863,6 +938,7 @@ line-height:.95;
 letter-spacing:-3px;
 
 margin-bottom:30px;
+
 }
 
 .section-description{
@@ -872,6 +948,7 @@ max-width:760px;
 line-height:1.9;
 
 color:#8B949E;
+
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
@@ -888,6 +965,7 @@ repeat(auto-fit,minmax(340px,1fr));
 gap:90px;
 
 align-items:center;
+
 }
 
 .intro-image-wrapper{
@@ -908,6 +986,7 @@ border:
 
 box-shadow:
 0 20px 90px rgba(0,0,0,.35);
+
 }
 
 .intro-image{
@@ -918,11 +997,13 @@ height:100%;
 object-fit:cover;
 
 transition:1.2s ease;
+
 }
 
 .intro-image-wrapper:hover .intro-image{
 
 transform:scale(1.05);
+
 }
 
 .metrics{
@@ -934,6 +1015,7 @@ gap:20px;
 flex-wrap:wrap;
 
 margin-top:44px;
+
 }
 
 .metric{
@@ -953,6 +1035,7 @@ border:
 backdrop-filter:blur(20px);
 
 transition:var(--transition);
+
 }
 
 .metric:hover{
@@ -963,6 +1046,9 @@ translateY(-6px);
 border-color:
 rgba(59,160,255,.22);
 
+box-shadow:
+0 10px 40px rgba(0,87,255,.12);
+
 }
 
 .metric h3{
@@ -970,11 +1056,13 @@ rgba(59,160,255,.22);
 font-size:2rem;
 
 margin-bottom:10px;
+
 }
 
 .metric span{
 
 color:#8B949E;
+
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
@@ -991,6 +1079,7 @@ repeat(auto-fit,minmax(260px,1fr));
 gap:28px;
 
 margin-top:60px;
+
 }
 
 .social-card{
@@ -1012,6 +1101,7 @@ color:white;
 backdrop-filter:blur(20px);
 
 transition:var(--transition);
+
 }
 
 .social-card:hover{
@@ -1038,6 +1128,7 @@ letter-spacing:2px;
 color:#3BA0FF;
 
 margin-bottom:12px;
+
 }
 
 .social-card h3{
@@ -1051,6 +1142,7 @@ gap:16px;
 font-size:2rem;
 
 margin-bottom:18px;
+
 }
 
 .social-card svg{
@@ -1061,6 +1153,7 @@ height:30px;
 fill:#3BA0FF;
 
 stroke:#3BA0FF;
+
 }
 
 .social-card p{
@@ -1068,6 +1161,7 @@ stroke:#3BA0FF;
 line-height:1.8;
 
 color:#8B949E;
+
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
@@ -1087,6 +1181,7 @@ border:
 
 box-shadow:
 0 20px 90px rgba(0,0,0,.35);
+
 }
 
 .map-wrapper iframe{
@@ -1132,6 +1227,7 @@ grid-template-columns:
 repeat(auto-fit,minmax(220px,1fr));
 
 gap:60px;
+
 }
 
 .footer-column h3{
@@ -1139,6 +1235,7 @@ gap:60px;
 margin-bottom:20px;
 
 font-size:1.2rem;
+
 }
 
 .footer-column p,
@@ -1153,6 +1250,7 @@ text-decoration:none;
 margin-bottom:14px;
 
 line-height:1.7;
+
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
@@ -1163,7 +1261,7 @@ line-height:1.7;
 
 .hero-bike{
 
-opacity:.3;
+opacity:.25;
 
 width:60vw;
 
@@ -1198,7 +1296,7 @@ right:-30vw;
 
 bottom:0;
 
-opacity:.2;
+opacity:.14;
 
 }
 
@@ -1214,6 +1312,10 @@ flex-direction:column;
 .btn-primary,
 .btn-secondary{
 width:100%;
+}
+
+.intro-grid{
+gap:50px;
 }
 
 .intro-image-wrapper{
@@ -1232,6 +1334,10 @@ width:100%;
 height:420px;
 }
 
+.blackcode{
+display:none;
+}
+
 }
 
 </style>
@@ -1245,7 +1351,7 @@ height:420px;
 <div class="ambient-light"></div>
 
 <div class="blackcode">
-BLACK CODE by KNJO™
+BLACK CODE™ V5.2
 </div>
 
 <!-- INTRO -->
@@ -1300,6 +1406,7 @@ class="logo">
 <a
 href="https://wa.me/522441252948"
 target="_blank"
+rel="noopener noreferrer"
 class="btn-primary"
 aria-label="Contactar por WhatsApp">
 
@@ -1337,7 +1444,9 @@ type="video/mp4">
 <img
 src="hero-bike.webp"
 alt="Motocicleta premium Velver"
-class="hero-bike">
+class="hero-bike"
+loading="eager"
+decoding="async">
 
 <div class="hero-content">
 
@@ -1371,6 +1480,8 @@ Explorar Ecosistema
 
 <a
 href="https://wa.me/522441252948"
+target="_blank"
+rel="noopener noreferrer"
 class="btn-secondary">
 
 AI Match™
@@ -1479,6 +1590,7 @@ Velver Motos
 <a
 href="https://www.instagram.com/velver_motos"
 target="_blank"
+rel="noopener noreferrer"
 class="social-card">
 
 <span>
@@ -1510,6 +1622,7 @@ Contenido cinematográfico BLACK CODE™.
 <a
 href="https://www.tiktok.com/@velvermotosatlixc0"
 target="_blank"
+rel="noopener noreferrer"
 class="social-card">
 
 <span>
@@ -1539,6 +1652,7 @@ Experiencias premium y reels inmersivos.
 <div class="map-wrapper">
 
 <iframe
+title="Ubicación Velver Motos Atlixco"
 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.7169955848153!2d-98.43736969999999!3d18.899632099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfb3005ac5117f%3A0x5ad5a4c38060a9cd!2sVelver%20Motos%20Atlixco!5e0!3m2!1ses-419!2smx!4v1779120545041!5m2!1ses-419!2smx"
 loading="lazy"
 allowfullscreen=""
@@ -1606,6 +1720,10 @@ Atlixco, Puebla
 
 <script>
 
+window.addEventListener('DOMContentLoaded', () => {
+
+if(typeof gsap === 'undefined') return;
+
 gsap.registerPlugin(ScrollTrigger);
 
 /*━━━━━━━━━━━━━━━━━━*/
@@ -1632,7 +1750,7 @@ document.body.classList.add(
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
-/* INTRO FAILSAFE */
+/* INTRO */
 /*━━━━━━━━━━━━━━━━━━*/
 
 const introScreen =
@@ -1655,16 +1773,25 @@ introScreen.style.pointerEvents='none';
 
 }
 
+if(introVideo){
+
 introVideo.addEventListener(
 'canplaythrough',
 ()=>{
 
-setTimeout(closeIntro,4000);
+setTimeout(closeIntro,3500);
 
 }
 );
 
-setTimeout(closeIntro,6500);
+introVideo.addEventListener(
+'error',
+closeIntro
+);
+
+}
+
+setTimeout(closeIntro,5500);
 
 /*━━━━━━━━━━━━━━━━━━*/
 /* NAVBAR */
@@ -1693,11 +1820,12 @@ navbar.classList.remove(
 
 }
 
-}
+},
+{ passive:true }
 );
 
 /*━━━━━━━━━━━━━━━━━━*/
-/* HERO ANIMATIONS */
+/* GSAP */
 /*━━━━━━━━━━━━━━━━━━*/
 
 if(!reducedMotion){
@@ -1786,6 +1914,8 @@ scrub:1
 });
 
 }
+
+});
 
 </script>
 
