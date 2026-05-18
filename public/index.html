@@ -263,6 +263,14 @@ font-family:'Inter',sans-serif;
 font-weight:600;
 
 transition:var(--transition);
+
+text-decoration:none;
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
 }
 
 .btn-primary{
@@ -692,6 +700,117 @@ color:#8B949E;
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
+/* SOCIALS */
+/*━━━━━━━━━━━━━━━━━━*/
+
+.social-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(240px,1fr));
+
+gap:26px;
+
+margin-top:60px;
+}
+
+.social-card{
+
+padding:34px;
+
+border-radius:30px;
+
+background:
+rgba(255,255,255,.04);
+
+border:
+1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(24px);
+
+transition:var(--transition);
+
+text-decoration:none;
+
+color:white;
+}
+
+.social-card:hover{
+
+transform:
+translateY(-8px);
+
+border-color:
+rgba(59,160,255,.25);
+
+box-shadow:
+0 0 60px rgba(0,87,255,.12);
+}
+
+.social-card span{
+
+display:block;
+
+font-size:12px;
+
+letter-spacing:2px;
+
+color:#3BA0FF;
+
+margin-bottom:14px;
+}
+
+.social-card h3{
+
+font-size:2rem;
+
+margin-bottom:14px;
+}
+
+.social-card p{
+
+color:#8B949E;
+
+line-height:1.8;
+}
+
+/*━━━━━━━━━━━━━━━━━━*/
+/* MAP */
+/*━━━━━━━━━━━━━━━━━━*/
+
+.map-wrapper{
+
+margin-top:70px;
+
+border-radius:36px;
+
+overflow:hidden;
+
+border:
+1px solid rgba(255,255,255,.08);
+
+box-shadow:
+0 0 60px rgba(0,0,0,.35);
+}
+
+.map-wrapper iframe{
+
+width:100%;
+
+height:550px;
+
+display:block;
+
+border:none;
+
+filter:
+grayscale(1)
+contrast(1.1)
+brightness(.85);
+}
+
+/*━━━━━━━━━━━━━━━━━━*/
 /* CATALOG */
 /*━━━━━━━━━━━━━━━━━━*/
 
@@ -936,6 +1055,10 @@ min-height:420px;
 flex-direction:column;
 align-items:flex-start;
 }
+
+.map-wrapper iframe{
+height:420px;
+}
 }
 
 </style>
@@ -954,8 +1077,6 @@ BLACK CODE by KNJO™
 
 <div id="app">
 
-<!-- TOPBAR -->
-
 <header class="topbar">
 
 <img
@@ -965,23 +1086,18 @@ class="logo">
 
 <div class="topbar-actions">
 
-<button class="btn-secondary">
-AI Match™
-</button>
-
-<button
-class="btn-primary"
-onclick="window.open('https://wa.me/522441234567')">
+<a
+href="https://wa.me/522441234567"
+target="_blank"
+class="btn-primary">
 
 WhatsApp
 
-</button>
+</a>
 
 </div>
 
 </header>
-
-<!-- HERO -->
 
 <section class="hero">
 
@@ -1057,8 +1173,6 @@ análisis de presupuesto y experiencia personalizada.
 </div>
 
 </section>
-
-<!-- INTRO -->
 
 <section class="intro">
 
@@ -1147,7 +1261,107 @@ class="intro-image">
 
 </section>
 
-<!-- CATALOG -->
+<!-- SOCIAL -->
+
+<section class="socials">
+
+<div class="section-glow"></div>
+
+<div class="section-tag">
+VELVER SOCIAL™
+</div>
+
+<h2 class="section-title">
+Conecta Con
+<br>
+Velver Motos
+</h2>
+
+<p class="section-description">
+
+Síguenos en nuestras plataformas oficiales
+para conocer lanzamientos, promociones,
+contenido premium y experiencias cinematográficas.
+
+</p>
+
+<div class="social-grid">
+
+<a
+href="https://www.instagram.com/velver_motos?igsh=MTZ3ZnU1NmhrcWd4Ng=="
+target="_blank"
+class="social-card">
+
+<span>
+INSTAGRAM
+</span>
+
+<h3>
+@velver_motos
+</h3>
+
+<p>
+Contenido premium, reels cinematográficos
+y experiencias BLACK CODE™.
+</p>
+
+</a>
+
+<a
+href="https://www.tiktok.com/@velvermotosatlixc0?_r=1&_t=ZS-96KW6vHqTz8"
+target="_blank"
+class="social-card">
+
+<span>
+TIKTOK
+</span>
+
+<h3>
+@velvermotosatlixc0
+</h3>
+
+<p>
+Videos dinámicos, motocicletas premium
+y contenido visual de nueva generación.
+</p>
+
+</a>
+
+<a
+href="https://www.facebook.com/share/1GsfHLH1q2/"
+target="_blank"
+class="social-card">
+
+<span>
+FACEBOOK
+</span>
+
+<h3>
+Velver Motos Atlixco
+</h3>
+
+<p>
+Noticias, promociones y conexión directa
+con la comunidad Velver™.
+</p>
+
+</a>
+
+</div>
+
+<div class="map-wrapper">
+
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.7169955848153!2d-98.43736969999999!3d18.899632099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfb3005ac5117f%3A0x5ad5a4c38060a9cd!2sVelver%20Motos%20Atlixco!5e0!3m2!1ses-419!2smx!4v1779120545041!5m2!1ses-419!2smx"
+allowfullscreen=""
+loading="lazy"
+referrerpolicy="no-referrer-when-downgrade">
+
+</iframe>
+
+</div>
+
+</section>
 
 <section class="catalog">
 
@@ -1162,8 +1376,6 @@ Catálogo Inteligente
 </h2>
 
 <div class="catalog-grid">
-
-<!-- CARD -->
 
 <article class="bike-card">
 
@@ -1208,8 +1420,6 @@ Ver Más
 
 </article>
 
-<!-- CARD -->
-
 <article class="bike-card">
 
 <div class="bike-image">
@@ -1252,8 +1462,6 @@ Ver Más
 </div>
 
 </article>
-
-<!-- CARD -->
 
 <article class="bike-card">
 
@@ -1302,8 +1510,6 @@ Ver Más
 
 </section>
 
-<!-- FOOTER -->
-
 <footer class="footer">
 
 <div class="footer-bg">
@@ -1331,19 +1537,31 @@ Experiencia premium cinematográfica de nueva generación.
 <div class="footer-column">
 
 <h3>
-Ecosystem
+Redes Oficiales
 </h3>
 
-<a href="#">
-AI Match™
+<a
+href="https://www.instagram.com/velver_motos?igsh=MTZ3ZnU1NmhrcWd4Ng=="
+target="_blank">
+
+Instagram
+
 </a>
 
-<a href="#">
-Premium Catalog
+<a
+href="https://www.tiktok.com/@velvermotosatlixc0?_r=1&_t=ZS-96KW6vHqTz8"
+target="_blank">
+
+TikTok
+
 </a>
 
-<a href="#">
-Showroom
+<a
+href="https://www.facebook.com/share/1GsfHLH1q2/"
+target="_blank">
+
+Facebook
+
 </a>
 
 </div>
@@ -1375,7 +1593,7 @@ Huaihai
 <div class="footer-column">
 
 <h3>
-Contacto
+Ubicación
 </h3>
 
 <p>
@@ -1383,11 +1601,11 @@ Atlixco, Puebla
 </p>
 
 <p>
-WhatsApp Business
+Velver Motos Atlixco™
 </p>
 
 <p>
-Velver Experience™
+BLACK CODE™ EXPERIENCE
 </p>
 
 </div>
@@ -1401,8 +1619,6 @@ Velver Experience™
 <script>
 
 gsap.registerPlugin(ScrollTrigger);
-
-/* HERO */
 
 gsap.from('.hero-tag',{
 opacity:0,
@@ -1438,8 +1654,6 @@ duration:1.4,
 delay:.8
 });
 
-/* INTRO */
-
 gsap.from('.metric',{
 opacity:0,
 y:40,
@@ -1450,14 +1664,22 @@ start:'top 80%'
 }
 });
 
-/* CARDS */
-
 gsap.from('.bike-card',{
 opacity:0,
 y:80,
 stagger:.18,
 scrollTrigger:{
 trigger:'.catalog-grid',
+start:'top 80%'
+}
+});
+
+gsap.from('.social-card',{
+opacity:0,
+y:60,
+stagger:.15,
+scrollTrigger:{
+trigger:'.social-grid',
 start:'top 80%'
 }
 });
