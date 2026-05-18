@@ -10,16 +10,12 @@ name="viewport"
 content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
 <title>
-Velver Motos Atlixco™ | BLACK CODE™ V3
+Velver Motos Atlixco™ | BLACK CODE™ V4 IMMERSIVE SYSTEM
 </title>
 
 <meta
 name="description"
-content="Experiencia cinematográfica premium de motocicletas en Atlixco. Ecosistema digital inteligente BLACK CODE™.">
-
-<meta
-name="keywords"
-content="Velver Motos, motocicletas, Atlixco, showroom premium, motos Puebla, financiamiento motos">
+content="Experiencia cinematográfica premium de motocicletas en Atlixco. Ecosistema digital BLACK CODE™ inspirado en Tesla, Ducati y Apple.">
 
 <meta
 name="theme-color"
@@ -35,15 +31,15 @@ content="Velver Motos Atlixco™">
 
 <meta
 property="og:description"
-content="BLACK CODE™ Cinematic Ecosystem">
-
-<meta
-property="og:type"
-content="website">
+content="BLACK CODE™ Immersive Cinematic Ecosystem">
 
 <meta
 property="og:image"
 content="og-cover.webp">
+
+<meta
+property="og:type"
+content="website">
 
 <meta
 name="twitter:card"
@@ -68,18 +64,18 @@ rel="stylesheet">
 
 <link
 rel="preload"
-as="image"
-href="logo-main.webp">
+href="intro-video.mp4"
+as="video">
 
 <link
 rel="preload"
-as="video"
-href="intro-video.mp4">
+href="hero-video.mp4"
+as="video">
 
 <link
 rel="preload"
-as="video"
-href="hero-video.mp4">
+href="logo-main.webp"
+as="image">
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G1JRYB0WW5"></script>
 
@@ -122,7 +118,7 @@ max-width:100%;
 :root{
 
 --bg:#050505;
---bg2:#0B0D12;
+--bg2:#0A0D12;
 
 --blue:#0057FF;
 --cyan:#3BA0FF;
@@ -131,7 +127,7 @@ max-width:100%;
 --gray:#8B949E;
 
 --glass:
-rgba(255,255,255,.045);
+rgba(255,255,255,.05);
 
 --glass-border:
 rgba(255,255,255,.08);
@@ -159,7 +155,7 @@ position:relative;
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
-/* CINEMATIC FX */
+/* GLOBAL IMMERSIVE FX */
 /*━━━━━━━━━━━━━━━━━━*/
 
 body::before{
@@ -173,7 +169,7 @@ inset:0;
 background:
 radial-gradient(
 circle at top,
-rgba(0,87,255,.18),
+rgba(0,87,255,.22),
 transparent 55%
 );
 
@@ -219,13 +215,55 @@ inset:0;
 background:
 radial-gradient(
 circle,
-transparent 55%,
+transparent 45%,
 rgba(0,0,0,.78)
 );
 
 pointer-events:none;
 
 z-index:1;
+}
+
+.ambient-light{
+
+position:fixed;
+
+width:800px;
+height:800px;
+
+background:
+radial-gradient(
+circle,
+rgba(0,87,255,.12),
+transparent 70%
+);
+
+filter:blur(100px);
+
+top:-250px;
+right:-200px;
+
+animation:
+ambientFloat 14s ease-in-out infinite;
+
+pointer-events:none;
+
+z-index:1;
+}
+
+@keyframes ambientFloat{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(50px);
+}
+
+100%{
+transform:translateY(0px);
+}
 }
 
 .blackcode{
@@ -254,7 +292,7 @@ z-index:2;
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
-/* INTRO */
+/* INTRO IMMERSIVE */
 /*━━━━━━━━━━━━━━━━━━*/
 
 #intro-screen{
@@ -271,11 +309,13 @@ align-items:center;
 
 justify-content:center;
 
-background:#050505;
-
 overflow:hidden;
 
-transition:1.2s ease;
+background:#050505;
+
+transition:
+opacity 1.4s ease,
+visibility 1.4s ease;
 }
 
 #intro-video{
@@ -289,16 +329,14 @@ height:100%;
 
 object-fit:cover;
 
-pointer-events:none;
-
-user-select:none;
-
 filter:
-brightness(.32)
-contrast(1.15)
-saturate(1.08);
+brightness(.28)
+contrast(1.2)
+saturate(1.1);
 
-transform:scale(1.04);
+transform:scale(1.05);
+
+pointer-events:none;
 }
 
 .intro-overlay{
@@ -310,7 +348,7 @@ inset:0;
 background:
 linear-gradient(
 to bottom,
-rgba(0,0,0,.2),
+rgba(0,0,0,.15),
 rgba(0,0,0,.92)
 );
 }
@@ -328,14 +366,54 @@ flex-direction:column;
 align-items:center;
 
 gap:28px;
+
+animation:
+introReveal 2s ease;
+}
+
+@keyframes introReveal{
+
+0%{
+opacity:0;
+transform:
+translateY(40px)
+scale(.96);
+filter:blur(12px);
+}
+
+100%{
+opacity:1;
+transform:
+translateY(0)
+scale(1);
+filter:blur(0);
+}
 }
 
 .intro-logo{
 
-width:min(360px,78vw);
+width:min(380px,80vw);
 
 filter:
-drop-shadow(0 0 45px rgba(0,87,255,.25));
+drop-shadow(0 0 50px rgba(0,87,255,.3));
+
+animation:
+logoPulse 4s ease infinite;
+}
+
+@keyframes logoPulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.03);
+}
+
+100%{
+transform:scale(1);
+}
 }
 
 .intro-text{
@@ -381,12 +459,21 @@ border-bottom:
 1px solid rgba(255,255,255,.05);
 
 box-shadow:
-0 10px 40px rgba(0,0,0,.32);
+0 10px 40px rgba(0,0,0,.3);
+
+transition:var(--transition);
+}
+
+.topbar.scrolled{
+
+padding:18px 7vw;
+
+background:
+rgba(5,5,5,.72);
 }
 
 .logo{
-height:60px;
-object-fit:contain;
+height:58px;
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
@@ -432,7 +519,7 @@ color:white;
 border:none;
 
 box-shadow:
-0 0 60px rgba(0,87,255,.22);
+0 0 60px rgba(0,87,255,.24);
 }
 
 .btn-primary:hover{
@@ -440,6 +527,9 @@ box-shadow:
 transform:
 translateY(-4px)
 scale(1.03);
+
+box-shadow:
+0 0 90px rgba(0,87,255,.35);
 }
 
 .btn-secondary{
@@ -459,7 +549,7 @@ color:white;
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
-/* HERO */
+/* HERO IMMERSIVE */
 /*━━━━━━━━━━━━━━━━━━*/
 
 .hero{
@@ -473,11 +563,9 @@ display:flex;
 align-items:center;
 
 padding:
-160px 8vw 120px;
+170px 8vw 120px;
 
 overflow:hidden;
-
-isolation:isolate;
 }
 
 .hero-video{
@@ -491,16 +579,12 @@ height:100%;
 
 object-fit:cover;
 
-pointer-events:none;
-
-user-select:none;
-
-z-index:-3;
-
 filter:
-brightness(.32)
+brightness(.28)
 contrast(1.15)
-saturate(1.05);
+saturate(1.08);
+
+z-index:-4;
 }
 
 .hero-overlay{
@@ -513,35 +597,51 @@ background:
 linear-gradient(
 to bottom,
 rgba(5,5,5,.15),
-rgba(5,5,5,.95)
+rgba(5,5,5,.96)
 );
 
-z-index:-2;
+z-index:-3;
 }
 
-.hero-noise{
+.hero-fog{
 
 position:absolute;
 
 inset:0;
 
-opacity:.045;
+background:
+radial-gradient(
+circle at center,
+rgba(255,255,255,.03),
+transparent 70%
+);
 
-background-image:url("noise.webp");
+mix-blend-mode:screen;
 
-background-size:cover;
+animation:
+fogMove 18s ease infinite;
 
-mix-blend-mode:overlay;
+z-index:-2;
+}
 
-z-index:-1;
+@keyframes fogMove{
+
+0%{
+transform:translateX(0px);
+}
+
+50%{
+transform:translateX(40px);
+}
+
+100%{
+transform:translateX(0px);
+}
 }
 
 .hero-light{
 
 position:absolute;
-
-top:-250px;
-right:-150px;
 
 width:900px;
 height:900px;
@@ -555,11 +655,15 @@ transparent 70%
 
 filter:blur(100px);
 
+top:-250px;
+right:-150px;
+
 z-index:-1;
 }
 
 .hero-content{
-max-width:860px;
+
+max-width:900px;
 }
 
 .hero-tag{
@@ -589,28 +693,28 @@ margin-bottom:30px;
 .hero-title{
 
 font-size:
-clamp(4rem,9vw,7.5rem);
+clamp(4rem,9vw,8rem);
 
 line-height:.88;
 
-letter-spacing:-5px;
+letter-spacing:-6px;
 
 font-weight:900;
 
-margin-bottom:28px;
+margin-bottom:30px;
 }
 
 .hero-description{
 
-max-width:670px;
+max-width:680px;
 
 line-height:1.9;
 
-font-size:1.06rem;
+font-size:1.08rem;
 
 color:#8B949E;
 
-margin-bottom:42px;
+margin-bottom:44px;
 }
 
 .hero-actions{
@@ -650,13 +754,13 @@ margin-bottom:18px;
 .section-title{
 
 font-size:
-clamp(2.6rem,5vw,4.8rem);
+clamp(2.6rem,5vw,5rem);
 
 line-height:.95;
 
 letter-spacing:-3px;
 
-margin-bottom:28px;
+margin-bottom:30px;
 }
 
 .section-description{
@@ -701,7 +805,7 @@ border:
 1px solid rgba(255,255,255,.08);
 
 box-shadow:
-0 20px 80px rgba(0,0,0,.35);
+0 20px 90px rgba(0,0,0,.35);
 }
 
 .intro-image{
@@ -727,7 +831,7 @@ gap:20px;
 
 flex-wrap:wrap;
 
-margin-top:42px;
+margin-top:44px;
 }
 
 .metric{
@@ -745,6 +849,17 @@ border:
 1px solid rgba(255,255,255,.08);
 
 backdrop-filter:blur(20px);
+
+transition:var(--transition);
+}
+
+.metric:hover{
+
+transform:
+translateY(-6px);
+
+border-color:
+rgba(59,160,255,.2);
 }
 
 .metric h3{
@@ -760,7 +875,7 @@ color:#8B949E;
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
-/* SOCIALS */
+/* SOCIAL */
 /*━━━━━━━━━━━━━━━━━━*/
 
 .social-grid{
@@ -777,7 +892,7 @@ margin-top:60px;
 
 .social-card{
 
-padding:36px;
+padding:38px;
 
 border-radius:32px;
 
@@ -805,7 +920,7 @@ border-color:
 rgba(59,160,255,.28);
 
 box-shadow:
-0 0 60px rgba(0,87,255,.15);
+0 0 70px rgba(0,87,255,.16);
 }
 
 .social-card span{
@@ -867,20 +982,20 @@ border:
 1px solid rgba(255,255,255,.08);
 
 box-shadow:
-0 20px 80px rgba(0,0,0,.35);
+0 20px 90px rgba(0,0,0,.35);
 }
 
 .map-wrapper iframe{
 
 width:100%;
-height:550px;
+height:560px;
 
 border:none;
 
 filter:
 grayscale(1)
-brightness(.88)
-contrast(1.05);
+brightness(.86)
+contrast(1.06);
 }
 
 /*━━━━━━━━━━━━━━━━━━*/
@@ -953,6 +1068,10 @@ padding:
 150px 6vw 100px;
 }
 
+.hero-title{
+letter-spacing:-4px;
+}
+
 section{
 padding:
 100px 6vw;
@@ -968,7 +1087,7 @@ width:100%;
 }
 
 .intro-image-wrapper{
-min-height:430px;
+min-height:420px;
 }
 
 .metrics{
@@ -991,6 +1110,8 @@ height:420px;
 <body>
 
 <div class="vignette"></div>
+
+<div class="ambient-light"></div>
 
 <div class="blackcode">
 BLACK CODE by KNJO™
@@ -1021,11 +1142,11 @@ type="video/mp4">
 
 <img
 src="logo-secondary.webp"
-alt="Velver Logo"
+alt="Velver Motos"
 class="intro-logo">
 
 <div class="intro-text">
-BLACK CODE™ EXPERIENCE
+VELVER MOTOS™ IMMERSIVE EXPERIENCE
 </div>
 
 </div>
@@ -1036,7 +1157,7 @@ BLACK CODE™ EXPERIENCE
 
 <!-- NAVBAR -->
 
-<header class="topbar">
+<header class="topbar" id="navbar">
 
 <img
 src="logo-main.webp"
@@ -1065,7 +1186,6 @@ muted
 loop
 playsinline
 webkit-playsinline
-preload="auto"
 poster="hero-poster.webp">
 
 <source
@@ -1076,14 +1196,14 @@ type="video/mp4">
 
 <div class="hero-overlay"></div>
 
-<div class="hero-noise"></div>
+<div class="hero-fog"></div>
 
 <div class="hero-light"></div>
 
 <div class="hero-content">
 
 <div class="hero-tag">
-BLACK CODE™ DIGITAL ECOSYSTEM
+BLACK CODE™ IMMERSIVE SYSTEM
 </div>
 
 <h1 class="hero-title">
@@ -1095,19 +1215,18 @@ MOTORCYCLE EXPERIENCE
 <p class="hero-description">
 
 Velver Motos Atlixco™ redefine la experiencia
-de motocicletas mediante tecnología, diseño
-cinematográfico y una experiencia premium
-inspirada en Tesla, Ducati y BMW Motorrad.
-
+de motocicletas mediante diseño cinematográfico,
+tecnología inteligente y una experiencia premium.
+  
 </p>
 
 <div class="hero-actions">
 
-<a href="#catalogo" class="btn-primary">
-Explorar Catálogo
+<a href="#social" class="btn-primary">
+Explorar Ecosistema
 </a>
 
-<a href="#social" class="btn-secondary">
+<a href="https://wa.me/522441252948" class="btn-secondary">
 AI Match™
 </a>
 
@@ -1117,7 +1236,7 @@ AI Match™
 
 </section>
 
-<!-- INTRO SECTION -->
+<!-- INTRO -->
 
 <section>
 
@@ -1137,8 +1256,7 @@ Motocicletas.
 
 <p class="section-description">
 
-Velver Motos Atlixco™ integra showroom,
-financiamiento inteligente, experiencia premium
+Velver Motos Atlixco™, experiencia premium
 y ecosistema digital en una sola plataforma.
 
 </p>
@@ -1149,9 +1267,7 @@ y ecosistema digital en una sola plataforma.
 
 <h3>+5</h3>
 
-<span>
-Marcas Premium
-</span>
+<span>Marcas Premium</span>
 
 </div>
 
@@ -1159,9 +1275,7 @@ Marcas Premium
 
 <h3>AI</h3>
 
-<span>
-Sistema Inteligente
-</span>
+<span>Sistema Inteligente</span>
 
 </div>
 
@@ -1169,9 +1283,7 @@ Sistema Inteligente
 
 <h3>24/7</h3>
 
-<span>
-Experiencia Digital
-</span>
+<span>Experiencia Digital</span>
 
 </div>
 
@@ -1182,7 +1294,7 @@ Experiencia Digital
 <div class="intro-image-wrapper">
 
 <img
-src="intro.webp"
+src="logotipo.webp"
 alt="Velver Motos"
 class="intro-image"
 loading="lazy"
@@ -1259,7 +1371,7 @@ TikTok
 </h3>
 
 <p>
-Experiencias dinámicas y reels premium.
+Experiencias premium y reels inmersivos.
 </p>
 
 </a>
@@ -1293,7 +1405,7 @@ Velver Motos™
 </h3>
 
 <p>
-BLACK CODE™ Cinematic Ecosystem
+Immersive Ecosystem™ 
 </p>
 
 </div>
@@ -1338,7 +1450,9 @@ Atlixco, Puebla
 
 gsap.registerPlugin(ScrollTrigger);
 
+/*━━━━━━━━━━━━━━━━━━*/
 /* INTRO */
+/*━━━━━━━━━━━━━━━━━━*/
 
 window.addEventListener('load',()=>{
 
@@ -1353,22 +1467,45 @@ intro.style.visibility='hidden';
 
 intro.style.pointerEvents='none';
 
-},4000);
+},4200);
 
 });
 
-/* HERO */
+/*━━━━━━━━━━━━━━━━━━*/
+/* NAVBAR SCROLL */
+/*━━━━━━━━━━━━━━━━━━*/
+
+const navbar =
+document.getElementById('navbar');
+
+window.addEventListener('scroll',()=>{
+
+if(window.scrollY > 60){
+
+navbar.classList.add('scrolled');
+
+}else{
+
+navbar.classList.remove('scrolled');
+
+}
+
+});
+
+/*━━━━━━━━━━━━━━━━━━*/
+/* HERO ANIMATION */
+/*━━━━━━━━━━━━━━━━━━*/
 
 gsap.from('.hero-tag',{
 opacity:0,
-y:30,
+y:40,
 duration:1
 });
 
 gsap.from('.hero-title',{
 opacity:0,
-y:80,
-duration:1.2,
+y:100,
+duration:1.3,
 delay:.2
 });
 
@@ -1376,37 +1513,63 @@ gsap.from('.hero-description',{
 opacity:0,
 y:40,
 duration:1,
-delay:.4
+delay:.45
 });
 
 gsap.from('.hero-actions',{
 opacity:0,
 y:40,
 duration:1,
-delay:.6
+delay:.7
 });
 
+/*━━━━━━━━━━━━━━━━━━*/
 /* METRICS */
+/*━━━━━━━━━━━━━━━━━━*/
 
 gsap.from('.metric',{
 opacity:0,
-y:50,
+y:60,
 stagger:.15,
+duration:1,
 scrollTrigger:{
 trigger:'.metrics',
-start:'top 80%'
+start:'top 82%'
 }
 });
 
+/*━━━━━━━━━━━━━━━━━━*/
 /* SOCIAL */
+/*━━━━━━━━━━━━━━━━━━*/
 
 gsap.from('.social-card',{
 opacity:0,
-y:60,
-stagger:.15,
+y:80,
+stagger:.18,
+duration:1,
 scrollTrigger:{
 trigger:'.social-grid',
-start:'top 80%'
+start:'top 82%'
+}
+});
+
+/*━━━━━━━━━━━━━━━━━━*/
+/* PARALLAX */
+/*━━━━━━━━━━━━━━━━━━*/
+
+gsap.to('.hero-light',{
+y:120,
+scrollTrigger:{
+trigger:'.hero',
+scrub:1
+}
+});
+
+gsap.to('.intro-image',{
+scale:1.08,
+scrollTrigger:{
+trigger:'.intro-image-wrapper',
+scrub:1
 }
 });
 
