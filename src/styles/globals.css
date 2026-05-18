@@ -6,6 +6,23 @@
 
 body{
   background:#050505;
-  color:white;
-  font-family:sans-serif;
+  color:#F5F7FA;
+  font-family:Arial,sans-serif;
+}
+
+.navbar{
+  padding:20px;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.hero{
+  min-height:70vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.footer{
+  padding:30px;
+  border-top:1px solid rgba(255,255,255,.1);
 }
