@@ -1,38 +1,621 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VELVER MOTOS ATLIXCO™ | BLACK CODE™ DIGITAL ECOSYSTEM</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    
-    <link rel="stylesheet" href="styles.css">
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+
+  <title>Velver Motos Atlixco™ | AI Smart Catalog</title>
+
+  <meta
+    name="description"
+    content="Experiencia premium inteligente de motocicletas en Atlixco."
+  />
+
+  <meta name="theme-color" content="#050505">
+
+  <!-- OPEN GRAPH -->
+
+  <meta property="og:title" content="Velver Motos Atlixco™">
+  <meta property="og:description" content="AI Smart Catalog™">
+  <meta property="og:image" content="/og-cover.webp">
+
+  <!-- FAVICON -->
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="/logo-main.png"
+  >
+
+  <!-- GOOGLE FONTS -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- TAILWIND -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- GSAP -->
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+  <!-- FONT AWESOME -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
+  <!-- GOOGLE ANALYTICS -->
+
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-G1JRYB0WW5"
+  ></script>
+
+  <script>
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag(){
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-G1JRYB0WW5');
+
+  </script>
+
+  <!-- STYLES -->
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Inter',sans-serif;
+      -webkit-tap-highlight-color:transparent;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#050505;
+      color:#F5F7FA;
+      overflow-x:hidden;
+    }
+
+    .container-system{
+      max-width:1450px;
+      margin:auto;
+    }
+
+    .section{
+      padding:140px 24px;
+      position:relative;
+      z-index:2;
+    }
+
+    .glass{
+      background:rgba(255,255,255,.035);
+      backdrop-filter:blur(20px);
+      border:1px solid rgba(255,255,255,.06);
+    }
+
+    .glass-soft{
+      background:rgba(255,255,255,.02);
+      backdrop-filter:blur(14px);
+      border:1px solid rgba(255,255,255,.04);
+    }
+
+    .gradient-text{
+      background:linear-gradient(90deg,#FFFFFF,#9FD3FF);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .subtle{
+      color:#8B949E;
+    }
+
+    .primary-btn{
+      background:linear-gradient(135deg,#0057FF,#3BA0FF);
+      transition:.4s ease;
+      box-shadow:0 20px 70px rgba(0,87,255,.22);
+    }
+
+    .primary-btn:hover{
+      transform:translateY(-4px);
+      box-shadow:0 25px 90px rgba(0,87,255,.35);
+    }
+
+    .bg-system{
+      position:fixed;
+      inset:0;
+      z-index:-2;
+      overflow:hidden;
+    }
+
+    .glow-a{
+      position:absolute;
+      width:900px;
+      height:900px;
+      border-radius:999px;
+      background:#0057FF;
+      top:-300px;
+      left:-300px;
+      opacity:.08;
+      filter:blur(180px);
+    }
+
+    .glow-b{
+      position:absolute;
+      width:700px;
+      height:700px;
+      border-radius:999px;
+      background:#3BA0FF;
+      bottom:-250px;
+      right:-220px;
+      opacity:.08;
+      filter:blur(180px);
+    }
+
+    .noise{
+      position:absolute;
+      inset:0;
+      opacity:.02;
+      background-image:radial-gradient(#fff .5px,transparent .5px);
+      background-size:12px 12px;
+    }
+
+    .navbar{
+      position:fixed;
+      top:18px;
+      left:50%;
+      transform:translateX(-50%);
+      width:calc(100% - 24px);
+      max-width:1450px;
+      z-index:1000;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+      padding:0 24px;
+    }
+
+    .massive{
+      font-size:clamp(3.2rem,10vw,8rem);
+      line-height:.95;
+      font-weight:900;
+    }
+
+    .catalog-card{
+      transition:.45s ease;
+      overflow:hidden;
+    }
+
+    .catalog-card:hover{
+      transform:translateY(-10px);
+      border-color:rgba(59,160,255,.25);
+    }
+
+    .social-btn{
+      transition:.4s ease;
+    }
+
+    .social-btn:hover{
+      transform:translateY(-6px);
+      border-color:rgba(59,160,255,.3);
+    }
+
+    #intro{
+      position:fixed;
+      inset:0;
+      background:#050505;
+      z-index:9999;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    @media(max-width:980px){
+
+      .desktop-nav{
+        display:none;
+      }
+
+      .section{
+        padding:110px 22px;
+      }
+
+      .massive{
+        font-size:3.7rem;
+      }
+
+    }
+
+  </style>
+
 </head>
-<body class="bg-[#050505] text-[#F5F7FA] font-sans overflow-x-hidden">
-    
-    <div class="fixed bottom-5 right-5 rotate-[-11deg] opacity-20 pointer-events-none z-[9999] text-[10px] text-gray-500">
-        BLACK CODE by KNJO™ | KNJO-BLK-1141015
+
+<body>
+
+  <!-- BACKGROUND -->
+
+  <div class="bg-system">
+
+    <div class="glow-a"></div>
+
+    <div class="glow-b"></div>
+
+    <div class="noise"></div>
+
+  </div>
+
+  <!-- INTRO -->
+
+  <div id="intro">
+
+    <div class="text-center px-6">
+
+      <img
+        id="introLogo"
+        src="/logo-secondary.png"
+        alt="Velver"
+        class="w-[170px] lg:w-[240px] mx-auto opacity-0 scale-75"
+      >
+
+      <h1
+        id="introTitle"
+        class="mt-10 text-5xl lg:text-8xl font-black tracking-[12px] opacity-0"
+      >
+        VELVER
+      </h1>
+
+      <p
+        id="introSub"
+        class="mt-6 text-xs lg:text-sm tracking-[8px] uppercase text-blue-300 opacity-0"
+      >
+        Intelligent Mobility Platform™
+      </p>
+
     </div>
 
-    <header class="topbar fixed w-full p-[20px_7vw] flex justify-between items-center z-[1000] backdrop-blur-[24px] border-b border-[rgba(255,255,255,0.05)]">
-        <h1 class="text-xl font-black tracking-widest text-white">VELVER<span class="text-[#0057FF]">MOTOS</span></h1>
-        <div class="top-right flex items-center gap-4">
-            <a href="#" class="social-icon flex items-center justify-center w-[46px] h-[46px] border border-[rgba(255,255,255,0.06)] rounded-[16px] text-white hover:border-[#0057FF] transition-all">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-        </div>
-    </header>
+  </div>
 
-    <main class="pt-[120px] px-[7vw] pb-[100px] min-h-screen">
-        <h2 class="text-4xl font-black mb-10 text-center">CATÁLOGO <span class="text-[#3BA0FF]">DIGITAL</span></h2>
-        
-        <div id="catalog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-    </main    
-    
-    <script src="/scripts/catalog.js" type="module"></script>
+  <!-- NAVBAR -->
+
+  <header class="navbar">
+
+    <div class="glass rounded-[28px] px-5 lg:px-8 py-4 flex items-center justify-between">
+
+      <div class="flex items-center gap-4">
+
+        <img
+          src="/logo-secondary.png"
+          alt="Velver"
+          class="w-11 h-11 object-contain"
+        >
+
+        <div>
+
+          <h1 class="font-black tracking-wide">
+            VELVER MOTOS
+          </h1>
+
+          <p class="text-xs subtle tracking-[3px] uppercase">
+            Atlixco™
+          </p>
+
+        </div>
+
+      </div>
+
+      <nav class="desktop-nav flex items-center gap-10 text-sm subtle">
+
+        <a href="#catalogo" class="hover:text-white transition">
+          Catálogo
+        </a>
+
+        <a href="#ai-match" class="hover:text-white transition">
+          AI Match™
+        </a>
+
+        <a href="#redes" class="hover:text-white transition">
+          Redes
+        </a>
+
+      </nav>
+
+      <a
+        href="https://wa.me/522441252948"
+        target="_blank"
+        class="primary-btn px-6 py-3 rounded-2xl text-sm font-semibold"
+      >
+        WhatsApp IA
+      </a>
+
+    </div>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container-system relative z-10 pt-40">
+
+      <div class="grid lg:grid-cols-[1.1fr_.9fr] gap-16 items-center">
+
+        <div>
+
+          <div class="glass-soft inline-flex items-center gap-3 px-5 py-3 rounded-full mb-10">
+
+            <div class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
+
+            <span class="text-sm subtle tracking-[3px] uppercase">
+              AI Smart Catalog™
+            </span>
+
+          </div>
+
+          <h1 class="massive max-w-5xl leading-none">
+
+            El futuro de las
+
+            <span class="gradient-text">
+              motocicletas premium.
+            </span>
+
+          </h1>
+
+          <p class="mt-10 text-lg lg:text-xl subtle max-w-2xl leading-relaxed">
+            Ecosistema cinematográfico diseñado para nueva generación.
+          </p>
+
+          <div class="flex flex-wrap gap-5 mt-12">
+
+            <a
+              href="#catalogo"
+              class="primary-btn px-8 py-5 rounded-2xl font-bold"
+            >
+              Explorar catálogo
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CATALOGO -->
+
+  <section id="catalogo" class="section pt-0">
+
+    <div class="container-system">
+
+      <div class="mb-16">
+
+        <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-5">
+          Smart Collection™
+        </p>
+
+        <h2 class="text-4xl lg:text-6xl font-black mb-8">
+          Catálogo inteligente.
+        </h2>
+
+      </div>
+
+      <!-- FILTROS -->
+
+      <div class="grid md:grid-cols-4 gap-5 mb-14">
+
+        <select
+          id="brandFilter"
+          class="glass px-5 py-4 rounded-2xl bg-transparent outline-none"
+        >
+          <option value="all">Todas las marcas</option>
+          <option value="ZMoto">ZMoto</option>
+          <option value="RGH">RGH</option>
+          <option value="Ryder">Ryder</option>
+        </select>
+
+        <select
+          id="typeFilter"
+          class="glass px-5 py-4 rounded-2xl bg-transparent outline-none"
+        >
+          <option value="all">Todas las categorías</option>
+          <option value="Sport">Sport</option>
+          <option value="Touring">Touring</option>
+          <option value="Urbana">Urbana</option>
+        </select>
+
+      </div>
+
+      <!-- GRID -->
+
+      <div
+        id="catalog-grid"
+        class="grid md:grid-cols-2 xl:grid-cols-3 gap-8"
+      ></div>
+
+    </div>
+
+  </section>
+
+  <!-- AI MATCH -->
+
+  <section id="ai-match" class="section pt-0">
+
+    <div class="container-system max-w-5xl">
+
+      <div class="glass rounded-[40px] p-8 lg:p-14">
+
+        <div class="text-center mb-14">
+
+          <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-5">
+            AI Match™
+          </p>
+
+          <h2 class="text-4xl lg:text-6xl font-black mb-8">
+            Descubre tu moto ideal.
+          </h2>
+
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8">
+
+          <div>
+
+            <label class="block mb-4 font-semibold">
+              Uso principal
+            </label>
+
+            <select
+              id="use"
+              class="glass w-full px-5 py-4 rounded-2xl bg-transparent outline-none"
+            >
+              <option value="city">Ciudad</option>
+              <option value="travel">Viajes</option>
+              <option value="sport">Deportivo</option>
+            </select>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- REDES -->
+
+  <section id="redes" class="section pt-0">
+
+    <div class="container-system">
+
+      <div class="glass rounded-[44px] p-10 lg:p-16">
+
+        <p class="text-blue-400 tracking-[4px] uppercase text-sm font-semibold mb-6">
+          Social Ecosystem™
+        </p>
+
+        <h2 class="text-4xl lg:text-6xl font-black leading-tight mb-10">
+          Conecta con Velver.
+        </h2>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="px-6 pb-14">
+
+    <div class="container-system">
+
+      <div class="glass rounded-[34px] p-10 lg:p-14 flex flex-col lg:flex-row items-center justify-between gap-10">
+
+        <div class="flex items-center gap-5">
+
+          <img
+            src="/logo-secondary.png"
+            alt="Velver"
+            class="w-[70px]"
+          >
+
+          <div>
+
+            <h3 class="text-3xl font-black">
+              Velver Motos Atlixco™
+            </h3>
+
+            <p class="subtle">
+              AI Luxury Motorcycle Platform™
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- INTRO ANIMATION -->
+
+  <script>
+
+    window.addEventListener('load',()=>{
+
+      gsap.to('#introLogo',{
+        opacity:1,
+        scale:1,
+        duration:1.2
+      });
+
+      gsap.to('#introTitle',{
+        opacity:1,
+        y:-10,
+        duration:1,
+        delay:.3
+      });
+
+      gsap.to('#introSub',{
+        opacity:1,
+        y:-10,
+        duration:1,
+        delay:.6
+      });
+
+      gsap.to('#intro',{
+        opacity:0,
+        duration:1.4,
+        delay:2.8,
+        pointerEvents:'none'
+      });
+
+    });
+
+  </script>
+
+  <!-- CATALOG SYSTEM -->
+
+  <script src="/catalogo/scripts/catalog.js"></script>
 
 </body>
 </html>
